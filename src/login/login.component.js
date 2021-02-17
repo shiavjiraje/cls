@@ -1,53 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import { connect } from 'react-redux';
 import { userActions } from '../_actions';
 import { history } from '../_helpers';
-import Typography from '@material-ui/core/Typography';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './login.component.css'
-
-
-const styles = theme => ({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    },
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    margin: {
-      margin: theme.spacing.unit,
-    },
-    withoutLabel: {
-      marginTop: theme.spacing.unit * 3,
-    },
-    textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-        width: 200,
-    },
-
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-
-    button: {
-        margin: theme.spacing.unit,
-    },
-
-    input: {
-        display: 'none',
-    },
-  });
+import logo from '../assets/img/cls-logo-white.png'
+import { Container, Row, Col,Label, FormGroup, Button, } from 'reactstrap';
 
   
 class Login extends Component {
@@ -82,53 +40,76 @@ class Login extends Component {
     }
 
    render() {
-      const { classes } = this.props;
       return (
-        <div className="login-margin">
-            <Grid container spacing={24}>
-                <Grid item xs={3}>
-                </Grid>
-                <Grid item xs={6}>
-                    <Paper className={classes.paper}>
-                        <Typography><h1>{'Login'}</h1></Typography>
-                    </Paper>
-                    <Paper className={classes.paper}>
-                        <div>
-                        <TextField
-                            label="Username"
+        <div className="login-bg">
+            <Container className="login-margin">
+                        <Row className="justify-content-center">
+                            <Col md={4} className="card shadow login-box p-0">
+                   <div className="pt-2 white-border pb-3">
+                        <img src={logo} className="logo" alt="logo"/>
+                   </div>
+                   <div className="pb-3 pl-3 pr-3 pt-3">
+                    <h4>{'Welcome'}</h4>
+                        <form>
+                        <div class="form-group">
+                        <label className="text-left w-100">Username</label>
+                        <div class="input-group mb-3">
+                           
+                            <div class="input-group-prepend">
+                                <span class="input-group-text input-group-icon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" 
                             value={this.state.username}
-                            className={classes.textField}
-                            onChange = {this.handleChange('username')}
-                            />
-                        <br/>
-                        <br/>
-                        <TextField
-                            label="Password"
-                            autoComplete="current-password"
+                            onChange = {this.handleChange('username')} aria-label="Username" aria-describedby="basic-addon1"/>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label className="text-left w-100">Email</label>
+                        <div class="input-group mb-3">
+                           
+                            <div class="input-group-prepend">
+                                <span class="input-group-text input-group-icon" id="basic-addon3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" 
+                            //value={this.state.username}
+                            //onChange = {this.handleChange('username')} 
+                            aria-label="Username" aria-describedby="basic-addon3"/>
+                        </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label className="text-left w-100">Password</label>
+                        <div class="input-group mb-3">
+                       
+                            <div class="input-group-prepend">
+                                <span class="input-group-text input-group-icon" id="basic-addon2">@</span>
+                            </div>
+                            <input  class="form-control" placeholder="Password" 
                             type={this.state.showPassword ? 'text' : 'password'}
-                            className={classes.textField}
                             value={this.state.password}
-                            onChange={this.handleChange('password')}
-                        />
-                        <br/>
-                        <br/>
-                        <Button variant="contained" color="primary" className={classes.button} onClick={(event)=>{this.login()}}>
+                            onChange={this.handleChange('password')} aria-label="Password" aria-describedby="basic-addon2"/>
+                        </div>
+                        </div>
+                        <div class="form-group form-check check-m">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"/> Remember me
+                            </label>
+                            <Link to="/account/forget-password" className="float-right text-muted text-unline-dashed ml-1">Forgot your password?</Link>
+                        </div>
+                        <Button variant="contained" className="btn btn-light btn-block" onClick={(event)=>{this.login()}}>
                             Login
                         </Button>
+                        </form>
                         </div>
-                    </Paper>
-                </Grid>
-                <Grid item xs={3}>
-                </Grid>
-            </Grid>
+                </Col>
+                </Row>
+                </Container>
         </div>
       );
    }
 }
 
-Login.propTypes = {
-    classes: PropTypes.object.isRequired,
-  };
+
   
 const mapStateToProps = (state) =>{
     const { loggingIn } = state.authentication;
@@ -139,6 +120,6 @@ const mapStateToProps = (state) =>{
 
 const connectedLoginPage = withRouter(connect(mapStateToProps, null, null, {
     pure: false
-})(withStyles(styles)(Login)));
+})(Login));
 
 export { connectedLoginPage as Login };

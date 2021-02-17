@@ -7,8 +7,7 @@ import  { Login } from './login/';
 import { Home } from './home/';
 import { history } from './_helpers';
 import { PrivateRoute } from './_components';
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   render() {
     return (

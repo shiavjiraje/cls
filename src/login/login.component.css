@@ -1,4 +1,37 @@
 .login-margin{
-    margin-top: 300px;
-    display: 'flex';
+    padding-top: 100px;
 }
+.login-box{
+    background: #4d186f !important;
+    color: #fff;
+    font-weight: 600;
+}
+.logo{
+    width: 100px;
+    margin: 0px auto;
+}
+.white-border{
+    border-bottom: 1px solid;
+}
+.login-bg{ 
+    background: url('../assets/img/CRM\ Loginbg.jpg') no-repeat center center fixed; 
+     /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  }
+  .check-m{
+    margin-left: -50px;
+  }
+  .input-group-icon{
+    background: #290043 !important;
+    color: #fff !important;
+  }
