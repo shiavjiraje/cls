@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import { userActions } from '../_actions';
 import { history } from '../_helpers';
 import { Link, withRouter } from 'react-router-dom';
-import './login.component.css'
 import logo from '../assets/img/cls-logo-white.png'
-import { Container, Row, Col,Label, FormGroup, Button, } from 'reactstrap';
+import { Container, Row, Col, Button, } from 'reactstrap';
 
   
 class Login extends Component {
@@ -49,54 +48,53 @@ class Login extends Component {
                         <img src={logo} className="logo" alt="logo"/>
                    </div>
                    <div className="pb-3 pl-3 pr-3 pt-3">
-                    <h4>{'Welcome'}</h4>
+                    <h5>{'Welcome'}</h5>
                         <form>
-                        <div class="form-group">
-                        <label className="text-left w-100">Username</label>
-                        <div class="input-group mb-3">
+                        <div className="form-group">
+                        <label className="text-left w-100">Name</label>
+                        <div className="input-group mb-3">
                            
-                            <div class="input-group-prepend">
-                                <span class="input-group-text input-group-icon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <div className="input-group-prepend">
+                                <span className="input-group-text input-group-icon" id="basic-addon1"><i className="fa fa-user" aria-hidden="true"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Username" 
-                            value={this.state.username}
-                            onChange = {this.handleChange('username')} aria-label="Username" aria-describedby="basic-addon1"/>
+                            <input type="text" className="form-control" placeholder="Name" 
+                             aria-label="Name" aria-describedby="basic-addon1"/>
                         </div>
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                         <label className="text-left w-100">Email</label>
-                        <div class="input-group mb-3">
+                        <div className="input-group mb-3">
                            
-                            <div class="input-group-prepend">
-                                <span class="input-group-text input-group-icon" id="basic-addon3"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                            <div className="input-group-prepend">
+                                <span className="input-group-text input-group-icon" id="basic-addon3"><i className="fa fa-envelope-o" aria-hidden="true"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Username" 
-                            //value={this.state.username}
-                            //onChange = {this.handleChange('username')} 
+                            <input type="text" className="form-control" placeholder="Email" 
+                            value={this.state.username}
+                            onChange = {this.handleChange('username')}
                             aria-label="Username" aria-describedby="basic-addon3"/>
                         </div>
                         </div>
                         
-                        <div class="form-group">
+                        <div className="form-group">
                         <label className="text-left w-100">Password</label>
-                        <div class="input-group mb-3">
+                        <div className="input-group mb-3">
                        
-                            <div class="input-group-prepend">
-                                <span class="input-group-text input-group-icon" id="basic-addon2">@</span>
+                            <div className="input-group-prepend">
+                                <span className="input-group-text input-group-icon" id="basic-addon2"><i className="fa fa-lock" aria-hidden="true"></i></span>
                             </div>
-                            <input  class="form-control" placeholder="Password" 
+                            <input  className="form-control" placeholder="Password" 
                             type={this.state.showPassword ? 'text' : 'password'}
                             value={this.state.password}
                             onChange={this.handleChange('password')} aria-label="Password" aria-describedby="basic-addon2"/>
                         </div>
                         </div>
-                        <div class="form-group form-check check-m">
-                            <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"/> Remember me
+                        <div className="form-group form-check check-m">
+                            <label className="form-check-label login-text">
+                            <input className="form-check-input" type="checkbox"/> Remember me
                             </label>
-                            <Link to="/account/forget-password" className="float-right text-muted text-unline-dashed ml-1">Forgot your password?</Link>
+                            <Link to="/account/forget-password" className="float-right login-text text-unline-dashed ml-1">Forgot your password?</Link>
                         </div>
-                        <Button variant="contained" className="btn btn-light btn-block" onClick={(event)=>{this.login()}}>
+                        <Button variant="contained" className="btn btn-light btn-block " onClick={(event)=>{this.login()}}>
                             Login
                         </Button>
                         </form>

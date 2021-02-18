@@ -8,6 +8,7 @@ import { Home } from './home/';
 import { history } from './_helpers';
 import { PrivateRoute } from './_components';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/assets/css/custom.css'
 class App extends Component {
   render() {
     return (

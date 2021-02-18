@@ -1,0 +1,63 @@
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px;
+}
+.login-margin {
+  padding-top: 100px;
+}
+.bg-dark {
+  background: #4d186f !important;
+}
+.login-box {
+  background: #4d186f;
+  color: #fff;
+  font-weight: 400;
+}
+.logo {
+  width: 100px;
+  margin: 0px auto;
+}
+.white-border {
+  border-bottom: 1px solid;
+}
+.login-bg {
+  background: url("../img/CRM\ Loginbg.jpg") no-repeat center center fixed;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.check-m {
+  margin-left: -50px;
+}
+.input-group-icon {
+  background: #290043;
+  color: #fff;
+  width: 40px;
+}
+.login-text {
+  color: #a48eb3;
+  font-weight: normal;
+  /* font-size: 12px; */
+}
+.btn-light {
+  color: #4d186f;
+  font-weight: 600;
+}
+.login-box .form-control {
+  background-color: #a48eb3;
+}
+.login-box .form-control::placeholder {
+  color: #dad9da;
+}
+.top-100 {
+  margin-top: 100px;
+}
