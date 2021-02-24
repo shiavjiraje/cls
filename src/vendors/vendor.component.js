@@ -5,7 +5,7 @@ import AppBar from '../_components/appbar';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Nav from '../_components/nav'; 
+import Nav from '../_components/navbar'; 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -90,7 +90,6 @@ class Vendor extends Component {
       return (
         <div className={classes.root}>
             <div className={classes.appFrame}>
-            <AppBar/>
             <Nav />
             <main className={classes.content}>
                 <div className={classes.toolbar} />
