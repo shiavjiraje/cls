@@ -62,13 +62,13 @@ class Navbarsupport extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar className="col-9">
             <Nav className="col-md-9 homenavbar" navbar>
             <NavItem>
-              <NavLink href="/home" className="left-border">Support Center Home</NavLink>
+              <NavLink href="/supportcenter" className={this.props.activeSupport +'left-border'}>Support Center Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/home" className="">Open a New Ticket</NavLink>
+              <NavLink href="/opennewticket" className={this.props.activeTicket}>Open a New Ticket</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/home" className="">Check Ticket Status</NavLink>
+              <NavLink href="/ticketstatus" className={this.props.activeTickitStatus}>Check Ticket Status</NavLink>
             </NavItem>
             </Nav>
             <div className="col-md-3 text-right" >

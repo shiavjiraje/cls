@@ -12,6 +12,8 @@ import '../src/assets/css/custom.css'
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import OpenNewTicket from './opennewticket/opennewticket';
+import SupportCenterHome from './supportcenterhome/supportcenterhome';
+import CheckTicketStatus from './checkticketstatus/checkticketstatus';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -42,6 +44,8 @@ function App() {
                 <PrivateRoute exact path='/edit-vendor/:id' component={AddVendor} /> */}
                 <Route exact path='/' component={Login} />
                 <Route exact path='/opennewticket' component={OpenNewTicket} />
+                <Route exact path='/supportcenter' component={SupportCenterHome} />
+                <Route exact path='/ticketstatus' component={CheckTicketStatus} />
               </Switch>
           </div>
         </Router>

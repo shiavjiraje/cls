@@ -4,10 +4,10 @@ import { Col, Row } from 'reactstrap';
 import TextEditor from '../_components/textEditor';
 import Footer from '../_components/footer';
 function OpenNewTicket(){
-    const active ="active"
+    const activeTicket ="active "
     return(
         <React.Fragment>
-       <Navbarsupoort active={active}/>
+       <Navbarsupoort activeTicket={activeTicket}/>
        
        <section className="light-section pb-1 mt-5">
               <div className="content pt-5"> 
