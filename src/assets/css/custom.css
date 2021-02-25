@@ -114,3 +114,38 @@ select.form-control{
 .style-input .form-control{
   border: 1px solid #4d186f;
 }
+hr{
+  border-top: 1px solid #4d186f;
+}
+.RichTextEditor__root___2QXK-{
+  width:100%;
+  height: 200px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #4d186f;
+  border-color: #4d186f;
+  border-radius: 25px;
+  padding: 7px 40px;
+  font-weight: bold;
+}
+.btn-primary:hover, .btn-primary:focus {
+  color: #fff;
+  background-color: #74379a;
+  border-color: #74379a;
+}
+.user-icon{
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
+  margin-top: 8px;
+}
+.nav-icon{
+  font-size: 20px;
+    padding-top: 14px;
+}
+footer{
+  background: #4d186f;
+  padding: 15px 0px;
+  color: #fff;
+}

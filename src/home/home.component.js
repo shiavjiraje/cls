@@ -1,52 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';  
 import { withRouter } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
 import Navigation from '../_components/navbar'; 
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
+import Footer from '../_components/footer';
 
-
-const drawerWidth = 240;
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  appFrame: {
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-  },
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-  },
-  'appBar-left': {
-    marginLeft: drawerWidth,
-  },
-  'appBar-right': {
-    marginRight: drawerWidth,
-  },
-  drawerPaper: {
-    position: 'relative',
-    width: drawerWidth,
-  },
-  toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-  },
-});
 
 
 class Home extends Component {
 
    render() {
-     const { classes } = this.props;
+    // const { classes } = this.props;
 
       return (
           <React.Fragment>
@@ -1701,6 +1666,438 @@ This section must be completed if the shares are to be owned by a body corporate
               
               </div>
               </section>
+              <section className="light-section pb-1">
+              <div className="content pt-5"> 
+              <Row className="mt-3">
+                  <Col lg={12}>
+                  <h6 className="text-span"><b>Beneficial Owners  </b> </h6><label>
+
+                  This section must be completed if the subscribers are not the beneficial owners of the shares in this company or the shares are being held by a corporate subscriber 
+<span className="text-span"><b>(Note 14)</b></span>
+                  </label>
+                  </Col>
+                </Row>
+                <Row className="mt-3"> 
+                  <Col lg={4}>
+                    <label className="text-span"><b>Beneficial Owners 1</b></label>
+                  </Col>
+                  <Col lg={4}>
+                    <label className="text-span"><b>Beneficial Owners 2</b></label>
+                  </Col>
+                  <Col lg={4}>
+                    <label className="text-span"><b>Beneficial Owners 3</b></label>
+                  </Col>
+                  </Row>
+                <Row className="mt-3">
+                  <Col lg={4}>
+                    <label>Name</label>                 
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Name</label>                 
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Name</label>                  
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                
+                <Row className="mt-4">                 
+                  <Col lg={4}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={4}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={4}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={4}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={4}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={4}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">
+                  <Col lg={4}>
+                    <label>Occupation</label>
+                    <input type="date"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Occupation</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Occupation</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                
+                <Row className="mt-4 mb-5">                 
+                  <Col lg={4}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={4}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+              </div>
+              </section>
+              <section className="dark-section pb-1">
+              <div className="content pt-5"> 
+              <Row className="mt-3">
+                  <Col lg={12}>
+                  <h6 className="text-span"><b>Additional Beneficial Owner Details </b> </h6>
+                  </Col>
+                </Row>
+                <Row className="mt-3">
+                  <Col lg={3}>
+                    <label className="text-span"><b>Beneficial Owner 4</b></label>
+                  </Col>
+                  <Col lg={3}>
+                    <label className="text-span"><b>Beneficial Owner 5</b></label>
+                  </Col>
+                  <Col lg={3}>
+                    <label className="text-span"><b>Beneficial Owner 6</b></label>
+                  </Col>
+                  <Col lg={3}>
+                    <label className="text-span"><b>Beneficial Owner 7</b></label>
+                  </Col>
+                  </Row>
+                <Row className="mt-3">
+                  <Col lg={3}>
+                    <label>Name</label>                 
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Name</label>                 
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Name</label>                  
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Name</label>                  
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 1</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 2</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 3</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Aircode/Pincode</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Country</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Nationality</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">
+                  <Col lg={3}>
+                    <label>Occupation</label>
+                    <input type="date"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Occupation</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Occupation</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Occupation</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4 mb-5">                 
+                  <Col lg={3}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Nature of Beneficial Ownership</label>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+               
+              </div>
+              </section>
+              <section className="light-section pb-1">
+              <div className="content pt-5"> 
+              <Row className="mt-3">
+                  <Col lg={12}>
+                  <h6 className="text-span"><b>Address Details </b> </h6>
+                  </Col>
+                </Row>
+                <Row className="mt-3">
+                  <Col lg={6}>
+                    <label className="text-span"><b>Registered Office Address </b></label>
+                    <p>This must be in the Republic of Ireland (Note 15)</p>
+                  </Col>
+                  <Col lg={6}>
+                    <label className="text-span"><b>Business / Central Administration Address</b></label>
+                    <p>(If different from Registered Address)</p>
+                  </Col>
+                  </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Address Line 1</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 1</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Address Line 2</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Address Line 2</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4">                 
+                  <Col lg={3}>
+                    <label>Address Line 3</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                  <label>Address Line 3</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+                <Row className="mt-4 mb-5">
+                <Col lg={3}>
+                    <label>Aircode/Pincode</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                  <Col lg={3}>
+                    <label>Aircode/Pincode</label>
+                  </Col>
+                  <Col lg={3}>
+                    <input type="text"  className="form-control"/>
+                  </Col>
+                </Row>
+               
+              </div>
+              </section>
+              
+              <section className="dark-section pb-1">
+              <div className="content pt-3"> 
+              <Row className="mt-3">
+                  <Col lg={12}>
+                  <h6 className="text-span"><b>Additional information </b> </h6>
+                  <p className="text-span">Note 16</p>
+                  </Col>
+                </Row>
+                <Row className="mt-2 mb-4">                 
+                  <Col lg={12}>
+                    <textarea className="form-control" rows="12"></textarea>
+                  </Col>
+                </Row>       
+              </div>
+              </section>
+              <Footer/>
             </React.Fragment>
       );
    }
@@ -1718,7 +2115,7 @@ function mapStateToProps(state) {
 
 const connectedHomePage = withRouter(connect(mapStateToProps, null, null, {
     pure: false
-})(withStyles(styles)(Home)));
+})((Home)));
 
 export { connectedHomePage as Home };
   

@@ -10,18 +10,12 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from 'reactstrap';
-import userLogo from '../assets/img/user.png'
 // const links = [
-//   { href: '/home', className:"left-border", text: 'Teamwork CRM' },
-//   { href: '/vendor', text: 'Project Management' },
-//   { href: '#about', text: 'Document Management' },
-//   { href: '#cata', text: 'Customer Support' }
+//   { href: '/home', className:"left-border", text: 'Support Center Home' },
+//   { href: '/opennewticket', text: 'Open a New Ticket' },
+//   { href: '#about', text: 'Check Ticket Status' }
 // ];
 
 // const createNavItem = ({ href, text, className, i}) => (
@@ -29,7 +23,7 @@ import userLogo from '../assets/img/user.png'
 //     <NavLink href={href} className={className}>{text}</NavLink>
 //   </NavItem>
 // );
-class Navigation extends React.Component {
+class Navbarsupport extends React.Component {
 
     constructor(props){
         super(props);
@@ -68,43 +62,23 @@ class Navigation extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar className="col-9">
             <Nav className="col-md-9 homenavbar" navbar>
             <NavItem>
-              <NavLink href="/home" className="left-border">Teamwork CRM</NavLink>
+              <NavLink href="/home" className="left-border">Support Center Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/home" className="">Project Management</NavLink>
+              <NavLink href="/home" className="">Open a New Ticket</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/home" className="">Document Management</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/home" className="">Customer Support</NavLink>
+              <NavLink href="/home" className="">Check Ticket Status</NavLink>
             </NavItem>
             </Nav>
-            <div className="col-md-3 pl-0" >
+            <div className="col-md-3 text-right" >
             <Nav className="" navbar>
             <NavItem >
-              <NavLink >
-              <i class="fa fa-bell nav-icon" aria-hidden="true"></i>
+              <NavLink href="/">
+              <NavbarText>Sign In</NavbarText>
               </NavLink>
             </NavItem>
-            <NavItem >
-              <NavLink >
-              <i class="fa fa-cog nav-icon" aria-hidden="true"></i>
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-               <span><img src={userLogo} alt="userIcon" className="user-icon"/></span> Name Here
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem onClick={(event)=>{this.logout()}}>
-                 Logout
-                </DropdownItem>
-                <DropdownItem>
-                  Profile
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            
            </Nav>
             </div>
           </Collapse>
@@ -124,4 +98,4 @@ const mapStateToProps = (state) =>{
     };
 }
 
-export default connect(mapStateToProps)(Navigation);
+export default connect(mapStateToProps)(Navbarsupport);
