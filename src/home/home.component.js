@@ -25,18 +25,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      collapse1: false,
-      collapse2: false,
-      collapse3: false,
-      collapse4: false,
-      collapse5: false,
-      collapse6: false,
-      collapse7: false,
-      collapse8: false,
-      collapse9: false,
-      collapse10: false,
-      collapse11: false,
-      collapse12:false,
+      collapse1: false,  collapse2: false,  collapse3: false,
+      collapse4: false,  collapse5: false,  collapse6: false,
+      collapse7: false,  collapse8: false,  collapse9: false,
+      collapse10: false, collapse11: false, collapse12:false,
      };
   }
 
