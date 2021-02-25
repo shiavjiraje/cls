@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';  
 import { withRouter } from 'react-router-dom';
 import Navigation from '../_components/navbar'; 
-import { Col, Row, Collapse } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 import Footer from '../_components/footer';
 import FirstSection from './section/FirstSection';
 import SecondSection from './section/SecondSection';
