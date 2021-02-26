@@ -78,7 +78,7 @@ const FirstSection= (props)=> {
                                         }} name="agree"  ref={register({ required: true })} type="checkbox"/> Agree<span className="redspan">*</span>
                       
                     </label>
-                    {errors.agree && <p className="redspan font-12">The field is required</p>}
+                    {errors.agree && <p className="redspan font-12">The field is Required</p>}
                   </div>
                   </Col>
                 </Row>
@@ -116,7 +116,7 @@ const FirstSection= (props)=> {
                     <option value="Standard">Standard</option>
                     <option value="Nominee">Nominee</option>
                   </select>
-                  {errors.incorporationtype && <p className="redspan font-12">The field is required</p>}
+                  {errors.incorporationtype && <p className="redspan font-12">The field is Required</p>}
                   </div>
                   </Col>
                 </Row>
@@ -134,7 +134,7 @@ const FirstSection= (props)=> {
                     <option value="Digital Pack (Incl Seal)">Digital Pack (Incl Seal)</option>
                     <option value="Hard Copy (Incl Seal)">Hard Copy (Incl Seal)</option>
                   </select>
-                  {errors.companypacktype && <p className="redspan font-12">The field is required</p>}
+                  {errors.companypacktype && <p className="redspan font-12">The field is Required</p>}
                   </div>
                   </Col>
                 </Row>
@@ -151,7 +151,7 @@ const FirstSection= (props)=> {
                     <option value="Bank Transfer">Bank Transfer</option>
                     <option value="Credit Card">Credit Card</option>
                   </select>
-                  {errors.paymenttype && <p className="redspan font-12">The field is required</p>}
+                  {errors.paymenttype && <p className="redspan font-12">The field is Required</p>}
                   </div>
                   </Col>
                 </Row>
@@ -168,7 +168,7 @@ const FirstSection= (props)=> {
                     <input type="text"  ref={register({ required: true })} onChange={(e) => {
                                             setname (e.target.value);
                                         }} name = "name" className="form-control"/>
-                                         {errors.name && <p className="redspan font-12">The field is required</p>}
+                                         {errors.name && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Address Line 1<span className="redspan">*</span></label>
@@ -177,7 +177,7 @@ const FirstSection= (props)=> {
                     <input type="text"  ref={register({ required: true })}  className="form-control" onChange={(e) => {
                                             setaddressline1 (e.target.value);
                                         }} name = "addressline1"/>
-                                         {errors.addressline1 && <p className="redspan font-12">The field is required</p>}
+                                         {errors.addressline1 && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                 </Row>
                 <Row className="mt-4">
@@ -188,7 +188,7 @@ const FirstSection= (props)=> {
                     <input type="text"  ref={register({ required: true })} className="form-control" onChange={(e) => {
                                             setcompanyname (e.target.value);
                                         }} name = "companyname"/>
-                                         {errors.companyname && <p className="redspan font-12">The field is required</p>}
+                                         {errors.companyname && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Address Line 2<span className="redspan">*</span></label>
@@ -197,7 +197,7 @@ const FirstSection= (props)=> {
                     <input type="text"  ref={register({ required: true })} className="form-control" onChange={(e) => {
                                             setaddressline2 (e.target.value);
                                         }} name = "addressline2"/>
-                                         {errors.addressline2 && <p className="redspan font-12">The field is required</p>}
+                                         {errors.addressline2 && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                 </Row>
                 <Row className="mt-4">
@@ -208,7 +208,7 @@ const FirstSection= (props)=> {
                     <input type="number"  ref={register({ required: true, min:10 })} className="form-control" onChange={(e) => {
                                             setphone (e.target.value);
                                         }} name = "phone"/>
-                                        {errors.phone && <p className="redspan font-12">The Feild is required Number</p>}
+                                        {errors.phone && <p className="redspan font-12">The Feild is Required Number</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Address Line 3</label>
@@ -227,7 +227,7 @@ const FirstSection= (props)=> {
                     <input type="email"  ref={register({ required: true })} className="form-control" onChange={(e) => {
                                             setemail (e.target.value);
                                         }} name = "email"/>
-                                         {errors.email && <p className="redspan font-12">The Feild is required Number</p>}
+                                         {errors.email && <p className="redspan font-12">The Feild is Required Email</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Aircode/Pincode</label>
@@ -236,7 +236,7 @@ const FirstSection= (props)=> {
                     <input type="number"  className="form-control" onChange={(e) => {
                                             setpostal (e.target.value);
                                         }} name = "postal"/>
-                                        {errors.postal && <p className="redspan font-12">The Feild is required Number</p>}
+                                        {errors.postal && <p className="redspan font-12">The Feild is Required Number</p>}
                   </Col>
                 </Row>
                 <Row className="pb-3">
