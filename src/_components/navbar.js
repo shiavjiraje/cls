@@ -83,12 +83,12 @@ class Navigation extends React.Component {
             <Nav className="" navbar>
             <NavItem >
               <NavLink >
-              <i class="fa fa-bell nav-icon" aria-hidden="true"></i>
+              <i className="fa fa-bell nav-icon" aria-hidden="true"></i>
               </NavLink>
             </NavItem>
             <NavItem >
               <NavLink >
-              <i class="fa fa-cog nav-icon" aria-hidden="true"></i>
+              <i className="fa fa-cog nav-icon" aria-hidden="true"></i>
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
