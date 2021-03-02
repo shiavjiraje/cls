@@ -1,6 +1,7 @@
-import { userService } from '../_services/';
+import { userService } from '../_services';
 import { history } from '../_helpers';
-
+//import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 export const vendorAction = {
     getVendor,
     getVendorById,
@@ -9,7 +10,7 @@ export const vendorAction = {
     createVendor,
     deleteVendorById
 };
-
+//const { reset } = useForm();
 function getVendor(){
     return dispatch => {
         let apiEndpoint = 'vendors';
@@ -26,12 +27,17 @@ function getVendor(){
 
 function createVendor(payload){
     return dispatch => {
-        let apiEndpoint = 'vendors/';
+        let apiEndpoint = 'clscompanyincorporation/';
         userService.post(apiEndpoint, payload)
         .then((response)=>{
             dispatch(createUserInfo());
-            history.push('/vendor');
-        }) 
+            console.log(response.data);
+            if(response.data){
+                swal("Record Saved Successful", "You clicked the button!", "success");
+                
+               // reset();
+               }
+            }).catch(err =>  swal(err, "You clicked the button!", "error"));
     }
 }
 
@@ -106,9 +112,10 @@ export function updatedUserInfo(){
     }
 }
 
-export function createUserInfo(){
+export function createUserInfo(createid){
     return{
-        type: "USER_CREATED_SUCCESSFULLY"
+        type: "USER_CREATED_SUCCESSFULLY",
+        payload:createid
     }
 }
 

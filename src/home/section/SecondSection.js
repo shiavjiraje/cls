@@ -1,11 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from "react-hook-form";
 import { Col, Row } from 'reactstrap';
- class SecondSection extends Component {
-  render() {
+import { vendorAction } from '../../_actions/section2.actions';
+const SecondSection =(props)=> {
+  let roleList = useSelector((state) => state.vendor.createid || []);
+  const dispatch = useDispatch();
+  useEffect( () => {
+      dispatch(vendorAction.createVendor());
+  
+      // eslint-disable-next-line
+    }, [] );
+    console.log('rollist', roleList.createid);
+    var i = 10;
+    const [cfid, setcfid]=useState(i);
+    const [firstchoice, setfirstchoice]=useState('');
+    const [secondchoice, setsecondchoice]=useState('');
+    const [thirdchoice, setthirdchoice]=useState('');
+    const [principalactivity, setprincipalactivity]=useState('');
+    const [additionwording, setadditionwording]=useState('');
+    const [companytype, setcompanytype]=useState('');
+    const { register, errors, handleSubmit } = useForm();
+    const onSubmit = e => {
+     // e.preventDefault();
+      let reqBody = {
+        cfid: cfid,
+        firstchoice:firstchoice,
+        secondchoice:secondchoice,
+        thirdchoice:thirdchoice,
+        principalactivity:principalactivity,
+        additionwording:additionwording,
+        companytype:companytype,
+      }
+     
+      dispatch(vendorAction.createVendor(reqBody));        
+      };
     return (
       <section className="dark-section pb-1">
               <div className="content pt-5"> 
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
               <Row className="">
                   <Col lg={12}>
                   <h6 className="text-span"><b>Company Incorporation Required Details (Please Complete in Full)</b> </h6>
@@ -18,22 +51,35 @@ import { Col, Row } from 'reactstrap';
                 </Row>
                 <Row className="mt-4">
                   <Col lg={1}>
-                    <label>First Choice</label>
+                    <label>First Choice <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                  <input type="hidden"  className="form-control" onChange={(e) => {
+                                            setcfid (e.target.value);
+                                        }} name = "cfid" />
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setfirstchoice (e.target.value);
+                                        }} name = "firstchoice" ref={register({ required: true })}/>
+                                         {errors.firstchoice && <p className="redspan font-12">The field is Required</p>}
+
                   </Col>
                   <Col lg={1}>
-                    <label>Second Choice</label>
+                    <label>Second Choice <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setsecondchoice (e.target.value);
+                                        }} name = "secondchoice" ref={register({ required: true })}/>
+                                         {errors.secondchoice && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={1}>
-                    <label>Third Choice</label>
+                    <label>Third Choice <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setthirdchoice (e.target.value);
+                                        }} name = "thirdchoice" ref={register({ required: true })}/>
+                                         {errors.thirdchoice && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                 </Row>
                 <Row className="mt-4">
@@ -43,28 +89,42 @@ import { Col, Row } from 'reactstrap';
                 </Row>
                 <Row className="mt-4">
                   <Col lg={1}>
-                    <label>Principal Activity</label>
+                    <label>Principal Activity <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setprincipalactivity (e.target.value);
+                                        }} name = "principalactivity" ref={register({ required: true })}/>
+                                         {errors.principalactivity && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={1}>
                     <label>additional Wording</label>
                   </Col>
                   <Col lg={3}>
-                    <textarea type="text"  className="form-control"></textarea>
+                    <textarea type="text"  className="form-control" onChange={(e) => {
+                                            setadditionwording (e.target.value);
+                                        }} name = "additionwording"></textarea>
                   </Col>
                 </Row>
                 <Row className="mt-3 mb-3">
                   <Col lg={9}>
-                  <label><h6><b>Company Type (Select)</b> </h6><label>Please choose the appropriate company type and <span className="text-span"> click here</span> for more information</label></label>
+                  <label><h6><b>Company Type (Select) <span className="redspan">*</span></b> </h6><label>Please choose the appropriate company type and <span className="text-span"> click here</span> for more information</label></label>
                   </Col>
                   <Col lg={3}>                  
                   <div className="form-group">
-                  <select className="form-control">
-                    <option>Select</option>
+                  <select className="form-control" onChange={(e) => {
+                                            setcompanytype (e.target.value);
+                                        }} name = "companytype" ref={register({ required: true })}>
+                    <option value="">Select</option>
+                    <option value="Private Company Limited by Shares - LTD">Private Company Limited by Shares - LTD</option>
+                    <option value="Designated Activity Company - DAC">Designated Activity Company - DAC</option>
+                    <option value="Company Limited by Guarantee - CLG">Company Limited by Guarantee - CLG</option>
+                    <option value="Charity (CLG or DAC)">Charity (CLG or DAC)</option>
+                    <option value="Unlimited Company - ULC">Unlimited Company - ULC</option>
                   </select>
+                  {errors.companytype && <p className="redspan font-12">The field is Required</p>}
                   </div>
+
                   </Col>
                 </Row>
                 <Row className="pb-3">
@@ -72,7 +132,7 @@ import { Col, Row } from 'reactstrap';
                     <button type="submit" className="btn btn-primary">Submit</button> 
                   </Col>
                   <Col lg={6} className="text-right">
-                    <button type="button" className="btn btn-primary" onClick={this.props.onThirdSectionClick}>Next</button> 
+                    <button type="button" className="btn btn-primary" onClick={props.onThirdSectionClick}>Next</button> 
                   </Col>
                 </Row>
                 </form>
@@ -82,5 +142,5 @@ import { Col, Row } from 'reactstrap';
               
     )
   }
-}
+
 export default SecondSection;

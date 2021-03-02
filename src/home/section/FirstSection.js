@@ -1,9 +1,8 @@
 import React, {  useState } from 'react'
 import { Col, Row } from 'reactstrap';
-import axios from "axios"; 
 import { useForm } from "react-hook-form";
-import swal from 'sweetalert';
-
+import { vendorAction } from '../../_actions/section1.actions';
+import { useDispatch } from 'react-redux';
 const FirstSection= (props)=> {
   const [name, setname]=useState('');
   const [agree, setagree]=useState(0);
@@ -18,9 +17,9 @@ const FirstSection= (props)=> {
   const [phone, setphone]=useState('');
   const [email, setemail]=useState('');
   const [postal, setpostal]=useState('');
-  const { register, errors, handleSubmit, reset } = useForm();
+  const { register, errors, handleSubmit } = useForm();
 
-
+  const dispatch = useDispatch();
   const onSubmit = e => {
    // e.preventDefault();
     let reqBody = {
@@ -38,19 +37,8 @@ const FirstSection= (props)=> {
       email:email,
       postal:postal
     }
-    //console.log(reqBody);
-    axios
-            .post('http://www.apiats.somee.com/api/clsagree', reqBody)
-           
-            .then((response) => {
-               console.log(response.data);
-               if(response.data){
-                swal("Record Saved Successful", "You clicked the button!", "success");
-                
-                reset();
-               }
-            }).catch(err =>  swal(err, "You clicked the button!", "error"));
-        
+   
+    dispatch(vendorAction.createVendor(reqBody));        
     };
     return (
       <section className="light-section top-100" >

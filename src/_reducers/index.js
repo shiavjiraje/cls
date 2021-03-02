@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 import { authentication } from './auth.reducer';
-import { vendor } from './vendor.reducer';
+import { vendor } from './section1.reducer';
 
 
 const rootReducer = combineReducers({

@@ -8,18 +8,18 @@ export const userActions = {
 
 function login(username, password){
     return dispatch => {
-        let apiEndpoint = 'login';
+        let apiEndpoint = 'clslogin';
         let payload = {
             username: username,
             password: password
         }
         userService.post(apiEndpoint, payload)
         .then((response)=>{
-            console.log(response.data);
-            if (response.data.Data) {
+            console.log(response.data.status);
+            if (response.data.status===true) {
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('auth', response.data.auth);
-                dispatch(setUserDetails(response.data.Data));
+                dispatch(setUserDetails(response.data.data));
                 history.push('/home');
             }
         })

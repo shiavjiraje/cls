@@ -1,11 +1,56 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useForm } from "react-hook-form";
 import { Col, Row } from 'reactstrap';
-export class FourthSection extends Component {
-    render() {
+import { vendorAction } from '../../_actions/section4.actions';
+const FourthSection =(props)=> {
+  var i = 10;
+  const [cfid, setcfid]=useState(i);
+  const [name, setname]=useState('');
+  const [companyname, setcompanyname]=useState(0);
+  const [dob, setdob]=useState('');
+  const [companynumber, setcompanynumber]=useState('');
+  const [companydirector, setcompanydirector]=useState('');
+  const [companyregiseroffice, setcompanyregiseroffice]=useState('');
+  const [addressline1, setaddressline1]=useState('');
+  const [addressline2, setaddressline2]=useState('');
+  const [addressline3, setaddressline3]=useState('');
+  const [companyaddressline1, setcompanyaddressline1]=useState('');
+  const [companyaddressline2, setcompanyaddressline2]=useState('');
+  const [country, setcountry]=useState('');
+  const [companypostal, setcompanypostal]=useState('');
+  const [postal, setpostal]=useState('');
+  const[companycountry, setcompanycountry]=useState('');
+  const { register, errors, handleSubmit } = useForm();
+
+  const dispatch = useDispatch();
+  const onSubmit = e => {
+   // e.preventDefault();
+    let reqBody = {
+      cfid:cfid,
+      name: name,
+      companyname:companyname,
+      dob:dob,
+      companynumber:companynumber,
+      addressline1:addressline1,
+      addressline2:addressline2,
+      addressline3:addressline3,
+      companydirector:companydirector,
+      companyregiseroffice:companyregiseroffice,
+      companyaddressline1:companyaddressline1,
+      companyaddressline2:companyaddressline2,
+      country:country,
+      companypostal:companypostal,
+      postal:postal,
+      companycountry:companycountry,
+    }
+   
+    dispatch(vendorAction.createVendor(reqBody));        
+    };
         return (
             <section className="dark-section pb-1">
               <div className="content pt-5"> 
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
               <Row className="mt-3">
                   <Col lg={12}>
                   <h6 className="text-span"><b>Company Secretary Details </b> </h6><label><b>Every company is required to have a company secretary. If there is only one director a separate company secretary is required (Note 11)</b></label>
@@ -21,59 +66,82 @@ export class FourthSection extends Component {
                   </Row>
                 <Row className="mt-3">
                   <Col lg={3}>
-                    <label>Name</label>
+                    <label>Name <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                  <input type="hidden"  className="form-control" onChange={(e) => {
+                                            setcfid (e.target.value);
+                                        }} name = "cfid" />
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setname (e.target.value);
+                                        }} name = "name" ref={register({ required: true })}/>
+                                        {errors.name && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Company Name</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanyname (e.target.value);
+                                        }} name = "companyname"/>
                   </Col>
                 </Row>
                 <Row className="mt-4">
                   <Col lg={3}>
-                    <label>Date Of Birth</label>
+                    <label>Date Of Birth <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="date"  className="form-control"/>
+                    <input type="date"  className="form-control" onChange={(e) => {
+                                            setdob (e.target.value);
+                                        }} name = "dob" ref={register({ required: true })}/>
+                                        {errors.dob && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Company Number</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanynumber (e.target.value);
+                                        }} name = "companynumber"/>
                   </Col>
                 </Row>
                 <Row className="mt-4">                 
                   <Col lg={3}>
-                    <label>Address Line 1</label>
+                    <label>Address Line 1 <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setaddressline1 (e.target.value);
+                                        }} name = "addressline1" ref={register({ required: true })}/>
+                                        {errors.addressline1 && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Company Director <div>
 (signing on behalf of the Company)</div></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanydirector (e.target.value);
+                                        }} name = "companydirector"/>
                   </Col>
                 </Row>
                 <Row className="mt-4">                 
                   <Col lg={3}>
-                    <label>Address Line 2</label>
+                    <label>Address Line 2 <span className="redspan">*</span></label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setaddressline2 (e.target.value);
+                                        }} name = "addressline2" ref={register({ required: true })}/>
+                                        {errors.addressline2 && <p className="redspan font-12">The field is Required</p>}
                   </Col>
                   <Col lg={3}>
                     <label>Registered Office</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanyregiseroffice (e.target.value);
+                                        }} name = "companyregiseroffice"/>
                   </Col>
                 </Row>
                 <Row className="mt-4">                 
@@ -81,13 +149,17 @@ export class FourthSection extends Component {
                     <label>Address Line 3</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setaddressline3 (e.target.value);
+                                        }} name = "addressline3"/>
                   </Col>
                   <Col lg={3}>
                   <label>Address Line 1</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanyaddressline1 (e.target.value);
+                                        }} name = "companyaddressline1"/>
                   </Col>
                 </Row>
                 <Row className="mt-4">
@@ -95,13 +167,17 @@ export class FourthSection extends Component {
                     <label>Aircode/Pincode</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setpostal (e.target.value);
+                                        }} name = "postal"/>
                   </Col>
                   <Col lg={3}>
                     <label>Address Line 2</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanyaddressline2 (e.target.value);
+                                        }} name = "companyaddressline2"/>
                   </Col>
                 </Row>
                 <Row className="mt-4">
@@ -109,13 +185,17 @@ export class FourthSection extends Component {
                     <label>Country</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcountry (e.target.value);
+                                        }} name = "country"/>
                   </Col>
                   <Col lg={3}>
                   <label>Aircode/Pincode</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanypostal (e.target.value);
+                                        }} name = "companypostal"/>
                   </Col>
                 </Row>
                 <Row className="mt-4 mb-5">
@@ -129,7 +209,9 @@ export class FourthSection extends Component {
                   <label>Country</label>
                   </Col>
                   <Col lg={3}>
-                    <input type="text"  className="form-control"/>
+                    <input type="text"  className="form-control" onChange={(e) => {
+                                            setcompanycountry (e.target.value);
+                                        }} name = "companycountry"/>
                   </Col>
                 </Row>
                 <Row className="pb-3">
@@ -137,7 +219,7 @@ export class FourthSection extends Component {
                     <button type="submit" className="btn btn-primary">Submit</button> 
                   </Col>
                   <Col lg={6} className="text-right">
-                    <button type="button" className="btn btn-primary" onClick={this.props.onFiveSectionClick}>Next</button> 
+                    <button type="button" className="btn btn-primary" onClick={props.onFiveSectionClick}>Next</button> 
                   </Col>
                 </Row>
                 </form>
@@ -146,6 +228,6 @@ export class FourthSection extends Component {
               
         )
     }
-}
+
 
 export default FourthSection
