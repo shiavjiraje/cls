@@ -16,7 +16,7 @@ function getVendor(){
         let apiEndpoint = 'vendors';
         userService.get(apiEndpoint)
         .then((response)=>{
-            console.log(response);
+            console.log(response.data);
             dispatch(changeVendorsList(response.data.data));
         }).catch((err)=>{
             console.log("Error");
@@ -27,7 +27,7 @@ function getVendor(){
 
 function createVendor(payload){
     return dispatch => {
-        let apiEndpoint = 'clssecretary/';
+        let apiEndpoint = 'clsdirector/';
         userService.post(apiEndpoint, payload)
         .then((response)=>{
             dispatch(createUserInfo());

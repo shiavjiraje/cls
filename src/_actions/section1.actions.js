@@ -31,7 +31,8 @@ function createVendor(payload){
         userService.post(apiEndpoint, payload)
         .then((response)=>{
             dispatch(createUserInfo());
-            console.log(response.data);
+            console.log(response.data.cfid);
+            localStorage.setItem("apiData", JSON.stringify(response.data));
             if(response.data){
                 swal("Record Saved Successful", "You clicked the button!", "success");
                 
