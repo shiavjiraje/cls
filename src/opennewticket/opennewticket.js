@@ -66,12 +66,14 @@ function OpenNewTicket(){
 		
             console.log("log response on success");
             console.log(data);
+            localStorage.setItem("ticketNumber", JSON.stringify(data));
             swal("Ticket Created Successful", data, "success");
             
         }
     });
     };
-   
+    var getTicketNumbar = JSON.parse(localStorage.getItem("ticketNumber"));
+    //console.log(getTicketNumbar,"getTicketNumbargetTicketNumbar");
     return(
         <React.Fragment>
        <Navbarsupoort activeTicket={activeTicket}/>
