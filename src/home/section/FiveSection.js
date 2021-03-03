@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { vendorAction } from "../../_actions/section5.actions";
 const FiveSection = (props) => {
+  //const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(vendorAction.createVendor());
+
+    // eslint-disable-next-line
+  }, []);
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  console.log(getcfid.cfid,"section-5");
+
   const [otherdirectorship1, setotherdirectorship1]=useState({
       // cfid: i,
       // name: '',
@@ -176,7 +184,7 @@ const FiveSection = (props) => {
                 Name <span className="redspan">*</span>
               </label>
               <input
-                type="text"
+                type="hidden"
                 className="form-control"
                 //value={sectionstate.otherdirectorship1.cfid}
                 value={getcfid.cfid}
@@ -184,7 +192,7 @@ const FiveSection = (props) => {
                 name="cfid" id="cfid1"
               />
               <input
-                type="text"
+                type="hidden"
                 className="form-control"
                 value={getcfid.cfid}
                 //value={sectionstate.otherdirectorship2.cfid}
@@ -192,7 +200,7 @@ const FiveSection = (props) => {
                 name="cfid" id="cfid2"
               />
               <input
-                type="text"
+                type="hidden"
                 className="form-control"
                 value={getcfid.cfid}
                 //value={sectionstate.otherdirectorship3.cfid}

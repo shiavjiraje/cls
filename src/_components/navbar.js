@@ -76,7 +76,7 @@ class Navigation extends React.Component {
               <NavLink href="/home" className="">Document Management</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/home" className="">Customer Support</NavLink>
+              <NavLink href="/supportcenter" className="">Customer Support</NavLink>
             </NavItem>
             </Nav>
             <div className="col-md-3 pl-0" >
