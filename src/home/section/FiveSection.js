@@ -1,71 +1,30 @@
-import React, { useState,useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { vendorAction } from "../../_actions/section5.actions";
+//import { createVendorinfo } from "../../_actions/section1.actions";
+import { createVendor } from "../../_actions/section5.actions";
 const FiveSection = (props) => {
-  //const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(vendorAction.createVendor());
+  
+  // let getcfid = useSelector((state) => state.vendor.getcfid || []);
+  // useEffect(() => {
+  //   dispatch(createVendorinfo());
 
-    // eslint-disable-next-line
-  }, []);
+  //   // eslint-disable-next-line
+  // }, []);
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  console.log(getcfid.cfid,"section-5");
-
+  console.log("rollist backend role -5", getcfid.cfid);
+  
+  //console.log(getcfid.cfid,"section-5");
   const [otherdirectorship1, setotherdirectorship1]=useState({
-      // cfid: i,
-      // name: '',
-      // occupation: '',
-      // dob: '',
-      // addressline1: '',
-      // addressline2: '',
-      // addressline3: '',
-      // postal: '',
-      // country: '',
-      // nationality: '',
-      // otherdirectorship1: '',
-      // otherdirectorship2: '',
-      // otherdirectorship3: '',
-      // restricted: '',
-      // numberofshare: '',
-      // beneficialowner: '',
+    cfid: getcfid.cfid
     });
     const [otherdirectorship2, setotherdirectorship2]=useState({
-      // cfid: i,
-      // name: '',
-      // occupation: '',
-      // dob: '',
-      // addressline1: '',
-      // addressline2: '',
-      // addressline3: '',
-      // postal: '',
-      // country: '',
-      // nationality: '',
-      // otherdirectorship1: '',
-      // otherdirectorship2: '',
-      // otherdirectorship3: '',
-      // restricted: '',
-      // numberofshare: '',
-      // beneficialowner: '',
-    });
+      cfid: getcfid.cfid
+      });
     const [otherdirectorship3, setotherdirectorship3]=useState({
-      // cfid: i,
-      // name: '',
-      // occupation: '',
-      // dob: '',
-      // addressline1: '',
-      // addressline2: '',
-      // addressline3: '',
-      // postal: '',
-      // country: '',
-      // nationality: '',
-      // otherdirectorship1: '',
-      // otherdirectorship2: '',
-      // otherdirectorship3: '',
-      // restricted: '',
-      // numberofshare: '',
-      // beneficialowner: '',
+      cfid: getcfid.cfid
+      
   });
 
   const { register, errors, handleSubmit } = useForm();
@@ -76,64 +35,8 @@ const FiveSection = (props) => {
 // };
   const dispatch = useDispatch();
   const onSubmit = (e) => {
-    // e.preventDefault();
-    // console.log(sectionstate, typeof sectionstate);
-    // let otherdirectorship1 = {
-    //   cfid: sectionstate.otherdirectorship1.cfid,
-    //   name: sectionstate.otherdirectorship1.name,
-    //   occupation: sectionstate.otherdirectorship1.occupation,
-    //   dob: sectionstate.otherdirectorship1.dob,
-    //   addressline1: sectionstate.otherdirectorship1.addressline1,
-    //   addressline2: sectionstate.otherdirectorship1.addressline2,
-    //   addressline3: sectionstate.otherdirectorship1.addressline3,
-    //   postal: sectionstate.otherdirectorship1.postal,
-    //   country: sectionstate.otherdirectorship1.country,
-    //   nationality: sectionstate.otherdirectorship1.nationality,
-    //   otherdirectorship1: sectionstate.otherdirectorship1.otherdirectorship1,
-    //   otherdirectorship2: sectionstate.otherdirectorship1.otherdirectorship2,
-    //   otherdirectorship3: sectionstate.otherdirectorship1.otherdirectorship3,
-    //   restricted: sectionstate.otherdirectorship1.restricted,
-    //   numberofshare: sectionstate.otherdirectorship1.numberofshare,
-    //   beneficialowner: sectionstate.otherdirectorship1.beneficialowner,
-    // };
-    // let otherdirectorship2 = {
-    //   cfid: sectionstate.otherdirectorship2.cfid,
-    //   name: sectionstate.otherdirectorship2.name,
-    //   occupation: sectionstate.otherdirectorship2.occupation,
-    //   dob: sectionstate.otherdirectorship2.dob,
-    //   addressline1: sectionstate.otherdirectorship2.addressline1,
-    //   addressline2: sectionstate.otherdirectorship2.addressline2,
-    //   addressline3: sectionstate.otherdirectorship2.addressline3,
-    //   postal: sectionstate.otherdirectorship2.postal,
-    //   country: sectionstate.otherdirectorship2.country,
-    //   nationality: sectionstate.otherdirectorship2.nationality,
-    //   otherdirectorship1: sectionstate.otherdirectorship2.otherdirectorship1,
-    //   otherdirectorship2: sectionstate.otherdirectorship2.otherdirectorship2,
-    //   otherdirectorship3: sectionstate.otherdirectorship2.otherdirectorship3,
-    //   restricted: sectionstate.otherdirectorship2.restricted,
-    //   numberofshare: sectionstate.otherdirectorship2.numberofshare,
-    //   beneficialowner: sectionstate.otherdirectorship2.beneficialowner,
-    // };
-    // let otherdirectorship3 = {
-    //   cfid: sectionstate.otherdirectorship3.cfid,
-    //   name: sectionstate.otherdirectorship3.name,
-    //   occupation: sectionstate.otherdirectorship3.occupation,
-    //   dob: sectionstate.otherdirectorship3.dob,
-    //   addressline1: sectionstate.otherdirectorship3.addressline1,
-    //   addressline2: sectionstate.otherdirectorship3.addressline2,
-    //   addressline3: sectionstate.otherdirectorship3.addressline3,
-    //   postal: sectionstate.otherdirectorship3.postal,
-    //   country: sectionstate.otherdirectorship3.country,
-    //   nationality: sectionstate.otherdirectorship3.nationality,
-    //   otherdirectorship1: sectionstate.otherdirectorship3.otherdirectorship1,
-    //   otherdirectorship2: sectionstate.otherdirectorship3.otherdirectorship2,
-    //   otherdirectorship3: sectionstate.otherdirectorship3.otherdirectorship3,
-    //   restricted: sectionstate.otherdirectorship3.restricted,
-    //   numberofshare: sectionstate.otherdirectorship3.numberofshare,
-    //   beneficialowner: sectionstate.otherdirectorship3.beneficialowner,
-    // };
     console.log(otherdirectorship1,otherdirectorship2,otherdirectorship3);
-    dispatch(vendorAction.createVendor([otherdirectorship1,otherdirectorship2,otherdirectorship3]));
+    dispatch(createVendor([otherdirectorship1,otherdirectorship2,otherdirectorship3]));
   };
   const onChange = (set, field, value) => {
     set(state => ({
@@ -183,8 +86,8 @@ const FiveSection = (props) => {
               <label>
                 Name <span className="redspan">*</span>
               </label>
-              <input
-                type="hidden"
+              {/* <input
+                type="text"
                 className="form-control"
                 //value={sectionstate.otherdirectorship1.cfid}
                 value={getcfid.cfid}
@@ -192,27 +95,28 @@ const FiveSection = (props) => {
                 name="cfid" id="cfid1"
               />
               <input
-                type="hidden"
+                type="text"
                 className="form-control"
                 value={getcfid.cfid}
                 //value={sectionstate.otherdirectorship2.cfid}
-                onChange={event => onChange(setotherdirectorship2, "cfid", event.target.value)}
+                
+                //onChange={event => onChange(setotherdirectorship2, "cfid", event.target.value)}
                 name="cfid" id="cfid2"
               />
               <input
-                type="hidden"
+                type="text"
                 className="form-control"
                 value={getcfid.cfid}
                 //value={sectionstate.otherdirectorship3.cfid}
-                onChange={event => onChange(setotherdirectorship3, "cfid", event.target.value)}
+                //onChange={event => onChange(setotherdirectorship3, "cfid", event.target.value)}
                 name="cfid" id="cfid3"
               />
-              <br/>
+              <br/> */}
               <input
                 type="text"
                 className="form-control"
                 //value={sectionstate.otherdirectorship1.name}
-                onChange={event => onChange(setotherdirectorship1, "name", event.target.value)}
+                //onChange={event => onChange(setotherdirectorship1, "name", event.target.value)}
                 name="name" id="name1"
                 ref={register({ required: true })}
               />

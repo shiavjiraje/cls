@@ -4,9 +4,9 @@ import Navbarsupoort from '../_components/navbarsupoort';
 import { Col, Row } from 'reactstrap';
 import TextEditor from '../_components/textEditor';
 import Footer from '../_components/footer';
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
-import { vendorAction } from "../_actions/opennewticket.actions";
+//import { vendorAction } from "../_actions/opennewticket.actions";
 import $ from 'jquery';
 import swal from "sweetalert";
 function OpenNewTicket(){
@@ -23,7 +23,7 @@ function OpenNewTicket(){
     const [initialstatus, setinitialstatus]=useState(open)
     const { register, errors, reset, handleSubmit } = useForm();
 
-    const dispatch = useDispatch();
+  //  const dispatch = useDispatch();
     const onSubmit = (e) => {
       // e.preventDefault();
       // let reqBody = {
@@ -72,7 +72,7 @@ function OpenNewTicket(){
         }
     });
     };
-    var getTicketNumbar = JSON.parse(localStorage.getItem("ticketNumber"));
+    //var getTicketNumbar = JSON.parse(localStorage.getItem("ticketNumber"));
     //console.log(getTicketNumbar,"getTicketNumbargetTicketNumbar");
     return(
         <React.Fragment>

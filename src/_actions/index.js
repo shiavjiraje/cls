@@ -5,3 +5,4 @@ export * from './section3.actions';
 export * from './section4.actions';
 export * from './section5.actions';
 export * from './opennewticket.actions';
+export * from './viewticketthread';

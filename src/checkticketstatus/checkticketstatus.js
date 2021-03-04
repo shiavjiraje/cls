@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import Navbarsupoort from '../_components/navbarsupoort';
 import { Col, Row } from 'reactstrap';
 import Footer from '../_components/footer';
+import axios from 'axios';
 function CheckTicketStatus(){
-    const activeTickitStatus ="active "
+    const activeTickitStatus ="active ";
+    const [data, setData] = useState({ hits: [] });
+  const [email, setemail] = useState('');
+  const [ticketno, setticketno] = useState('');
+  const [search, setSearch] = useState('');
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        `http://www.apiats.somee.com/api/clsreplyticket?email=${email}&ticketno=${ticketno}`,
+      );
+ 
+      setData(result.data);
+     
+    };
+ 
+    fetchData();
+  }, [email,ticketno]);
+  console.log(data);
     return(
         <React.Fragment>
        <Navbarsupoort activeTickitStatus={activeTickitStatus}/>
@@ -30,7 +48,9 @@ function CheckTicketStatus(){
                   <label>Email Address</label>
                   </Col>
                   <Col lg={3}>
-                  <input type="text" className="form-control"/>
+                  <input type="text" className="form-control"
+                   value={email}
+                   onChange={event => setemail(event.target.value)}/>
                   </Col>
                   <Col lg={3}>
                   <label>Have an account with us ? <a className="text-span" href="/">Sign in</a></label>
@@ -41,12 +61,13 @@ function CheckTicketStatus(){
                   <label>Ticket Number</label>
                   </Col>
                   <Col lg={3}>
-                  <input type="text" className="form-control" placeholder="e.g 562894"/>
+                  <input type="text" value={ticketno}
+                   onChange={event => setticketno(event.target.value)} className="form-control" placeholder="e.g 562894"/>
                   </Col>
               </Row>
                 <Row className="mt-5 pb-5">
                   <Col>
-                  <button className="btn btn-primary">Email Access Link</button> 
+                  <button type="button" onClick={() => setSearch(email,ticketno)} className="btn btn-primary">Email Access Link</button> 
                   </Col>
                 </Row>           
               </div>

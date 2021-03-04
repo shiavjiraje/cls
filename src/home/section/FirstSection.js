@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Row } from "reactstrap";
 import { useForm } from "react-hook-form";
-import { vendorAction } from "../../_actions/section1.actions";
+import { createVendorinfo } from "../../_actions/section1.actions";
 import { useDispatch } from "react-redux";
 const FirstSection = (props) => {
   const [name, setname] = useState("");
@@ -18,7 +18,7 @@ const FirstSection = (props) => {
   const [email, setemail] = useState("");
   const [postal, setpostal] = useState("");
   const { register, errors, handleSubmit } = useForm();
-  localStorage.setItem("apiData", JSON.stringify("10"));
+  localStorage.setItem("cfid", JSON.stringify("10"));
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     // e.preventDefault();
@@ -38,7 +38,7 @@ const FirstSection = (props) => {
       postal: postal,
     };
 
-    dispatch(vendorAction.createVendor(reqBody));
+    dispatch(createVendorinfo(reqBody));
   };
   return (
     <section className="light-section top-100">

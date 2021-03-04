@@ -70,6 +70,9 @@ class Navbarsupport extends React.Component {
             <NavItem>
               <NavLink href="/ticketstatus" className={this.props.activeTickitStatus}>Check Ticket Status</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/viewticketthread" className={this.props.activeTickitThread}>View Ticket Thread</NavLink>
+            </NavItem>
             </Nav>
             <div className="col-md-3 text-right" >
             <Nav className="" navbar>

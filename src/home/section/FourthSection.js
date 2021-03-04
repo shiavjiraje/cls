@@ -1,12 +1,21 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { vendorAction } from "../../_actions/section4.actions";
+//import { createVendorinfo } from "../../_actions/section1.actions";
+import { createVendor } from "../../_actions/section4.actions";
 import axios from "axios";
 const FourthSection = (props) => {
  // var i = 10;
+//  let getcfid = useSelector((state) => state.vendor.getcfid || []);
+//  useEffect(() => {
+//    dispatch(createVendorinfo());
+
+//    // eslint-disable-next-line
+//  }, []);
+ //console.log("rollist backend role -4", getcfid.cfid);
  var getcfid = JSON.parse(localStorage.getItem("apiData"));
+ console.log("rollist backend role -4", getcfid.cfid);
 // console.log("fourth section", getcfid.cfid);
   const [cfid, setcfid] = useState(getcfid.cfid);
   const [name, setname] = useState("");
@@ -48,7 +57,7 @@ const FourthSection = (props) => {
       companycountry: companycountry,
     };
 
-    dispatch(vendorAction.createVendor(reqBody));
+    dispatch(createVendor(reqBody));
   };
   const handlePdfSubmit = () => {
     axios

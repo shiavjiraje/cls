@@ -2,18 +2,22 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { vendorAction } from "../../_actions/section3.actions";
+//import { createVendorinfo } from "../../_actions/section1.actions";
+import { createVendor } from "../../_actions/section3.actions";
 
 const ThirdSection = (props) => {
   //let roleList = useSelector((state) => state.vendor.createid || []);
+  //let getcfid = useSelector((state) => state.vendor.getcfid || []);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(vendorAction.createVendor());
+  // useEffect(() => {
+  //   dispatch(createVendorinfo());
 
-    // eslint-disable-next-line
-  }, []);
+  //   // eslint-disable-next-line
+  // }, []);
+ 
   //console.log("rollist", roleList.createid);
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  console.log("rollist backend role -3", getcfid.cfid);
   //var i = 10;
   
   const [cfid, setcfid] = useState(getcfid.cfid);
@@ -32,7 +36,7 @@ const ThirdSection = (props) => {
       authorisedsharecapital: authorisedsharecapital,
     };
 
-    dispatch(vendorAction.createVendor(reqBody));
+    dispatch(createVendor(reqBody));
   };
   return (
     <section className="light-section pt-5">

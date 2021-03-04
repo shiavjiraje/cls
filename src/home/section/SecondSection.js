@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { vendorAction } from "../../_actions/section2.actions";
+//import { createVendorinfo } from "../../_actions/section1.actions";
+import { createVendor } from "../../_actions/section2.actions";
 const SecondSection = (props) => {
- // let roleList = useSelector((state) => state.vendor.vendor || []);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(vendorAction.createVendor());
+//  let getcfid = useSelector((state) => state.vendor.getcfid || []);
+   const dispatch = useDispatch();
+//   useEffect(() => {
+//     dispatch(createVendorinfo());
 
-    // eslint-disable-next-line
-  }, []);
-  //console.log("rollist", roleList.cfid);
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-
+//     // eslint-disable-next-line
+//   }, []);
+ 
+ var getcfid = JSON.parse(localStorage.getItem("apiData"));
+ console.log("rollist backend role -2", getcfid.cfid);
 // console.log("local storage", getcfid.cfid);
   //var i = 10;
   const [cfid, setcfid] = useState(getcfid.cfid);
@@ -36,7 +37,7 @@ const SecondSection = (props) => {
       companytype: companytype,
     };
 
-    dispatch(vendorAction.createVendor(reqBody));
+    dispatch(createVendor(reqBody));
   };
   return (
     <section className="dark-section pb-1">

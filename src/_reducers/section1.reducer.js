@@ -1,11 +1,13 @@
-const initialState = { anchor: 'left',
+const initialState = { 
+    anchor: 'left',
     vendor: [],
     open: false,
     id: '',  
     name: '',
     mobile: '',
     phone_number: '',
-    address: ''
+    address: '',
+    getcfid:'',
  };
 
 
@@ -16,6 +18,11 @@ export function vendor(state = initialState, action) {
             ...state,
             vendor: action.vendor
             };
+            case 'USER_CREATED_SUCCESSFULLY':
+                return {
+                ...state,
+                getcfid: action.getcfid
+                };
         case 'VENDOR_DETAIL':
             return {
                 ...state,

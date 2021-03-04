@@ -14,6 +14,8 @@ import { Redirect } from 'react-router-dom';
 import OpenNewTicket from './opennewticket/opennewticket';
 import SupportCenterHome from './supportcenterhome/supportcenterhome';
 import CheckTicketStatus from './checkticketstatus/checkticketstatus';
+import ViewTicketThread from './viewticketthread/viewticketthread';
+import ViewSingleTicket from './viewsingleticket/viewsingleticket';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -46,6 +48,8 @@ function App() {
                 <Route exact path='/opennewticket' component={OpenNewTicket} />
                 <Route exact path='/supportcenter' component={SupportCenterHome} />
                 <Route exact path='/ticketstatus' component={CheckTicketStatus} />
+                <Route exact path='/viewticketthread' component={ViewTicketThread} />
+                <Route exact path='/viewsingleticket' component={ViewSingleTicket} />
               </Switch>
           </div>
         </Router>
