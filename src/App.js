@@ -3,19 +3,19 @@ import './App.css';
 import { Router, Switch, Route} from 'react-router-dom';
 //import { Vendor } from './vendors/vendor.component';
 //import { AddVendor } from './vendors/addvendor.component'
-import  { Login } from './login/';
-import { Home } from './home/';
+import  { Login } from './views/login/';
+import { Home } from './views/home/';
 import { history } from './_helpers';
 //import { PrivateRoute } from './_components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/assets/css/custom.css'
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import OpenNewTicket from './opennewticket/opennewticket';
-import SupportCenterHome from './supportcenterhome/supportcenterhome';
-import CheckTicketStatus from './checkticketstatus/checkticketstatus';
-import ViewTicketThread from './viewticketthread/viewticketthread';
-import ViewSingleTicket from './viewsingleticket/viewsingleticket';
+import OpenNewTicket from './views/opennewticket/opennewticket';
+import SupportCenterHome from './views/supportcenterhome/supportcenterhome';
+import CheckTicketStatus from './views/checkticketstatus/checkticketstatus';
+import ViewTicketThread from './views/viewticketthread/viewticketthread';
+import ViewSingleTicket from './views/viewsingleticket/viewsingleticket';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (

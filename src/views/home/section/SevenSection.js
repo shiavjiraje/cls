@@ -1,0 +1,583 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
+import { Col, Row } from "reactstrap";
+import { createVendor } from "../../../_actions/section7.actions";
+const SevenSection = (props) => {
+  var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  const [otherdirectorship1, setotherdirectorship1] = useState({
+    cfid: getcfid.cfid,
+  });
+  const [otherdirectorship2, setotherdirectorship2] = useState({
+    cfid: getcfid.cfid,
+  });
+  const [otherdirectorship3, setotherdirectorship3] = useState({
+    cfid: getcfid.cfid,
+  });
+
+  const { handleSubmit } = useForm();
+
+  const dispatch = useDispatch();
+  const onSubmit = (e) => {
+    console.log(otherdirectorship1, otherdirectorship2, otherdirectorship3);
+    dispatch(
+      createVendor([otherdirectorship1, otherdirectorship2, otherdirectorship3])
+    );
+  };
+  const onChange = (set, field, value) => {
+    set((state) => ({
+      ...state,
+      [field]: value,
+    }));
+  };
+  return (
+    <section className="light-section pb-1">
+      <div className="content pt-5">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Row className="mt-3">
+            <Col lg={12}>
+              <h6 className="text-span">
+                <b>Subscriber Details (Individual) </b>{" "}
+              </h6>
+              <label>
+                The subscribers are the first shareholders / members of the
+                company and at least one is required (Note 13)
+                <p>
+                  <b>NOTE:</b> If a Subscriber is a Corporate Body only please
+                  enter N/A for Subscriber details (individual) and complete
+                  Subscriber Details (Corporate)
+                </p>
+              </label>
+            </Col>
+          </Row>
+          <Row className="mt-3">
+            <Col lg={4}>
+              <label className="text-span">
+                <b>Subscriber 1</b>
+              </label>
+            </Col>
+            <Col lg={4}>
+              <label className="text-span">
+                <b>Subscriber 2</b>
+              </label>
+            </Col>
+            <Col lg={4}>
+              <label className="text-span">
+                <b>Subscriber 3</b>
+              </label>
+            </Col>
+          </Row>
+          <Row className="mt-3">
+            <Col lg={4}>
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "name", event.target.value)
+                }
+                name="name"
+                id="name1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "name", event.target.value)
+                }
+                name="name"
+                id="name2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "name", event.target.value)
+                }
+                name="name"
+                id="name3"
+              />
+            </Col>
+          </Row>
+
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Aircode/Pincode</label>
+              <input
+                type="number"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Aircode/Pincode</label>
+              <input
+                type="number"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Aircode/Pincode</label>
+              <input
+                type="number"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "country", event.target.value)
+                }
+                name="country"
+                id="country1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "country", event.target.value)
+                }
+                name="country"
+                id="country2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "country", event.target.value)
+                }
+                name="country"
+                id="country3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col lg={4}>
+              <label>Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare1"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare2"
+              />
+            </Col>
+            <Col lg={4}>
+              <label>Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4 pb-5">
+            <Col lg={4}>
+              <label>
+                Is the Subscriber the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner1"
+              ><option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={4}>
+              <label>
+                Is the Subscriber the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner2"
+              ><option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={4}>
+              <label>
+                Is the Subscriber the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner3"
+              ><option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+          </Row>
+          <Row className="pb-3">
+          <Col lg={4} className="text-right">
+            </Col>
+            <Col lg={4} className="text-center">
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </Col>
+            <Col lg={4} className="text-right">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={props.onEightSectionClick}
+              >
+                Next
+              </button>
+            </Col>
+          </Row>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default SevenSection;

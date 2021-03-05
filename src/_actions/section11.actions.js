@@ -1,17 +1,13 @@
 import { userService } from '../_services';
-//import { history } from '../_helpers';
-//import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
 
-
-export const createVendorinfo=(payload)=>{
+export const createVendor=(payload)=>{
     return dispatch => {
-        let apiEndpoint = 'clsagree/';
+        let apiEndpoint = 'clsbenefeficialowner/';
         userService.post(apiEndpoint, payload)
         .then((response)=>{
-            dispatch(createUserInfo(response.data));
-            console.log(response.data.cfid);
-            localStorage.setItem("apiData", JSON.stringify(response.data));
+            dispatch(createUserInfo());
+            console.log(response.data);
             if(response.data){
                 swal("Record Saved Successful", "You clicked the button!", "success");
                 
@@ -21,9 +17,10 @@ export const createVendorinfo=(payload)=>{
     }
 }
 
-export function createUserInfo(getcfid){
+
+export function createUserInfo(createid){
     return{
-        type: "USER_CREATED_SUCCESSFULLY", 
-        getcfid:getcfid
+        type: "USER_CREATED_SUCCESSFULLY",
+        payload:createid
     }
 }

@@ -13,10 +13,10 @@ function request(endpoint,method,data,headers={},params=''){
         method: method,
         url: config.baseUrl+endpoint
       }
-      if (method == 'POST') {
+      if (method === 'POST') {
         methodparams.data = data
       }
-      if (params != '') {
+      if (params !== '') {
           methodparams.url += `?${params}`;
       }
       if (Object.keys(headers).length > 0) {
