@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section4.actions";
-import axios from "axios";
+//import axios from "axios";
 const FourthSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
   const [cfid, setcfid] = useState(getcfid.cfid);

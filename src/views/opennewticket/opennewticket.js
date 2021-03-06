@@ -18,7 +18,7 @@ function OpenNewTicket() {
   const [extension, setextension] = useState("");
   const [helptopics, sethelptopics] = useState("");
   const [issuesummary, setissuesummary] = useState("");
-  const [details, setdetails] = useState("");
+  const [details] = useState("");
   const [initialstatus, setinitialstatus] = useState(open);
   const { register, errors, reset, handleSubmit } = useForm();
 

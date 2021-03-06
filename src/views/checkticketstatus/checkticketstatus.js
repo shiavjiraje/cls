@@ -8,7 +8,7 @@ function CheckTicketStatus() {
   const [data, setData] = useState({ hits: [] });
   const [email, setemail] = useState("");
   const [ticketno, setticketno] = useState("");
-  const [search, setSearch] = useState("");
+  const [setSearch] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(

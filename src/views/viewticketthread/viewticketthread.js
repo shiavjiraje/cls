@@ -229,16 +229,16 @@ const ViewTicketThread = () => {
                            <div className="light-section">
                            <Row>
                                 <Col lg={1}>
-                                    <div className="chat-icon"><h1><i class="fa fa-user" aria-hidden="true"></i></h1></div>
+                                <div className="chat-icon"><div className="h1"><i className="fa fa-user" aria-hidden="true"></i></div></div>
                                 </Col>
                                 <Col lg={11}>
-                                <div class="card card-post">
-                                <div class="card-header bgprimary">{viewticketdetails.ticket_number} Posted {viewticketdetails.ticket_createdate}</div>
-                                <div class="card-body">Content</div>
+                                <div className="card card-post">
+                                <div className="card-header bgprimary">{viewticketdetails.ticket_number} Posted {viewticketdetails.ticket_createdate}</div>
+                                <div className="card-body">Content</div>
                                 </div>
                                 <Col lg={12} className="mt-3">
-                                    <i class="fa fa-pencil-square-o text-span font-18" aria-hidden="true"></i><label className="createdby"> Created By</label>
-                                    <i class="fa fa-user-o text-span font-18 ml-5" aria-hidden="true"></i><label className="ml-2">{viewticketdetails.ticket_phoneno}</label>
+                                    <i className="fa fa-pencil-square-o text-span font-18" aria-hidden="true"></i><label className="createdby"> Created By</label>
+                                    <i className="fa fa-user-o text-span font-18 ml-5" aria-hidden="true"></i><label className="ml-2">{viewticketdetails.ticket_phoneno}</label>
                                     <label className="createdby ml-2"> {viewticketdetails.ticket_createdate}</label>
                                 </Col>
                                 </Col>
@@ -246,9 +246,9 @@ const ViewTicketThread = () => {
                                 <Row>
                                
                                 <Col lg={11}>
-                                <div class="card card-replay">
-                                <div class="card-header bgprimary">{viewticketdetails.ticket_number} Posted {viewticketdetails.ticket_createdate}</div>
-                                <div class="card-body">Content</div>
+                                <div className="card card-replay">
+                                <div className="card-header bgprimary">{viewticketdetails.ticket_number} Posted {viewticketdetails.ticket_createdate}</div>
+                                <div className="card-body">Content</div>
                                 </div>
                                 <Col lg={12} className="mt-3">
                                    <label className="createdby"> Closed By</label>
@@ -259,7 +259,7 @@ const ViewTicketThread = () => {
                                 </Col>
                                 </Col>
                                 <Col lg={1}>
-                                    <div className="chat-icon"><h1><i class="fa fa-user" aria-hidden="true"></i></h1></div>
+                                <div className="chat-icon"><div className="h1"><i className="fa fa-user" aria-hidden="true"></i></div></div>
                                 </Col>
                                 </Row>
                             </div>

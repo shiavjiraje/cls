@@ -69,26 +69,26 @@ const ViewSingleTicket = () => {
                   <Col lg={1}>
                     <div className="chat-icon">
                       <h1>
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i className="fa fa-user" aria-hidden="true"></i>
                       </h1>
                     </div>
                   </Col>
                   <Col lg={11}>
-                    <div class="card">
-                      <div class="card-header bgprimary">
+                    <div className="card">
+                      <div className="card-header bgprimary">
                         {viewticketdetails.number} Posted{" "}
                         {viewticketdetails.createdate}
                       </div>
-                      <div class="card-body">Content</div>
+                      <div className="card-body">Content</div>
                     </div>
                     <Col lg={12} className="mt-3">
                       <i
-                        class="fa fa-pencil-square-o text-span font-18"
+                        className="fa fa-pencil-square-o text-span font-18"
                         aria-hidden="true"
                       ></i>
                       <label className="createdby"> Created By</label>
                       <i
-                        class="fa fa-user-o text-span font-18 ml-5"
+                        className="fa fa-user-o text-span font-18 ml-5"
                         aria-hidden="true"
                       ></i>
                       <label className="ml-2">
@@ -103,12 +103,12 @@ const ViewSingleTicket = () => {
                 </Row>
                 <Row>
                   <Col lg={11}>
-                    <div class="card card-replay">
-                      <div class="card-header bgprimary">
+                    <div className="card card-replay">
+                      <div className="card-header bgprimary">
                         {viewticketdetails.number} Posted{" "}
                         {viewticketdetails.createdate}
                       </div>
-                      <div class="card-body">Content</div>
+                      <div className="card-body">Content</div>
                     </div>
                     <Col lg={12} className="mt-3">
                       <label className="createdby"> Closed By</label>
@@ -127,7 +127,7 @@ const ViewSingleTicket = () => {
                   <Col lg={1}>
                     <div className="chat-icon">
                       <h1>
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i className="fa fa-user" aria-hidden="true"></i>
                       </h1>
                     </div>
                   </Col>
