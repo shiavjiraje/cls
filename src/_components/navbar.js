@@ -67,7 +67,7 @@ class Navigation extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar className="col-9">
             <Nav className="col-md-9 homenavbar" navbar>
             <NavItem>
-              <NavLink href="/home" className="left-border">Teamwork CRM</NavLink>
+              <NavLink href="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/crm&client_id=4f1c06ed36fa06c273b0d1ae4a979d013d901c55" target="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/crm&client_id=4f1c06ed36fa06c273b0d1ae4a979d013d901c55" className={this.props.activeCrm +'left-border'}>Teamwork CRM</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/home" className="">Project Management</NavLink>

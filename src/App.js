@@ -16,6 +16,7 @@ import SupportCenterHome from './views/supportcenterhome/supportcenterhome';
 import CheckTicketStatus from './views/checkticketstatus/checkticketstatus';
 import ViewTicketThread from './views/viewticketthread/viewticketthread';
 import ViewSingleTicket from './views/viewsingleticket/viewsingleticket';
+import Crm from './views/crm/crm';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -50,6 +51,7 @@ function App() {
                 <Route exact path='/ticketstatus' component={CheckTicketStatus} />
                 <Route exact path='/viewticketthread' component={ViewTicketThread} />
                 <Route exact path='/viewsingleticket' component={ViewSingleTicket} />
+                <Route exact path='/crm' component={Crm} />
               </Switch>
           </div>
         </Router>
