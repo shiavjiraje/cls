@@ -3,29 +3,56 @@ import Navbarsupoort from "../../_components/navbarsupoort";
 import { Col, Row } from "reactstrap";
 import Footer from "../../_components/footer";
 import axios from "axios";
+import ViewTicketReplay from "./viewticketreplay";
 function CheckTicketStatus() {
   const activeTickitStatus = "active ";
-  const [data, setData] = useState({ hits: [] });
+  //const [data, setData] = useState({ hits: [] });
   const [email, setemail] = useState("");
   const [ticketno, setticketno] = useState("");
-  const [setSearch] = useState("");
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        `http://www.apiats.somee.com/api/clsreplyticket?email=${email}&ticketno=${ticketno}`
-      );
+  const [search, setSearch] = useState("");
+  const [showTicketGrid, showTicketDetails] = useState(true);
+  const [ticketDetails, setticketDetails] = useState([]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await axios(
+  //       `http://www.apiats.somee.com/api/clsreplyticket?email=${email}&ticketno=${ticketno}`
+  //     );
 
-      setData(result.data);
-    };
+  //     setticketDetails(result.data);
+  //     if(result.data){
+  //       showTicketDetails(!showTicketGrid);
+  //     }
+  //   };
 
-    fetchData();
-  }, [email, ticketno]);
-  console.log(data);
+  //   fetchData();
+  // }, [email, ticketno]);
+  const handleTicketStstusForm = (e) => {
+    e.preventDefault();
+  var reqBody={
+    email:email,
+    ticketno:ticketno
+   }
+   // console.log(reqBody);
+    axios
+        .get(`http://www.apiats.somee.com/api/clsreplyticket?email=${email}&ticketno=${ticketno}`,reqBody)
+
+        .then((response) => {
+          setticketDetails(response.data);
+          if(response.data){
+            showTicketDetails(!showTicketGrid);
+          }
+        });
+};
+  console.log(ticketDetails);
+  function gotobackpage(){
+    showTicketDetails(!showTicketGrid);
+ }
+ let viewticketdetails = ticketDetails;
   return (
     <React.Fragment>
       <Navbarsupoort activeTickitStatus={activeTickitStatus} />
-
-      <section className="light-section pb-5 mt-5">
+      {showTicketGrid ? <React.Fragment>
+        <section className="light-section pb-5 mt-5">
         <div className="content pt-5">
           <Row className="mt-5">
             <Col lg={12}>
@@ -43,6 +70,7 @@ function CheckTicketStatus() {
           </Row>
         </div>
       </section>
+      <form onSubmit={handleTicketStstusForm}>
       <section className="dark-section pt-5">
         <div className="content">
           <Row>
@@ -60,7 +88,7 @@ function CheckTicketStatus() {
               <input
                 type="text"
                 className="form-control"
-                value={email}
+                //value={email}
                 onChange={(event) => setemail(event.target.value)}
               />
             </Col>
@@ -80,7 +108,7 @@ function CheckTicketStatus() {
             <Col lg={3}>
               <input
                 type="text"
-                value={ticketno}
+                //value={ticketno}
                 onChange={(event) => setticketno(event.target.value)}
                 className="form-control"
                 placeholder="e.g 562894"
@@ -90,8 +118,8 @@ function CheckTicketStatus() {
           <Row className="mt-5 pb-5">
             <Col>
               <button
-                type="button"
-                onClick={() => setSearch(email, ticketno)}
+                type="submit"
+                //onClick={() => setSearch(email, ticketno)}
                 className="btn btn-primary"
               >
                 Email Access Link
@@ -100,6 +128,7 @@ function CheckTicketStatus() {
           </Row>
         </div>
       </section>
+      </form>
       <section className="light-section pb-3 pt-3 ">
         <div className="content">
           <Row className="">
@@ -115,6 +144,12 @@ function CheckTicketStatus() {
           </Row>
         </div>
       </section>
+      </React.Fragment>
+:
+            
+              <ViewTicketReplay viewticketdetails={viewticketdetails} gotobackpage={gotobackpage}/>
+            }
+     
       <Footer />
     </React.Fragment>
   );

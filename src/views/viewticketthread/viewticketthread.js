@@ -11,11 +11,11 @@ import Navbarsupoort from '../../_components/navbarsupoort';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 //import RichTextEditor from 'react-rte';
-import { Controller, useForm } from "react-hook-form";
-import TextEditor from '../../_components/textEditor';
+//import { Controller, useForm } from "react-hook-form";
+//import TextEditor from '../../_components/textEditor';
 //import { Link } from 'react-router-dom';
 //import PageTitle from '../../components/PageTitle';
-import $ from "jquery";
+//import $ from "jquery";
 import ViewTicketReplay from './viewticketreplay';
 const defaultSorted = [
     {
