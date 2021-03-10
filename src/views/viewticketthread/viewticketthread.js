@@ -10,12 +10,13 @@ import Navbarsupoort from '../../_components/navbarsupoort';
 //import { vendorAction } from '../_actions/viewticketthread';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+//import RichTextEditor from 'react-rte';
+import { Controller, useForm } from "react-hook-form";
 import TextEditor from '../../_components/textEditor';
 //import { Link } from 'react-router-dom';
 //import PageTitle from '../../components/PageTitle';
-
-
-
+import $ from "jquery";
+import ViewTicketReplay from './viewticketreplay';
 const defaultSorted = [
     {
         dataField: 'id',
@@ -106,7 +107,7 @@ const TableWithSearch = (props) => {
     );
 };
 
-const ViewTicketThread = () => {
+const ViewTicketThread = (props) => {
 
   
 
@@ -121,12 +122,12 @@ const ViewTicketThread = () => {
         .then((response)=>{
             var allTickets=response.data;
             getTickets(allTickets);            
-             console.log(allTickets, 'join list');
+            // console.log(allTickets, 'join list');
 
         })
     }
     let records =tickets;
-    console.log(tickets, "ticket record");
+    //console.log(tickets, "ticket record");
     
     const columns = [
         {
@@ -174,7 +175,8 @@ const ViewTicketThread = () => {
      let viewticketdetails = ticketDetails;
 
     const activeTickitThread ="active";
-    
+   
+    //let records =tickets;
     return (
         <React.Fragment>
             <Navbarsupoort activeTickitThread={activeTickitThread}/>
@@ -189,97 +191,7 @@ const ViewTicketThread = () => {
             </section>
 :
             
-                 <section className="light-section pt-2 mt-5">
-                 <div className="content pt-5">
-                       <Row>
-                            <Col lg={12}>
-                               <h6 className="text-span"><b>Ticket Number : {viewticketdetails.ticket_number}</b></h6>
-                           </Col>
-                           <Col lg={6} >
-                               <div className="dark-section p-3">
-                               <h6 className="text-span"><b>Basic Ticket Information</b></h6>
-                               <label>Ticket Status : {viewticketdetails.ticket_initial_status}</label><br/>
-                               <label>Deapartment : {viewticketdetails.ticket_business}</label><br/>
-                               <label>Create Date : {viewticketdetails.ticket_createdate}</label>
-                               </div>
-                           </Col>
-                           <Col lg={6}>
-                           <div className="dark-section p-3">
-                           <h6 className="text-span"><b>User Information</b></h6>
-                               <label>Name : {viewticketdetails.ticket_name}</label><br/>
-                               <label>Email : {viewticketdetails.ticket_email}</label><br/>
-                               <label>Phone : {viewticketdetails.ticket_phoneno}</label>
-                               </div>
-                           </Col>
-                           <Col lg={12} className="mt-4">
-                           <div className="light-section">
-                                <Row>
-                                <Col lg={3}>
-                                <h6 className="text-span"><b>Ticket Status</b></h6>
-                                    <select className="form-control">
-                                        <option value="">Select</option>
-                                        <option value="Open">Open</option>
-                                        <option value="Close">Close</option>
-                                    </select>
-                                </Col>
-                                </Row>
-                           </div>
-                           </Col>
-                           <Col lg={12} className="mt-5">
-                           <div className="light-section">
-                           <Row>
-                                <Col lg={1}>
-                                <div className="chat-icon"><div className="h1"><i className="fa fa-user" aria-hidden="true"></i></div></div>
-                                </Col>
-                                <Col lg={11}>
-                                <div className="card card-post">
-                                <div className="card-header bgprimary">{viewticketdetails.ticket_number} Posted {viewticketdetails.ticket_createdate}</div>
-                                <div className="card-body">Content</div>
-                                </div>
-                                <Col lg={12} className="mt-3">
-                                    <i className="fa fa-pencil-square-o text-span font-18" aria-hidden="true"></i><label className="createdby"> Created By</label>
-                                    <i className="fa fa-user-o text-span font-18 ml-5" aria-hidden="true"></i><label className="ml-2">{viewticketdetails.ticket_phoneno}</label>
-                                    <label className="createdby ml-2"> {viewticketdetails.ticket_createdate}</label>
-                                </Col>
-                                </Col>
-                                </Row>
-                                <Row>
-                               
-                                <Col lg={11}>
-                                <div className="card card-replay">
-                                <div className="card-header bgprimary">{viewticketdetails.ticket_number} Posted {viewticketdetails.ticket_createdate}</div>
-                                <div className="card-body">Content</div>
-                                </div>
-                                <Col lg={12} className="mt-3">
-                                   <label className="createdby"> Closed By</label>
-                                    <label className="ml-2">{viewticketdetails.ticket_name}</label>With Status of
-                                    <label className="createdby ml-2"> {viewticketdetails.ticket_initial_status}</label>
-                                    <label className="createdby ml-2"> {viewticketdetails.ticket_finaldate}</label>
-                                    
-                                </Col>
-                                </Col>
-                                <Col lg={1}>
-                                <div className="chat-icon"><div className="h1"><i className="fa fa-user" aria-hidden="true"></i></div></div>
-                                </Col>
-                                </Row>
-                            </div>
-                           </Col>
-                           <Col lg={12} className="mt-5">
-                           <div className="dark-section p-3 blue-brd">
-                               <h6 className="text-span"><b>Post a Replay</b></h6>
-                               <Row className="blue-brd-top"></Row>
-                               <label className="mt-2">To best assist you, we request that you be specific and detailed</label>
-                                <TextEditor/>
-                                <Col lg={12} className="mt-4 text-center">
-                                    <button type="submit" className="btn btn-primary">Post Replay</button> 
-                                    <button type="button" className="btn btn-primary ml-2">Reset</button> 
-                                    <button type="button" onClick={() => gotobackpage()} className="btn btn-primary ml-2">Cancel</button> 
-                                </Col>
-                           </div>
-                           </Col>
-                       </Row>
-                       </div>
-                       </section>
+              <ViewTicketReplay viewticketdetails={viewticketdetails} gotobackpage={gotobackpage}/>
             }
         </React.Fragment>
     );
