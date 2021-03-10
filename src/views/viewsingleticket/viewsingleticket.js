@@ -6,6 +6,7 @@ import axios from "axios";
 import TextEditor from "../../_components/textEditor";
 
 const ViewSingleTicket = () => {
+  
   const [tickets, getTickets] = useState([]);
   const url = "http://www.apiats.somee.com/api/";
   useEffect(() => {
