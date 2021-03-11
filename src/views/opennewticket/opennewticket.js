@@ -207,9 +207,9 @@ function OpenNewTicket() {
                   name="helptopics"
                 >
                   <option value="">Select</option>
-                  <option value="Cotizacion">Cotizacion</option>
-                  <option value="Facturacion">Facturacion</option>
-                  <option value="Soporte">Soporte</option>
+                  <option value="Quotation">Quotation</option>
+                  <option value="Billing">Billing</option>
+                  <option value="Medium">Medium</option>
                 </select>
               </Col>
             </Row>

@@ -17,6 +17,7 @@ import CheckTicketStatus from './views/checkticketstatus/checkticketstatus';
 import ViewTicketThread from './views/viewticketthread/viewticketthread';
 import ViewSingleTicket from './views/viewsingleticket/viewsingleticket';
 import Crm from './views/crm/crm';
+import ProjectManagement from './views/projectmangement/projectmangement';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -42,6 +43,7 @@ function App() {
           <div>            
               <Switch>
                 <PrivateRoute exact path='/home' component={Home} />
+                <PrivateRoute exact path='/projectmanagement' component={ProjectManagement} />
                 {/* <PrivateRoute exact path='/vendor' component={Vendor} />
                 <PrivateRoute exact path='/add-vendor' component={AddVendor} />
                 <PrivateRoute exact path='/edit-vendor/:id' component={AddVendor} /> */}

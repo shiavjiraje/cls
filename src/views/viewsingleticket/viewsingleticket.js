@@ -138,7 +138,7 @@ const ViewSingleTicket = () => {
             <Col lg={12} className="mt-5">
               <div className="dark-section p-3 blue-brd">
                 <h6 className="text-span">
-                  <b>Post a Replay</b>
+                  <b>Post a Reply</b>
                 </h6>
                 <Row className="blue-brd-top"></Row>
                 <label className="mt-2">
@@ -148,7 +148,7 @@ const ViewSingleTicket = () => {
                 <TextEditor />
                 <Col lg={12} className="mt-4 text-center">
                   <button type="submit" className="btn btn-primary">
-                    Post Replay
+                    Post Reply
                   </button>
                   <button type="button" className="btn btn-primary ml-2">
                     Reset
