@@ -24,20 +24,6 @@ function OpenNewTicket() {
 
   //  const dispatch = useDispatch();
   const onSubmit = (e) => {
-    // e.preventDefault();
-    // let reqBody = {
-    //   name: name,
-    //   email: email,
-    //   business: business,
-    //   phoneno: phoneno,
-    //   extension: extension,
-    //   helptopics: helptopics,
-    //   issuesummary: issuesummary,
-    //   details: details,
-    //   initialstatus:initialstatus
-    // };
-    // console.log(reqBody);
-    // dispatch(vendorAction.createVendor(reqBody));
     console.log("main function");
     console.log("ajax request to the resource which will require cors enabled");
 

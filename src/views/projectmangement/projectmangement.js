@@ -5,9 +5,11 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import $ from "jquery";
 import Navbar from '../../_components/navbar';
+import swal from 'sweetalert';
+import CreateProject from './createproject';
+
 const defaultSorted = [
     {
         dataField: 'id',
@@ -49,11 +51,11 @@ const TableWithSearch = (props) => {
                 <ToolkitProvider bootstrap4 keyField="ROW_NUMBER" data={props.records} columns={props.columns} search>
                     {(props) => (
                         <React.Fragment>
-                            <Row>
+                            <Row className="mb-3">
                                 <Col md={6} className="">
                                     <SearchBar {...props.searchProps} />
                                 </Col>    
-                               
+                                 
                             </Row>
 
                             <BootstrapTable
@@ -91,84 +93,70 @@ const ProjectManagement = (props) => {
   
 
   const [tickets, getTickets ]=useState([]);
- const url ='http://www.apiats.somee.com/api/';
+// const url ='http://www.apiats.somee.com/api/';
     useEffect(() => {
-      getAllTickets();
+      getAllProject();
     }, []);
-    const getAllTickets=()=>{
-        var config = {
-            method: 'GET',
-            url: 'https://archesoftronix1.teamwork.com/projects.json',
-            headers: { 
-              'Authorization': 'Basic twp_5242nQlYlcxYe3lJ3ZnugeDM3tB2', 
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET"
+    const getAllProject=()=>{
+        var apitokenstring = "twp_7lLfVHIgalTodMCxT3aWRMngEUnb_eu";
+        var encodedtoken = window.btoa(apitokenstring);
+        //alert("calling");
+        $.ajax
+        ({
+             
+            url: "https://clscharteredsecretaries.eu.teamwork.com/projects.json",
+            type:"GET",
+            dataType:"JSON",
+            //data: JSON.stringify(obj),
+                headers: {
+            'Access-Control-Allow-Headers' : 'Origin, Content-Type, Accept',
+            'Authorization':`Basic ${encodedtoken}`,
+            'Access-Control-Allow-Origin' :'*',
+            'Access-Control-Allow-Credentials' : true,
+            'Access-Control-Allow-Methods' : '*'
+            
+            },
+            
+            Authorization: `Basic ${encodedtoken}`,
+            success: function(data) 
+            {
+               // debugger;
+                console.log("log response on success");
+                console.log(data);
+                var allTickets = data;
+                getTickets(allTickets);
             }
-          };
-          
-        //   ,  
-          //data : data
-             // "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-              //"Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept, Authorization",
-             // "Content-type": "Application/json",
-        axios(config)
-          .then(function (response) {
-            console.log(JSON.stringify(response.data));
-            var allTickets=response.data;
-                getTickets(allTickets);  
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+        });
     }
-   
-    let records =tickets;
-    //console.log(tickets, "ticket record");
+    
+    let records =tickets.projects ||[];
+    console.log(tickets, "ticket record");
     
     const columns = [
         {
-            dataField: 'ticket_number',
-            text: 'Ticket No.',
+            dataField: 'id',
+            text: 'Project Id',
+            sort:true
         },
         {
-            dataField:'ticket_createdate',
-            text:"Date"
+            dataField: 'name',
+            text: 'Project Name',
         },
         {
-            dataField: 'ticket_name',
-            text: 'Name',
+            dataField: 'created-on',
+            text: 'Create Date',
         },
         {
-            dataField: 'ticket_phoneno',
-            text: 'Contact Number',
+            dataField:'description',
+            text:"Description"
         },
         {
-            dataField: 'ticket_initial_status',
-            text: 'Status',
-            formatter: (cell, row, rowIndex, extraData) => (
-                <Link
-                  className="btn-link"
-                  onClick={() => _validateFunction(row)}
-                  > {row.ticket_initial_status} 
-                  </Link>
-              )
-        }
+            dataField:'status',
+            text:"Status"
+        },
     ];
-    const [showTicketGrid, showTicketDetails] = useState(true);
-    const [ticketDetails, setticketDetails] = useState([]);
     
-    function _validateFunction(row , id) {    
-         console.log("activity id :",(row)); 
-         //ticketdetails =row;
-         setticketDetails(row);
-         showTicketDetails(!showTicketGrid);
-        //alert(showTicketGrid);
-     }
-     
-     function gotobackpage(){
-        showTicketDetails(!showTicketGrid);
-     }
-     let viewticketdetails = ticketDetails;
+    
 
     const activeProject ="active";
    
@@ -176,19 +164,23 @@ const ProjectManagement = (props) => {
     return (
         <React.Fragment>
             <Navbar activeProject={activeProject}/>
-            {showTicketGrid ? <section className="light-section pt-3 mt-5">
-      <div className="content pt-5">
-            <Row>
+           
+           
+                          
+          <section className="light-section pt-3 mt-5">
+      <div className="content pt-1">
+     
+            <Row className="mt-5">
+            <Col md={12} className="text-right">
+                                    <CreateProject getAllProject={getAllProject}/>
+                                </Col>   
                 <Col>
                     <TableWithSearch records={records} columns={columns} />
                 </Col>
             </Row>
+            
             </div>
             </section>
-:
-            
-             <h1>test</h1>
-            }
         </React.Fragment>
     );
 };
