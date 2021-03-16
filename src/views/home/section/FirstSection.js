@@ -18,7 +18,7 @@ const FirstSection = (props) => {
   const [email, setemail] = useState("");
   const [postal, setpostal] = useState("");
   const { register, errors, handleSubmit } = useForm();
-  localStorage.setItem("cfid", JSON.stringify("10"));
+  localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     // e.preventDefault();
