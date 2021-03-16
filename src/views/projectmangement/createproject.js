@@ -9,7 +9,8 @@ const CreateProject = (props) => {
   } = props;
 
   const [modal, setModal] = useState(false);
-
+  localStorage.setItem("pdfData", JSON.stringify({CompanyName:"", Filepath:""}));
+  //getPdfDetails.CompanyName,
   const toggle = () => setModal(!modal);
   const [name, setname] = useState("");
   const [description, setdescription] = useState("");
