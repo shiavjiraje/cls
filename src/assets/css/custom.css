@@ -243,3 +243,11 @@ footer {
 .tox-tinymce{
   width: 100%;
 }
+.email-cont{
+  background: #fff;
+    padding: 20px 10px;
+    box-shadow: 1px 0px 1px;
+    border-radius: 10px;
+    border-bottom: 2px solid #4d186f;
+    line-height: 2;
+}

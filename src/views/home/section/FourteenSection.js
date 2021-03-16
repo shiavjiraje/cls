@@ -68,7 +68,7 @@ const FourteenSection = (props) => {
             <Row className="pb-3 mt-4">
               <Col lg={12} className="text-center">
                 <button type="submit" className="btn btn-primary">
-                  Submit
+                  Save
                 </button>
               </Col>
             </Row>

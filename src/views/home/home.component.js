@@ -35,49 +35,62 @@ class Home extends Component {
   
   showSecondSection(){
     this.setState({ collapse1: !this.state.collapse1 });
+    window.scrollBy(0,400);
   }
   showThirdSection() {
     this.setState({ collapse2: !this.state.collapse2 });
+    window.scrollBy(0,500);
   }
   showFourthSection() {
     this.setState({ collapse3: !this.state.collapse3 });
+    window.scrollBy(0,500);
   }
   showFiveSection() {
     this.setState({ collapse4: !this.state.collapse4 });
+    window.scrollBy(0,500);
   }
   showSixSection() {
     this.setState({ collapse5: !this.state.collapse5 });
+    window.scrollBy(0,500);
   }
   showSevenSection() {
     this.setState({ collapse6: !this.state.collapse6 });
+    window.scrollBy(0,500);
   }
   showEightSection() {
     this.setState({ collapse7: !this.state.collapse7 });
+    window.scrollBy(0,500);
   }
   showNineSection() {
     this.setState({ collapse8: !this.state.collapse8 });
+    window.scrollBy(0,500);
   }
   showTenSection() {
     this.setState({ collapse9: !this.state.collapse9 });
+    window.scrollBy(0,500);
   }
   showElevenSection() {
     this.setState({ collapse10: !this.state.collapse10 });
+    window.scrollBy(0,500);
   }
   showTwellSection() {
     this.setState({ collapse11: !this.state.collapse11 });
+    window.scrollBy(0,500);
   }
 
   showThirteenSection() {
     this.setState({ collapse12: !this.state.collapse12 });
+    window.scrollBy(0,500);
   }
   showFourteenSection() {
     this.setState({ collapse13: !this.state.collapse13 });
+    window.scrollBy(0,500);
   }
   
   
    render() {
       return (
-          <React.Fragment>
+          <React.Fragment style={{height:"2100px"}}>
               <Navigation />
               <FirstSection onSecondSectionClick={this.showSecondSection.bind(this)}/>
               <Collapse isOpen={this.state.collapse1}>

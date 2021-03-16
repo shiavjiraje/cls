@@ -228,7 +228,7 @@ const SecondSection = (props) => {
             </Col>
             <Col lg={4} className="text-center">
               <button type="submit" className="btn btn-primary">
-                Submit
+                Save
               </button>
             </Col>
             <Col lg={4} className="text-right">

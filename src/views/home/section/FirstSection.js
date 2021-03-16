@@ -56,6 +56,11 @@ const FirstSection = (props) => {
               />
             </Col>
           </Row>
+          <Row>
+            <Col lg={12} className="email-cont">
+              <p>The first step in forming a company is to complete the below order form. The order form should be completed with all the required details and we will prepare the company formation documentation based on this order form and email you the documentation for signing. If you have any queries on completing the order form, please feel free to call us on <a href="">059 9186776</a> or send us an <a href="">email</a>.</p>
+            </Col>
+          </Row>
           <Row className="mt-4">
             <Col lg={9}>
               <label>
@@ -394,12 +399,12 @@ const FirstSection = (props) => {
           <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">
-              <input type="submit" className="btn btn-primary" value="Submit" />
+              <input type="submit" className="btn btn-primary" value="Save" />
             </Col>
             <Col lg={4} className="text-right">
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-primary" id="second-section"
                 onClick={props.onSecondSectionClick}
               >
                 Next

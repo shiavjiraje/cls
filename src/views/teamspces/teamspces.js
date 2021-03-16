@@ -99,19 +99,17 @@ const TeamSpaces = (props) => {
     const getAllSpces=()=>{
         var axios = require('axios');
         var data = '';
-        
+        var token="tkn.v1_ZjdhY2YxNDQtZjQxMS00YzFkLTgyNDEtYmRkNzVkNGE0YmUwLTc2ODY5Ni40NjY4MzcuVVM="
         var config = {
           method: 'get',
           url: 'https://archesoftronix1.teamwork.com/spaces/api/v1/spaces.json',
           headers: { 
-            'Authorization': 'Bearer tkn.v1_MWY2ZmMwYzMtZjNlNS00NWI2LWJjZDktZTkxZWNiNzdhZTAzLTc2ODY5Ni40NjY4MzcuVVM=', 
-            "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-            "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true
-            //'Cookie': 'JSESSIONID=383092c1a51459f1932317564345ed5f6b76; PROJLB=s3; RDS=3; tw-auth=tw-3BA56F6201B2F8445B60F26E56596C6C-BOc5LdSpWaOGYhlgWTR43Zkd9tPqM7-466837'
+            //'Authorization': 'Bearer tkn.v1_MWY2ZmMwYzMtZjNlNS00NWI2LWJjZDktZTkxZWNiNzdhZTAzLTc2ODY5Ni40NjY4MzcuVVM=', 
+            //Accept: 'application/json',
+            //'Content-Type': 'application/json',
+             //Authorization: 'Bearer' + token // if you use token
           },
-          Authorization: 'Bearer tkn.v1_MWY2ZmMwYzMtZjNlNS00NWI2LWJjZDktZTkxZWNiNzdhZTAzLTc2ODY5Ni40NjY4MzcuVVM=', 
+          Authorization: 'Bearer' + token, // if you use token
           data : data
         };
         

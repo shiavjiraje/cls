@@ -871,7 +871,7 @@ const FiveSection = (props) => {
           <Row className="pb-3">
             <Col lg={6} className="text-right">
               <button type="submit" className="btn btn-primary">
-                Submit
+                Save
               </button>
             </Col>
             <Col lg={6} className="text-right">
