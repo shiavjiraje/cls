@@ -6,7 +6,8 @@ import { createVendor } from "../../../_actions/section4.actions";
 //import axios from "axios";
 const FourthSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  console.log(getcfid.cfid, "section-4");
+  var cfidPost =getcfid.cfid
+ // console.log(getcfid.cfid, "section-4");
   const [cfid, setcfid] = useState();
   const [name, setname] = useState("");
   const [companyname, setcompanyname] = useState(0);
@@ -29,7 +30,7 @@ const FourthSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: getcfid.cfid,
+      cfid: cfidPost,
       name: name,
       companyname: companyname,
       dob: dob,
