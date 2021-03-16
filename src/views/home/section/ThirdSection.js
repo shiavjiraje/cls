@@ -7,8 +7,8 @@ import { createVendor } from "../../../_actions/section3.actions";
 const ThirdSection = (props) => {
   const dispatch = useDispatch();
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
-
-  const [cfid, setcfid] = useState(getcfid.cfid);
+  console.log(getcfid.cfid, "section-2");
+  const [cfid, setcfid] = useState();
   const [issuedsharecapital, setissuedsharecapital] = useState("");
   const [nominalamountpershare, setnominalamountpershare] = useState("");
   const [shareclass, setshareclass] = useState("");
@@ -17,13 +17,13 @@ const ThirdSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: cfid,
+      cfid: getcfid.cfid,
       issuedsharecapital: issuedsharecapital,
       nominalamountpershare: nominalamountpershare,
       shareclass: shareclass,
       authorisedsharecapital: authorisedsharecapital,
     };
-
+    console.log(reqBody);
     dispatch(createVendor(reqBody));
   };
   return (

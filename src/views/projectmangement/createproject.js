@@ -19,8 +19,8 @@ const CreateProject = (props) => {
       var recipeUrl = 'https://clscharteredsecretaries.eu.teamwork.com/projects.json';
       var postBody = {
           "Project":{
-          name: name,
-          description:  description
+          name: getPdfDetails.CompanyName,
+          description:  getPdfDetails.Filepath
           }
       };
       var requestMetadata = {
@@ -45,6 +45,8 @@ const CreateProject = (props) => {
           });
     
     };
+    var getPdfDetails = JSON.parse(localStorage.getItem("pdfData"));
+    console.log(getPdfDetails);
     
   return (
     <div>
@@ -57,6 +59,7 @@ const CreateProject = (props) => {
                     <label>Name</label>
               <input
                 type="text"
+                value={getPdfDetails.CompanyName}
                 onChange={(e) => {
                   setname(e.target.value);
                 }}
@@ -73,6 +76,7 @@ const CreateProject = (props) => {
                 onChange={(e) => {
                   setdescription(e.target.value);
                 }}
+                value={getPdfDetails.Filepath}
                 name="description"
                 className="form-control"
               />

@@ -90,8 +90,9 @@ class Home extends Component {
   
    render() {
       return (
-          <React.Fragment style={{height:"2100px"}}>
+          <React.Fragment>
               <Navigation />
+              <div style={{height:"2100px"}}>
               <FirstSection onSecondSectionClick={this.showSecondSection.bind(this)}/>
               <Collapse isOpen={this.state.collapse1}>
                 <SecondSection onThirdSectionClick={this.showThirdSection.bind(this)}/>
@@ -132,7 +133,9 @@ class Home extends Component {
              <Collapse isOpen={this.state.collapse13}>
               <FourteenSection />
              </Collapse>
+           
               <Footer/>
+              </div>
             </React.Fragment>
       );
    }

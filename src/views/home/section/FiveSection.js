@@ -5,14 +5,16 @@ import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section5.actions";
 const FiveSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  console.log(getcfid.cfid, "section-5");
+  var cfidPost =getcfid.cfid
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: getcfid.cfid,
+    cfid: cfidPost,
   });
   const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: getcfid.cfid,
+    cfid: cfidPost,
   });
   const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: getcfid.cfid,
+    cfid: cfidPost,
   });
 
   const { register, errors, handleSubmit } = useForm();

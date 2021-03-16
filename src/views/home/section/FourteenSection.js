@@ -6,18 +6,22 @@ import { createVendor } from "../../../_actions/section14.actions";
 import axios from "axios";
 const FourteenSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  var cfidPost =getcfid.cfid
+  console.log(getcfid.cfid, "section-3");
+ // console.log(getcfid);
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: getcfid.cfid,
+    cfid: cfidPost,
     //agree:1
   });
 
   const { handleSubmit } = useForm();
   const handlePdfSubmit = () => {
     axios
-      .post(`http://www.apiats.somee.com/api/clspdfform?cfid=${getcfid.cfid}`)
+      .post(`http://www.apiats.somee.com/api/clspdfform?cfid=${cfidPost}`)
       .then((response) => {
        // alert("pdf calling");
         console.log(response);
+        localStorage.setItem("pdfData", JSON.stringify(response.data));
       })
       .catch(function () {
         console.log("error");

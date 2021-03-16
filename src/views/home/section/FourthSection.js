@@ -6,7 +6,8 @@ import { createVendor } from "../../../_actions/section4.actions";
 //import axios from "axios";
 const FourthSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  const [cfid, setcfid] = useState(getcfid.cfid);
+  console.log(getcfid.cfid, "section-4");
+  const [cfid, setcfid] = useState();
   const [name, setname] = useState("");
   const [companyname, setcompanyname] = useState(0);
   const [dob, setdob] = useState("");
@@ -28,7 +29,7 @@ const FourthSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: cfid,
+      cfid: getcfid.cfid,
       name: name,
       companyname: companyname,
       dob: dob,
@@ -45,7 +46,7 @@ const FourthSection = (props) => {
       postal: postal,
       companycountry: companycountry,
     };
-
+    console.log(reqBody);
     dispatch(createVendor(reqBody));
   };
  

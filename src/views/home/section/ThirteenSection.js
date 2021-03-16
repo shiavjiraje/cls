@@ -5,11 +5,12 @@ import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section13.actions";
 const ThirteenSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  var cfidPost =getcfid.cfid
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: getcfid.cfid,
+    cfid: cfidPost,
     //agree:1
   });
-
+  //console.log(getcfid);
   const { register, errors, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const onSubmit = (e) => {
