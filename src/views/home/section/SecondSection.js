@@ -6,8 +6,9 @@ import { createVendor } from "../../../_actions/section2.actions";
 const SecondSection = (props) => {
    const dispatch = useDispatch();
  var getcfid = JSON.parse(localStorage.getItem("apiData"));
- console.log(getcfid.cfid, "section-2");
- console.log(getcfid.cfid, "second section");
+ //console.log(getcfid.cfid, "section-2");
+ //console.log(getcfid.cfid, "second section");
+ var cfidPost =getcfid.cfid
   const [cfid, setcfid] = useState();
   const [firstchoice, setfirstchoice] = useState("");
   const [secondchoice, setsecondchoice] = useState("");
@@ -20,7 +21,7 @@ const SecondSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: getcfid.cfid,
+      cfid: cfidPost,
       firstchoice: firstchoice,
       secondchoice: secondchoice,
       thirdchoice: thirdchoice,
