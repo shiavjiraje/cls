@@ -28,7 +28,7 @@ const ThirdSection = (props) => {
     dispatch(createVendor(reqBody));
   };
   return (
-    <section className="light-section pt-5">
+    <section className="light-section pt-5 pb-4">
       <div className="content">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="">

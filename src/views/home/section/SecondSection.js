@@ -38,7 +38,7 @@ const SecondSection = (props) => {
         }
     }, []);
   return (
-    <section className="dark-section pb-1">
+    <section className="dark-section pt-2 pb-4">
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="">

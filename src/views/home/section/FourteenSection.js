@@ -42,7 +42,7 @@ const FourteenSection = (props) => {
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <section className="dark-section pb-1">
+        <section className="dark-section pb-4">
           <div className="content pt-3">
             <Row className="mt-3">
               <Col lg={12}>

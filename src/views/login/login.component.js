@@ -43,7 +43,7 @@ class Login extends Component {
         <div className="login-bg">
             <Container className="login-margin">
                         <Row className="justify-content-center">
-                            <Col md={4} className="card shadow login-box p-0">
+                            <Col md={4} className="card shadow login-box">
                    <div className="pt-2 white-border text-center pb-3">
                         <img src={logo} className="logo" alt="logo"/>
                    </div>
@@ -56,7 +56,7 @@ class Login extends Component {
                         <div className="input-group mb-3">
                            
                             <div className="input-group-prepend">
-                                <span className="input-group-text input-group-icon" id="basic-addon3"><i className="fa fa-envelope-o" aria-hidden="true"></i></span>
+                                <span className="input-group-text input-group-icon" id="basic-addon3"><i class="fa fa-user" aria-hidden="true"></i></span>
                             </div>
                             <input type="text" className="form-control" placeholder="Username" 
                             value={this.state.username}
@@ -79,15 +79,17 @@ class Login extends Component {
                         </div>
                         </div>
                         <div className="clearfix"></div>
-                        <div className="form-group form-check mt-4">
+                        <div className="form-group form-check mt-4 mb-1">
                             <label className="form-check-label login-text">
                             <input className="form-check-input" type="checkbox"/> Remember me
                             </label>
                             <Link to="/account/forget-password" className="float-right login-text text-unline-dashed ml-1">Forgot your password?</Link>
                         </div>
+                        <div className="form-group mt-4 mb-1">
                         <Button variant="contained" className="btn btn-light btn-block " onClick={(event)=>{this.login()}}>
                             Login
                         </Button>
+                        </div>
                         </form>
                         </div>
                 </Col>

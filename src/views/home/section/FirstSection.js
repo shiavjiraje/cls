@@ -41,27 +41,26 @@ const FirstSection = (props) => {
     dispatch(createVendorinfo(reqBody));
   };
   return (
-    <section className="light-section top-100">
+    <section className="light-section top-100 pb-5">
       <div className="content">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Row className="pb-4">
+          <Row className="pb-4 pt-3">
             <Col lg={9}>
               <label className="light-text">You are here : Home</label>
             </Col>
             <Col lg={3}>
-              <input
-                type="text"
-                placeholder="Search for datas and report"
-                className="form-control"
-              />
+               <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control"  placeholder="Search for datas and report"/>
+              </div>
             </Col>
           </Row>
-          <Row>
+          <Row className="mb-3">
             <Col lg={12} className="email-cont">
               <p>The first step in forming a company is to complete the below order form. The order form should be completed with all the required details and we will prepare the company formation documentation based on this order form and email you the documentation for signing. If you have any queries on completing the order form, please feel free to call us on <a href="">059 9186776</a> or send us an <a href="">email</a>.</p>
             </Col>
           </Row>
-          <Row className="mt-4">
+          <Row className="mt-5">
             <Col lg={9}>
               <label>
                 <b>

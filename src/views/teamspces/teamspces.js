@@ -99,17 +99,14 @@ const TeamSpaces = (props) => {
     const getAllSpces=()=>{
         var axios = require('axios');
         var data = '';
-        var token="tkn.v1_ZjdhY2YxNDQtZjQxMS00YzFkLTgyNDEtYmRkNzVkNGE0YmUwLTc2ODY5Ni40NjY4MzcuVVM="
+        
         var config = {
           method: 'get',
           url: 'https://archesoftronix1.teamwork.com/spaces/api/v1/spaces.json',
           headers: { 
-            //'Authorization': 'Bearer tkn.v1_MWY2ZmMwYzMtZjNlNS00NWI2LWJjZDktZTkxZWNiNzdhZTAzLTc2ODY5Ni40NjY4MzcuVVM=', 
-            //Accept: 'application/json',
-            //'Content-Type': 'application/json',
-             //Authorization: 'Bearer' + token // if you use token
+            'Authorization': 'Bearer tkn.v1_ZjdhY2YxNDQtZjQxMS00YzFkLTgyNDEtYmRkNzVkNGE0YmUwLTc2ODY5Ni40NjY4MzcuVVM=', 
+            'Cookie': 'JSESSIONID=3830ac92f6c784a04f59747e3261a6f7c334; PROJLB=s7; RDS=3; tw-auth=tw-3BA56F6201B2F8445B60F26E56596C6C-oWViIwOasSfk9rBDxFaQ6ktTBj9Nu4-466837'
           },
-          Authorization: 'Bearer' + token, // if you use token
           data : data
         };
         
@@ -120,6 +117,7 @@ const TeamSpaces = (props) => {
         .catch(function (error) {
           console.log(error);
         });
+        
         
     }
     

@@ -129,7 +129,7 @@ function CheckTicketStatus() {
         </div>
       </section>
       </form>
-      <section className="light-section pb-3 pt-3 ">
+      <section className="light-section pb-3 pt-5  mb-5">
         <div className="content">
           <Row className="">
             <Col lg={12}>
@@ -144,13 +144,16 @@ function CheckTicketStatus() {
           </Row>
         </div>
       </section>
+      <Footer />
       </React.Fragment>
 :
-            
+<React.Fragment>
               <ViewTicketReplay viewticketdetails={viewticketdetails} gotobackpage={gotobackpage}/>
+              <Footer />
+              </React.Fragment>
             }
      
-      <Footer />
+     
     </React.Fragment>
   );
 }

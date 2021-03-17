@@ -5,7 +5,12 @@ body {
   color: #454145;
 }
 .login-margin {
-  padding-top: 100px;
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .bg-dark {
   background: #4d186f !important;
@@ -14,10 +19,12 @@ body {
   background: #4d186f;
   color: #fff;
   font-weight: 400;
+  padding: 10px 0px;
 }
 .logo {
   width: 100px;
   margin: 0px auto;
+  padding: 15px 0px;
 }
 .nav-logo {
   width: 80px;
@@ -136,10 +143,11 @@ hr {
   background-color: #4d186f;
 }
 .btn-primary:hover,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary:active {
   color: #fff;
-  background-color: #74379a;
-  border-color: #74379a;
+  background-color: #74379a !important;
+  border-color: #74379a !important;
 }
 .user-icon {
   width: 40px;
@@ -185,7 +193,7 @@ footer {
 }
 
 .card {
-  border-radius: 0.5rem;
+  border-radius: 0;
   border: 1px solid rgb(77 24 111);
 }
 .card-post:after {
@@ -217,7 +225,7 @@ footer {
   border-left: 10px solid #4d186f;
 }
 .font-18 {
-  font-size: 26px;
+  font-size: 18px;
 }
 .createdby {
   margin-left: 15px;
@@ -236,8 +244,8 @@ footer {
 .h1{
   margin-bottom: .5rem;
     font-weight: 500;
-    line-height: 1.7;
-    font-size: 2.5rem;
+    line-height: 2;
+    font-size: 2.2rem;
     display: block;
 }
 .tox-tinymce{
@@ -250,4 +258,45 @@ footer {
     border-radius: 10px;
     border-bottom: 2px solid #4d186f;
     line-height: 2;
+}
+.login-box .form-control:-webkit-autofill,
+.login-box .form-control:-webkit-autofill:hover, 
+.login-box .form-control:-webkit-autofill:focus, 
+.login-box .form-control:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px #a48eb3 inset !important;
+}
+.email-cont a, .table-hover tbody tr td a{
+  color: #4d186f;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+  border: 1px solid #4d186f;
+  background: transparent;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.light-section .form-control{
+  background: transparent;
+  border: 1px solid #4d186f;
+}
+.dark-section .form-control{
+  border: 1px solid #4d186f;
+}
+.page-link {
+  color: #4d186f;
+}
+.page-item.active .page-link {
+  background-color: #4d186f;
+  border-color: #4d186f;
 }

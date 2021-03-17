@@ -10,6 +10,7 @@ import Navbarsupoort from '../../_components/navbarsupoort';
 //import { vendorAction } from '../_actions/viewticketthread';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Footer from "../../_components/footer";
 //import RichTextEditor from 'react-rte';
 //import { Controller, useForm } from "react-hook-form";
 //import TextEditor from '../../_components/textEditor';
@@ -180,8 +181,10 @@ const ViewTicketThread = (props) => {
     return (
         <React.Fragment>
             <Navbarsupoort activeTickitThread={activeTickitThread}/>
-            {showTicketGrid ? <section className="light-section pt-3 mt-5">
-      <div className="content pt-5">
+            {showTicketGrid ?
+             <React.Fragment>
+                  <section className="light-section pt-3 mt-5">
+      <div className="content pt-5 mb-5">
             <Row>
                 <Col>
                     <TableWithSearch records={records} columns={columns} />
@@ -189,9 +192,14 @@ const ViewTicketThread = (props) => {
             </Row>
             </div>
             </section>
-:
+            <Footer />
+             </React.Fragment>
             
+:
+<React.Fragment>           
               <ViewTicketReplay viewticketdetails={viewticketdetails} gotobackpage={gotobackpage}/>
+              <Footer />
+              </React.Fragment>
             }
         </React.Fragment>
     );

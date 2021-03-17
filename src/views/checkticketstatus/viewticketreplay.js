@@ -71,7 +71,7 @@ const ViewTicketReplay = (props) => {
     console.log(ticketreplay,"function baher filter");
     
     return (
-        <section className="light-section pt-2 mt-5">
+        <section className="light-section pt-2 mt-5 mb-5">
              <form onSubmit={handleSubmit(onSubmit)}>
         <div className="content pt-5">
               <Row>

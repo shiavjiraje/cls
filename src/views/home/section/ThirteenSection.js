@@ -26,7 +26,7 @@ const ThirteenSection = (props) => {
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <section className="light-section pb-1">
+        <section className="light-section pb-4">
           <div className="content pt-5">
             <Row className="mt-3">
               <Col lg={12}>
