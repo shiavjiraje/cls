@@ -19,6 +19,7 @@ import ViewSingleTicket from './views/viewsingleticket/viewsingleticket';
 import Crm from './views/crm/crm';
 import ProjectManagement from './views/projectmangement/projectmangement';
 import TeamSpaces from './views/teamspces/teamspces';
+import FormSubmissionStstus from './views/home/formsubmitionStatus';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -46,6 +47,7 @@ function App() {
                 <PrivateRoute exact path='/home' component={Home} />
                 <PrivateRoute exact path='/projectmanagement' component={ProjectManagement} />
                 <PrivateRoute exact path='/teamspce' component={TeamSpaces} />
+                <PrivateRoute exact path='/viewforms' component={FormSubmissionStstus} />
                 {/* <PrivateRoute exact path='/vendor' component={Vendor} />
                 <PrivateRoute exact path='/add-vendor' component={AddVendor} />
                 <PrivateRoute exact path='/edit-vendor/:id' component={AddVendor} /> */}

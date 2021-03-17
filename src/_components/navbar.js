@@ -76,6 +76,9 @@ class Navigation extends React.Component {
               <NavLink href="/teamspce" className={this.props.activeTeamspce} className="">Team Space</NavLink>
             </NavItem>
             <NavItem>
+              <NavLink href="/viewforms" className={this.props.activeTeamspce} className="">View Forms</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="/supportcenter" className="">Customer Support</NavLink>
             </NavItem>
             </Nav>
