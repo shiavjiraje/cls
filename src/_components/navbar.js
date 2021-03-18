@@ -55,10 +55,12 @@ class Navigation extends React.Component {
         isOpen: !this.state.isOpen
       });
     }
+    
     render() {
         //const { classes } = this.props;
        // const { anchor } = this.state;
-
+      var getUsername = localStorage.getItem('Username');
+       //console.log(getUsername,"getUsernamegetUsernamegetUsername");
         return(
           <div>
             <Navbar className="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb">
@@ -96,7 +98,7 @@ class Navigation extends React.Component {
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-               <span><img src={userLogo} alt="userIcon" className="user-icon"/></span> Name Here
+               <span><img src={userLogo} alt="userIcon" className="user-icon"/></span> {getUsername}
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem onClick={(event)=>{this.logout()}}>

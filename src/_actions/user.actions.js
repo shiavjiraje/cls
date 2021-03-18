@@ -19,6 +19,7 @@ function login(username, password){
             if (response.data.status===true) {
                 localStorage.setItem('token', response.data.data.token);
                 localStorage.setItem('auth', response.data.data.auth);
+                localStorage.setItem('Username', response.data.data.Username);
                 dispatch(setUserDetails(response.data.data));
                 history.push('/home');
             }
