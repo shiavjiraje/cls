@@ -4,8 +4,8 @@ import { Col, Row } from "reactstrap";
 import TextEditor from "../../_components/textEditor";
 import Footer from "../../_components/footer";
 //import { useDispatch } from "react-redux";
-import { useForm } from "react-hook-form";
-//import { vendorAction } from "../_actions/opennewticket.actions";
+import {Controller, useForm } from "react-hook-form";
+//import { vendorAction } from "../_actions/opennewticket.actions"; 
 import $ from "jquery";
 import swal from "sweetalert";
 import config from '../../config/config';
@@ -22,12 +22,12 @@ function OpenNewTicket() {
   const [issuesummary, setissuesummary] = useState("");
   const [details] = useState("");
   const [initialstatus, setinitialstatus] = useState(open);
-  const { register, errors, reset, handleSubmit } = useForm();
-
+  const { register, control, errors, reset, handleSubmit } = useForm();
   //  const dispatch = useDispatch();
   
-  const onSubmit = (e) => {
-    
+  const onSubmit = (e, data) => {
+    var textdata = data.editor;
+    var stripedHtml = textdata.replace(/<[^>]+>/g, '');
 
     console.log("main function");
     console.log("ajax request to the resource which will require cors enabled");
@@ -40,7 +40,7 @@ function OpenNewTicket() {
     formData.append("extension", extension);
     formData.append("helptopics", helptopics);
     formData.append("issuesummary", issuesummary);
-    formData.append("details", details);
+    formData.append("details", stripedHtml);
     formData.append("initialstatus", initialstatus);
 
     $.ajax({
@@ -242,7 +242,14 @@ function OpenNewTicket() {
               {/* <textarea onChange={(e) => {
                       setdetails(e.target.value);
                     }} name="details" className="form-control"></textarea> */}
-              <TextEditor />
+                             <Controller
+                              name="editor"
+                              control={control}
+                              defaultValue=""
+                              render={({ onChange, value }) => (
+                                <TextEditor onChange={onChange} value={value} />
+                              )}
+                              />
               {/* onChange={(e) => {
                       setdetails(e.target.value);
                     }} name="details" */}
