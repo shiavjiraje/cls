@@ -10,7 +10,8 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
-
+import config from '../../config/config';
+var urlpattern =config.baseUrl;
 const defaultSorted = [
     {
         dataField: 'id',
@@ -18,6 +19,7 @@ const defaultSorted = [
     },
 ];
 //const { ExportCSVButton } = CSVExport;
+
 const sizePerPageRenderer = ({ options, currSizePerPage, onSizePerPageChange }) => (
     <React.Fragment>
         <label className="d-inline mr-1">Show</label>
@@ -102,7 +104,7 @@ const FormSubmissionStstus = (props) => {
         
         var config = {
           method: 'get',
-          url: 'http://apiats.somee.com/api/clsstatus',          
+          url: `${urlpattern}clsstatus`,          
           data : data
         };
         
@@ -135,11 +137,11 @@ const FormSubmissionStstus = (props) => {
             dataField: 'status',
             text: 'Status',
             formatter: (cell, row, rowIndex, extraData) => (
-                <div
+                <a href="#"
                   className="btn-link"
                   onClick={() => _validateFunction(row)}
-                  > {row.status} 
-                  </div>
+                  > {row.status} &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
               )
         }
     ];
@@ -158,7 +160,7 @@ const FormSubmissionStstus = (props) => {
         
         var config = {
           method: 'PUT',
-          url: `http://apiats.somee.com/api/clsstatus?cfid=${getcfid}&status=${status}`,          
+          url: `${urlpattern}clsstatus?cfid=${getcfid}&status=${status}`,          
           data : data
         };
         console.log(data);

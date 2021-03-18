@@ -8,7 +8,9 @@ import { useForm } from "react-hook-form";
 //import { vendorAction } from "../_actions/opennewticket.actions";
 import $ from "jquery";
 import swal from "sweetalert";
+import config from '../../config/config';
 function OpenNewTicket() {
+  var urlpattern =config.baseUrl;
   const activeTicket = "active ";
   const open = "open";
   const [name, setname] = useState("");
@@ -23,7 +25,10 @@ function OpenNewTicket() {
   const { register, errors, reset, handleSubmit } = useForm();
 
   //  const dispatch = useDispatch();
+  
   const onSubmit = (e) => {
+    
+
     console.log("main function");
     console.log("ajax request to the resource which will require cors enabled");
 
@@ -39,7 +44,7 @@ function OpenNewTicket() {
     formData.append("initialstatus", initialstatus);
 
     $.ajax({
-      url: "http://apiats.somee.com/api/clscreateticket",
+      url: `${urlpattern}clscreateticket`,
       type: "Post",
       dataType: "JSON",
       data: formData, //JSON.stringify(obj),

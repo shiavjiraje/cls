@@ -4,18 +4,18 @@ import { Row, Col } from "reactstrap";
 import Navbarsupoort from "../../_components/navbarsupoort";
 import axios from "axios";
 import TextEditor from "../../_components/textEditor";
-
+import config from '../../config/config';
 const ViewSingleTicket = () => {
   
+var urlpattern =config.baseUrl;
   const [tickets, getTickets] = useState([]);
-  const url = "http://www.apiats.somee.com/api/";
   useEffect(() => {
     getAllTickets();
   }, []);
   const getAllTickets = () => {
     axios
       .get(
-        `${url}clsreplyticket?email=ajay.zala@archesoftronix.com&ticketno=20210224001`
+        `${urlpattern}clsreplyticket?email=ajay.zala@archesoftronix.com&ticketno=20210224001`
       )
 
       .then((response) => {

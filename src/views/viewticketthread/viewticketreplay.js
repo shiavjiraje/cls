@@ -4,9 +4,10 @@ import { Controller, useForm } from "react-hook-form";
 import TextEditor from '../../_components/textEditor';
 import { Row, Col, Input } from 'reactstrap';
 import $ from "jquery";
-
+import config from '../../config/config';
 const ViewTicketReplay = (props) => {
     
+var urlpattern =config.baseUrl;
    
     const { control, handleSubmit } = useForm();
     const [status, setstatus]=useState('');
@@ -30,7 +31,7 @@ const ViewTicketReplay = (props) => {
   formData.append("ticketno", ticketno);
   console.log(stripedHtml);
   $.ajax({
-    url: "http://www.apiats.somee.com/api/clsreplyticket",
+    url: `${urlpattern}clsreplyticket`,
     type: "Post",
     dataType: "JSON",
     data: formData, //JSON.stringify(obj),
@@ -50,12 +51,11 @@ const ViewTicketReplay = (props) => {
     var currentticketnuber = props.viewticketdetails.ticket_number;
   console.log(currentticketnuber,"currentticketnuber")
   const [replays, getReplays ]=useState([]);
-  const urlreplay ='http://www.apiats.somee.com/api/';
     useEffect(() => {
       getAllReplays();
     }, []);
     const getAllReplays=()=>{
-        axios.get(`${urlreplay}clsreplyticket?ticketno=${currentticketnuber}`)
+        axios.get(`${urlpattern}clsreplyticket?ticketno=${currentticketnuber}`)
         
         .then((response)=>{
             var allreplays=response.data;

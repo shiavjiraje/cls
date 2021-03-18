@@ -92,7 +92,6 @@ const TeamSpaces = (props) => {
   
 
   const [tickets, getTickets ]=useState([]);
-// const url ='http://www.apiats.somee.com/api/';
     useEffect(() => {
       getAllSpces();
     }, []);

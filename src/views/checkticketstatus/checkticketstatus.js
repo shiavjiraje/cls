@@ -4,7 +4,10 @@ import { Col, Row } from "reactstrap";
 import Footer from "../../_components/footer";
 import axios from "axios";
 import ViewTicketReplay from "./viewticketreplay";
+import config from '../../config/config';
 function CheckTicketStatus() {
+  
+var urlpattern =config.baseUrl;
   const activeTickitStatus = "active ";
   //const [data, setData] = useState({ hits: [] });
   const [email, setemail] = useState("");
@@ -12,20 +15,6 @@ function CheckTicketStatus() {
   const [search, setSearch] = useState("");
   const [showTicketGrid, showTicketDetails] = useState(true);
   const [ticketDetails, setticketDetails] = useState([]);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const result = await axios(
-  //       `http://www.apiats.somee.com/api/clsreplyticket?email=${email}&ticketno=${ticketno}`
-  //     );
-
-  //     setticketDetails(result.data);
-  //     if(result.data){
-  //       showTicketDetails(!showTicketGrid);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [email, ticketno]);
   const handleTicketStstusForm = (e) => {
     e.preventDefault();
   var reqBody={
@@ -34,7 +23,7 @@ function CheckTicketStatus() {
    }
    // console.log(reqBody);
     axios
-        .get(`http://www.apiats.somee.com/api/clsreplyticket?email=${email}&ticketno=${ticketno}`,reqBody)
+        .get(`${urlpattern}clsreplyticket?email=${email}&ticketno=${ticketno}`,reqBody)
 
         .then((response) => {
           setticketDetails(response.data);

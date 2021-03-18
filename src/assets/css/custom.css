@@ -12,6 +12,10 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+.email-cont a, .table-hover tbody tr td a{
+  color: #4d186f;
+  text-decoration: none;
+}
 .bg-dark {
   background: #4d186f !important;
 }
@@ -238,8 +242,12 @@ footer {
   border-top: 1px solid #4d186f;
 }
 .table-hover tbody tr:hover {
-  color: #faf9fa;
+  color: #faf9fa !important;
   background-color: rgb(77 24 111);
+}
+.table-hover tbody tr:hover a{
+  color: #fff !important;
+  text-decoration: none;
 }
 .h1{
   margin-bottom: .5rem;
@@ -266,9 +274,7 @@ footer {
 {
  -webkit-box-shadow: 0 0 0 30px #a48eb3 inset !important;
 }
-.email-cont a, .table-hover tbody tr td a{
-  color: #4d186f;
-}
+
 .has-search .form-control {
   padding-left: 2.375rem;
   border: 1px solid #4d186f;

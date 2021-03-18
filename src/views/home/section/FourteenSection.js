@@ -4,7 +4,10 @@ import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section14.actions";
 import axios from "axios";
+import config from '../../../config/config';
 const FourteenSection = (props) => {
+  
+var urlpattern =config.baseUrl;
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
   var cfidPost =getcfid.cfid
   console.log(getcfid.cfid, "section-3");
@@ -17,7 +20,7 @@ const FourteenSection = (props) => {
   const { handleSubmit } = useForm();
   const handlePdfSubmit = () => {
     axios
-      .post(`http://www.apiats.somee.com/api/clspdfform?cfid=${cfidPost}`)
+      .post(`${urlpattern}clspdfform?cfid=${cfidPost}`)
       .then((response) => {
        // alert("pdf calling");
         console.log(response);

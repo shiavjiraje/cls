@@ -5,19 +5,13 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-//import * as FeatherIcon from 'react-feather';
 import Navbarsupoort from '../../_components/navbarsupoort';
-//import { vendorAction } from '../_actions/viewticketthread';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Footer from "../../_components/footer";
-//import RichTextEditor from 'react-rte';
-//import { Controller, useForm } from "react-hook-form";
-//import TextEditor from '../../_components/textEditor';
-//import { Link } from 'react-router-dom';
-//import PageTitle from '../../components/PageTitle';
-//import $ from "jquery";
 import ViewTicketReplay from './viewticketreplay';
+import config from '../../config/config';
+var urlpattern =config.baseUrl;
 const defaultSorted = [
     {
         dataField: 'id',
@@ -113,12 +107,11 @@ const ViewTicketThread = (props) => {
   
 
   const [tickets, getTickets ]=useState([]);
- const url ='http://www.apiats.somee.com/api/';
     useEffect(() => {
       getAllTickets();
     }, []);
     const getAllTickets=()=>{
-        axios.get(`${url}clscreateticket?status=All`)
+        axios.get(`${urlpattern}clscreateticket?status=All`)
         
         .then((response)=>{
             var allTickets=response.data;
