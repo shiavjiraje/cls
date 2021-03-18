@@ -56,7 +56,7 @@ class Login extends Component {
                         <div className="input-group mb-3">
                            
                             <div className="input-group-prepend">
-                                <span className="input-group-text input-group-icon" id="basic-addon3"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <span className="input-group-text input-group-icon" id="basic-addon3"><i className="fa fa-user" aria-hidden="true"></i></span>
                             </div>
                             <input type="text" className="form-control" placeholder="Username" 
                             value={this.state.username}
