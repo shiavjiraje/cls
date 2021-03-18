@@ -31,6 +31,7 @@ function logout(){
     return dispatch => {
         localStorage.removeItem('auth');
         localStorage.removeItem('token');
+        localStorage.removeItem('Username');
         dispatch(logoutUser());
         history.push('/');
     }

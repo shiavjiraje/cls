@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbarsupoort from "../../_components/navbarsupoort";
 import { Col, Row } from "reactstrap";
-import TextEditor from "../../_components/textEditor";
+import TextEditor from '../../_components/textEditor';
 import Footer from "../../_components/footer";
 //import { useDispatch } from "react-redux";
 import {Controller, useForm } from "react-hook-form";
@@ -26,8 +26,10 @@ function OpenNewTicket() {
   //  const dispatch = useDispatch();
   
   const onSubmit = (e, data) => {
-    var textdata = data.editor;
-    var stripedHtml = textdata.replace(/<[^>]+>/g, '');
+   
+    var textdata = data.texteditordata;
+    console.log(textdata,"text editor console")
+    //var stripedHtml = textdata.replace(/<[^>]+>/g, '');
 
     console.log("main function");
     console.log("ajax request to the resource which will require cors enabled");
@@ -40,7 +42,7 @@ function OpenNewTicket() {
     formData.append("extension", extension);
     formData.append("helptopics", helptopics);
     formData.append("issuesummary", issuesummary);
-    formData.append("details", stripedHtml);
+    formData.append("details", details);
     formData.append("initialstatus", initialstatus);
 
     $.ajax({
@@ -243,7 +245,7 @@ function OpenNewTicket() {
                       setdetails(e.target.value);
                     }} name="details" className="form-control"></textarea> */}
                              <Controller
-                              name="editor"
+                              name="texteditordata"
                               control={control}
                               defaultValue=""
                               render={({ onChange, value }) => (
