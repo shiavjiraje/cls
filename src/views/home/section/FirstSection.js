@@ -49,9 +49,9 @@ const FirstSection = (props) => {
               <label className="light-text">You are here : Home</label>
             </Col>
             <Col lg={3}>
-               <div class="form-group has-search">
-                <span class="fa fa-search form-control-feedback"></span>
-                <input type="text" class="form-control"  placeholder="Search for datas and report"/>
+               <div className="form-group has-search">
+                <span className="fa fa-search form-control-feedback"></span>
+                <input type="text" className="form-control"  placeholder="Search for datas and report"/>
               </div>
             </Col>
           </Row>

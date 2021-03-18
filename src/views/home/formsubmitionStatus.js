@@ -140,7 +140,7 @@ const FormSubmissionStstus = (props) => {
                 <a href="#"
                   className="btn-link"
                   onClick={() => _validateFunction(row)}
-                  > {row.status} &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>
+                  > {row.status} &nbsp;&nbsp;&nbsp;&nbsp;<i className="fa fa-angle-down" aria-hidden="true"></i>
                   </a>
               )
         }
@@ -224,7 +224,7 @@ const FormSubmissionStstus = (props) => {
                               name="status">
                                <option value="">Select</option>
                                <option value="Submit">Submit</option>
-                               <option value="inProgress">In Progress</option>                               
+                               <option value="InProgress">In Progress</option>                               
                                <option value="Completed">Completed</option>
                            </select>
                        </Col>

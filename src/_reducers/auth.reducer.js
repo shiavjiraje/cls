@@ -1,7 +1,7 @@
 
 let token = '';//localStorage.getItem('token');
 let auth = '';//localStorage.getItem('auth');
-const initialState = auth ? { loggedIn: true, auth, token } : {};
+const initialState = auth ? { loggedIn: true, auth, token, user:'' } : {}; 
 
 export function authentication(state = initialState, action) {
   switch (action.type) {
@@ -9,7 +9,8 @@ export function authentication(state = initialState, action) {
       return {
         loggingIn: true,
         auth: action.auth,
-        token: action.token
+        token: action.token,
+        user:action.user
       };
     case 'LOGOUT_SUCCESS':
       return {

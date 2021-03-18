@@ -15,10 +15,10 @@ function login(username, password){
         }
         userService.post(apiEndpoint, payload)
         .then((response)=>{
-            console.log(response.data.status);
+            console.log(response,"Login Response");
             if (response.data.status===true) {
-                localStorage.setItem('token', response.data.token);
-                localStorage.setItem('auth', response.data.auth);
+                localStorage.setItem('token', response.data.data.token);
+                localStorage.setItem('auth', response.data.data.auth);
                 dispatch(setUserDetails(response.data.data));
                 history.push('/home');
             }
@@ -39,7 +39,8 @@ export function setUserDetails(user){
     return{
         type: "LOGIN_SUCCESS",
         auth: user.auth,
-        token: user.token
+        token: user.token,
+        user:user
     }
 }
 
