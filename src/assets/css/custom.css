@@ -249,6 +249,9 @@ footer {
   color: #fff !important;
   text-decoration: none;
 }
+.table-hover tbody tr td{
+  word-wrap:break-word;
+}
 .h1{
   margin-bottom: .5rem;
     font-weight: 500;

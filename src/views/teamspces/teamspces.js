@@ -97,26 +97,26 @@ const TeamSpaces = (props) => {
     }, []);
     const getAllSpces=()=>{
         var axios = require('axios');
-        var data = '';
-        
-        var config = {
-          method: 'get',
-          url: 'https://archesoftronix1.teamwork.com/spaces/api/v1/spaces.json',
-          headers: { 
-            'Authorization': 'Bearer tkn.v1_ZjdhY2YxNDQtZjQxMS00YzFkLTgyNDEtYmRkNzVkNGE0YmUwLTc2ODY5Ni40NjY4MzcuVVM=', 
-            'Cookie': 'JSESSIONID=3830ac92f6c784a04f59747e3261a6f7c334; PROJLB=s7; RDS=3; tw-auth=tw-3BA56F6201B2F8445B60F26E56596C6C-oWViIwOasSfk9rBDxFaQ6ktTBj9Nu4-466837'
-          },
-          data : data
-        };
-        
-        axios(config)
-        .then(function (response) {
-          console.log(JSON.stringify(response.data));
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-        
+var data = '';
+
+var config = {
+  method: 'get',
+  url: 'https://clscharteredsecretaries.eu.teamwork.com/spaces/api/v1/spaces.json',
+  headers: { 
+    'Authorization': 'Bearer tkn.v1_MzVjNTRiZTUtZmFhZS00MTQ4LWFhMzQtMmNlNjNkN2U5ODNhLTY4MzY1OC41ODA3MDMuRVU=', 
+    'Cookie': 'tw-auth=tw-BCDC8AA908709E9255CD6F19BD88BAD8-acEukNZ1lKrkCuniJkg1piawvOtN53-580703'
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
         
     }
     

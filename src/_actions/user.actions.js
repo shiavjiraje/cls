@@ -1,5 +1,6 @@
 import { userService } from '../_services/';
 import { history } from '../_helpers';
+import swal from 'sweetalert';
 
 export const userActions = {
     login,
@@ -22,6 +23,9 @@ function login(username, password){
                 localStorage.setItem('Username', response.data.data.Username);
                 dispatch(setUserDetails(response.data.data));
                 history.push('/home');
+            }
+            else{
+                swal("Username Password Wrong", "You clicked the button!", "error");
             }
         })
     };
