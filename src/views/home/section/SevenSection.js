@@ -6,15 +6,7 @@ import { createVendor } from "../../../_actions/section7.actions";
 const SevenSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
   var cfidPost =getcfid.cfid
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
-  });
-  const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfidPost,
-  });
-  const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfidPost,
-  });
+ 
 
   const { handleSubmit } = useForm();
 
@@ -25,6 +17,15 @@ const SevenSection = (props) => {
       createVendor([otherdirectorship1, otherdirectorship2, otherdirectorship3])
     );
   };
+  const [otherdirectorship1, setotherdirectorship1] = useState({
+    cfid: cfidPost,
+  });
+  const [otherdirectorship2, setotherdirectorship2] = useState({
+    cfid: cfidPost,
+  });
+  const [otherdirectorship3, setotherdirectorship3] = useState({
+    cfid: cfidPost,
+  });
   const onChange = (set, field, value) => {
     set((state) => ({
       ...state,

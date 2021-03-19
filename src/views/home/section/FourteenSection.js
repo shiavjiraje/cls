@@ -12,10 +12,7 @@ var urlpattern =config.baseUrl;
   var cfidPost =getcfid.cfid
   console.log(getcfid.cfid, "section-3");
  // console.log(getcfid);
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
-    //agree:1
-  });
+  
 
   const { handleSubmit } = useForm();
   const handlePdfSubmit = () => {
@@ -30,6 +27,10 @@ var urlpattern =config.baseUrl;
         console.log("error");
       });
   };
+  const [otherdirectorship1, setotherdirectorship1] = useState({
+    cfid: cfidPost,
+    //agree:1
+  });
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     console.log(otherdirectorship1);

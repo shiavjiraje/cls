@@ -7,15 +7,7 @@ const FiveSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
   console.log(getcfid.cfid, "section-5");
   var cfidPost =getcfid.cfid
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
-  });
-  const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfidPost,
-  });
-  const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfidPost,
-  });
+ 
 
   const { register, errors, handleSubmit } = useForm();
 
@@ -26,6 +18,15 @@ const FiveSection = (props) => {
       createVendor([otherdirectorship1, otherdirectorship2, otherdirectorship3])
     );
   };
+  const [otherdirectorship1, setotherdirectorship1] = useState({
+    cfid: cfidPost,
+  });
+  const [otherdirectorship2, setotherdirectorship2] = useState({
+    cfid: cfidPost,
+  });
+  const [otherdirectorship3, setotherdirectorship3] = useState({
+    cfid: cfidPost,
+  });
   const onChange = (set, field, value) => {
     set((state) => ({
       ...state,

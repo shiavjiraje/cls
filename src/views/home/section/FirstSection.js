@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Row } from "reactstrap";
 import { useForm } from "react-hook-form";
 import { createVendorinfo } from "../../../_actions/section1.actions";
@@ -18,7 +18,7 @@ const FirstSection = (props) => {
   const [email, setemail] = useState("");
   const [postal, setpostal] = useState("");
   const { register, errors, handleSubmit } = useForm();
-  localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
+  
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     // e.preventDefault();
@@ -40,6 +40,10 @@ const FirstSection = (props) => {
 
     dispatch(createVendorinfo(reqBody));
   };
+  // useEffect(() => {
+  //   localStorage.setItem("apiData", JSON.stringify({cfid:""}));
+  // });
+ 
   return (
     <section className="light-section top-100 pb-5">
       <div className="content">
