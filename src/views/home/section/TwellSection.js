@@ -26,17 +26,18 @@ const TwellSection = (props) => {
       ])
     );
   };
+  const [cfid, setCfid]=useState(cfidPost);
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
   });
   const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
   });
   const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
   });
   const [otherdirectorship4, setotherdirectorship4] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
   });
   const onChange = (set, field, value) => {
     set((state) => ({

@@ -27,8 +27,9 @@ var urlpattern =config.baseUrl;
         console.log("error");
       });
   };
+  const [cfid, setCfid]=useState(cfidPost);
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
     //agree:1
   });
   const dispatch = useDispatch();

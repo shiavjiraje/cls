@@ -14,8 +14,9 @@ const ThirteenSection = (props) => {
     console.log(otherdirectorship1);
     dispatch(createVendor(otherdirectorship1));
   };
+  const [cfid, setCfid]=useState(cfidPost);
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
     //agree:1
   });
   const onChange = (set, field, value) => {

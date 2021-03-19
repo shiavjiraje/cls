@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section5.actions";
 const FiveSection = (props) => {
   var getcfid = JSON.parse(localStorage.getItem("apiData"));
+
   console.log(getcfid.cfid, "section-5");
   var cfidPost =getcfid.cfid
  
@@ -18,14 +19,16 @@ const FiveSection = (props) => {
       createVendor([otherdirectorship1, otherdirectorship2, otherdirectorship3])
     );
   };
+  const [cfid, setCfid]=useState(cfidPost);
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfidPost,
+    
+    cfid: cfid,
   });
   const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
   });
   const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfidPost,
+    cfid: cfid,
   });
   const onChange = (set, field, value) => {
     set((state) => ({
