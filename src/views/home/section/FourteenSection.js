@@ -5,6 +5,7 @@ import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section14.actions";
 import axios from "axios";
 import config from '../../../config/config';
+import { history } from '../../../_helpers';
 const FourteenSection = (props) => {
   
 var urlpattern =config.baseUrl;
@@ -22,6 +23,11 @@ var urlpattern =config.baseUrl;
        // alert("pdf calling");
         console.log(response);
         localStorage.setItem("pdfData", JSON.stringify(response.data));
+        debugger;
+        if(response.data.Filepath==!null){
+          history.push('/projectmanagement');
+        }
+        
       })
       .catch(function () {
         console.log("error");
