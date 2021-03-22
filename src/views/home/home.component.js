@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';  
 import { withRouter } from 'react-router-dom';
-import Navigation from '../../_components/navbar'; 
 import { Collapse } from 'reactstrap';
 import Footer from '../../_components/footer';
 import FirstSection from './section/FirstSection';
@@ -18,6 +17,7 @@ import ElevenSection from './section/ElevenSection';
 import TwellSection from './section/TwellSection';
 import ThirteenSection from './section/ThirteenSection';
 import FourteenSection from './section/FourteenSection';
+import HomeNavbar from '../../_components/homnavbar';
 
 
 
@@ -91,7 +91,7 @@ class Home extends Component {
    render() {
       return (
           <React.Fragment>
-              <Navigation />
+              <HomeNavbar />
               <div style={{height:"2100px"}}>
               <FirstSection onSecondSectionClick={this.showSecondSection.bind(this)}/>
               <Collapse isOpen={this.state.collapse1}>
@@ -118,7 +118,7 @@ class Home extends Component {
              <Collapse isOpen={this.state.collapse8}>
               <NineSection onTenSectionClick={this.showTenSection.bind(this)}/>
              </Collapse>
-             <Collapse isOpen={this.state.collapse9}>
+            <Collapse isOpen={this.state.collapse9}>
               <TenSection onElevenSectionClick={this.showElevenSection.bind(this)}/>
              </Collapse>
              <Collapse isOpen={this.state.collapse10}>
@@ -130,9 +130,9 @@ class Home extends Component {
              <Collapse isOpen={this.state.collapse12}>
               <ThirteenSection onFourteenSectionClick={this.showFourteenSection.bind(this)}/>
              </Collapse>
-             <Collapse isOpen={this.state.collapse13}>
+              <Collapse isOpen={this.state.collapse13}>
               <FourteenSection />
-             </Collapse>
+             </Collapse> 
            
               <Footer/>
               </div>

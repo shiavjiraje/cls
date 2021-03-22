@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section4.actions";
+import config from '../../../config/config';
 //import axios from "axios";
 const FourthSection = (props) => {
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  var cfidPost =getcfid.cfid
+  var urlpattern =config.baseUrl;
+  //var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  //var cfidPost =getcfid.cfid
  // console.log(getcfid.cfid, "section-4");
   const [cfid, setcfid] = useState();
   const [name, setname] = useState("");
@@ -30,7 +32,7 @@ const FourthSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: cfidPost,
+      cfid: cfid,
       name: name,
       companyname: companyname,
       dob: dob,
@@ -50,7 +52,30 @@ const FourthSection = (props) => {
     console.log(reqBody);
     dispatch(createVendor(reqBody));
   };
- 
+  useEffect(() => {
+    getCfidApi();
+}, []);
+const getCfidApi=()=>{
+var axios = require('axios');
+var data = '';
+
+var config = {
+  method: 'get',
+  url: `${urlpattern}clscfid`,
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+  var setApicfid= response.data.cfid;
+  setcfid(setApicfid);
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+}
   return (
     <section className="dark-section pb-4">
       <div className="content pt-5">
@@ -88,7 +113,7 @@ const FourthSection = (props) => {
               </label>
             </Col>
             <Col lg={3}>
-              <input
+              {/* <input
                 type="hidden"
                 className="form-control"
                 onChange={(e) => {
@@ -96,7 +121,7 @@ const FourthSection = (props) => {
                 }}
                 value={getcfid.cfid}
                 name="cfid"
-              />
+              /> */}
               <input
                 type="text"
                 className="form-control"

@@ -1,14 +1,16 @@
 import React, {useRef, useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section2.actions";
+import config from '../../../config/config';
 const SecondSection = (props) => {
    const dispatch = useDispatch();
- var getcfid = JSON.parse(localStorage.getItem("apiData"));
+   var urlpattern =config.baseUrl;
+ //var getcfid = JSON.parse(localStorage.getItem("apiData"));
  //console.log(getcfid.cfid, "section-2");
  //console.log(getcfid.cfid, "second section");
- var cfidPost =getcfid.cfid
+ //var cfidPost =getcfid.cfid
   const [cfid, setcfid] = useState();
   const [firstchoice, setfirstchoice] = useState("");
   const [secondchoice, setsecondchoice] = useState("");
@@ -21,7 +23,7 @@ const SecondSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: cfidPost,
+      cfid: cfid,
       firstchoice: firstchoice,
       secondchoice: secondchoice,
       thirdchoice: thirdchoice,
@@ -36,7 +38,29 @@ const SecondSection = (props) => {
     if (firstInputFocus.current) {
           firstInputFocus.current.focus()
         }
+        getCfidApi();
     }, []);
+   const getCfidApi=()=>{
+    var axios = require('axios');
+    var data = '';
+    
+    var config = {
+      method: 'get',
+      url: `${urlpattern}clscfid`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      var setApicfid= response.data.cfid;
+      setcfid(setApicfid);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+   }
   return (
     <section className="dark-section pt-2 pb-4">
       <div className="content pt-5">
@@ -69,14 +93,14 @@ const SecondSection = (props) => {
               </label>
             </Col>
             <Col lg={3}>
-              <input
+              {/* <input
                 type="hidden" value={getcfid.cfid}
                 className="form-control" ref={firstInputFocus}
                 onChange={(e) => {
                   setcfid(e.target.value);
                 }} autoFocus
                 name="cfid"
-              />
+              /> */}
               <input
                 type="text"
                 className="form-control"

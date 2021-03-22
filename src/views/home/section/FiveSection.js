@@ -3,39 +3,73 @@ import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section5.actions";
+import config from '../../../config/config';
 const FiveSection = (props) => {
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  // var getcfid = JSON.parse(localStorage.getItem("apiData"));
 
-  console.log(getcfid.cfid, "section-5");
-  var cfidPost =getcfid.cfid
- 
-
+  // console.log(getcfid.cfid, "section-5");
+  // var cfidPost =getcfid.cfid
+  
+  var urlpattern =config.baseUrl;
   const { register, errors, handleSubmit } = useForm();
 
   const dispatch = useDispatch();
-  const onSubmit = (e) => {
-    console.log(otherdirectorship1, otherdirectorship2, otherdirectorship3);
-    dispatch(
-      createVendor([otherdirectorship1, otherdirectorship2, otherdirectorship3])
-    );
-  };
-  const [cfid, setCfid]=useState(cfidPost);
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    
-    cfid: cfid,
-  });
-  const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfid,
-  });
-  const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfid,
-  });
+
   const onChange = (set, field, value) => {
     set((state) => ({
       ...state,
       [field]: value,
     }));
   };
+  useEffect(() => {
+    getCfidApi();
+}, []);
+
+
+const [getcfid, setcfid] = useState();  
+ 
+
+const getCfidApi=()=>{
+var axios = require('axios');
+var data = '';
+
+var config = {
+  method: 'get',
+  url: `${urlpattern}clscfid`,
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+  var setApicfid= response.data.cfid;
+  setcfid(setApicfid);
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+}
+
+ 
+const [otherdirectorship1, setotherdirectorship1] = useState({
+  cfid:getcfid
+});
+const [otherdirectorship2, setotherdirectorship2] = useState({
+  cfid:getcfid
+});
+const [otherdirectorship3, setotherdirectorship3] = useState({
+  cfid:getcfid
+});
+const onSubmit = (e) => {
+  console.log(otherdirectorship1, otherdirectorship2, otherdirectorship3);
+  let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3];
+  data.map(directorship => directorship.cfid=getcfid);
+  dispatch(
+    createVendor(data)
+  );
+};
+
   return (
     <section className="light-section pb-4">
       <div className="content pt-5">
@@ -81,29 +115,12 @@ const FiveSection = (props) => {
               {/* <input
                 type="text"
                 className="form-control"
-                //value={sectionstate.otherdirectorship1.cfid}
-                value={getcfid.cfid}
-                onChange={event => onChange(setotherdirectorship1, "cfid", event.target.value)}
-                name="cfid" id="cfid1"
-              />
-              <input
-                type="text"
-                className="form-control"
-                value={getcfid.cfid}
-                //value={sectionstate.otherdirectorship2.cfid}
-                
-                //onChange={event => onChange(setotherdirectorship2, "cfid", event.target.value)}
-                name="cfid" id="cfid2"
-              />
-              <input
-                type="text"
-                className="form-control"
-                value={getcfid.cfid}
-                //value={sectionstate.otherdirectorship3.cfid}
-                //onChange={event => onChange(setotherdirectorship3, "cfid", event.target.value)}
-                name="cfid" id="cfid3"
-              />
-              <br/> */}
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "cfid", event.target.value)
+                }
+                name="cfid"
+              />  */}
+              <br/> 
               <input
                 type="text"
                 className="form-control"

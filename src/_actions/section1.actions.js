@@ -11,7 +11,7 @@ export const createVendorinfo=(payload)=>{
         .then((response)=>{
             dispatch(createUserInfo(response.data));
             console.log(response.data.cfid, "section-1-action");
-            localStorage.setItem("apiData", JSON.stringify(response.data));
+            //localStorage.setItem("apiData", JSON.stringify(response.data));
 
             if(response.data){
                 swal("Record Saved Successful", "You clicked the button!", "success");

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
@@ -9,46 +9,61 @@ import { history } from '../../../_helpers';
 const FourteenSection = (props) => {
   
 var urlpattern =config.baseUrl;
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  var cfidPost =getcfid.cfid
-  console.log(getcfid.cfid, "section-3");
- // console.log(getcfid);
-  
+ 
+const [cfid, setcfid] = useState();
+useEffect(() => {
+  getCfidApi();
+}, []);
+const getCfidApi=()=>{
+var axios = require('axios');
+var data = '';
 
+var config = {
+  method: 'get',
+  url: `${urlpattern}clscfid`,
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+  var setApicfid= response.data.cfid;
+  setcfid(setApicfid);
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+}
   const { handleSubmit } = useForm();
   const handlePdfSubmit = () => {
     axios
-      .post(`${urlpattern}clspdfform?cfid=${cfidPost}`)
+      .post(`${urlpattern}clspdfform?cfid=${cfid}`)
       .then((response) => {
        // alert("pdf calling");
         console.log(response);
         localStorage.setItem("pdfData", JSON.stringify(response.data));
         debugger;
-        if(response.data.Filepath==!null){
+        //if(response.data.Filepath==!null){
           history.push('/projectmanagement');
-        }
+        //}
         
       })
       .catch(function () {
         console.log("error");
       });
   };
-  const [cfid, setCfid]=useState(cfidPost);
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfid,
-    //agree:1
-  });
+  const [addtionalinfo, setaddtionalinfo]=useState();
+
   const dispatch = useDispatch();
   const onSubmit = (e) => {
-    console.log(otherdirectorship1);
-    dispatch(createVendor(otherdirectorship1));
+    let reqBody = {
+      cfid:cfid,
+      addtionalinfo:addtionalinfo
+    }
+   
+    dispatch(createVendor(reqBody));
     handlePdfSubmit();
-  };
-  const onChange = (set, field, value) => {
-    set((state) => ({
-      ...state,
-      [field]: value,
-    }));
   };
   return (
     <React.Fragment>
@@ -68,13 +83,9 @@ var urlpattern =config.baseUrl;
                 <textarea
                   className="form-control"
                   rows="12"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "addtionalinfo",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setaddtionalinfo(e.target.value);
+                  }}
                   name="addtionalinfo"
                   id="addtionalinfo"
                 ></textarea>

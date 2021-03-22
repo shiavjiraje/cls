@@ -1,14 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section6.actions";
+import config from '../../../config/config';
 const SixSection = (props) => {
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  console.log(getcfid, "section-6");
-  var cfidPost =getcfid.cfid
   
-
+var urlpattern =config.baseUrl;
+  // var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  // console.log(getcfid, "section-6");
+  // var cfidPost =getcfid.cfid
+  
+  const [getcfid, setcfid] = useState();  
+ 
+  useEffect(() => {
+    getCfidApi();
+}, []);
+  const getCfidApi=()=>{
+  var axios = require('axios');
+  var data = '';
+  
+  var config = {
+    method: 'get',
+    url: `${urlpattern}clscfid`,
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    var setApicfid= response.data.cfid;
+    setcfid(setApicfid);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  
+  }
+  
   const { handleSubmit } = useForm();
   const dispatch = useDispatch();
   const onSubmit = (e) => {
@@ -18,27 +47,24 @@ const SixSection = (props) => {
       otherdirectorship3,
       otherdirectorship4
     );
+    let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4];
+  data.map(directorship => directorship.cfid=getcfid);
     dispatch(
-      createVendor([
-        otherdirectorship1,
-        otherdirectorship2,
-        otherdirectorship3,
-        otherdirectorship4,
-      ])
+      createVendor(data)
     );
   };
-  const [cfid, setCfid]=useState(cfidPost);
+
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const [otherdirectorship4, setotherdirectorship4] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const onChange = (set, field, value) => {
     set((state) => ({

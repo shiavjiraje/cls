@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section3.actions";
-
+import config from '../../../config/config';
 const ThirdSection = (props) => {
   const dispatch = useDispatch();
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  var cfidPost =getcfid.cfid
+  var urlpattern =config.baseUrl;
+  // var getcfid = JSON.parse(localStorage.getItem("apiData"));
+  // var cfidPost =getcfid.cfid
   //console.log(getcfid.cfid, "section-2");
   const [cfid, setcfid] = useState();
   const [issuedsharecapital, setissuedsharecapital] = useState("");
@@ -18,7 +19,7 @@ const ThirdSection = (props) => {
   const onSubmit = (e) => {
     // e.preventDefault();
     let reqBody = {
-      cfid: cfidPost,
+      cfid: cfid,
       issuedsharecapital: issuedsharecapital,
       nominalamountpershare: nominalamountpershare,
       shareclass: shareclass,
@@ -27,6 +28,30 @@ const ThirdSection = (props) => {
     console.log(reqBody);
     dispatch(createVendor(reqBody));
   };
+  useEffect(() => {
+        getCfidApi();
+    }, []);
+   const getCfidApi=()=>{
+    var axios = require('axios');
+    var data = '';
+    
+    var config = {
+      method: 'get',
+      url: `${urlpattern}clscfid`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      var setApicfid= response.data.cfid;
+      setcfid(setApicfid);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+   }
   return (
     <section className="light-section pt-5 pb-4">
       <div className="content">
@@ -49,7 +74,7 @@ const ThirdSection = (props) => {
             </Col>
             <Col lg={3} className="style-input">
               <div className="form-group">
-                <input
+                {/* <input
                   type="hidden"
                   className="form-control"
                   value={getcfid.cfid}
@@ -57,7 +82,7 @@ const ThirdSection = (props) => {
                     setcfid(e.target.value);
                   }}
                   name="cfid"
-                />
+                /> */}
                 <input
                   type="text"
                   className="form-control"

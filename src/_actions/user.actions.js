@@ -21,9 +21,9 @@ function login(username, password){
                 localStorage.setItem('token', response.data.data.token);
                 localStorage.setItem('auth', response.data.data.auth);
                 localStorage.setItem('Username', response.data.data.Username);
-                localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
+               // localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
                 dispatch(setUserDetails(response.data.data));
-                history.push('/home');
+                history.push('/welocme');
             }
             else{
                 swal("Username Password Wrong", "You clicked the button!", "error");
@@ -37,7 +37,7 @@ function logout(){
         localStorage.removeItem('auth');
         localStorage.removeItem('token');
         localStorage.removeItem('Username');
-        localStorage.removeItem('apiData');
+        //localStorage.removeItem('apiData');
         dispatch(logoutUser());
         history.push('/');
     }

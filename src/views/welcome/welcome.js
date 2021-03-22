@@ -5,7 +5,7 @@ import { Col, Row } from "reactstrap";
 import Footer from "../../_components/footer";
 import $ from "jquery";
 import Navbar from "../../_components/navbar";
-function Crm(props) {
+function Welcome(props) {
   //const activeTicket = "active ";
   //const open = "open";
   
@@ -52,7 +52,7 @@ function Crm(props) {
           <Row className="mt-3">
             <Col lg={12}>
               <h6 className="text-span">
-                <b>Welcome To Crm </b>
+                <b>Welcome To CLS </b>
               </h6>
             </Col>
           </Row>
@@ -62,4 +62,4 @@ function Crm(props) {
     </React.Fragment>
   );
 }
-export default Crm;
+export default Welcome;

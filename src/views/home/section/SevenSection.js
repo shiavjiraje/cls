@@ -1,31 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section7.actions";
+import config from '../../../config/config';
 const SevenSection = (props) => {
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  var cfidPost =getcfid.cfid
+  
+var urlpattern =config.baseUrl;
+  
  
 
   const { handleSubmit } = useForm();
-
+  const [getcfid, setcfid] = useState();  
+ 
+  useEffect(() => {
+    getCfidApi();
+}, []);
+  const getCfidApi=()=>{
+  var axios = require('axios');
+  var data = '';
+  
+  var config = {
+    method: 'get',
+    url: `${urlpattern}clscfid`,
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    var setApicfid= response.data.cfid;
+    setcfid(setApicfid);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  
+  }
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     console.log(otherdirectorship1, otherdirectorship2, otherdirectorship3);
+    let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3];
+  data.map(directorship => directorship.cfid=getcfid);
     dispatch(
-      createVendor([otherdirectorship1, otherdirectorship2, otherdirectorship3])
+      createVendor(data)
     );
   };
-  const [cfid, setCfid]=useState(cfidPost);
+  
   const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: cfid,
+    cfid: getcfid,
   });
   const onChange = (set, field, value) => {
     set((state) => ({

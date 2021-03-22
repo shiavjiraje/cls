@@ -20,6 +20,7 @@ import Crm from './views/crm/crm';
 import ProjectManagement from './views/projectmangement/projectmangement';
 import TeamSpaces from './views/teamspces/teamspces';
 import FormSubmissionStstus from './views/home/formsubmitionStatus';
+import Welcome from './views/welcome/welcome';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -46,6 +47,7 @@ function App() {
               <Switch>
                 {/* <PrivateRoute exact path='/home' component={Home} /> */}
                 <PrivateRoute exact path='/projectmanagement' component={ProjectManagement} />
+                <PrivateRoute exact path='/welocme' component={Welcome} />
                 <PrivateRoute exact path='/teamspce' component={TeamSpaces} />
                 <PrivateRoute exact path='/viewforms' component={FormSubmissionStstus} />
                 {/* <PrivateRoute exact path='/vendor' component={Vendor} />

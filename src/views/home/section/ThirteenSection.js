@@ -1,30 +1,64 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section13.actions";
+import config from '../../../config/config';
 const ThirteenSection = (props) => {
-  var getcfid = JSON.parse(localStorage.getItem("apiData"));
-  var cfidPost =getcfid.cfid
+  var urlpattern =config.baseUrl;
   
   //console.log(getcfid);
   const { register, errors, handleSubmit } = useForm();
   const dispatch = useDispatch();
+  const [roaddressline1 ,setroaddressline1]=useState('');
+  const [caaddressline1 ,setcaaddressline1]=useState('');
+  const [roaddressline2 ,setroaddressline2]=useState('');
+  const [caaddressline2 ,setcaaddressline2]=useState('');
+  const [roaddressline3 ,setroaddressline3]=useState('');
+  const [caaddressline3 ,setcaaddressline3]=useState('');
+  const [ropostalcode ,setropostalcode]=useState('');
+  const [capostalcode ,setcapostalcode]=useState('');
+  const [roisalsothebusinessorcaaddress ,setroisalsothebusinessorcaaddress]=useState('');
+  const [cfid, setcfid] = useState();
   const onSubmit = (e) => {
-    console.log(otherdirectorship1);
-    dispatch(createVendor(otherdirectorship1));
+    let reqBody = {
+      cfid:cfid,
+      roaddressline1: roaddressline1,
+      caaddressline1: caaddressline1,
+      roaddressline2: roaddressline2,
+      caaddressline2: caaddressline2,
+      roaddressline3: roaddressline3,
+      caaddressline3: caaddressline3,
+      ropostalcode: ropostalcode,
+      capostalcode: capostalcode,
+      roisalsothebusinessorcaaddress: roisalsothebusinessorcaaddress,
+    };
+    dispatch(createVendor(reqBody));
   };
-  const [cfid, setCfid]=useState(cfidPost);
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: cfid,
-    //agree:1
+  useEffect(() => {
+    getCfidApi();
+}, []);
+  const getCfidApi=()=>{
+  var axios = require('axios');
+  var data = '';
+  
+  var config = {
+    method: 'get',
+    url: `${urlpattern}clscfid`,
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    var setApicfid= response.data.cfid;
+    setcfid(setApicfid);
+  })
+  .catch(function (error) {
+    console.log(error);
   });
-  const onChange = (set, field, value) => {
-    set((state) => ({
-      ...state,
-      [field]: value,
-    }));
-  };
+  
+  }
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -61,13 +95,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "roaddressline1",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setroaddressline1(e.target.value);
+                  }}
                   name="roaddressline1"
                   id="roaddressline1"
                   ref={register({ required: true })}
@@ -83,13 +113,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "caaddressline1",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setcaaddressline1(e.target.value);
+                  }}
                   name="caaddressline1"
                   id="caaddressline1"
                 />
@@ -105,13 +131,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "roaddressline2",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setroaddressline2(e.target.value);
+                  }}
                   name="roaddressline2"
                   id="roaddressline2"
                   ref={register({ required: true })}
@@ -127,13 +149,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "caaddressline2",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setcaaddressline2(e.target.value);
+                  }}
                   name="caaddressline2"
                   id="caaddressline2"
                 />
@@ -147,13 +165,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "roaddressline3",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setroaddressline3(e.target.value);
+                  }}
                   name="roaddressline3"
                   id="roaddressline3"
                 />
@@ -165,13 +179,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "caaddressline3",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setcaaddressline3(e.target.value);
+                  }}
                   name="caaddressline3"
                   id="caaddressline3"
                 />
@@ -185,13 +195,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="number"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "ropostalcode",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setropostalcode(e.target.value);
+                  }}
                   name="ropostalcode"
                   id="ropostalcode"
                 />
@@ -203,13 +209,9 @@ const ThirteenSection = (props) => {
                 <input
                   type="number"
                   className="form-control"
-                  onChange={(event) =>
-                    onChange(
-                      setotherdirectorship1,
-                      "capostalcode",
-                      event.target.value
-                    )
-                  }
+                  onChange={(e) => {
+                    setcapostalcode(e.target.value);
+                  }}
                   name="capostalcode"
                   id="capostalcode"
                 />
@@ -223,13 +225,9 @@ const ThirteenSection = (props) => {
                       className="form-check-input"
                       value={"Yes" || "No"}
                       defaultChecked={false}
-                      onChange={(event) =>
-                        onChange(
-                          setotherdirectorship1,
-                          "roisalsothebusinessorcaaddress",
-                          event.target.value
-                        )
-                      }
+                      onChange={(e) => {
+                        setroisalsothebusinessorcaaddress(e.target.value);
+                      }}
                       name="roisalsothebusinessorcaaddress"
                       id="roisalsothebusinessorcaaddress"
                       type="checkbox"
