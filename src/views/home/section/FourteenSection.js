@@ -43,7 +43,7 @@ axios(config)
        // alert("pdf calling");
         console.log(response);
         localStorage.setItem("pdfData", JSON.stringify(response.data));
-        debugger;
+        //debugger;
         //if(response.data.Filepath==!null){
           history.push('/projectmanagement');
         //}
