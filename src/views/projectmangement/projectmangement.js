@@ -97,7 +97,7 @@ const ProjectManagement = (props) => {
       getAllProject();
     }, []);
     const getAllProject=()=>{
-        var apitokenstring = "twp_7lLfVHIgalTodMCxT3aWRMngEUnb_eu";
+        var apitokenstring = "twp_pqX4Pmi5ryK7DNzx9I3vuZHLyfxL_eu";
         var encodedtoken = window.btoa(apitokenstring);
         //alert("calling");
         $.ajax
