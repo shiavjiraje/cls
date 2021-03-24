@@ -96,27 +96,34 @@ const TeamSpaces = (props) => {
       getAllSpces();
     }, []);
     const getAllSpces=()=>{
-        var axios = require('axios');
-var data = '';
-
-var config = {
-  method: 'get',
-  url: 'https://clscharteredsecretaries.eu.teamwork.com/spaces/api/v1/spaces.json',
-  headers: { 
-    'Authorization': 'Bearer tkn.v1_MzVjNTRiZTUtZmFhZS00MTQ4LWFhMzQtMmNlNjNkN2U5ODNhLTY4MzY1OC41ODA3MDMuRVU=', 
-    'Cookie': 'tw-auth=tw-BCDC8AA908709E9255CD6F19BD88BAD8-acEukNZ1lKrkCuniJkg1piawvOtN53-580703'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
-
+        var apitokenstring = "tkn.v1_YTQ2OThiOTAtYzYwMC00MjkwLWFmMWUtMGQ4YTBmYTI3NTZiLTY4MzY1OC41ODA3MDMuRVU=";
+        //var encodedtoken = window.btoa(apitokenstring);
+        //alert("calling");
+        $.ajax
+        ({
+             
+            url: "https://clscharteredsecretaries.eu.teamwork.com/spaces/api/v1/spaces.json",
+            type:"GET",
+            dataType:"JSON",
+            //data: JSON.stringify(obj),
+                headers: {
+                    'Authorization':`Bearer ${apitokenstring}`,
+                    'Access-Control-Allow-Origin' :'*',
+                    'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, DELETE, PUT',
+                    'Access-Control-Allow-Headers' : 'append,delete,entries,foreach,get,has,keys,set,values,Authorization'
+            
+            },
+            
+            Authorization: `Bearer ${apitokenstring}`,
+            success: function(data) 
+            {
+               // debugger;
+                console.log("log response on success");
+                console.log(data);
+                var allTickets = data;
+                getTickets(allTickets);
+            }
+        });
         
     }
     
