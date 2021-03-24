@@ -47,7 +47,7 @@ function App() {
               <Switch>
                 {/* <PrivateRoute exact path='/home' component={Home} /> */}
                 
-                <PrivateRoute exact path='/welocme' component={Welcome} />
+                <PrivateRoute exact path='/welcome' component={Welcome} />
                 <PrivateRoute exact path='/teamspce' component={TeamSpaces} />
                 <PrivateRoute exact path='/viewforms' component={FormSubmissionStstus} />
                 {/* <PrivateRoute exact path='/vendor' component={Vendor} />

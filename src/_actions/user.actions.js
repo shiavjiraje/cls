@@ -23,7 +23,7 @@ function login(username, password){
                 localStorage.setItem('Username', response.data.data.Username);
                // localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
                 dispatch(setUserDetails(response.data.data));
-                history.push('/welocme');
+                history.push('/welcome');
             }
             else{
                 swal("Username Password Wrong", "You clicked the button!", "error");

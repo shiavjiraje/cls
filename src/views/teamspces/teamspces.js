@@ -108,7 +108,7 @@ const TeamSpaces = (props) => {
             //data: JSON.stringify(obj),
                 headers: {
                     'Authorization':`Bearer ${apitokenstring}`,
-                    'Access-Control-Allow-Origin' :'*',
+                    'Access-Control-Allow-Origin' :'http://cls.somee.com',
                     'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, DELETE, PUT',
                     'Access-Control-Allow-Headers' : 'append,delete,entries,foreach,get,has,keys,set,values,Authorization'
             

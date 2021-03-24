@@ -1,6 +1,7 @@
 {
-  "name": "cls",
+  "name": "cls",  
   "version": "0.1.0",
+  "homepage":"http://cls.somee.com",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^1.3.4",
