@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/cls/static/css/main.36731d8f.chunk.css",
-    "main.js": "/cls/static/js/main.cdd73a54.chunk.js",
-    "main.js.map": "/cls/static/js/main.cdd73a54.chunk.js.map",
+    "main.js": "/cls/static/js/main.72388abf.chunk.js",
+    "main.js.map": "/cls/static/js/main.72388abf.chunk.js.map",
     "runtime-main.js": "/cls/static/js/runtime-main.7614b7b6.js",
     "runtime-main.js.map": "/cls/static/js/runtime-main.7614b7b6.js.map",
     "static/css/2.3966517f.chunk.css": "/cls/static/css/2.3966517f.chunk.css",
-    "static/js/2.48b0e269.chunk.js": "/cls/static/js/2.48b0e269.chunk.js",
-    "static/js/2.48b0e269.chunk.js.map": "/cls/static/js/2.48b0e269.chunk.js.map",
+    "static/js/2.e46da90d.chunk.js": "/cls/static/js/2.e46da90d.chunk.js",
+    "static/js/2.e46da90d.chunk.js.map": "/cls/static/js/2.e46da90d.chunk.js.map",
     "index.html": "/cls/index.html",
     "static/css/2.3966517f.chunk.css.map": "/cls/static/css/2.3966517f.chunk.css.map",
     "static/css/main.36731d8f.chunk.css.map": "/cls/static/css/main.36731d8f.chunk.css.map",
-    "static/js/2.48b0e269.chunk.js.LICENSE.txt": "/cls/static/js/2.48b0e269.chunk.js.LICENSE.txt",
+    "static/js/2.e46da90d.chunk.js.LICENSE.txt": "/cls/static/js/2.e46da90d.chunk.js.LICENSE.txt",
     "static/media/custom.css": "/cls/static/media/CRM Loginbg.b1146704.jpg",
     "static/media/user.ed9e4adf.png": "/cls/static/media/user.ed9e4adf.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7614b7b6.js",
     "static/css/2.3966517f.chunk.css",
-    "static/js/2.48b0e269.chunk.js",
+    "static/js/2.e46da90d.chunk.js",
     "static/css/main.36731d8f.chunk.css",
-    "static/js/main.cdd73a54.chunk.js"
+    "static/js/main.72388abf.chunk.js"
   ]
 }
