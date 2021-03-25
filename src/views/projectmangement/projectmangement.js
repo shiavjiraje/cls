@@ -7,7 +7,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import $ from "jquery";
 import Navbar from '../../_components/navbar';
-import swal from 'sweetalert';
+//import swal from 'sweetalert';
 import CreateProject from './createproject';
 
 const defaultSorted = [

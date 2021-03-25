@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbarsupoort from "../../_components/navbarsupoort";
 import { Col, Row } from "reactstrap";
 import Footer from "../../_components/footer";
@@ -12,7 +12,7 @@ var urlpattern =config.baseUrl;
   //const [data, setData] = useState({ hits: [] });
   const [email, setemail] = useState("");
   const [ticketno, setticketno] = useState("");
-  const [search, setSearch] = useState("");
+  //const [search, setSearch] = useState("");
   const [showTicketGrid, showTicketDetails] = useState(true);
   const [ticketDetails, setticketDetails] = useState([]);
   const handleTicketStstusForm = (e) => {

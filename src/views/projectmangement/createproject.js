@@ -1,10 +1,10 @@
-import React, {useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { Row, Col, Input } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import swal from 'sweetalert';
 const CreateProject = (props) => {
   const {
-    buttonLabel,
+    //buttonLabel,
     className
   } = props;
 
@@ -12,8 +12,8 @@ const CreateProject = (props) => {
  // localStorage.setItem("pdfData", JSON.stringify({CompanyName:"", Filepath:""}));
   //getPdfDetails.CompanyName,
   const toggle = () => setModal(!modal);
-  const [name, setname] = useState("");
-  const [description, setdescription] = useState("");
+  const [setname] = useState("");
+  const [setdescription] = useState("");
   const createNewProject = (e) => {
     var apitokenstring = "twp_pqX4Pmi5ryK7DNzx9I3vuZHLyfxL_eu";
     var encodedtoken = window.btoa(apitokenstring);

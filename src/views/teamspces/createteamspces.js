@@ -1,10 +1,10 @@
-import React, {useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { Row, Col, Input } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import swal from 'sweetalert';
 const CeateTeamSpaces = (props) => {
   const {
-    buttonLabel,
+   // buttonLabel,
     className
   } = props;
 

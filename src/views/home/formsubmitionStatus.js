@@ -11,6 +11,7 @@ import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
 import config from '../../config/config';
+import { Link } from 'react-router-dom';
 var urlpattern =config.baseUrl;
 const defaultSorted = [
     {
@@ -137,11 +138,11 @@ const FormSubmissionStstus = (props) => {
             dataField: 'status',
             text: 'Status',
             formatter: (cell, row, rowIndex, extraData) => (
-                <a href="#"
+                <Link
                   className="btn-link"
                   onClick={() => _validateFunction(row)}
                   > {row.status} &nbsp;&nbsp;&nbsp;&nbsp;<i className="fa fa-angle-down" aria-hidden="true"></i>
-                  </a>
+                  </Link>
               )
         }
     ];
@@ -177,7 +178,7 @@ const FormSubmissionStstus = (props) => {
        
       };
     const {
-        buttonLabel,
+       // buttonLabel,
         className
       } = props;
   const toggle = () => setModal(!modal);
@@ -188,13 +189,13 @@ const FormSubmissionStstus = (props) => {
         setformtDetails(row);
         toggle();
     }
-    const activeTeamspce ="active";
+    const activeForms ="active";
    
     let records =formRecords;
     console.log(formtDetails.cfid, "cfid console");
     return (
         <React.Fragment>
-            <Navbar activeTeamspce={activeTeamspce}/>
+            <Navbar activeForms={activeForms}/>
            
            
                           

@@ -1,5 +1,5 @@
 import React from 'react';
-import { userActions } from '../_actions';
+//import { userActions } from '../_actions';
 import { connect } from 'react-redux';
 import Logo from '../assets/img/cls-logo-white.png';
 import {
@@ -7,10 +7,7 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  NavbarText
+  Nav
 } from 'reactstrap';
 // const links = [
 //   { href: '/home', className:"left-border", text: 'Support Center Home' },

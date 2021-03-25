@@ -9,9 +9,11 @@ const ViewSingleTicket = () => {
   
 var urlpattern =config.baseUrl;
   const [tickets, getTickets] = useState([]);
+  
   useEffect(() => {
     getAllTickets();
-  }, []);
+     // eslint-disable-next-line 
+ }, []);
   const getAllTickets = () => {
     axios
       .get(

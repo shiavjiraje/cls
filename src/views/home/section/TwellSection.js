@@ -8,8 +8,10 @@ const TwellSection = (props) => {
   var urlpattern =config.baseUrl;
   const [getcfid, setcfid] = useState();  
  
-  useEffect(() => {
-    getCfidApi();
+  
+useEffect(() => {
+  getCfidApi();
+   // eslint-disable-next-line 
 }, []);
   const getCfidApi=()=>{
   var axios = require('axios');

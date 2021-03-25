@@ -51,9 +51,11 @@ var urlpattern =config.baseUrl;
     var currentticketnuber = props.viewticketdetails.ticket_number;
   console.log(currentticketnuber,"currentticketnuber")
   const [replays, getReplays ]=useState([]);
+    
     useEffect(() => {
-      getAllReplays();
-    }, []);
+        getAllReplays();
+         // eslint-disable-next-line 
+     }, []);
     const getAllReplays=()=>{
         axios.get(`${urlpattern}clsreplyticket?ticketno=${currentticketnuber}`)
         

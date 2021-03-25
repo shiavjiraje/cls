@@ -2,7 +2,7 @@ import React, { useEffect,useState } from 'react';
 import axios from 'axios';
 import { Controller, useForm } from "react-hook-form";
 import TextEditor from '../../_components/textEditor';
-import { Row, Col, Input } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import $ from "jquery";
 import config from '../../config/config';
 const ViewTicketReplay = (props) => {
@@ -10,7 +10,7 @@ const ViewTicketReplay = (props) => {
    
 var urlpattern =config.baseUrl;
     const { control, handleSubmit } = useForm();
-    const [status, setstatus]=useState('');
+    const [status]=useState('');
     const onSubmit = (data, e) => {
    e.preventDefault();
   console.log("main function");
@@ -54,6 +54,7 @@ var urlpattern =config.baseUrl;
  // const urlreplay =urlpattern;
     useEffect(() => {
       getAllReplays();
+      // eslint-disable-next-line 
     }, []);
     const getAllReplays=()=>{
         axios.get(`${urlpattern}clsreplyticket?ticketno=${currentticketnuber}`)
@@ -117,7 +118,7 @@ var urlpattern =config.baseUrl;
                   <Col lg={12} className="mt-5">
                   <div className="light-section">
                   {ticketreplay.map((replies, index) => (
-                        replies.email == props.viewticketdetails.ticket_email
+                        replies.email === props.viewticketdetails.ticket_email
                         ? <Row key={replies.ticketid}>
                         <Col lg={1}>
                         <div className="chat-icon"><div className="h1"><i className="fa fa-user" aria-hidden="true"></i></div></div>

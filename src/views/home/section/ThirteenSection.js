@@ -38,7 +38,9 @@ const ThirteenSection = (props) => {
   };
   useEffect(() => {
     getCfidApi();
+    // eslint-disable-next-line 
 }, []);
+
   const getCfidApi=()=>{
   var axios = require('axios');
   var data = '';

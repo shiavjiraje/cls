@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { get, useForm } from "react-hook-form";
+import {  useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section9.actions";
 import config from '../../../config/config';
@@ -10,6 +10,7 @@ const NineSection = (props) => {
  
   useEffect(() => {
     getCfidApi();
+    // eslint-disable-next-line 
 }, []);
   const getCfidApi=()=>{
   var axios = require('axios');

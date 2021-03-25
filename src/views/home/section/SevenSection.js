@@ -15,6 +15,7 @@ var urlpattern =config.baseUrl;
  
   useEffect(() => {
     getCfidApi();
+    // eslint-disable-next-line 
 }, []);
   const getCfidApi=()=>{
   var axios = require('axios');

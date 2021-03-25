@@ -1,5 +1,5 @@
 import React, {useRef, useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
 import { createVendor } from "../../../_actions/section2.actions";
@@ -40,6 +40,7 @@ const SecondSection = (props) => {
           firstInputFocus.current.focus()
         }
         getCfidApi();
+        // eslint-disable-next-line 
     }, []);
    const getCfidApi=()=>{
     var axios = require('axios');
