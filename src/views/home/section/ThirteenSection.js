@@ -34,6 +34,7 @@ const ThirteenSection = (props) => {
       roisalsothebusinessorcaaddress: roisalsothebusinessorcaaddress,
     };
     dispatch(createVendor(reqBody));
+    props.onFourteenSectionClick();
   };
   useEffect(() => {
     getCfidApi();
@@ -243,18 +244,17 @@ const ThirteenSection = (props) => {
             </Row>
 
             <Row className="pb-3">
-            <Col lg={4} className="text-center">
+            {/* <Col lg={4} className="text-center">
               </Col>
               <Col lg={4} className="text-center">
                 <button type="submit" className="btn btn-primary">
                   Save
                 </button>
-              </Col>
-              <Col lg={4} className="text-right">
+              </Col> */}
+              <Col lg={12} className="text-right">
                 <button
-                  type="button"
+                  type="submit"
                   className="btn btn-primary"
-                  onClick={props.onFourteenSectionClick}
                 >
                   Next
                 </button>

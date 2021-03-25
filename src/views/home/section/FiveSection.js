@@ -68,6 +68,7 @@ const onSubmit = (e) => {
   dispatch(
     createVendor(data)
   );
+  props.onSixSectionClick();
 };
 
   return (
@@ -892,16 +893,15 @@ const onSubmit = (e) => {
             </Col>
           </Row>
           <Row className="pb-3">
-            <Col lg={6} className="text-right">
+            {/* <Col lg={6} className="text-right">
               <button type="submit" className="btn btn-primary">
                 Save
               </button>
-            </Col>
-            <Col lg={6} className="text-right">
+            </Col> */}
+            <Col lg={12} className="text-right">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
-                onClick={props.onSixSectionClick}
               >
                 Next
               </button>

@@ -94,7 +94,7 @@ axios(config)
             <Row className="pb-3 mt-4">
               <Col lg={12} className="text-center">
                 <button type="submit" className="btn btn-primary">
-                  Save
+                  Submit
                 </button>
               </Col>
             </Row>

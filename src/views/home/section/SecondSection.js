@@ -33,6 +33,7 @@ const SecondSection = (props) => {
     };
     console.log(reqBody);
     dispatch(createVendor(reqBody));
+    props.onThirdSectionClick();
   };
   useEffect(() => {
     if (firstInputFocus.current) {
@@ -251,18 +252,17 @@ const SecondSection = (props) => {
             </Col>
           </Row>
           <Row className="pb-3">
-          <Col lg={4} className="text-right">
+          {/* <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">
               <button type="submit" className="btn btn-primary">
                 Save
               </button>
-            </Col>
-            <Col lg={4} className="text-right">
+            </Col> */}
+            <Col lg={12} className="text-right">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
-                onClick={props.onThirdSectionClick}
               >
                 Next
               </button>

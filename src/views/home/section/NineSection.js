@@ -44,6 +44,7 @@ const NineSection = (props) => {
     dispatch(
       createVendor(data)
     );
+    props.onTenSectionClick();
   };
   const [otherdirectorship1, setotherdirectorship1] = useState({
     cfid: getcfid,
@@ -531,18 +532,17 @@ const NineSection = (props) => {
             </Col>
           </Row>
           <Row className="pb-3">
-          <Col lg={4} className="text-center">
+          {/* <Col lg={4} className="text-center">
             </Col>
             <Col lg={4} className="text-center">
               <button type="submit" className="btn btn-primary">
                 Save
               </button>
-            </Col>
-            <Col lg={4} className="text-right">
+            </Col> */}
+            <Col lg={12} className="text-right">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
-                onClick={props.onTenSectionClick}
               >
                 Next
               </button>

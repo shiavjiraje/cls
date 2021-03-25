@@ -39,6 +39,7 @@ const FirstSection = (props) => {
     };
 
     dispatch(createVendorinfo(reqBody));
+    props.onSecondSectionClick();
   };
   // useEffect(() => {
   //   localStorage.setItem("apiData", JSON.stringify({cfid:""}));
@@ -399,16 +400,15 @@ const FirstSection = (props) => {
             </Col>
           </Row>
           <Row className="pb-3">
-          <Col lg={4} className="text-right">
+          {/* <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">
               <input type="submit" className="btn btn-primary" value="Save" />
-            </Col>
-            <Col lg={4} className="text-right">
+            </Col> */}
+            <Col lg={12} className="text-right">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary" id="second-section"
-                onClick={props.onSecondSectionClick}
               >
                 Next
               </button>

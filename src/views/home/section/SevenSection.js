@@ -45,6 +45,7 @@ var urlpattern =config.baseUrl;
     dispatch(
       createVendor(data)
     );
+    props.onEightSectionClick();
   };
   
   const [otherdirectorship1, setotherdirectorship1] = useState({
@@ -589,18 +590,17 @@ var urlpattern =config.baseUrl;
             </Col>
           </Row>
           <Row className="pb-3">
-          <Col lg={4} className="text-right">
+          {/* <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">
               <button type="submit" className="btn btn-primary">
                 Save
               </button>
-            </Col>
-            <Col lg={4} className="text-right">
+            </Col> */}
+            <Col lg={12} className="text-right">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
-                onClick={props.onEightSectionClick}
               >
                 Next
               </button>

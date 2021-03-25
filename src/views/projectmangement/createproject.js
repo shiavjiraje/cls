@@ -21,7 +21,7 @@ const CreateProject = (props) => {
       var postBody = {
           "Project":{
           name: getPdfDetails.CompanyName,
-          description:  getPdfDetails.Filepath
+          description:  getPdfDetails.Filepath,
           }
       };
       var requestMetadata = {
@@ -60,7 +60,7 @@ const CreateProject = (props) => {
                     <label>Name</label>
               <input
                 type="text"
-                value={getPdfDetails.CompanyName}
+                value={getPdfDetails.CompanyName || ''}
                 onChange={(e) => {
                   setname(e.target.value);
                 }}
@@ -77,7 +77,7 @@ const CreateProject = (props) => {
                 onChange={(e) => {
                   setdescription(e.target.value);
                 }}
-                value={getPdfDetails.Filepath}
+                value={getPdfDetails.Filepath || ''}
                 name="description"
                 className="form-control"
               />
