@@ -71,9 +71,9 @@ class Navigation extends React.Component {
             <NavItem>
               <NavLink href="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/crm&client_id=4f1c06ed36fa06c273b0d1ae4a979d013d901c55" target="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/crm&client_id=4f1c06ed36fa06c273b0d1ae4a979d013d901c55" className={this.props.activeCrm +'left-border'}>Teamwork CRM</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="/projectmanagement" className={this.props.activeProject}>Project Management</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink href="/teamspce" className={this.props.activeTeamspce} >Team Space</NavLink>
             </NavItem>
