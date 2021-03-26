@@ -125,11 +125,11 @@ const FormSubmissionStstus = (props) => {
  
     
     const columns = [
-        {
-            dataField: 'cfid',
-            text: 'Id',
-            sort:true
-        },
+        // {
+        //     dataField: 'cfid',
+        //     text: 'Id',
+        //     sort:true
+        // },
         {
             dataField: 'companyName',
             text: 'Company Name',
