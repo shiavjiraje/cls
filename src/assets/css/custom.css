@@ -115,7 +115,7 @@ body {
 .form-control::placeholder,
 .form-control option,
 .form-control {
-  color: #918f93;
+  color: #212529;
   font-size: 14px;
 }
 select.form-control {
