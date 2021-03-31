@@ -60,6 +60,8 @@ class Navigation extends React.Component {
         //const { classes } = this.props;
        // const { anchor } = this.state;
       var getUsername = localStorage.getItem('Username');
+      //console.log(this.props.user, "AppJsConsole")
+      //let userrole =this.props.user.Role;
        //console.log(getUsername,"getUsernamegetUsernamegetUsername");
         return(
           <div>
@@ -77,6 +79,10 @@ class Navigation extends React.Component {
             <NavItem>
               <NavLink href="/teamspce" className={this.props.activeTeamspce} >Team Space</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/deals" className={this.props.activeDeals} >Deals</NavLink>
+            </NavItem>
+            
             <NavItem>
               <NavLink href="/viewforms" className={this.props.activeForms} >View Forms</NavLink>
             </NavItem>
@@ -122,9 +128,9 @@ class Navigation extends React.Component {
 
   
 const mapStateToProps = (state) =>{
-    const { loggingIn } = state.authentication;
+    const { loggingIn,user } = state.authentication;
     return {
-        loggingIn
+        loggingIn, user
     };
 }
 

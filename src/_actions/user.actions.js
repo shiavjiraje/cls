@@ -21,6 +21,7 @@ function login(username, password){
                 localStorage.setItem('token', response.data.data.token);
                 localStorage.setItem('auth', response.data.data.auth);
                 localStorage.setItem('Username', response.data.data.Username);
+                localStorage.setItem('Role', response.data.data.Role);
                // localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
                 dispatch(setUserDetails(response.data.data));
                 history.push('/welcome');
@@ -37,6 +38,7 @@ function logout(){
         localStorage.removeItem('auth');
         localStorage.removeItem('token');
         localStorage.removeItem('Username');
+        localStorage.removeItem('Role');
         //localStorage.removeItem('apiData');
         dispatch(logoutUser());
         history.push('/');
