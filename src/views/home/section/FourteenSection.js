@@ -76,7 +76,7 @@ axios(config)
                 <h6 className="text-span">
                   <b>Additional information </b>{" "}
                 </h6>
-                <p className="text-span">Note 16</p>
+                <a className="text-span" target="_blank" href="/handyguide">Note 16</a>
               </Col>
             </Row>
             <Row className="mt-2 mb-4">

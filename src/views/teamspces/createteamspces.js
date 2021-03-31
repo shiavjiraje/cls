@@ -11,73 +11,123 @@ const CeateTeamSpaces = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
-  const [name, setname] = useState("");
-  const [description, setdescription] = useState("");
+  const [title, settitle] = useState("");
+  const [purpose, setpurpose] = useState("");
+  const [code, setcode] = useState("");
+  const [state, setstate] = useState("");
+  //const [spaceColor, setspaceColor] = useState("");
   const createNewProject = (e) => {
-    var apitokenstring = "twp_7lLfVHIgalTodMCxT3aWRMngEUnb_eu";
-    var encodedtoken = window.btoa(apitokenstring);
-      var recipeUrl = 'https://clscharteredsecretaries.eu.teamwork.com/projects.json';
-      var postBody = {
-          "Project":{
-          name: name,
-          description:  description
-          }
-      };
-      var requestMetadata = {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-              'Authorization':`Basic ${encodedtoken}`,
-          },
-          Authorization: `Basic ${encodedtoken}`,
-          body: JSON.stringify(postBody)
-      };
-  
-      fetch(recipeUrl, requestMetadata)
-          .then(res => res.json())
-          .then(recipes => {
-              console.log(recipes);
-             // getAllProject();
-              swal("Project Created Successful", recipes.id, "success");
-              toggle();
-              props.getAllSpces();
-              //alert(recipes.id);
-          });
+   
+    var axios = require('axios');
+    var data = JSON.stringify({
+      "space": {
+        "title": title,
+        "purpose": purpose,
+        "code": code,
+        "state": state,
+        "spaceColor": "#494e6a",
+        "icon": "",
+        "banner": "",
+        "bannerX": 0,
+        "bannerY": 50
+      }
+    });
+    
+    var config = {
+      method: 'post',
+      url: 'http://28cd94a37549.ngrok.io/spaces',
+      headers: { 
+        'Authorization': 'Bearer tkn.v1_NTBmYWYwMzQtYTU5OC00OGFlLTk4ZjEtYTBjYjVkZTc5YWI2LTY4MzY1OC41ODA3MDMuRVU=', 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      swal("Teamspace Created Successful", "success");
+      toggle();
+      props.getAllSpces();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
     
     };
     
   return (
     <div>
-      <Button color="primary" onClick={toggle}>Create New Project</Button>
+      <Button color="primary" onClick={toggle}>Create New Teamspce</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Create New Project</ModalHeader>
+        <ModalHeader toggle={toggle}>Create New Teamspace</ModalHeader>
         <ModalBody>
         <Row>
                 <Col lg={12}>
-                    <label>Name</label>
+                    <label>Title</label>
               <input
                 type="text"
                 onChange={(e) => {
-                  setname(e.target.value);
+                  settitle(e.target.value);
                 }}
-                name="name"
+                name="title"
                 className="form-control"
               />
             </Col>
             </Row>
             <Row className="mt-3">
             <Col lg={12}>
-            <label>Description</label>
+            <label>Purpose</label>
               <input
                 type="text"
                 onChange={(e) => {
-                  setdescription(e.target.value);
+                  setpurpose(e.target.value);
                 }}
-                name="description"
+                name="purpose"
                 className="form-control"
               />
             </Col>
          </Row>
+         <Row className="mt-3">
+            <Col lg={12}>
+            <label>Code</label>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setcode(e.target.value);
+                }}
+                name="code"
+                className="form-control"
+              />
+            </Col>
+         </Row>
+         <Row className="mt-3">
+            <Col lg={12}>
+            <label>State</label>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setstate(e.target.value);
+                }}
+                name="state"
+                className="form-control"
+              />
+            </Col>
+         </Row>
+         {/* <Row className="mt-3">
+            <Col lg={12}>
+            <label>Space Color</label>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setspaceColor(e.target.value);
+                }}
+                name="spaceColor"
+                className="form-control"
+              />
+            </Col>
+         </Row> */}
         </ModalBody>
         <ModalFooter>
           <Button color="primary"  onClick={createNewProject} >Create</Button>{' '}

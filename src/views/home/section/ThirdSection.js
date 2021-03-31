@@ -64,7 +64,7 @@ const ThirdSection = (props) => {
                 <b>Share Capital </b>{" "}
               </h6>
               <label>
-                <b>This part does not apply to CLG’s (Note 10)</b>
+                <b>This part does not apply to CLG’s<a className="text-span" target="_blank" href="/handyguide"> (Note 10)</a></b>
               </label>
             </Col>
           </Row>

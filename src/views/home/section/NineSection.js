@@ -73,7 +73,7 @@ const NineSection = (props) => {
               </h6>
               <label>
                 This section must be completed if the shares are to be owned by
-                a body corporate (Note 13)
+                a body corporate <a className="text-span" target="_blank" href="/handyguide">(Note 13)</a>
               </label>
             </Col>
           </Row>

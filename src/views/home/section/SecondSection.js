@@ -166,7 +166,7 @@ const SecondSection = (props) => {
                   activities of the company. If this is more than 40 words
                   please complete the additional wording box
                 </label>
-                <span className="text-span"> (Note 8)</span>
+                <a className="text-span" target="_blank" href="/handyguide"> (Note 8)</a>
               </label>
             </Col>
           </Row>

@@ -114,14 +114,14 @@ const FirstSection = (props) => {
                 <div>
                   We confirm that we have performed CDD on this business
                   relationship in full compliance with Criminal Justice (Money
-                  Laundering & Terrorist Financing) Act 2010 Note 4
+                  Laundering & Terrorist Financing) Act 2010 <a className="text-span" target="_blank" href="/handyguide">Note 4</a>
                 </div>
                 <div>OR</div>
                 <div>Non-Third Parties </div>
                 <div>
-                  If you are a Non-Third party please read Note 4 and confirm
+                  If you are a Non-Third party please read <a className="text-span" target="_blank" href="/handyguide">Note 4</a> and confirm
                   you agree to provide the Anti-Money Laundering documentation
-                  in Note 4
+                  in<a className="text-span" target="_blank" href="/handyguide"> Note 4</a>
                 </div>
               </label>
             </Col>
@@ -149,7 +149,7 @@ const FirstSection = (props) => {
                     Incorporation Type: <span className="redspan">*</span>
                   </b>{" "}
                 </h6>
-                <div className="text-span"> Note 4 </div>
+                <a className="text-span" target="_blank" href="/handyguide"> Note 4 </a>
               </label>
             </Col>
             <Col lg={3}>
@@ -181,7 +181,7 @@ const FirstSection = (props) => {
                     <span className="redspan">*</span>
                   </b>{" "}
                 </h6>
-                <div className="text-span"> Note 6 </div>
+                <a className="text-span" target="_blank" href="/handyguide"> Note 6 </a>
               </label>
             </Col>
             <Col lg={3}>

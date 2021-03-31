@@ -91,7 +91,7 @@ axios(config)
                 <b>
                   Every company is required to have a company secretary. If
                   there is only one director a separate company secretary is
-                  required (Note 11)
+                  required <a className="text-span" target="_blank" href="/handyguide">(Note 11)</a>
                 </b>
               </label>
             </Col>

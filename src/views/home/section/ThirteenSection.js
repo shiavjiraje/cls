@@ -79,7 +79,7 @@ const ThirteenSection = (props) => {
                 <label className="text-span">
                   <b>Registered Office Address </b>
                 </label>
-                <p>This must be in the Republic of Ireland (Note 15)</p>
+                <p>This must be in the Republic of Ireland<a className="text-span" target="_blank" href="/handyguide">(Note 15)</a></p>
               </Col>
               <Col lg={6}>
                 <label className="text-span">

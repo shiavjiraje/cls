@@ -75,7 +75,7 @@ const ElevenSection = (props) => {
                 beneficial owners of the shares in this company or the shares
                 are being held by a corporate subscriber
                 <span className="text-span">
-                  <b>(Note 14)</b>
+                  <b><a className="text-span" target="_blank" href="/handyguide">(Note 14)</a></b>
                 </span>
               </label>
             </Col>

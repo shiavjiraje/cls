@@ -84,7 +84,7 @@ const onSubmit = (e) => {
               <label>
                 LTD company may have 1 director. All other company types must
                 have 2, and charity companies must have 3
-                <span className="text-span"> (Note 12)</span> If any director
+                <a className="text-span" target="_blank" href="/handyguide"> (Note 12)</a> If any director
                 has more than 3 directorships please forward these details by
                 email to <span className="text-span">formations@clscs.ie</span>
                 If any director is also a subscriber, please enter their number

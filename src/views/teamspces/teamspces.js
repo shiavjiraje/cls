@@ -96,29 +96,21 @@ const TeamSpaces = (props) => {
       getAllSpces();
     }, []);
     const getAllSpces=()=>{
-        var apitokenstring = "tkn.v1_YTQ2OThiOTAtYzYwMC00MjkwLWFmMWUtMGQ4YTBmYTI3NTZiLTY4MzY1OC41ODA3MDMuRVU=";
+        //var apitokenstring = "tkn.v1_YTQ2OThiOTAtYzYwMC00MjkwLWFmMWUtMGQ4YTBmYTI3NTZiLTY4MzY1OC41ODA3MDMuRVU=";
         //var encodedtoken = window.btoa(apitokenstring);
         //alert("calling");
         $.ajax
         ({
              
-            url: "https://clscharteredsecretaries.eu.teamwork.com/spaces/api/v1/spaces.json",
+            url: "http://28cd94a37549.ngrok.io/spaces",
             type:"GET",
             dataType:"JSON",
-            //data: JSON.stringify(obj),
-                headers: {
-                    'Authorization':`Bearer ${apitokenstring}`,
-                    'Access-Control-Allow-Origin' :'http://cls.somee.com',
-                    'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, DELETE, PUT',
-                    'Access-Control-Allow-Headers' : 'append,delete,entries,foreach,get,has,keys,set,values,Authorization'
             
-            },
             
-            Authorization: `Bearer ${apitokenstring}`,
             success: function(data) 
             {
                // debugger;
-                console.log("log response on success");
+                //console.log("log response on success");
                 console.log(data);
                 var allTickets = data;
                 getTickets(allTickets);
@@ -128,14 +120,14 @@ const TeamSpaces = (props) => {
     }
     
     let records =tickets.spaces ||[];
-    console.log(tickets, "ticket record");
+    console.log(tickets, "spaces record");
     
     const columns = [
-        {
-            dataField: 'id',
-            text: 'Project Id',
-            sort:true
-        },
+        // {
+        //     dataField: 'id',
+        //     text: 'Project Id',
+        //     sort:true
+        // },
         {
             dataField: 'title',
             text: 'Title',

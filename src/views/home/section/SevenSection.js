@@ -75,7 +75,7 @@ var urlpattern =config.baseUrl;
               </h6>
               <label>
                 The subscribers are the first shareholders / members of the
-                company and at least one is required (Note 13)
+                company and at least one is required <a className="text-span" target="_blank" href="/handyguide">(Note 13)</a>
                 <p>
                   <b>NOTE:</b> If a Subscriber is a Corporate Body only please
                   enter N/A for Subscriber details (individual) and complete

@@ -21,6 +21,7 @@ import ProjectManagement from './views/projectmangement/projectmangement';
 import TeamSpaces from './views/teamspces/teamspces';
 import FormSubmissionStstus from './views/home/formsubmitionStatus';
 import Welcome from './views/welcome/welcome';
+import HandyGuide from './views/handyguide/handyGuide';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -62,6 +63,7 @@ function App() {
                 <Route exact path='/viewticketthread' component={ViewTicketThread} />
                 <Route exact path='/viewsingleticket' component={ViewSingleTicket} />
                 <Route exact path='/crm' component={Crm} />
+                <Route exact path='/handyguide' component={HandyGuide} />
               </Switch>
           </div>
         </Router>
