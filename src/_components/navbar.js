@@ -71,7 +71,7 @@ class Navigation extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar className="col-9">
             <Nav className="col-md-9 homenavbar" navbar>
             <NavItem>
-              <NavLink href="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/crm&client_id=4f1c06ed36fa06c273b0d1ae4a979d013d901c55" target="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/crm&client_id=4f1c06ed36fa06c273b0d1ae4a979d013d901c55" className={this.props.activeCrm +'left-border'}>Teamwork CRM</NavLink>
+              <NavLink href="https://www.teamwork.com/launchpad/login?redirect_uri=http://www.cls.somee.com/welcome&client_id=884044adcead8dd8fcff5f051bcd420246d40b22" target="https://www.teamwork.com/launchpad/login?redirect_uri=http://www.cls.somee.com/welcome&client_id=884044adcead8dd8fcff5f051bcd420246d40b22" className={this.props.activeCrm +'left-border'}>Teamwork Login</NavLink>
             </NavItem>
             {/* <NavItem>
               <NavLink href="/projectmanagement" className={this.props.activeProject}>Project Management</NavLink>
@@ -80,7 +80,7 @@ class Navigation extends React.Component {
               <NavLink href="/teamspce" className={this.props.activeTeamspce} >Team Space</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/deals" className={this.props.activeDeals} >Deals</NavLink>
+              <NavLink href="/deals" className={this.props.activeDeals} >Teamwork CRM</NavLink>
             </NavItem>
             
             <NavItem>
