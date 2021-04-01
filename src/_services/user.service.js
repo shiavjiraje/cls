@@ -1,6 +1,6 @@
 import axios from 'axios';
 import config from '../config/config';
-
+import swal from 'sweetalert';
 
 export const userService = {
     get,
@@ -22,7 +22,10 @@ function post(apiEndpoint, payload){
     return axios.post(config.baseUrl+apiEndpoint, payload, getOptions()).then((response)=>{
         return response;
     }).catch((err)=>{
-        console.log(err);
+        console.log("here!!!"); 
+            console.error(err);
+            console.error(err.response);
+            swal(err.response.data, "You clicked the button!", "error")
     })
 }
 

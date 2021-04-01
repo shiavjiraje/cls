@@ -198,7 +198,7 @@ The nominee incorporation is where CLS act as directors, secretary and sharehold
 
               CLS Company Formation Packs – What’s Included?
 </p>
-<table class="table table-striped">
+<table className="table table-striped">
     <thead className="blue-thead">
       <tr>
       <th></th>
@@ -210,39 +210,39 @@ The nominee incorporation is where CLS act as directors, secretary and sharehold
     <tbody>
       <tr>
         <td>Certificate of Incorporation</td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
       </tr>
       <tr>
         <td>Share Certificate(s)</td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
       </tr>
       <tr>
         <td>Board Meeting Minutes</td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
       </tr>
       <tr>
         <td>Company Register</td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
       </tr>
       <tr>
         <td>Company Constitution</td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
       </tr>
       <tr>
         <td>Company Seal</td>
-        <td className="text-center"><i class="fa fa-times" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-times" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
       </tr>
       <tr>
         <td>Method Of Delivery:</td>

@@ -313,3 +313,15 @@ footer {
   background: #4d186f;
   color: #fff;
 }
+.signup{
+  background: #290043;
+  color: #fff;
+  border: 0px;
+}
+.signup:hover{
+  background-color: #a94be4;
+}
+.mt4{
+    margin-top: 1.8rem!important;
+
+}

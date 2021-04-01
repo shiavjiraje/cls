@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Row, Col } from 'reactstrap';
 import swal from 'sweetalert';
+import config from '../../config/config';
 const CeateTeamSpaces = (props) => {
   const {
    // buttonLabel,
     className
   } = props;
-
+  var urlpattern =config.crmUrl;
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
@@ -35,7 +36,7 @@ const CeateTeamSpaces = (props) => {
     
     var config = {
       method: 'post',
-      url: 'http://28cd94a37549.ngrok.io/spaces',
+      url: `${urlpattern}spaces`,
       headers: { 
         'Authorization': 'Bearer tkn.v1_NTBmYWYwMzQtYTU5OC00OGFlLTk4ZjEtYTBjYjVkZTc5YWI2LTY4MzY1OC41ODA3MDMuRVU=', 
         'Content-Type': 'application/json'

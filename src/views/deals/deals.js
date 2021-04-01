@@ -8,7 +8,8 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import $ from "jquery";
 import Navbar from '../../_components/navbar';
 import CreateDeals from './createDeals';
-
+import config from '../../config/config';
+var urlpattern =config.crmUrl;
 const defaultSorted = [
     {
         dataField: 'id',
@@ -102,7 +103,7 @@ const Deals = (props) => {
         $.ajax
         ({
              
-            url: "http://28cd94a37549.ngrok.io/deals",
+            url: `${urlpattern}deals`,
             type:"GET",
             dataType:"JSON",
             

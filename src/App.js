@@ -23,6 +23,7 @@ import FormSubmissionStstus from './views/home/formsubmitionStatus';
 import Welcome from './views/welcome/welcome';
 import HandyGuide from './views/handyguide/handyGuide';
 import Deals from './views/deals/deals';
+import Registration from './views/registartion/registration';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -68,6 +69,7 @@ function App() {
                 <Route exact path='/viewsingleticket' component={ViewSingleTicket} />
                 <Route exact path='/crm' component={Crm} />
                 <Route exact path='/handyguide' component={HandyGuide} />
+                <Route exact path='/registration' component={Registration} />
               </Switch>
           </div>
         </Router>

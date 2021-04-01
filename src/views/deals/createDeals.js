@@ -3,6 +3,8 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Row, Col } from 'reactstrap';
 import swal from 'sweetalert';
 import $ from "jquery";
+import config from '../../config/config';
+var urlpattern =config.crmUrl;
 const CreateDeals = (props) => {
   const {
    // buttonLabel,
@@ -22,7 +24,7 @@ const CreateDeals = (props) => {
       $.ajax
       ({
            
-          url: "http://28cd94a37549.ngrok.io/stages",
+          url: `${urlpattern}stages`,
           type:"GET",
           dataType:"JSON",
           success: function(data) 
@@ -53,7 +55,7 @@ const CreateDeals = (props) => {
     
     var config = {
       method: 'post',
-      url: 'http://28cd94a37549.ngrok.io/deals',
+      url: `${urlpattern}deals`,
       headers: { 
         'Authorization': 'Bearer tkn.v1_YmEzYzg4MzctYjE2OC00NDlmLTk0YjYtZjlmYzdmYjMxNWYxLTY4MzY1OC41ODA3MDMuRVU=', 
         'Content-Type': 'application/json'
