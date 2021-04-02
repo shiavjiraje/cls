@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section4.actions";
+//import { createVendor } from "../../../_actions/section4.actions";
 import config from '../../../config/config';
+import swal from "sweetalert";
 //import axios from "axios";
 const FourthSection = (props) => {
   var urlpattern =config.baseUrl;
@@ -28,10 +29,10 @@ const FourthSection = (props) => {
   const [companycountry, setcompanycountry] = useState("");
   const { register, errors, handleSubmit } = useForm();
 
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const onSubmit = (e) => {
-    // e.preventDefault();
-    let reqBody = {
+    var axios = require('axios');
+    var data = {
       cfid: cfid,
       name: name,
       companyname: companyname,
@@ -49,9 +50,22 @@ const FourthSection = (props) => {
       postal: postal,
       companycountry: companycountry,
     };
-    console.log(reqBody);
-    dispatch(createVendor(reqBody));
-    props.onFiveSectionClick();
+    
+    var config = {
+      method: 'post',
+      url: `${urlpattern}clssecretary/`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      swal("Record Saved Successful", "You clicked the button!", "success");
+      props.onFiveSectionClick();
+    })
+    .catch(function (error) {
+      swal(error.response.data, "You clicked the button!", "error")
+    });
   };
   useEffect(() => {
     getCfidApi();
@@ -176,7 +190,7 @@ axios(config)
             </Col>
             <Col lg={3}>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 onChange={(e) => {
                   setcompanynumber(e.target.value);

@@ -90,11 +90,11 @@ class Login extends Component {
                             Login
                         </Button>
                         </div>
-                        <div className="form-group mt-4 mb-3">
+                        {/* <div className="form-group mt-4 mb-3">
                         <Link className="btn btn-light btn-block signup"  to="/registration">
                             Sign Up
                         </Link>
-                        </div>
+                        </div> */}
                         </form>
                         </div>
                 </Col>

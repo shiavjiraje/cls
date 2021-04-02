@@ -59,10 +59,11 @@ function Registration() {
                               }}
                               name="empcode"
                               ref={register({ required: true })}/>
-                               {errors.empcode && (
+                               
+                        </div>
+                        {errors.empcode && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         <Col lg={6}  className="pl-5 pr-5">
                         <label className="text-left w-100">Email Id <span className="redspan">*</span></label>
@@ -78,10 +79,11 @@ function Registration() {
                               }}
                               name="email"
                               ref={register({ required: true })}/>
-                               {errors.email && (
+                               
+                        </div>
+                        {errors.email && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         </Row>
                         <Row className="mt-3">
@@ -99,10 +101,11 @@ function Registration() {
                               }}
                               name="firstname"
                               ref={register({ required: true })}/>
-                               {errors.firstname && (
+                               
+                        </div>
+                        {errors.firstname && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         <Col lg={6}  className="pl-5 pr-5">
                         <label className="text-left w-100">Last Name <span className="redspan">*</span></label>
@@ -118,10 +121,11 @@ function Registration() {
                               }}
                               name="lastname"
                               ref={register({ required: true })}/>
-                               {errors.lastname && (
+                               
+                        </div>
+                        {errors.lastname && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         </Row>
                         <Row className="mt-3">
@@ -139,10 +143,11 @@ function Registration() {
                               }}
                               name="username"
                               ref={register({ required: true })}/>
-                               {errors.username && (
+                              
+                        </div>
+                        {errors.username && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         <Col lg={6}  className="pl-5 pr-5">
                         <label className="text-left w-100">Password <span className="redspan">*</span></label>
@@ -158,10 +163,11 @@ function Registration() {
                               }}
                               name="password"
                               ref={register({ required: true })}/>
-                               {errors.password && (
+                               
+                        </div>
+                        {errors.password && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         </Row>
                         <Row className="mt-3">
@@ -178,13 +184,15 @@ function Registration() {
                                 setrole(e.target.value);
                               }}
                               name="role"  ref={register({ required: true })}>
+                                 <option value="">Select</option>
                                 <option value="User">User</option>
                                 <option value="Agent">Agent</option>
                             </select>
-                            {errors.role && (
+                            
+                        </div>
+                        {errors.role && (
                   <p className="redspan font-12">The field is Required</p>
                 )}
-                        </div>
                         </Col>
                         <Col lg={6}  className="pl-5 pr-5">
                         <button type="submit"  className="btn btn-light btn-block mt4">

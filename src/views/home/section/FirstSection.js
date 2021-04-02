@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Col, Row } from "reactstrap";
 import { useForm } from "react-hook-form";
-import { createVendorinfo } from "../../../_actions/section1.actions";
-import { useDispatch } from "react-redux";
+//import { createVendorinfo } from "../../../_actions/section1.actions";
+//import { useDispatch } from "react-redux";
+//import axios from "axios";
+import config from '../../../config/config';
+import swal from "sweetalert";
+var urlpattern =config.baseUrl;
+
 const FirstSection = (props) => {
   const [name, setname] = useState("");
   const [agree, setagree] = useState(0);
@@ -19,10 +24,10 @@ const FirstSection = (props) => {
   const [postal, setpostal] = useState("");
   const { register, errors, handleSubmit } = useForm();
   
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const onSubmit = (e) => {
-    // e.preventDefault();
-    let reqBody = {
+    var axios = require('axios');
+    var data = {
       name: name,
       agree: agree,
       nonthirdparties: nonthirdparties,
@@ -37,13 +42,29 @@ const FirstSection = (props) => {
       email: email,
       postal: postal,
     };
-
-    dispatch(createVendorinfo(reqBody));
-    props.onSecondSectionClick();
+    
+    var config = {
+      method: 'post',
+      url: `${urlpattern}clsagree/`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      swal("Record Saved Successful", "You clicked the button!", "success");
+      props.onSecondSectionClick();
+    })
+    .catch(function (error) {
+      swal(error.response.data, "You clicked the button!", "error")
+    });
+    
   };
+
   // useEffect(() => {
   //   localStorage.setItem("apiData", JSON.stringify({cfid:""}));
   // });
+ 
  
   return (
     <section className="light-section top-100 pb-5">

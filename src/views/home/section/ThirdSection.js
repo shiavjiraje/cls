@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section3.actions";
+//import { createVendor } from "../../../_actions/section3.actions";
+import swal from "sweetalert";
 import config from '../../../config/config';
 const ThirdSection = (props) => {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   var urlpattern =config.baseUrl;
   // var getcfid = JSON.parse(localStorage.getItem("apiData"));
   // var cfidPost =getcfid.cfid
@@ -17,17 +18,30 @@ const ThirdSection = (props) => {
   const [authorisedsharecapital, setauthorisedsharecapital] = useState("");
   const { register, errors, handleSubmit } = useForm();
   const onSubmit = (e) => {
-    // e.preventDefault();
-    let reqBody = {
+    var axios = require('axios');
+    var data = {
       cfid: cfid,
       issuedsharecapital: issuedsharecapital,
       nominalamountpershare: nominalamountpershare,
       shareclass: shareclass,
       authorisedsharecapital: authorisedsharecapital,
     };
-    console.log(reqBody);
-    dispatch(createVendor(reqBody));
-    props.onFourthSectionClick();
+    
+    var config = {
+      method: 'post',
+      url: `${urlpattern}clssharecapital/`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      swal("Record Saved Successful", "You clicked the button!", "success");
+      props.onFourthSectionClick();
+    })
+    .catch(function (error) {
+      swal(error.response.data, "You clicked the button!", "error")
+    });
   };
   useEffect(() => {
         getCfidApi();

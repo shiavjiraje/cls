@@ -22,9 +22,6 @@ function post(apiEndpoint, payload){
     return axios.post(config.baseUrl+apiEndpoint, payload, getOptions()).then((response)=>{
         return response;
     }).catch((err)=>{
-        console.log("here!!!"); 
-            console.error(err);
-            console.error(err.response);
             swal(err.response.data, "You clicked the button!", "error")
     })
 }

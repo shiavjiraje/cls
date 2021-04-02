@@ -325,3 +325,6 @@ footer {
     margin-top: 1.8rem!important;
 
 }
+.dropdown-item a{
+  color:#212529;
+}

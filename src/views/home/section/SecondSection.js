@@ -1,11 +1,12 @@
 import React, {useRef, useState, useEffect } from "react";
-import { useDispatch} from "react-redux";
+//import { useDispatch} from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section2.actions";
+//import { createVendor } from "../../../_actions/section2.actions";
 import config from '../../../config/config';
+import swal from "sweetalert";
 const SecondSection = (props) => {
-   const dispatch = useDispatch();
+   //const dispatch = useDispatch();
    var urlpattern =config.baseUrl;
  //var getcfid = JSON.parse(localStorage.getItem("apiData"));
  //console.log(getcfid.cfid, "section-2");
@@ -21,8 +22,8 @@ const SecondSection = (props) => {
   const { register, errors, handleSubmit } = useForm();
   const firstInputFocus = useRef();
   const onSubmit = (e) => {
-    // e.preventDefault();
-    let reqBody = {
+    var axios = require('axios');
+    var data = {
       cfid: cfid,
       firstchoice: firstchoice,
       secondchoice: secondchoice,
@@ -31,9 +32,22 @@ const SecondSection = (props) => {
       additionwording: additionwording,
       companytype: companytype,
     };
-    console.log(reqBody);
-    dispatch(createVendor(reqBody));
-    props.onThirdSectionClick();
+    
+    var config = {
+      method: 'post',
+      url: `${urlpattern}clscompanyincorporation/`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      swal("Record Saved Successful", "You clicked the button!", "success");
+      props.onThirdSectionClick();
+    })
+    .catch(function (error) {
+      swal(error.response.data, "You clicked the button!", "error")
+    });
   };
   useEffect(() => {
     if (firstInputFocus.current) {

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section8.actions";
+//import { createVendor } from "../../../_actions/section8.actions";
 import config from '../../../config/config';
+import swal from "sweetalert";
 const EightSection = (props) => {
   var urlpattern =config.baseUrl;
   const [getcfid, setcfid] = useState();  
@@ -36,20 +37,29 @@ const EightSection = (props) => {
   
 
   const { handleSubmit } = useForm();
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
+  
   const onSubmit = (e) => {
-    console.log(
-      otherdirectorship1,
-      otherdirectorship2,
-      otherdirectorship3,
-      otherdirectorship4
-    );
+
+    var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4];
     data.map(directorship => directorship.cfid=getcfid);
-    dispatch(
-      createVendor(data)
-    );
+  
+  var config = {
+    method: 'post',
+    url: `${urlpattern}clssubscriber/`,
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    swal("Record Saved Successful", "You clicked the button!", "success");
     props.onNineSectionClick();
+  })
+  .catch(function (error) {
+    swal(error.response.data, "You clicked the button!", "error")
+  });
   };
   const [otherdirectorship1, setotherdirectorship1] = useState({
     cfid: getcfid,

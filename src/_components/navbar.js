@@ -16,6 +16,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 import userLogo from '../assets/img/user.png'
+import { Link } from 'react-router-dom';
 // const links = [
 //   { href: '/home', className:"left-border", text: 'Teamwork CRM' },
 //   { href: '/vendor', text: 'Project Management' },
@@ -107,11 +108,17 @@ class Navigation extends React.Component {
                <span><img src={userLogo} alt="userIcon" className="user-icon"/></span> {getUsername}
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem onClick={(event)=>{this.logout()}}>
-                 Logout
-                </DropdownItem>
+              <DropdownItem>
+              <Link  to="/registration">
+                            Registration
+                        </Link>
+                        </DropdownItem>
+               
                 <DropdownItem>
                   Profile
+                </DropdownItem>
+                <DropdownItem onClick={(event)=>{this.logout()}}>
+                 Logout
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

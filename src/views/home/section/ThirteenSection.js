@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section13.actions";
+//import { createVendor } from "../../../_actions/section13.actions";
 import config from '../../../config/config';
+import swal from "sweetalert";
 const ThirteenSection = (props) => {
   var urlpattern =config.baseUrl;
   
   //console.log(getcfid);
   const { register, errors, handleSubmit } = useForm();
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const [roaddressline1 ,setroaddressline1]=useState('');
   const [caaddressline1 ,setcaaddressline1]=useState('');
   const [roaddressline2 ,setroaddressline2]=useState('');
@@ -21,7 +22,8 @@ const ThirteenSection = (props) => {
   const [roisalsothebusinessorcaaddress ,setroisalsothebusinessorcaaddress]=useState('');
   const [cfid, setcfid] = useState();
   const onSubmit = (e) => {
-    let reqBody = {
+    var axios = require('axios');
+    let data ={
       cfid:cfid,
       roaddressline1: roaddressline1,
       caaddressline1: caaddressline1,
@@ -32,9 +34,23 @@ const ThirteenSection = (props) => {
       ropostalcode: ropostalcode,
       capostalcode: capostalcode,
       roisalsothebusinessorcaaddress: roisalsothebusinessorcaaddress,
-    };
-    dispatch(createVendor(reqBody));
+    }
+  
+  var config = {
+    method: 'post',
+    url: `${urlpattern}clsaddressdetails/`,
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    swal("Record Saved Successful", "You clicked the button!", "success");
     props.onFourteenSectionClick();
+  })
+  .catch(function (error) {
+    swal(error.response.data, "You clicked the button!", "error")
+  });
   };
   useEffect(() => {
     getCfidApi();

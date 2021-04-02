@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from "react";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section10.actions";
+//import { createVendor } from "../../../_actions/section10.actions";
 import config from '../../../config/config';
+import swal from "sweetalert";
 const TenSection = (props) => {
   var urlpattern =config.baseUrl;
   const [getcfid, setcfid] = useState();  
@@ -37,20 +38,27 @@ const TenSection = (props) => {
 
   const { handleSubmit } = useForm();
 
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const onSubmit = (e) => {
-    console.log(
-      otherdirectorship1,
-      otherdirectorship2,
-      otherdirectorship3,
-      otherdirectorship4
-    );
+    var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4];
     data.map(directorship => directorship.cfid=getcfid);
-    dispatch(
-      createVendor(data)
-    );
+  
+  var config = {
+    method: 'post',
+    url: `${urlpattern}clscorporatesubscriber/`,
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    swal("Record Saved Successful", "You clicked the button!", "success");
     props.onElevenSectionClick();
+  })
+  .catch(function (error) {
+    swal(error.response.data, "You clicked the button!", "error")
+  });
   };
   const [otherdirectorship1, setotherdirectorship1] = useState({
     cfid: getcfid
@@ -174,7 +182,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Company Number</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -190,7 +198,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Company Number</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -206,7 +214,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Company Number</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -222,7 +230,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Company Number</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
