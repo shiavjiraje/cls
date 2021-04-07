@@ -52,7 +52,9 @@ const CeateTeamSpaces = (props) => {
       props.getAllSpces();
     })
     .catch(function (error) {
-      console.log(error);
+      //console.log(JSON.stringify(error.response.data.error.errors));
+      swal(JSON.stringify(error.response.data.error.errors[0].title), "You clicked the button!", "error")
+     // console.log(JSON.stringify(error.data));
     });
     
     

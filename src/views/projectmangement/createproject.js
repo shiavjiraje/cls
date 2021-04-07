@@ -65,6 +65,7 @@ const CreateProject = (props) => {
                   setname(e.target.value);
                 }}
                 name="name"
+                readOnly
                 className="form-control"
               />
             </Col>
@@ -74,6 +75,7 @@ const CreateProject = (props) => {
             <label>Description</label>
               <input
                 type="text"
+                readOnly
                 onChange={(e) => {
                   setdescription(e.target.value);
                 }}

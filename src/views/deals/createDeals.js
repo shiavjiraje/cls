@@ -71,7 +71,7 @@ const CreateDeals = (props) => {
       props.getAllDeals();
     })
     .catch(function (error) {
-      console.log(error);
+      swal(JSON.stringify(error.response.data.error.errors[0].title), "You clicked the button!", "error")
     });
     
     
@@ -107,6 +107,7 @@ const CreateDeals = (props) => {
                   }}
                   name="stage"
                 >
+                  <option value="">Select</option>
                   {stageRecords.map((stagelist,i) => (
                                     <option key={i++} value={stagelist.id}>
                                         {stagelist.name}
