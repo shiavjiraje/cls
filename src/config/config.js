@@ -2,6 +2,6 @@ module.exports = {
     baseUrl: 'http://www.apiats.somee.com/api/',
     //baseUrl: 'http://192.168.0.11/api/'
     //baseUrl: 'http://192.168.1.200:5789/api/'
-    crmUrl :"http://74d397dcff3d.ngrok.io/"
+    crmUrl :"http://b4b5bfbcf0e3.ngrok.io/"
     
 }
