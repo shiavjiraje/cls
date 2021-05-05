@@ -6,6 +6,7 @@ import { createVendor } from "../../../_actions/section14.actions";
 import axios from "axios";
 import config from '../../../config/config';
 import { history } from '../../../_helpers';
+import swal from "sweetalert";
 const FourteenSection = (props) => {
   
 var urlpattern =config.baseUrl;
@@ -43,17 +44,47 @@ axios(config)
       .then((response) => {
        // alert("pdf calling");
         console.log(response);
-        localStorage.setItem("pdfData", JSON.stringify(response.data));
+        //localStorage.setItem("pdfData", JSON.stringify(response.data));
         //debugger;
         //if(response.data.Filepath==!null){
-          history.push('/projectmanagement');
+          //history.push('/projectmanagement');
         //}
+        var apitokenstring = "twp_pqX4Pmi5ryK7DNzx9I3vuZHLyfxL_eu";
+    var encodedtoken = window.btoa(apitokenstring);
+      var recipeUrl = 'https://clscharteredsecretaries.eu.teamwork.com/projects.json';
+      var postBody = {
+          "Project":{
+          name: response.data.CompanyName,
+          description:  response.data.Filepath,
+          }
+      };
+      var requestMetadata = {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization':`Basic ${encodedtoken}`,
+          },
+          Authorization: `Basic ${encodedtoken}`,
+          body: JSON.stringify(postBody)
+      };
+  
+      fetch(recipeUrl, requestMetadata)
+          .then(res => res.json())
+          .then(recipes => {
+              console.log(recipes);
+             // getAllProject();
+              swal("Project Created Successful", recipes.id, );
+              history.push('/home');
+              window.location.reload();
+              //alert(recipes.id);
+          });
         
       })
       .catch(function () {
         console.log("error");
       });
   };
+ 
   const [addtionalinfo, setaddtionalinfo]=useState();
 
   const dispatch = useDispatch();

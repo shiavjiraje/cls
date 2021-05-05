@@ -42,11 +42,11 @@ const SecondSection = (props) => {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      swal("Record Saved Successful", "You clicked the button!", "success");
+      swal("Record Saved Successful",);
       props.onThirdSectionClick();
     })
     .catch(function (error) {
-      swal(error.response.data, "You clicked the button!", "error")
+      swal(error.response.data, "error")
     });
   };
   useEffect(() => {
@@ -253,8 +253,11 @@ const SecondSection = (props) => {
                   <option value="Company Limited by Guarantee - CLG">
                     Company Limited by Guarantee - CLG
                   </option>
-                  <option value="Charity (CLG or DAC)">
-                    Charity (CLG or DAC)
+                  <option value="Charity (CLG)">
+                    Charity (CLG)
+                  </option>
+                  <option value="Charity (DAC)">
+                    Charity (DAC)
                   </option>
                   <option value="Unlimited Company - ULC">
                     Unlimited Company - ULC

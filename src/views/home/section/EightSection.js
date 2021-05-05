@@ -54,11 +54,11 @@ const EightSection = (props) => {
   axios(config)
   .then(function (response) {
     console.log(JSON.stringify(response.data));
-    swal("Record Saved Successful", "You clicked the button!", "success");
+    swal("Record Saved Successful", );
     props.onNineSectionClick();
   })
   .catch(function (error) {
-    swal(error.response.data, "You clicked the button!", "error")
+    swal(error.response.data, "error")
   });
   };
   const [otherdirectorship1, setotherdirectorship1] = useState({
@@ -365,7 +365,7 @@ const EightSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -381,7 +381,7 @@ const EightSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -397,7 +397,7 @@ const EightSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -413,7 +413,7 @@ const EightSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(

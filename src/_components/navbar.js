@@ -109,13 +109,15 @@ class Navigation extends React.Component {
               </DropdownToggle>
               <DropdownMenu right>
               <DropdownItem>
-              <Link  to="/registration">
+              <Link  to="/registration">  
                             Registration
                         </Link>
                         </DropdownItem>
                
                 <DropdownItem>
-                  Profile
+                  <Link to="/resetpassword">
+                  Change Password
+                  </Link>
                 </DropdownItem>
                 <DropdownItem onClick={(event)=>{this.logout()}}>
                  Logout

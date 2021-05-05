@@ -8,7 +8,7 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import $ from "jquery";
 import Navbar from '../../_components/navbar';
 //import swal from 'sweetalert';
-import CreateProject from './createproject';
+//import CreateProject from './createproject';
 
 const defaultSorted = [
     {
@@ -75,7 +75,7 @@ const TableWithSearch = (props) => {
                                                 { text: '10', value: 10, }, 
                                                 { text: '20', value: 20 }, 
                                                 { text: '50', value: 50 }, 
-                                                { text: 'Todos', value: ( props.records ? props.records.length : 0 ) }
+                                               // { text: 'Todos', value: ( props.records ? props.records.length : 0 ) }
                                             ] 
                                         } 
                                     )
@@ -171,7 +171,7 @@ const ProjectManagement = (props) => {
      
             <Row className="mt-5">
             <Col md={12} className="text-right">
-                                    <CreateProject getAllProject={getAllProject}/>
+                                    {/* <CreateProject getAllProject={getAllProject}/> */}
                                 </Col>   
                 <Col>
                     <TableWithSearch records={records} columns={columns} />

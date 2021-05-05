@@ -42,7 +42,7 @@ var urlpattern =config.baseUrl;
      // console.log("log response on success");
       console.log("log response on success postbody",data);
       localStorage.setItem("ticketNumber", JSON.stringify(data));
-      //swal("Ticket Created Successful", data, "success");
+      //swal("Ticket Created Successful", data, "");
       getAllReplays();
     },
   });

@@ -56,11 +56,11 @@ var urlpattern =config.baseUrl;
   axios(config)
   .then(function (response) {
     console.log(JSON.stringify(response.data));
-    swal("Record Saved Successful", "You clicked the button!", "success");
+    swal("Record Saved Successful", );
     props.onSevenSectionClick();
   })
   .catch(function (error) {
-    swal(error.response.data, "You clicked the button!", "error")
+    swal(error.response.data, "error")
   });
   };
 
@@ -484,7 +484,7 @@ var urlpattern =config.baseUrl;
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship1, "postal", event.target.value)
@@ -496,7 +496,7 @@ var urlpattern =config.baseUrl;
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship2, "postal", event.target.value)
@@ -508,7 +508,7 @@ var urlpattern =config.baseUrl;
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship3, "postal", event.target.value)
@@ -520,7 +520,7 @@ var urlpattern =config.baseUrl;
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship4, "postal", event.target.value)

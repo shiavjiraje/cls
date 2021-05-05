@@ -36,11 +36,11 @@ const ThirdSection = (props) => {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      swal("Record Saved Successful", "You clicked the button!", "success");
+      swal("Record Saved Successful", );
       props.onFourthSectionClick();
     })
     .catch(function (error) {
-      swal(error.response.data, "You clicked the button!", "error")
+      swal(error.response.data, "error")
     });
   };
   useEffect(() => {

@@ -5,6 +5,7 @@ import TextEditor from '../../_components/textEditor';
 import { Row, Col } from 'reactstrap';
 import $ from "jquery";
 import config from '../../config/config';
+import swal from 'sweetalert';
 const ViewTicketReplay = (props) => {
     
 var urlpattern =config.baseUrl;
@@ -42,7 +43,7 @@ var urlpattern =config.baseUrl;
      // console.log("log response on success");
       console.log("log response on success postbody",data);
       localStorage.setItem("ticketNumber", JSON.stringify(data));
-      //swal("Ticket Created Successful", data, "success");
+      swal("Record Saved Successful", data, );
       getAllReplays();
     },
   });

@@ -47,13 +47,13 @@ const CeateTeamSpaces = (props) => {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      swal("Teamspace Created Successful", "success");
+      swal("Teamspace Created Successful", );
       toggle();
       props.getAllSpces();
     })
     .catch(function (error) {
       //console.log(JSON.stringify(error.response.data.error.errors));
-      swal(JSON.stringify(error.response.data.error.errors[0].title), "You clicked the button!", "error")
+      swal(JSON.stringify(error.response.data.error.errors[0].title),  "error")
      // console.log(JSON.stringify(error.data));
     });
     

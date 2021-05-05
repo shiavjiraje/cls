@@ -13,7 +13,7 @@ const FourthSection = (props) => {
  // console.log(getcfid.cfid, "section-4");
   const [cfid, setcfid] = useState();
   const [name, setname] = useState("");
-  const [companyname, setcompanyname] = useState(0);
+  const [companyname, setcompanyname] = useState('');
   const [dob, setdob] = useState("");
   const [companynumber, setcompanynumber] = useState("");
   const [companydirector, setcompanydirector] = useState("");
@@ -60,11 +60,11 @@ const FourthSection = (props) => {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      swal("Record Saved Successful", "You clicked the button!", "success");
+      swal("Record Saved Successful", );
       props.onFiveSectionClick();
     })
     .catch(function (error) {
-      swal(error.response.data, "You clicked the button!", "error")
+      swal(error.response.data, "error")
     });
   };
   useEffect(() => {
@@ -145,11 +145,15 @@ axios(config)
                   setname(e.target.value);
                 }}
                 name="name"
-                ref={register({ required: true })}
+                ref={register({
+                  required: "The field is Required",
+                  pattern: {
+                    value: /^[a-zA-Z]*$/,
+                    message: "Enter a valid First Name",
+                  },
+                 })}
               />
-              {errors.name && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
+              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
             </Col>
             <Col lg={3}>
               <label>Company Name</label>
@@ -303,7 +307,7 @@ axios(config)
             </Col>
             <Col lg={3}>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(e) => {
                   setpostal(e.target.value);
@@ -344,7 +348,7 @@ axios(config)
             </Col>
             <Col lg={3}>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(e) => {
                   setcompanypostal(e.target.value);

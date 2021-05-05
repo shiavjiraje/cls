@@ -78,11 +78,11 @@ const onSubmit = (e) => {
   axios(config)
   .then(function (response) {
     console.log(JSON.stringify(response.data));
-    swal("Record Saved Successful", "You clicked the button!", "success");
+    swal("Record Saved Successful", );
     props.onSixSectionClick();
   })
   .catch(function (error) {
-    swal(error.response.data, "You clicked the button!", "error")
+    swal(error.response.data, "error")
   });
 };
 
@@ -146,11 +146,15 @@ const onSubmit = (e) => {
                 }
                 name="name"
                 id="name1"
-                ref={register({ required: true })}
+                ref={register({
+                  required: "The field is Required",
+                  pattern: {
+                    value: /^[a-zA-Z]*$/,
+                    message: "Enter a valid First Name",
+                  },
+                 })}
               />
-              {errors.name && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
+              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
             </Col>
             <Col lg={4}>
               <label>Name</label>
@@ -444,7 +448,7 @@ const onSubmit = (e) => {
             <Col lg={4}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship1, "postal", event.target.value)
@@ -456,7 +460,7 @@ const onSubmit = (e) => {
             <Col lg={4}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship3, "postal", event.target.value)
@@ -468,7 +472,7 @@ const onSubmit = (e) => {
             <Col lg={4}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship3, "postal", event.target.value)

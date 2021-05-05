@@ -31,6 +31,7 @@ function Registration() {
 
     dispatch(createVendorinfo(reqBody));
   };
+  
     return (
         <div>
             <div className="login-bg">
@@ -78,12 +79,16 @@ function Registration() {
                                 setemail(e.target.value);
                               }}
                               name="email"
-                              ref={register({ required: true })}/>
+                              ref={register({
+                                required: "The field is Required",
+                                pattern: {
+                                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                  message: "Enter a valid e-mail address",
+                                },
+                               })}/>
                                
                         </div>
-                        {errors.email && (
-                  <p className="redspan font-12">The field is Required</p>
-                )}
+                        {errors.email && <p className="error redspan font-12">{errors.email.message}</p>}
                         </Col>
                         </Row>
                         <Row className="mt-3">
@@ -100,12 +105,16 @@ function Registration() {
                                 setfirstname(e.target.value);
                               }}
                               name="firstname"
-                              ref={register({ required: true })}/>
+                              ref={register({
+                                required: "The field is Required",
+                                pattern: {
+                                  value: /^[a-zA-Z]*$/,
+                                  message: "Enter a valid First Name",
+                                },
+                               })}/>
                                
                         </div>
-                        {errors.firstname && (
-                  <p className="redspan font-12">The field is Required</p>
-                )}
+                        {errors.firstname && <p className="error redspan font-12">{errors.firstname.message}</p>}
                         </Col>
                         <Col lg={6}  className="pl-5 pr-5">
                         <label className="text-left w-100">Last Name <span className="redspan">*</span></label>
@@ -120,12 +129,16 @@ function Registration() {
                                 setlastname(e.target.value);
                               }}
                               name="lastname"
-                              ref={register({ required: true })}/>
+                              ref={register({
+                                required: "The field is Required",
+                                pattern: {
+                                  value: /^[a-zA-Z]*$/,
+                                  message: "Enter a valid Last Name",
+                                },
+                               })}/>
                                
                         </div>
-                        {errors.lastname && (
-                  <p className="redspan font-12">The field is Required</p>
-                )}
+                        {errors.lastname && <p className="error redspan font-12">{errors.lastname.message}</p>}
                         </Col>
                         </Row>
                         <Row className="mt-3">

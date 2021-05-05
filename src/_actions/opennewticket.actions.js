@@ -48,12 +48,12 @@ function createVendor(payload,reqBody) {
         console.log(response.data);
         dispatch(createUserInfo());
         if (response.data) {
-          swal("Record Saved Successful", "You clicked the button!", "success");
+          swal("Record Saved Successful",);
 
           // reset();
         }
       })
-      .catch((err) => swal(err, "You clicked the button!", "error"));
+      .catch((err) => swal(err, "error"));
   };
 }
 

@@ -36,7 +36,7 @@ const TenSection = (props) => {
   }
   
 
-  const { handleSubmit } = useForm();
+  const { register, errors, handleSubmit } = useForm();
 
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
@@ -53,11 +53,11 @@ const TenSection = (props) => {
   axios(config)
   .then(function (response) {
     console.log(JSON.stringify(response.data));
-    swal("Record Saved Successful", "You clicked the button!", "success");
+    swal("Record Saved Successful",);
     props.onElevenSectionClick();
   })
   .catch(function (error) {
-    swal(error.response.data, "You clicked the button!", "error")
+    swal(error.response.data, "error")
   });
   };
   const [otherdirectorship1, setotherdirectorship1] = useState({
@@ -312,10 +312,11 @@ const TenSection = (props) => {
           </Row>
           <Row className="mt-3">
             <Col lg={3}>
-              <label>Registered Office Address</label>
+              <label>Registered Office Address<span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
+                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship1,
@@ -326,12 +327,16 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice1"
               />
+              {errors.registeroffice && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
             </Col>
             <Col lg={3}>
-              <label>Registered Office Address</label>
+              <label>Registered Office Address<span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
+                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship2,
@@ -342,12 +347,16 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice2"
               />
+              {errors.registeroffice && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
             </Col>
             <Col lg={3}>
-              <label>Registered Office Address</label>
+              <label>Registered Office Address <span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
+                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship3,
@@ -358,12 +367,16 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice3"
               />
+              {errors.registeroffice && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
             </Col>
             <Col lg={3}>
-              <label>Registered Office Address</label>
+              <label>Registered Office Address<span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
+                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
@@ -374,6 +387,9 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice4"
               />
+              {errors.registeroffice && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
             </Col>
           </Row>
 
@@ -513,7 +529,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -529,7 +545,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -545,7 +561,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -561,7 +577,7 @@ const TenSection = (props) => {
             <Col lg={3}>
               <label>Aircode/Pincode</label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(

@@ -14,11 +14,11 @@ export const createVendorinfo=(payload)=>{
             //localStorage.setItem("apiData", JSON.stringify(response.data));
 
             if(response.data){
-                swal("Record Saved Successful", "You clicked the button!", "success");
+                swal("User Created Successfully",);
                 
                // reset();
                }
-            }).catch(err =>  swal(err, "You clicked the button!", "error"));
+            }).catch(err =>  swal(err,  "error"));
     }
 }
 

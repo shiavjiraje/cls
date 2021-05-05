@@ -22,7 +22,7 @@ function OpenNewTicket() {
   const [issuesummary, setissuesummary] = useState("");
   const [details] = useState("");
   const [initialstatus, setinitialstatus] = useState(open);
-  const { register, control, errors, reset, handleSubmit } = useForm();
+  const { register, control, errors,  handleSubmit } = useForm();
   //  const dispatch = useDispatch();
   
   const onSubmit = (e, data) => {
@@ -56,10 +56,13 @@ function OpenNewTicket() {
         console.log("log response on success");
         console.log(data);
         localStorage.setItem("ticketNumber", JSON.stringify(data));
-        swal("Ticket Created Successful", data, "success");
+        swal("Ticket Created Successful", data, );
       },
     });
   };
+  const resetPage=()=>{
+    window.location.reload();
+  }
   //var getTicketNumbar = JSON.parse(localStorage.getItem("ticketNumber"));
   //console.log(getTicketNumbar,"getTicketNumbargetTicketNumbar");
   return (
@@ -160,7 +163,7 @@ function OpenNewTicket() {
               </Col>
               <Col lg={3}>
                 <input
-                  type="text"
+                  type="number"
                   className="form-control"
                   onChange={(e) => {
                     setphoneno(e.target.value);
@@ -173,7 +176,7 @@ function OpenNewTicket() {
               </Col>
               <Col lg={1}>
                 <input
-                  type="text"
+                  type="number"
                   className="form-control"
                   onChange={(e) => {
                     setextension(e.target.value);
@@ -264,10 +267,10 @@ function OpenNewTicket() {
             <button type="submit" className="btn btn-primary">
               Create Ticket
             </button>
-            <button type={reset} className="btn btn-primary ml-5">
+            <button type="button" onClick={resetPage} className="btn btn-primary ml-5">
               Reset
             </button>
-            <button className="btn btn-primary ml-5">Cancel</button>
+            <button type="button" onClick={resetPage} className="btn btn-primary ml-5">Cancel</button>
           </div>
         </section>
       </form>

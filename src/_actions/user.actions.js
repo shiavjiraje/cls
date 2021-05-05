@@ -24,10 +24,14 @@ function login(username, password){
                 localStorage.setItem('Role', response.data.data.Role);
                // localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
                 dispatch(setUserDetails(response.data.data));
-                history.push('/welcome');
+                // if (response.data.data.Role==="Agent") {
+                // history.push('/home');
+                // }else{
+                    history.push('/welcome');
+               // }
             }
             else{
-                swal("Username Password Wrong", "You clicked the button!", "error");
+                swal("Username Password Wrong", "error");
             }
         })
     };

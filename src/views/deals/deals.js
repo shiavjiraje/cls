@@ -75,7 +75,7 @@ const TableWithSearch = (props) => {
                                                 { text: '10', value: 10, }, 
                                                 { text: '20', value: 20 }, 
                                                 { text: '50', value: 50 }, 
-                                                { text: 'Todos', value: ( props.records ? props.records.length : 0 ) }
+                                               // { text: 'Todos', value: ( props.records ? props.records.length : 0 ) }
                                             ] 
                                         } 
                                     )

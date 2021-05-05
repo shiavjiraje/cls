@@ -5,13 +5,9 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import Navbar from '../../_components/navbar';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
-import swal from 'sweetalert';
 import config from '../../config/config';
-import { Link } from 'react-router-dom';
+import Homnavbar from '../../_components/homnavbar';
 var urlpattern =config.baseUrl;
 const defaultSorted = [
     {
@@ -79,7 +75,7 @@ const TableWithSearch = (props) => {
                                                 { text: '10', value: 10, }, 
                                                 { text: '20', value: 20 }, 
                                                 { text: '50', value: 50 }, 
-                                                //{ text: 'Todos', value: ( props.records ? props.records.length : 0 ) }
+                                               // { text: 'Todos', value: ( props.records ? props.records.length : 0 ) }
                                             ] 
                                         } 
                                     )
@@ -92,14 +88,19 @@ const TableWithSearch = (props) => {
     );
 };
 
-const ViewformAgent = (props) => {
+const FormSubmissionStstus = (props) => {
 
   
 
   const [formRecords, getformRecords ]=useState([]);
+
     useEffect(() => {
+
       getAllFormRecords();
+      // eslint-disable-next-line
     }, []);
+
+   // var getUsername = localStorage.getItem('Username');
     const getAllFormRecords=()=>{
         var data = '';
         
@@ -131,67 +132,18 @@ const ViewformAgent = (props) => {
         },
         {
             dataField: 'status',
-            text: 'Status',
-            formatter: (cell, row, rowIndex, extraData) => (
-                <Link
-                  className="btn-link"
-                  onClick={() => _validateFunction(row)}
-                  > {row.status} &nbsp;&nbsp;&nbsp;&nbsp;<i className="fa fa-angle-down" aria-hidden="true"></i>
-                  </Link>
-              )
+            text: 'Status'
         }
     ];
     
-    const [modal, setModal] = useState(false);
-    const  [status, setstatus] = useState('');
-    const [formtDetails, setformtDetails] = useState([]);
-    const { handleSubmit } = useForm(); 
-    const onSubmit = (e) => {
-        // e.preventDefault();
-      var getcfid=formtDetails.cfid;
-       var data = {
-        status: status,
-        cfid:getcfid
-      };
-        
-        var config = {
-          method: 'PUT',
-          url: `${urlpattern}clsstatus?cfid=${getcfid}&status=${status}`,          
-          data : data
-        };
-        console.log(data);
-        axios(config)
-        .then(function (response) {
-          console.log(JSON.stringify(response.data));
-          getAllFormRecords();
-          swal("Status Updated Successful", );
-          toggle();
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-       
-      };
-    const {
-       // buttonLabel,
-        className
-      } = props;
-  const toggle = () => setModal(!modal);
-    function _validateFunction(row , id) {    
-       
-       // var selectedformdata = row;
-        //console.log("activity id :",(selectedformdata)); 
-        setformtDetails(row);
-        toggle();
-    }
+    
+   
     const activeForms ="active";
    
-    let records =formRecords;
-    console.log(formtDetails.cfid, "cfid console");
+    let records =formRecords || [];
     return (
         <React.Fragment>
-            <Navbar activeForms={activeForms}/>
-           
+           <Homnavbar activeForms={activeForms}/>
            
                           
           <section className="light-section pt-3 mt-5">
@@ -206,7 +158,7 @@ const ViewformAgent = (props) => {
             </Row>
             
             </div>
-            <Modal isOpen={modal} toggle={toggle} className={className}>
+            {/* <Modal isOpen={modal} toggle={toggle} className={className}>
             <form onSubmit={handleSubmit(onSubmit)}>
         <ModalHeader toggle={toggle}>Change Status</ModalHeader>
         <ModalBody>
@@ -231,12 +183,12 @@ const ViewformAgent = (props) => {
           <Button color="primary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
         </form>
-      </Modal>
+      </Modal> */}
             </section>
         </React.Fragment>
     );
 };
 
-export default ViewformAgent;
+export default FormSubmissionStstus;
 
 

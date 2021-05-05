@@ -9,6 +9,7 @@ import swal from "sweetalert";
 var urlpattern =config.baseUrl;
 
 const FirstSection = (props) => {
+  var getUsername = localStorage.getItem('Username') || '';
   const [name, setname] = useState("");
   const [agree, setagree] = useState(0);
   const [nonthirdparties, setnonthirdparties] = useState("");
@@ -22,9 +23,14 @@ const FirstSection = (props) => {
   const [phone, setphone] = useState("");
   const [email, setemail] = useState("");
   const [postal, setpostal] = useState("");
+  const [username] = useState(getUsername);
   const { register, errors, handleSubmit } = useForm();
   
   //const dispatch = useDispatch();
+  if(window.location.href.indexOf("home") > -1) {
+    //alert('working href');
+    localStorage.removeItem('Username');
+}
   const onSubmit = (e) => {
     var axios = require('axios');
     var data = {
@@ -41,6 +47,7 @@ const FirstSection = (props) => {
       phone: phone,
       email: email,
       postal: postal,
+      username:username
     };
     
     var config = {
@@ -52,11 +59,11 @@ const FirstSection = (props) => {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      swal("Record Saved Successful", "You clicked the button!", "success");
+      swal("Record Saved Successful", );
       props.onSecondSectionClick();
     })
     .catch(function (error) {
-      swal(error.response.data, "You clicked the button!", "error")
+      swal(error.response.data, "error")
     });
     
   };
@@ -278,16 +285,20 @@ const FirstSection = (props) => {
             <Col lg={3}>
               <input
                 type="text"
-                ref={register({ required: true })}
+                ref={register({
+                  required: "The field is Required",
+                  pattern: {
+                    value: /^[a-zA-Z]*$/,
+                    message: "Enter a valid Name",
+                  },
+                 })}
                 onChange={(e) => {
                   setname(e.target.value);
                 }}
                 name="name"
                 className="form-control"
               />
-              {errors.name && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
+              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
             </Col>
             <Col lg={3}>
               <label>
@@ -392,23 +403,28 @@ const FirstSection = (props) => {
             <Col lg={3}>
               <input
                 type="email"
-                ref={register({ required: true })}
+                ref={register({
+                  required: "The field is Required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                    message: "Enter a valid e-mail address",
+                  },
+                 })}
+
                 className="form-control"
                 onChange={(e) => {
                   setemail(e.target.value);
                 }}
                 name="email"
               />
-              {errors.email && (
-                <p className="redspan font-12">The Feild is Required Email</p>
-              )}
+             {errors.email && <p className="error redspan font-12">{errors.email.message}</p>}
             </Col>
             <Col lg={3}>
               <label>Aircode/Pincode</label>
             </Col>
             <Col lg={3}>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 onChange={(e) => {
                   setpostal(e.target.value);

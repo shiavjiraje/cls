@@ -24,6 +24,8 @@ import Welcome from './views/welcome/welcome';
 import HandyGuide from './views/handyguide/handyGuide';
 import Deals from './views/deals/deals';
 import Registration from './views/registartion/registration';
+import ViewformAgent from './views/home/ViewformAgent';
+import resetPassword from './views/resetpasswrd/resetPassword';
 function App() {
 
   const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -56,12 +58,14 @@ function App() {
                 <PrivateRoute exact path='/teamspce' component={TeamSpaces} />
                 <PrivateRoute exact path='/viewforms' component={FormSubmissionStstus} />
                 <PrivateRoute exact path='/deals' component={Deals} />
+                <PrivateRoute exact path='/resetpassword' component={resetPassword} />
                 {/* <PrivateRoute exact path='/vendor' component={Vendor} />
                 <PrivateRoute exact path='/add-vendor' component={AddVendor} />
                 <PrivateRoute exact path='/edit-vendor/:id' component={AddVendor} /> */}
                 <Route exact path='/' component={Login} />
                 <Route exact path='/projectmanagement' component={ProjectManagement} />
                 <Route exact path='/home' component={Home} />
+                <Route exact path='/formview' component={ViewformAgent} />
                 <Route exact path='/opennewticket' component={OpenNewTicket} />
                 <Route exact path='/supportcenter' component={SupportCenterHome} />
                 <Route exact path='/ticketstatus' component={CheckTicketStatus} />

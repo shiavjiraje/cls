@@ -5,8 +5,9 @@ import { Col, Row } from "reactstrap";
 //import { createVendor } from "../../../_actions/section13.actions";
 import config from '../../../config/config';
 import swal from "sweetalert";
+var urlpattern =config.baseUrl;
 const ThirteenSection = (props) => {
-  var urlpattern =config.baseUrl;
+
   
   //console.log(getcfid);
   const { register, errors, handleSubmit } = useForm();
@@ -45,11 +46,11 @@ const ThirteenSection = (props) => {
   axios(config)
   .then(function (response) {
     console.log(JSON.stringify(response.data));
-    swal("Record Saved Successful", "You clicked the button!", "success");
+    swal("Record Saved Successful", );
     props.onFourteenSectionClick();
   })
   .catch(function (error) {
-    swal(error.response.data, "You clicked the button!", "error")
+    swal(error.response.data, "error")
   });
   };
   useEffect(() => {
@@ -126,18 +127,22 @@ const ThirteenSection = (props) => {
                 )}
               </Col>
               <Col lg={3}>
-                <label>Address Line 1</label>
+                <label>Address Line 1<span className="redspan">*</span></label>
               </Col>
               <Col lg={3}>
                 <input
                   type="text"
                   className="form-control"
+                  ref={register({ required: true })}
                   onChange={(e) => {
                     setcaaddressline1(e.target.value);
                   }}
                   name="caaddressline1"
                   id="caaddressline1"
                 />
+                 {errors.caaddressline1 && (
+                  <p className="redspan font-12">The field is Required</p>
+                )}
               </Col>
             </Row>
             <Row className="mt-4">
@@ -212,7 +217,7 @@ const ThirteenSection = (props) => {
               </Col>
               <Col lg={3}>
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   onChange={(e) => {
                     setropostalcode(e.target.value);
@@ -226,7 +231,7 @@ const ThirteenSection = (props) => {
               </Col>
               <Col lg={3}>
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   onChange={(e) => {
                     setcapostalcode(e.target.value);

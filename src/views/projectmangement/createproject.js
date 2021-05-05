@@ -14,6 +14,8 @@ const CreateProject = (props) => {
   const toggle = () => setModal(!modal);
   const [setname] = useState("");
   const [setdescription] = useState("");
+  var getPdfDetails = JSON.parse(localStorage.getItem("pdfData"));
+    console.log(getPdfDetails);
   const createNewProject = (e) => {
     var apitokenstring = "twp_pqX4Pmi5ryK7DNzx9I3vuZHLyfxL_eu";
     var encodedtoken = window.btoa(apitokenstring);
@@ -39,15 +41,14 @@ const CreateProject = (props) => {
           .then(recipes => {
               console.log(recipes);
              // getAllProject();
-              swal("Project Created Successful", recipes.id, "success");
+              swal("Project Created Successful", recipes.id, );
               toggle();
               props.getAllProject();
               //alert(recipes.id);
           });
     
     };
-    var getPdfDetails = JSON.parse(localStorage.getItem("pdfData"));
-    console.log(getPdfDetails);
+    
     
   return (
     <div>

@@ -7,8 +7,12 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav
+  Nav,
+ // NavItem,
+ // NavbarText
 } from 'reactstrap';
+import { userActions } from '../_actions';
+//import { Link, NavLink } from 'react-router-dom';
 // const links = [
 //   { href: '/home', className:"left-border", text: 'Support Center Home' },
 //   { href: '/opennewticket', text: 'Open a New Ticket' },
@@ -36,7 +40,12 @@ class HomeNavbar extends React.Component {
           dropDownOpen : !this.state.dropDownOpen
       });
   }
-   
+  logout = event =>{
+    const { dispatch } = this.props;
+    console.log(this.props);
+    console.log(localStorage.getItem('auth'));
+    dispatch(userActions.logout());
+} 
     toggleNav() {
       this.setState({
         isOpen: !this.state.isOpen
@@ -54,6 +63,12 @@ class HomeNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar className="col-9">
             <Nav className="col-md-9 homenavbar" navbar>
             {/* <NavItem>
+              <NavLink to="/home" className= 'nav-link' >Add Form</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/formview" className={'nav-link'} >View Form</NavLink>
+            </NavItem> */}
+            {/* <NavItem>
               <NavLink href="/supportcenter" className={this.props.activeSupport +'left-border'}>Support Center Home</NavLink>
             </NavItem>
             <NavItem>
@@ -69,11 +84,8 @@ class HomeNavbar extends React.Component {
             <div className="col-md-3 text-right" >
             <Nav className="" navbar>
             {/* <NavItem >
-              <NavLink href="/">
-              <NavbarText>Sign In</NavbarText>
-              </NavLink>
+              <NavbarText className="nav-link" onClick={(event)=>{this.logout()}}><Link to="#">Logout</Link></NavbarText>
             </NavItem> */}
-            
            </Nav>
             </div>
           </Collapse>

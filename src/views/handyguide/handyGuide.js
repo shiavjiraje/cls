@@ -37,7 +37,7 @@ function HandyGuide(props) {
         var getaccess_token = JSON.parse(localStorage.getItem("access_token"));
         console.log(getaccess_token, "crm access")
        // localStorage.setItem("ticketNumber", JSON.stringify(data));
-        //swal("Ticket Created Successful", data, "success");
+        //swal("Ticket Created Successful", data, "");
       },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -9,11 +9,11 @@ export const createVendor=(payload)=>{
             dispatch(createUserInfo());
             console.log(response.data);
             if(response.data){
-                swal("Record Saved Successful", "You clicked the button!", "success");
+                swal("Record Saved Successful",);
                 
                // reset();
                }
-            }).catch(err =>  swal(err, "You clicked the button!", "error"));
+            }).catch(err =>  swal(err, "error"));
     }
 }
 
