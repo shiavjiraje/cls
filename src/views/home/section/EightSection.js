@@ -124,47 +124,6 @@ const EightSection = (props) => {
                 name="name"
                 id="name1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "name", event.target.value)
-                }
-                name="name"
-                id="name2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "name", event.target.value)
-                }
-                name="name"
-                id="name3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship4, "name", event.target.value)
-                }
-                name="name"
-                id="name4"
-              />
-            </Col>
-          </Row>
-
-          <Row className="mt-4">
-            <Col lg={3}>
               <label>Address Line 1</label>
               <input
                 type="text"
@@ -179,58 +138,6 @@ const EightSection = (props) => {
                 name="addressline1"
                 id="addressline1_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
               <label>Address Line 2</label>
               <input
                 type="text"
@@ -245,8 +152,46 @@ const EightSection = (props) => {
                 name="addressline2"
                 id="addressline2_1"
               />
+              <label>Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_1"
+              />
             </Col>
             <Col lg={3}>
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "name", event.target.value)
+                }
+                name="name"
+                id="name2"
+              />
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_2"
+              />
               <label>Address Line 2</label>
               <input
                 type="text"
@@ -261,8 +206,46 @@ const EightSection = (props) => {
                 name="addressline2"
                 id="addressline2_2"
               />
+              <label>Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_2"
+              />
             </Col>
             <Col lg={3}>
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "name", event.target.value)
+                }
+                name="name"
+                id="name3"
+              />
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_3"
+              />
               <label>Address Line 2</label>
               <input
                 type="text"
@@ -279,6 +262,30 @@ const EightSection = (props) => {
               />
             </Col>
             <Col lg={3}>
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship4, "name", event.target.value)
+                }
+                name="name"
+                id="name4"
+              />
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_4"
+              />
               <label>Address Line 2</label>
               <input
                 type="text"
@@ -297,36 +304,10 @@ const EightSection = (props) => {
           </Row>
           <Row className="mt-4">
             <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_1"
-              />
+              
             </Col>
             <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_2"
-              />
+              
             </Col>
             <Col lg={3}>
               <label>Address Line 3</label>

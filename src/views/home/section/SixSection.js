@@ -118,7 +118,7 @@ var urlpattern =config.baseUrl;
           </Row>
           <Row className="mt-3">
             <Col lg={3}>
-              <label>Name</label>
+              <label className="mt-4">Name</label>
               <input
                 type="text"
                 className="form-control"
@@ -128,47 +128,7 @@ var urlpattern =config.baseUrl;
                 name="name"
                 id="name1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "name", event.target.value)
-                }
-                name="name"
-                id="name2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "name", event.target.value)
-                }
-                name="name"
-                id="name3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship4, "name", event.target.value)
-                }
-                name="name"
-                id="name4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Date Of Birth</label>
+               <label className="mt-4">Date Of Birth</label>
               <input
                 type="date"
                 className="form-control"
@@ -178,47 +138,7 @@ var urlpattern =config.baseUrl;
                 name="dob"
                 id="dob1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Date Of Birth</label>
-              <input
-                type="date"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Date Of Birth</label>
-              <input
-                type="date"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Date Of Birth</label>
-              <input
-                type="date"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship4, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Occupation</label>
+              <label className="mt-4">Occupation</label>
               <input
                 type="text"
                 className="form-control"
@@ -232,59 +152,7 @@ var urlpattern =config.baseUrl;
                 name="occupation"
                 id="occupation1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Address Line 1</label>
+               <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -298,59 +166,7 @@ var urlpattern =config.baseUrl;
                 name="addressline1"
                 id="addressline1_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Address Line 2</label>
+              <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -364,59 +180,7 @@ var urlpattern =config.baseUrl;
                 name="addressline2"
                 id="addressline2_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Address Line 3</label>
+              <label className="mt-4">Address Line 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -430,59 +194,7 @@ var urlpattern =config.baseUrl;
                 name="addressline3"
                 id="addressline3_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
+              <label className="mt-4">Aircode/Pincode</label>
               <input
                 type="text"
                 className="form-control"
@@ -492,47 +204,7 @@ var urlpattern =config.baseUrl;
                 name="postal"
                 id="postal1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship4, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Country</label>
+              <label className="mt-4">Country</label>
               <input
                 type="text"
                 className="form-control"
@@ -542,47 +214,7 @@ var urlpattern =config.baseUrl;
                 name="country"
                 id="country1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "country", event.target.value)
-                }
-                name="country"
-                id="country3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship4, "country", event.target.value)
-                }
-                name="country"
-                id="country4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Nationality</label>
+              <label className="mt-4">Nationality</label>
               <input
                 type="text"
                 className="form-control"
@@ -596,59 +228,7 @@ var urlpattern =config.baseUrl;
                 name="nationality"
                 id="nationality1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Other Directorship 1 - Company Number</label>
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
               <input
                 type="text"
                 className="form-control"
@@ -662,59 +242,7 @@ var urlpattern =config.baseUrl;
                 name="otherdirectorship1"
                 id="otherdirectorship1_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Other Directorship 2 - Company Number</label>
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
               <input
                 type="text"
                 className="form-control"
@@ -728,59 +256,7 @@ var urlpattern =config.baseUrl;
                 name="otherdirectorship2"
                 id="otherdirectorship2_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Other Directorship 3 - Company Number</label>
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
               <input
                 type="text"
                 className="form-control"
@@ -794,59 +270,7 @@ var urlpattern =config.baseUrl;
                 name="otherdirectorship3"
                 id="otherdirectorship3_1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Disqualified or Restricted</label>
+              <label className="mt-4">Disqualified or Restricted</label>
               <input
                 type="text"
                 className="form-control"
@@ -860,59 +284,7 @@ var urlpattern =config.baseUrl;
                 name="restricted"
                 id="restricted1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>
+              <label className="mt-4">
                 If this director is also a subscriber, enter their number of
                 shares
               </label>
@@ -929,68 +301,7 @@ var urlpattern =config.baseUrl;
                 name="numberofshare"
                 id="numberofshare1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4 pb-5">
-            <Col lg={3}>
-              <label>
+              <label className="mt-4">
                 Is the director the beneficial owner of the above shares?
               </label>
               <select
@@ -1011,7 +322,190 @@ var urlpattern =config.baseUrl;
               </select>
             </Col>
             <Col lg={3}>
-              <label>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "name", event.target.value)
+                }
+                name="name"
+                id="name2"
+              />
+              <label className="mt-4">Date Of Birth</label>
+              <input
+                type="date"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob2"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation2"
+              />
+               <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_2"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_2"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_2"
+              />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal2"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "country", event.target.value)
+                }
+                name="country"
+                id="country2"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality2"
+              />
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "otherdirectorship1",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship1"
+                id="otherdirectorship1_2"
+              />
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "otherdirectorship2",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship2"
+                id="otherdirectorship2_2"
+              />
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "otherdirectorship3",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship3"
+                id="otherdirectorship3_2"
+              />
+              <label className="mt-4">Disqualified or Restricted</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted2"
+              />
+              <label className="mt-4">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare2"
+              />
+              <label className="mt-4">
                 Is the director the beneficial owner of the above shares?
               </label>
               <select
@@ -1032,7 +526,190 @@ var urlpattern =config.baseUrl;
               </select>
             </Col>
             <Col lg={3}>
-              <label>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "name", event.target.value)
+                }
+                name="name"
+                id="name3"
+              />
+              <label className="mt-4">Date Of Birth</label>
+              <input
+                type="date"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob3"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation3"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_3"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_3"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_3"
+              />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal3"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "country", event.target.value)
+                }
+                name="country"
+                id="country3"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality3"
+              />
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "otherdirectorship1",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship1"
+                id="otherdirectorship1_3"
+              />
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "otherdirectorship2",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship2"
+                id="otherdirectorship2_3"
+              />
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "otherdirectorship3",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship3"
+                id="otherdirectorship3_3"
+              />
+              <label className="mt-4">Disqualified or Restricted</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted3"
+              />
+              <label className="mt-4">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare3"
+              />
+              <label className="mt-4">
                 Is the director the beneficial owner of the above shares?
               </label>
               <select
@@ -1052,7 +729,190 @@ var urlpattern =config.baseUrl;
               </select>
             </Col>
             <Col lg={3}>
-              <label>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship4, "name", event.target.value)
+                }
+                name="name"
+                id="name4"
+              />
+              <label className="mt-4">Date Of Birth</label>
+              <input
+                type="date"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship4, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob4"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation4"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_4"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_4"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_4"
+              />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship4, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal4"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship4, "country", event.target.value)
+                }
+                name="country"
+                id="country4"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality4"
+              />
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "otherdirectorship1",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship1"
+                id="otherdirectorship1_4"
+              />
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "otherdirectorship2",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship2"
+                id="otherdirectorship2_4"
+              />
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "otherdirectorship3",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship3"
+                id="otherdirectorship3_4"
+              />
+              <label className="mt-4">Disqualified or Restricted</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted4"
+              />
+              <label className="mt-4">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare4"
+              />
+              <label className="mt-4">
                 Is the director the beneficial owner of the above shares?
               </label>
               <select
@@ -1072,7 +932,7 @@ var urlpattern =config.baseUrl;
               </select>
             </Col>
           </Row>
-          <Row className="pb-3">
+          <Row className="pb-3 mt-5">
           {/* <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">

@@ -167,5 +167,4 @@ var urlpattern =config.baseUrl;
     </React.Fragment>
   );
 };
-
 export default ViewSingleTicket;

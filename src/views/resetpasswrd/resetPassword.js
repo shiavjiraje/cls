@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import config from '../../config/config';
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 var urlpattern =config.baseUrl;
 
 class resetPassword extends Component {
@@ -44,7 +44,8 @@ class resetPassword extends Component {
         
   render() {
       
-      let colour1="red",colour2="red",colour3="red",colour4="red",colour5="red";
+      let colour1="red",colour2="red",colour3="red",colour4="red";
+      //colour5="red";
       if(this.state.newpwd.length >= "8")
       {
           colour1="green";    
@@ -63,7 +64,7 @@ class resetPassword extends Component {
       }
       if(this.state.newpwd === this.state.value2 && this.state.newpwd!=="" )
       {
-          colour5="green";    
+          //colour5="green";    
       }
       
       const style={
