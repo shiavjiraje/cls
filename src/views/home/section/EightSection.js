@@ -304,6 +304,20 @@ const EightSection = (props) => {
                 name="addressline3"
                 id="addressline3_2"
               />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode2"
+              />
               <label className="mt-4">Country</label>
               <input
                 type="text"
@@ -428,20 +442,7 @@ const EightSection = (props) => {
                 name="addressline3"
                 id="addressline3_3"
               />
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode2"
-              />
+              
               <label className="mt-4">Aircode/Pincode</label>
               <input
                 type="text"

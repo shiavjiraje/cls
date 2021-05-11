@@ -103,7 +103,7 @@ const TeamSpaces = (props) => {
         $.ajax
         ({
              
-            url: `${urlpattern}spaces`,
+            url: `http://apiats.somee.com/api/Teamspace`,
             type:"GET",
             dataType:"JSON",
             
