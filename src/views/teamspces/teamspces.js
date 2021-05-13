@@ -9,7 +9,8 @@ import $ from "jquery";
 import Navbar from '../../_components/navbar';
 import CeateTeamSpaces from './createteamspces';
 import config from '../../config/config';
-var urlpattern =config.crmUrl;
+//var urlpattern =config.crmUrl;
+var urlpattern = config.baseUrl;
 const defaultSorted = [
     {
         dataField: 'id',
@@ -103,7 +104,8 @@ const TeamSpaces = (props) => {
         $.ajax
         ({
              
-            url: `http://apiats.somee.com/api/Teamspace`,
+            //url: `${urlpattern}spaces`,
+            url: `${urlpattern}Teamspace`,
             type:"GET",
             dataType:"JSON",
             

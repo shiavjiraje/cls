@@ -9,7 +9,8 @@ import $ from "jquery";
 import Navbar from '../../_components/navbar';
 import CreateDeals from './createDeals';
 import config from '../../config/config';
-var urlpattern =config.crmUrl;
+//var urlpattern =config.crmUrl;
+var urlpattern = config.baseUrl;
 const defaultSorted = [
     {
         dataField: 'id',
@@ -100,10 +101,11 @@ const Deals = (props) => {
         //var apitokenstring = "tkn.v1_YTQ2OThiOTAtYzYwMC00MjkwLWFmMWUtMGQ4YTBmYTI3NTZiLTY4MzY1OC41ODA3MDMuRVU=";
         //var encodedtoken = "tkn.v1_YmEzYzg4MzctYjE2OC00NDlmLTk0YjYtZjlmYzdmYjMxNWYxLTY4MzY1OC41ODA3MDMuRVU=";
         //alert("calling");
+        //url: `${urlpattern}deals`,
         $.ajax
         ({
              
-            url: `${urlpattern}deals`,
+            url: `${urlpattern}Deal`,
             type:"GET",
             dataType:"JSON",
             

@@ -4,7 +4,8 @@ import { Row, Col } from 'reactstrap';
 import swal from 'sweetalert';
 import $ from "jquery";
 import config from '../../config/config';
-var urlpattern =config.crmUrl;
+//var urlpattern =config.crmUrl;
+var urlpattern = config.baseUrl;
 const CreateDeals = (props) => {
   const {
    // buttonLabel,
@@ -24,7 +25,7 @@ const CreateDeals = (props) => {
       $.ajax
       ({
            
-          url: `${urlpattern}stages`,
+          url: `${urlpattern}Stage`,
           type:"GET",
           dataType:"JSON",
           success: function(data) 
@@ -55,7 +56,7 @@ const CreateDeals = (props) => {
     
     var config = {
       method: 'post',
-      url: `${urlpattern}deals`,
+      url: `${urlpattern}Deal`,
       headers: { 
         'Authorization': 'Bearer tkn.v1_YmEzYzg4MzctYjE2OC00NDlmLTk0YjYtZjlmYzdmYjMxNWYxLTY4MzY1OC41ODA3MDMuRVU=', 
         'Content-Type': 'application/json'

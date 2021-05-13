@@ -114,7 +114,7 @@ const TenSection = (props) => {
           </Row>
           <Row className="mt-3">
             <Col lg={3}>
-              <label>Company Name</label>
+              <label className="mt-4">Company Name</label>
               <input
                 type="text"
                 className="form-control"
@@ -128,59 +128,7 @@ const TenSection = (props) => {
                 name="companyname"
                 id="companyname1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Company Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "companyname",
-                    event.target.value
-                  )
-                }
-                name="companyname"
-                id="companyname2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Company Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "companyname",
-                    event.target.value
-                  )
-                }
-                name="companyname"
-                id="companyname3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Company Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "companyname",
-                    event.target.value
-                  )
-                }
-                name="companyname"
-                id="companyname4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={3}>
-              <label>Company Number</label>
+              <label className="mt-4">Company Number</label>
               <input
                 type="number"
                 className="form-control"
@@ -194,59 +142,7 @@ const TenSection = (props) => {
                 name="companyphonenumber"
                 id="companyphonenumber1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Company Number</label>
-              <input
-                type="number"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "companyphonenumber",
-                    event.target.value
-                  )
-                }
-                name="companyphonenumber"
-                id="companyphonenumber2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Company Number</label>
-              <input
-                type="number"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "companyphonenumber",
-                    event.target.value
-                  )
-                }
-                name="companyphonenumber"
-                id="companyphonenumber3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Company Number</label>
-              <input
-                type="number"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "companyphonenumber",
-                    event.target.value
-                  )
-                }
-                name="companyphonenumber"
-                id="companyphonenumber4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={3}>
-              <label>Company Director (Signing)</label>
+              <label className="mt-4">Company Director (Signing)</label>
               <input
                 type="text"
                 className="form-control"
@@ -260,59 +156,7 @@ const TenSection = (props) => {
                 name="companydirector"
                 id="companydirector1"
               />
-            </Col>
-            <Col lg={3}>
-              <label>Company Director (Signing)</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "companydirector",
-                    event.target.value
-                  )
-                }
-                name="companydirector"
-                id="companydirector2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Company Director (Signing)</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "companydirector",
-                    event.target.value
-                  )
-                }
-                name="companydirector"
-                id="companydirector3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Company Director (Signing)</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship4,
-                    "companydirector",
-                    event.target.value
-                  )
-                }
-                name="companydirector"
-                id="companydirector4"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={3}>
-              <label>Registered Office Address<span className="redspan">*</span></label>
+               <label className="mt-4">Registered Office Address<span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
@@ -330,9 +174,117 @@ const TenSection = (props) => {
               {errors.registeroffice && (
                 <p className="redspan font-12">The field is Required</p>
               )}
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_1"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_1"
+              />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode1"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "country", event.target.value)
+                }
+                name="country"
+                id="country1"
+              />
+              <label className="mt-4">Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare1"
+              />
             </Col>
             <Col lg={3}>
-              <label>Registered Office Address<span className="redspan">*</span></label>
+              <label className="mt-4">Company Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "companyname",
+                    event.target.value
+                  )
+                }
+                name="companyname"
+                id="companyname2"
+              />
+              <label className="mt-4">Company Number</label>
+              <input
+                type="number"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "companyphonenumber",
+                    event.target.value
+                  )
+                }
+                name="companyphonenumber"
+                id="companyphonenumber2"
+              />
+              <label className="mt-4">Company Director (Signing)</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "companydirector",
+                    event.target.value
+                  )
+                }
+                name="companydirector"
+                id="companydirector2"
+              />
+              <label className="mt-4">Registered Office Address<span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
@@ -350,9 +302,117 @@ const TenSection = (props) => {
               {errors.registeroffice && (
                 <p className="redspan font-12">The field is Required</p>
               )}
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_2"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_2"
+              />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode2"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "country", event.target.value)
+                }
+                name="country"
+                id="country2"
+              />
+              <label className="mt-4">Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare2"
+              />
             </Col>
             <Col lg={3}>
-              <label>Registered Office Address <span className="redspan">*</span></label>
+              <label className="mt-4">Company Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "companyname",
+                    event.target.value
+                  )
+                }
+                name="companyname"
+                id="companyname3"
+              />
+              <label className="mt-4">Company Number</label>
+              <input
+                type="number"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "companyphonenumber",
+                    event.target.value
+                  )
+                }
+                name="companyphonenumber"
+                id="companyphonenumber3"
+              />
+              <label className="mt-4">Company Director (Signing)</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "companydirector",
+                    event.target.value
+                  )
+                }
+                name="companydirector"
+                id="companydirector3"
+              />
+              <label className="mt-4">Registered Office Address <span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
@@ -370,9 +430,117 @@ const TenSection = (props) => {
               {errors.registeroffice && (
                 <p className="redspan font-12">The field is Required</p>
               )}
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_3"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_3"
+              />
+              <label className="mt-4">Aircode/Pincode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode3"
+              />
+               <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "country", event.target.value)
+                }
+                name="country"
+                id="country3"
+              />
+               <label className="mt-4">Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare3"
+              />
             </Col>
             <Col lg={3}>
-              <label>Registered Office Address<span className="redspan">*</span></label>
+              <label className="mt-4">Company Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "companyname",
+                    event.target.value
+                  )
+                }
+                name="companyname"
+                id="companyname4"
+              />
+              <label className="mt-4">Company Number</label>
+              <input
+                type="number"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "companyphonenumber",
+                    event.target.value
+                  )
+                }
+                name="companyphonenumber"
+                id="companyphonenumber4"
+              />
+              <label className="mt-4">Company Director (Signing)</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "companydirector",
+                    event.target.value
+                  )
+                }
+                name="companydirector"
+                id="companydirector4"
+              />
+              <label className="mt-4">Registered Office Address<span className="redspan">*</span></label>
               <input
                 type="text"
                 className="form-control"
@@ -390,60 +558,7 @@ const TenSection = (props) => {
               {errors.registeroffice && (
                 <p className="redspan font-12">The field is Required</p>
               )}
-            </Col>
-          </Row>
-
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_1"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 2</label>
+              <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -457,59 +572,7 @@ const TenSection = (props) => {
                 name="addressline2"
                 id="addressline2_4"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_1"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
+              <label className="mt-4">Address Line 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -523,59 +586,7 @@ const TenSection = (props) => {
                 name="addressline3"
                 id="addressline3_4"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode1"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Aircode/Pincode</label>
+              <label className="mt-4">Aircode/Pincode</label>
               <input
                 type="text"
                 className="form-control"
@@ -589,47 +600,7 @@ const TenSection = (props) => {
                 name="postalcode"
                 id="postalcode4"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "country", event.target.value)
-                }
-                name="country"
-                id="country1"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "country", event.target.value)
-                }
-                name="country"
-                id="country3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Country</label>
+              <label className="mt-4">Country</label>
               <input
                 type="text"
                 className="form-control"
@@ -639,59 +610,7 @@ const TenSection = (props) => {
                 name="country"
                 id="country4"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4 pb-5">
-            <Col lg={3}>
-              <label>Number Of Shares</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare1"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Number Of Shares</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare2"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Number Of Shares</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare3"
-              />
-            </Col>
-            <Col lg={3}>
-              <label>Number Of Shares</label>
+              <label className="mt-4">Number Of Shares</label>
               <input
                 type="text"
                 className="form-control"
@@ -707,7 +626,7 @@ const TenSection = (props) => {
               />
             </Col>
           </Row>
-          <Row className="pb-3">
+          <Row className="pb-3 mt-4">
           {/* <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">
