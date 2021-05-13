@@ -54,7 +54,7 @@ const CeateTeamSpaces = (props) => {
     })
     .catch(function (error) {
       //console.log(JSON.stringify(error.response.data.error.errors));
-      swal(JSON.stringify(error.response.data.error.errors[0].title),  "error")
+      //swal(JSON.stringify(error.response.data.error.errors[0].title),  "error")
      // console.log(JSON.stringify(error.data));
     });
     

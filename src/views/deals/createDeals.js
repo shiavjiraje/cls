@@ -46,19 +46,15 @@ const CreateDeals = (props) => {
     var axios = require('axios');
   var stagedata= parseInt(stage);
     var data = JSON.stringify({
-      "deal": {
+     
         "title": title,
-        "stage": {
-          id: stagedata
-        }
-      }
+        "stageId": stagedata
     });
     
     var config = {
       method: 'post',
       url: `${urlpattern}Deal`,
       headers: { 
-        'Authorization': 'Bearer tkn.v1_YmEzYzg4MzctYjE2OC00NDlmLTk0YjYtZjlmYzdmYjMxNWYxLTY4MzY1OC41ODA3MDMuRVU=', 
         'Content-Type': 'application/json'
       },
       data : data
