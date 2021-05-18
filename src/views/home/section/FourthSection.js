@@ -148,7 +148,7 @@ axios(config)
                 ref={register({
                   required: "The field is Required",
                   pattern: {
-                    value: /^[a-zA-Z]*$/,
+                    value: /^[a-zA-Z ]*$/,
                     message: "Enter a valid First Name",
                   },
                  })}
@@ -303,7 +303,7 @@ axios(config)
           </Row>
           <Row className="mt-4">
             <Col lg={3}>
-              <label>Aircode/Pincode</label>
+              <label>Eircode/Postcode</label>
             </Col>
             <Col lg={3}>
               <input
@@ -344,7 +344,7 @@ axios(config)
               />
             </Col>
             <Col lg={3}>
-              <label>Aircode/Pincode</label>
+              <label>Eircode/Postcode</label>
             </Col>
             <Col lg={3}>
               <input

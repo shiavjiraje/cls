@@ -229,9 +229,9 @@ const FirstSection = (props) => {
                   <option value="Digital Pack (Incl Seal)">
                     Digital Pack (Incl Seal)
                   </option>
-                  <option value="Hard Copy (Incl Seal)">
+                  {/* <option value="Hard Copy (Incl Seal)">
                     Hard Copy (Incl Seal)
-                  </option>
+                  </option> */}
                 </select>
                 {errors.companypacktype && (
                   <p className="redspan font-12">The field is Required</p>
@@ -288,7 +288,7 @@ const FirstSection = (props) => {
                 ref={register({
                   required: "The field is Required",
                   pattern: {
-                    value: /^[a-zA-Z]*$/,
+                    value: /^[a-zA-Z ]*$/,
                     message: "Enter a valid Name",
                   },
                  })}
@@ -420,7 +420,7 @@ const FirstSection = (props) => {
              {errors.email && <p className="error redspan font-12">{errors.email.message}</p>}
             </Col>
             <Col lg={3}>
-              <label>Aircode/Pincode</label>
+              <label>Eircode/Postcode</label>
             </Col>
             <Col lg={3}>
               <input

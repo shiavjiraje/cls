@@ -166,7 +166,7 @@ useEffect(() => {
                 name="addressline3"
                 id="addressline3_1"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -286,7 +286,7 @@ useEffect(() => {
                 name="addressline3"
                 id="addressline3_2"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -406,7 +406,7 @@ useEffect(() => {
                 name="addressline3"
                 id="addressline3_3"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -526,7 +526,7 @@ useEffect(() => {
                 name="addressline3"
                 id="addressline3_4"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"

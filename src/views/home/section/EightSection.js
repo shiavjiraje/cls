@@ -42,7 +42,7 @@ const EightSection = (props) => {
   const onSubmit = (e) => {
 
     var axios = require('axios');
-    let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4];
+    let data =[otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
     data.map(directorship => directorship.cfid=getcfid);
   
   var config = {
@@ -61,16 +61,16 @@ const EightSection = (props) => {
     swal(error.response.data, "error")
   });
   };
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: getcfid,
-  });
-  const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: getcfid,
-  });
-  const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: getcfid,
-  });
   const [otherdirectorship4, setotherdirectorship4] = useState({
+    cfid: getcfid,
+  });
+  const [otherdirectorship5, setotherdirectorship5] = useState({
+    cfid: getcfid,
+  });
+  const [otherdirectorship6, setotherdirectorship6] = useState({
+    cfid: getcfid,
+  });
+  const [otherdirectorship7, setotherdirectorship7] = useState({
     cfid: getcfid,
   });
   const onChange = (set, field, value) => {
@@ -83,452 +83,12 @@ const EightSection = (props) => {
     <section className="dark-section pb-4">
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Row className="mt-3">
-            <Col lg={12}>
-              <h6 className="text-span">
-                <b>Additional Subscriber Details </b>{" "}
-              </h6>
-            </Col>
-          </Row>
-          <Row className="mt-3">
+          
+          <Row className="mt-3">         
             <Col lg={3}>
-              <label className="text-span">
+            <label className="text-span">
                 <b>Subscriber 4</b>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <label className="text-span">
-                <b>Subscriber 5</b>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <label className="text-span">
-                <b>Subscriber 6</b>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <label className="text-span">
-                <b>Subscriber 7</b>
-              </label>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={3}>
-              <label className="mt-4">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "name", event.target.value)
-                }
-                name="name"
-                id="name1"
-              />
-              <label className="mt-4">Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_1"
-              />
-              <label className="mt-4">Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_1"
-              />
-              <label className="mt-4">Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_1"
-              />
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode1"
-              />
-              <label className="mt-4">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "country", event.target.value)
-                }
-                name="country"
-                id="country1"
-              />
-              <label className="mt-4">Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality1"
-              />
-              <label className="mt-4">Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation1"
-              />
-              <label className="mt-4">Number Of Shares</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare1"
-              />
-              <label className="mt-4">
-                Is the Subscriber the beneficial owner of the above shares?
-              </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner1"
-              ><option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={3}>
-              <label className="mt-4">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "name", event.target.value)
-                }
-                name="name"
-                id="name2"
-              />
-              <label className="mt-4">Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_2"
-              />
-              <label className="mt-4">Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_2"
-              />
-              <label className="mt-4">Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_2"
-              />
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode2"
-              />
-              <label className="mt-4">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-              <label className="mt-4">Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality2"
-              />
-              <label className="mt-4">Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation2"
-              />
-              <label className="mt-4">Number Of Shares</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare2"
-              />
-              <label className="mt-4">
-                Is the Subscriber the beneficial owner of the above shares?
-              </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner2"
-              ><option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={3}>
-              <label className="mt-4">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "name", event.target.value)
-                }
-                name="name"
-                id="name3"
-              />
-              <label className="mt-4">Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_3"
-              />
-              <label className="mt-4">Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_3"
-              />
-               <label className="mt-4">Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_3"
-              />
-              
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode3"
-              />
-              <label className="mt-4">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "country", event.target.value)
-                }
-                name="country"
-                id="country3"
-              />
-              <label className="mt-4">Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality3"
-              />
-              <label className="mt-4">Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation3"
-              />
-               <label className="mt-4">Number Of Shares</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare3"
-              />
-               <label className="mt-4">
-                Is the Subscriber the beneficial owner of the above shares?
-              </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner3"
-              ><option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={3}>
+              </label><br/>
               <label className="mt-4">Name</label>
               <input
                 type="text"
@@ -573,7 +133,7 @@ const EightSection = (props) => {
                 className="form-control"
                 onChange={(event) =>
                   onChange(
-                    setotherdirectorship1,
+                    setotherdirectorship4,
                     "addressline3",
                     event.target.value
                   )
@@ -581,7 +141,7 @@ const EightSection = (props) => {
                 name="addressline3"
                 id="addressline3_4"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -647,7 +207,7 @@ const EightSection = (props) => {
                 name="numberofshare"
                 id="numberofshare4"
               />
-                <label className="mt-4">
+              <label className="mt-4">
                 Is the Subscriber the beneficial owner of the above shares?
               </label>
               <select
@@ -661,6 +221,430 @@ const EightSection = (props) => {
                 }
                 name="beneficialowner"
                 id="beneficialowner4"
+              ><option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={3}>
+            <label className="text-span">
+                <b>Subscriber 5</b>
+              </label><br/>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship5, "name", event.target.value)
+                }
+                name="name"
+                id="name5"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_5"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_5"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_5"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode5"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship5, "country", event.target.value)
+                }
+                name="country"
+                id="country5"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality5"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation5"
+              />
+              <label className="mt-4">Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare5"
+              />
+              <label className="mt-4">
+                Is the Subscriber the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner5"
+              ><option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={3}>
+            <label className="text-span">
+                <b>Subscriber 6</b>
+              </label><br/>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship6, "name", event.target.value)
+                }
+                name="name"
+                id="name6"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_6"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_6"
+              />
+               <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_6"
+              />
+              
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode6"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship6, "country", event.target.value)
+                }
+                name="country"
+                id="country6"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality6"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation6"
+              />
+               <label className="mt-4">Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare6"
+              />
+               <label className="mt-4">
+                Is the Subscriber the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner6"
+              ><option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={3}>
+            <label className="text-span">
+                <b>Subscriber 7</b>
+              </label><br/>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship7, "name", event.target.value)
+                }
+                name="name"
+                id="name7"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_7"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_7"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship4,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_7"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode7"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship7, "country", event.target.value)
+                }
+                name="country"
+                id="country7"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality7"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation7"
+              />
+              <label className="mt-4">Number Of Shares</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare7"
+              />
+                <label className="mt-4">
+                Is the Subscriber the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner7"
               ><option value="">Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>

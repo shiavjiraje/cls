@@ -127,22 +127,18 @@ const ThirteenSection = (props) => {
                 )}
               </Col>
               <Col lg={3}>
-                <label>Address Line 1<span className="redspan">*</span></label>
+                <label>Address Line 1</label>
               </Col>
               <Col lg={3}>
                 <input
                   type="text"
                   className="form-control"
-                  ref={register({ required: true })}
                   onChange={(e) => {
                     setcaaddressline1(e.target.value);
                   }}
                   name="caaddressline1"
                   id="caaddressline1"
                 />
-                 {errors.caaddressline1 && (
-                  <p className="redspan font-12">The field is Required</p>
-                )}
               </Col>
             </Row>
             <Row className="mt-4">
@@ -213,7 +209,7 @@ const ThirteenSection = (props) => {
             </Row>
             <Row className="mt-4 mb-5">
               <Col lg={3}>
-                <label>Aircode/Pincode</label>
+                <label>Eircode/Postcode</label>
               </Col>
               <Col lg={3}>
                 <input
@@ -227,7 +223,7 @@ const ThirteenSection = (props) => {
                 />
               </Col>
               <Col lg={3}>
-                <label>Aircode/Pincode</label>
+                <label>Eircode/Postcode</label>
               </Col>
               <Col lg={3}>
                 <input

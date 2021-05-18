@@ -44,7 +44,7 @@ var urlpattern =config.baseUrl;
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
     var axios = require('axios');
-    let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4];
+    let data =[otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
     data.map(directorship => directorship.cfid=getcfid);
   
   var config = {
@@ -64,16 +64,16 @@ var urlpattern =config.baseUrl;
   });
   };
 
-  const [otherdirectorship1, setotherdirectorship1] = useState({
-    cfid: getcfid,
-  });
-  const [otherdirectorship2, setotherdirectorship2] = useState({
-    cfid: getcfid,
-  });
-  const [otherdirectorship3, setotherdirectorship3] = useState({
-    cfid: getcfid,
-  });
   const [otherdirectorship4, setotherdirectorship4] = useState({
+    cfid: getcfid,
+  });
+  const [otherdirectorship5, setotherdirectorship5] = useState({
+    cfid: getcfid,
+  });
+  const [otherdirectorship6, setotherdirectorship6] = useState({
+    cfid: getcfid,
+  });
+  const [otherdirectorship7, setotherdirectorship7] = useState({
     cfid: getcfid,
   });
   const onChange = (set, field, value) => {
@@ -86,649 +86,12 @@ var urlpattern =config.baseUrl;
   return (
     <section className="dark-section pb-4">
       <div className="content pt-5">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Row className="mt-3">
-            <Col lg={12}>
-              <h6 className="text-span">
-                <b>Additional Director Details </b>{" "}
-              </h6>
-            </Col>
-          </Row>
+        <form onSubmit={handleSubmit(onSubmit)}>          
           <Row className="mt-3">
             <Col lg={3}>
-              <label className="text-span">
+            <label className="text-span">
                 <b>Director 4</b>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <label className="text-span">
-                <b>Director 5</b>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <label className="text-span">
-                <b>Director 6</b>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <label className="text-span">
-                <b>Director 7</b>
-              </label>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={3}>
-              <label className="mt-4">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "name", event.target.value)
-                }
-                name="name"
-                id="name1"
-              />
-               <label className="mt-4">Date Of Birth</label>
-              <input
-                type="date"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob1"
-              />
-              <label className="mt-4">Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation1"
-              />
-               <label className="mt-4">Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_1"
-              />
-              <label className="mt-4">Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_1"
-              />
-              <label className="mt-4">Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_1"
-              />
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal1"
-              />
-              <label className="mt-4">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "country", event.target.value)
-                }
-                name="country"
-                id="country1"
-              />
-              <label className="mt-4">Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality1"
-              />
-              <label className="mt-4">Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_1"
-              />
-              <label className="mt-4">Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_1"
-              />
-              <label className="mt-4">Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_1"
-              />
-              <label className="mt-4">Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted1"
-              />
-              <label className="mt-4">
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare1"
-              />
-              <label className="mt-4">
-                Is the director the beneficial owner of the above shares?
-              </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner1"
-              >
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={3}>
-              <label className="mt-4">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "name", event.target.value)
-                }
-                name="name"
-                id="name2"
-              />
-              <label className="mt-4">Date Of Birth</label>
-              <input
-                type="date"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob2"
-              />
-              <label className="mt-4">Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation2"
-              />
-               <label className="mt-4">Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_2"
-              />
-              <label className="mt-4">Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_2"
-              />
-              <label className="mt-4">Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_2"
-              />
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal2"
-              />
-              <label className="mt-4">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-              <label className="mt-4">Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality2"
-              />
-              <label className="mt-4">Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_2"
-              />
-              <label className="mt-4">Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_2"
-              />
-              <label className="mt-4">Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_2"
-              />
-              <label className="mt-4">Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted2"
-              />
-              <label className="mt-4">
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare2"
-              />
-              <label className="mt-4">
-                Is the director the beneficial owner of the above shares?
-              </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner2"
-              >
-                 <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={3}>
-              <label className="mt-4">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "name", event.target.value)
-                }
-                name="name"
-                id="name3"
-              />
-              <label className="mt-4">Date Of Birth</label>
-              <input
-                type="date"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob3"
-              />
-              <label className="mt-4">Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation3"
-              />
-              <label className="mt-4">Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_3"
-              />
-              <label className="mt-4">Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_3"
-              />
-              <label className="mt-4">Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_3"
-              />
-              <label className="mt-4">Aircode/Pincode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal3"
-              />
-              <label className="mt-4">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "country", event.target.value)
-                }
-                name="country"
-                id="country3"
-              />
-              <label className="mt-4">Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality3"
-              />
-              <label className="mt-4">Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_3"
-              />
-              <label className="mt-4">Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_3"
-              />
-              <label className="mt-4">Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_3"
-              />
-              <label className="mt-4">Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted3"
-              />
-              <label className="mt-4">
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare3"
-              />
-              <label className="mt-4">
-                Is the director the beneficial owner of the above shares?
-              </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner3"
-              > <option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={3}>
+              </label><br/>
               <label className="mt-4">Name</label>
               <input
                 type="text"
@@ -739,7 +102,7 @@ var urlpattern =config.baseUrl;
                 name="name"
                 id="name4"
               />
-              <label className="mt-4">Date Of Birth</label>
+               <label className="mt-4">Date Of Birth</label>
               <input
                 type="date"
                 className="form-control"
@@ -763,7 +126,7 @@ var urlpattern =config.baseUrl;
                 name="occupation"
                 id="occupation4"
               />
-              <label className="mt-4">Address Line 1</label>
+               <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -775,7 +138,7 @@ var urlpattern =config.baseUrl;
                   )
                 }
                 name="addressline1"
-                id="addressline1_4"
+                id="addressline4_1"
               />
               <label className="mt-4">Address Line 2</label>
               <input
@@ -805,7 +168,7 @@ var urlpattern =config.baseUrl;
                 name="addressline3"
                 id="addressline3_4"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -846,12 +209,12 @@ var urlpattern =config.baseUrl;
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
-                    "otherdirectorship1",
+                    "otherdirectorship4",
                     event.target.value
                   )
                 }
-                name="otherdirectorship1"
-                id="otherdirectorship1_4"
+                name="otherdirectorship4"
+                id="otherdirectorship4_1"
               />
               <label className="mt-4">Other Directorship 2 - Company Number</label>
               <input
@@ -860,12 +223,12 @@ var urlpattern =config.baseUrl;
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
-                    "otherdirectorship2",
+                    "otherdirectorship4",
                     event.target.value
                   )
                 }
-                name="otherdirectorship2"
-                id="otherdirectorship2_4"
+                name="otherdirectorship4"
+                id="otherdirectorship4_2"
               />
               <label className="mt-4">Other Directorship 3 - Company Number</label>
               <input
@@ -874,12 +237,12 @@ var urlpattern =config.baseUrl;
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
-                    "otherdirectorship3",
+                    "otherdirectorship4",
                     event.target.value
                   )
                 }
-                name="otherdirectorship3"
-                id="otherdirectorship3_4"
+                name="otherdirectorship4"
+                id="otherdirectorship4_3"
               />
               <label className="mt-4">Disqualified or Restricted</label>
               <input
@@ -926,20 +289,640 @@ var urlpattern =config.baseUrl;
                 }
                 name="beneficialowner"
                 id="beneficialowner4"
+              >
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={3}>
+            <label className="text-span">
+                <b>Director 5</b>
+              </label><br/>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship5, "name", event.target.value)
+                }
+                name="name"
+                id="name5"
+              />
+              <label className="mt-4">Date Of Birth</label>
+              <input
+                type="date"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship5, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob5"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation5"
+              />
+               <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_5"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_5"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_5"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship5, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal5"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship5, "country", event.target.value)
+                }
+                name="country"
+                id="country5"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality5"
+              />
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "otherdirectorship5",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship5"
+                id="otherdirectorship5_1"
+              />
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "otherdirectorship5",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship5"
+                id="otherdirectorship5_2"
+              />
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "otherdirectorship5",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship5"
+                id="otherdirectorship5_3"
+              />
+              <label className="mt-4">Disqualified or Restricted</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted5"
+              />
+              <label className="mt-4">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare5"
+              />
+              <label className="mt-4">
+                Is the director the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship5,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner5"
+              >
+                 <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={3}>
+            <label className="text-span">
+                <b>Director 6</b>
+              </label><br/>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship6, "name", event.target.value)
+                }
+                name="name"
+                id="name6"
+              />
+              <label className="mt-4">Date Of Birth</label>
+              <input
+                type="date"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship6, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob6"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation6"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "addressline5",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_6"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_6"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_6"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship6, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal6"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship6, "country", event.target.value)
+                }
+                name="country"
+                id="country6"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality6"
+              />
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "otherdirectorship6",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship6"
+                id="otherdirectorship6_1"
+              />
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "otherdirectorship6",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship6"
+                id="otherdirectorship6_2"
+              />
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "otherdirectorship6",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship6"
+                id="otherdirectorship6_3"
+              />
+              <label className="mt-4">Disqualified or Restricted</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted6"
+              />
+              <label className="mt-4">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare6"
+              />
+              <label className="mt-4">
+                Is the director the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship6,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner6"
+              > <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              </select>
+            </Col>
+            <Col lg={3}>
+            <label className="text-span">
+                <b>Director 7</b>
+              </label><br/>
+              <label className="mt-4">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship7, "name", event.target.value)
+                }
+                name="name"
+                id="name7"
+              />
+              <label className="mt-4">Date Of Birth</label>
+              <input
+                type="date"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship7, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob7"
+              />
+              <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation7"
+              />
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_7"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_7"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_7"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship7, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal7"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship7, "country", event.target.value)
+                }
+                name="country"
+                id="country7"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality7"
+              />
+              <label className="mt-4">Other Directorship 1 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "otherdirectorship7",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship7"
+                id="otherdirectorship7_1"
+              />
+              <label className="mt-4">Other Directorship 2 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "otherdirectorship7",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship7"
+                id="otherdirectorship7_2"
+              />
+              <label className="mt-4">Other Directorship 3 - Company Number</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "otherdirectorship7",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship7"
+                id="otherdirectorship7_3"
+              />
+              <label className="mt-4">Disqualified or Restricted</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted7"
+              />
+              <label className="mt-4">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare7"
+              />
+              <label className="mt-4">
+                Is the director the beneficial owner of the above shares?
+              </label>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship7,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner7"
               > <option value="">Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               </select>
             </Col>
           </Row>
-          <Row className="pb-3 mt-5">
+          {/* <Row className="pb-3 mt-5">
           {/* <Col lg={4} className="text-right">
             </Col>
             <Col lg={4} className="text-center">
               <button type="submit" className="btn btn-primary">
                 Save
               </button>
-            </Col> */}
+            </Col> 
             <Col lg={12} className="text-right">
               <button
                 type="submit"
@@ -948,7 +931,7 @@ var urlpattern =config.baseUrl;
                 Next
               </button>
             </Col>
-          </Row>
+          </Row> */}
         </form>
       </div>
     </section>

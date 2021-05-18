@@ -156,11 +156,10 @@ const TenSection = (props) => {
                 name="companydirector"
                 id="companydirector1"
               />
-               <label className="mt-4">Registered Office Address<span className="redspan">*</span></label>
+               <label className="mt-4">Registered Office Address</label>
               <input
                 type="text"
                 className="form-control"
-                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship1,
@@ -171,9 +170,6 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice1"
               />
-              {errors.registeroffice && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
               <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
@@ -202,7 +198,7 @@ const TenSection = (props) => {
                 name="addressline3"
                 id="addressline3_1"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -284,11 +280,10 @@ const TenSection = (props) => {
                 name="companydirector"
                 id="companydirector2"
               />
-              <label className="mt-4">Registered Office Address<span className="redspan">*</span></label>
+              <label className="mt-4">Registered Office Address</label>
               <input
                 type="text"
                 className="form-control"
-                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship2,
@@ -299,9 +294,6 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice2"
               />
-              {errors.registeroffice && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
               <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
@@ -330,7 +322,7 @@ const TenSection = (props) => {
                 name="addressline3"
                 id="addressline3_2"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -412,11 +404,10 @@ const TenSection = (props) => {
                 name="companydirector"
                 id="companydirector3"
               />
-              <label className="mt-4">Registered Office Address <span className="redspan">*</span></label>
+              <label className="mt-4">Registered Office Address</label>
               <input
                 type="text"
                 className="form-control"
-                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship3,
@@ -427,9 +418,6 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice3"
               />
-              {errors.registeroffice && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
               <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
@@ -458,7 +446,7 @@ const TenSection = (props) => {
                 name="addressline3"
                 id="addressline3_3"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -540,11 +528,10 @@ const TenSection = (props) => {
                 name="companydirector"
                 id="companydirector4"
               />
-              <label className="mt-4">Registered Office Address<span className="redspan">*</span></label>
+              <label className="mt-4">Registered Office Address</label>
               <input
                 type="text"
                 className="form-control"
-                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
@@ -555,9 +542,6 @@ const TenSection = (props) => {
                 name="registeroffice"
                 id="registeroffice4"
               />
-              {errors.registeroffice && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
               <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
@@ -586,7 +570,7 @@ const TenSection = (props) => {
                 name="addressline3"
                 id="addressline3_4"
               />
-              <label className="mt-4">Aircode/Pincode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"

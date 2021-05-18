@@ -108,7 +108,7 @@ function Registration() {
                               ref={register({
                                 required: "The field is Required",
                                 pattern: {
-                                  value: /^[a-zA-Z]*$/,
+                                  value: /^[a-zA-Z ]*$/,
                                   message: "Enter a valid First Name",
                                 },
                                })}/>
@@ -132,7 +132,7 @@ function Registration() {
                               ref={register({
                                 required: "The field is Required",
                                 pattern: {
-                                  value: /^[a-zA-Z]*$/,
+                                  value: /^[a-zA-Z ]*$/,
                                   message: "Enter a valid Last Name",
                                 },
                                })}/>

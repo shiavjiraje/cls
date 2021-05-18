@@ -411,7 +411,7 @@ const NineSection = (props) => {
           </Row>
           <Row className="mt-4">
             <Col lg={4}>
-              <label>Aircode/Pincode</label>
+              <label>Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -427,7 +427,7 @@ const NineSection = (props) => {
               />
             </Col>
             <Col lg={4}>
-              <label>Aircode/Pincode</label>
+              <label>Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -443,7 +443,7 @@ const NineSection = (props) => {
               />
             </Col>
             <Col lg={4}>
-              <label>Aircode/Pincode</label>
+              <label>Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
