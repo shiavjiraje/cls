@@ -91,7 +91,7 @@ const onSubmit = (e) => {
   .then(function (response) {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
-    props.onSixSectionClick();
+    props.onSevenSectionClick();
   })
   .catch(function (error) {
     swal(error.response.data, "error")

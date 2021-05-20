@@ -56,7 +56,7 @@ var urlpattern =config.baseUrl;
   .then(function (response) {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
-    props.onEightSectionClick();
+    props.onNineSectionClick();
   })
   .catch(function (error) {
     swal(error.response.data, "error")
