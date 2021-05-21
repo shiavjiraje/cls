@@ -103,7 +103,7 @@ const ThirteenSection = (props) => {
                   <b>Business / Central Administration Address</b>
                 </label>
                 <p>(If different from Registered Address)</p>
-              </Col>
+              </Col>  
             </Row>
             <Row className="mt-4">
               <Col lg={3}>
