@@ -116,17 +116,17 @@ class Home extends Component {
               <EightSection onNineSectionClick={this.showNineSection.bind(this)}/>
              </Collapse> */}
              <Collapse isOpen={this.state.collapse8}>
-              <NineSection onTenSectionClick={this.showTenSection.bind(this)}/>
+              <NineSection onElevenSectionClick={this.showElevenSection.bind(this)}/>
              </Collapse>
-            <Collapse isOpen={this.state.collapse9}>
+            {/* <Collapse isOpen={this.state.collapse9}>
               <TenSection onElevenSectionClick={this.showElevenSection.bind(this)}/>
-             </Collapse>
+             </Collapse> */}
              <Collapse isOpen={this.state.collapse10}>
-              <ElevenSection onTwellSectionClick={this.showTwellSection.bind(this)}/>
+              <ElevenSection onThirteenSectionClick={this.showThirteenSection.bind(this)}/>
              </Collapse>
-             <Collapse isOpen={this.state.collapse11}>
+             {/* <Collapse isOpen={this.state.collapse11}>
               <TwellSection onThirteenSectionClick={this.showThirteenSection.bind(this)}/>
-             </Collapse>
+             </Collapse> */}
              <Collapse isOpen={this.state.collapse12}>
               <ThirteenSection onFourteenSectionClick={this.showFourteenSection.bind(this)}/>
              </Collapse>
