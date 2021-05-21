@@ -36,7 +36,7 @@ const TenSection = (props) => {
   }
   
 
-  const { register, errors, handleSubmit } = useForm();
+  const { handleSubmit } = useForm();
 
   //const dispatch = useDispatch();
   const onSubmit = (e) => {

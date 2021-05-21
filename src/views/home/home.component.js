@@ -8,13 +8,13 @@ import SecondSection from './section/SecondSection';
 import ThirdSection from './section/ThirdSection';
 import FourthSection from './section/FourthSection';
 import FiveSection from './section/FiveSection';
-import SixSection from './section/SixSection';
+//import SixSection from './section/SixSection';
 import SevenSection from './section/SevenSection';
-import EightSection from './section/EightSection';
+//import EightSection from './section/EightSection';
 import NineSection from './section/NineSection';
-import TenSection from './section/TenSection';
+//import TenSection from './section/TenSection';
 import ElevenSection from './section/ElevenSection';
-import TwellSection from './section/TwellSection';
+//import TwellSection from './section/TwellSection';
 import ThirteenSection from './section/ThirteenSection';
 import FourteenSection from './section/FourteenSection';
 import HomeNavbar from '../../_components/homnavbar';
@@ -92,7 +92,7 @@ class Home extends Component {
       return (
           <React.Fragment>
               <HomeNavbar />
-              <div style={{height:"2100px"}}>
+              <div style={{height:"12730px"}}>
               <FirstSection onSecondSectionClick={this.showSecondSection.bind(this)}/>
               <Collapse isOpen={this.state.collapse1}>
                 <SecondSection onThirdSectionClick={this.showThirdSection.bind(this)}/>
