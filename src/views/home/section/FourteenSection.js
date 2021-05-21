@@ -76,6 +76,7 @@ axios(config)
               swal("Project Created Successful", recipes.id, );
               history.push('/home');
               window.location.reload();
+              window.scrollTo(0, 0)
               //alert(recipes.id);
           });
         
