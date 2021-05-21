@@ -501,7 +501,7 @@ const addDirectorSeven=()=>{
                 type="text"
                 className="form-control"
                 onChange={(event) =>
-                  onChange(setotherdirectorship3, "postal", event.target.value)
+                  onChange(setotherdirectorship2, "postal", event.target.value)
                 }
                 name="postal"
                 id="postal2"
@@ -794,7 +794,7 @@ const addDirectorSeven=()=>{
                 className="form-control"
                 onChange={(event) =>
                   onChange(
-                    setotherdirectorship3,
+                    setotherdirectorship2,
                     "restricted",
                     event.target.value
                   )
@@ -1072,11 +1072,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
-                    "otherdirectorship4",
+                    "otherdirectorship1",
                     event.target.value
                   )
                 }
-                name="otherdirectorship4"
+                name="otherdirectorship1"
                 id="otherdirectorship4_1"
               />
               <label className="mt-4">Other Directorship 2 - Company Number</label>
@@ -1086,11 +1086,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
-                    "otherdirectorship4",
+                    "otherdirectorship2",
                     event.target.value
                   )
                 }
-                name="otherdirectorship4"
+                name="otherdirectorship2"
                 id="otherdirectorship4_2"
               />
               <label className="mt-4">Other Directorship 3 - Company Number</label>
@@ -1100,11 +1100,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship4,
-                    "otherdirectorship4",
+                    "otherdirectorship3",
                     event.target.value
                   )
                 }
-                name="otherdirectorship4"
+                name="otherdirectorship3"
                 id="otherdirectorship4_3"
               />
               <label className="mt-4">Disqualified or Restricted</label>
@@ -1280,11 +1280,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship5,
-                    "otherdirectorship5",
+                    "otherdirectorship1",
                     event.target.value
                   )
                 }
-                name="otherdirectorship5"
+                name="otherdirectorship1"
                 id="otherdirectorship5_1"
               />
               <label className="mt-4">Other Directorship 2 - Company Number</label>
@@ -1294,11 +1294,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship5,
-                    "otherdirectorship5",
+                    "otherdirectorship2",
                     event.target.value
                   )
                 }
-                name="otherdirectorship5"
+                name="otherdirectorship2"
                 id="otherdirectorship5_2"
               />
               <label className="mt-4">Other Directorship 3 - Company Number</label>
@@ -1308,11 +1308,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship5,
-                    "otherdirectorship5",
+                    "otherdirectorship3",
                     event.target.value
                   )
                 }
-                name="otherdirectorship5"
+                name="otherdirectorship3"
                 id="otherdirectorship5_3"
               />
               <label className="mt-4">Disqualified or Restricted</label>
@@ -1412,7 +1412,7 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship6,
-                    "addressline5",
+                    "addressline1",
                     event.target.value
                   )
                 }
@@ -1488,11 +1488,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship6,
-                    "otherdirectorship6",
+                    "otherdirectorship1",
                     event.target.value
                   )
                 }
-                name="otherdirectorship6"
+                name="otherdirectorship1"
                 id="otherdirectorship6_1"
               />
               <label className="mt-4">Other Directorship 2 - Company Number</label>
@@ -1502,11 +1502,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship6,
-                    "otherdirectorship6",
+                    "otherdirectorship2",
                     event.target.value
                   )
                 }
-                name="otherdirectorship6"
+                name="otherdirectorship2"
                 id="otherdirectorship6_2"
               />
               <label className="mt-4">Other Directorship 3 - Company Number</label>
@@ -1516,11 +1516,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship6,
-                    "otherdirectorship6",
+                    "otherdirectorship3",
                     event.target.value
                   )
                 }
-                name="otherdirectorship6"
+                name="otherdirectorship3"
                 id="otherdirectorship6_3"
               />
               <label className="mt-4">Disqualified or Restricted</label>
@@ -1695,11 +1695,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship7,
-                    "otherdirectorship7",
+                    "otherdirectorship1",
                     event.target.value
                   )
                 }
-                name="otherdirectorship7"
+                name="otherdirectorship1"
                 id="otherdirectorship7_1"
               />
               <label className="mt-4">Other Directorship 2 - Company Number</label>
@@ -1709,11 +1709,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship7,
-                    "otherdirectorship7",
+                    "otherdirectorship2",
                     event.target.value
                   )
                 }
-                name="otherdirectorship7"
+                name="otherdirectorship2"
                 id="otherdirectorship7_2"
               />
               <label className="mt-4">Other Directorship 3 - Company Number</label>
@@ -1723,11 +1723,11 @@ const addDirectorSeven=()=>{
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship7,
-                    "otherdirectorship7",
+                    "otherdirectorship3",
                     event.target.value
                   )
                 }
-                name="otherdirectorship7"
+                name="otherdirectorship3"
                 id="otherdirectorship7_3"
               />
               <label className="mt-4">Disqualified or Restricted</label>

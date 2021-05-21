@@ -1040,7 +1040,7 @@ const addDirectorSeven=()=>{
                 id="occupation6"
               />
                <label className="mt-4">Number Of Shares</label>
-              <input
+               <input
                 type="text"
                 className="form-control"
                 onChange={(event) =>
@@ -1121,7 +1121,7 @@ const addDirectorSeven=()=>{
                 className="form-control"
                 onChange={(event) =>
                   onChange(
-                    setotherdirectorship4,
+                    setotherdirectorship7,
                     "addressline3",
                     event.target.value
                   )
