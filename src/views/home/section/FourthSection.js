@@ -132,7 +132,7 @@ axios(config)
             </Col>
             <Col lg={3}>
               <Row>
-            <Col lg={6}>
+              <Col lg={6}>
               <input
                 type="text"
                 ref={register({
@@ -150,7 +150,7 @@ axios(config)
                 placeholder="Firstname"
                 className="form-control"
               />
-              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
+              {errors.firstname && <p className="error redspan font-12">{errors.firstname.message}</p>}
             </Col>
             <Col lg={6}>
               <input
@@ -170,7 +170,7 @@ axios(config)
                 placeholder="Lastname"
                 className="form-control"
               />
-              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
+              {errors.lastname && <p className="error redspan font-12">{errors.lastname.message}</p>}
             </Col>
             </Row>
             </Col>
