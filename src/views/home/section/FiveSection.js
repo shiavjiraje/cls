@@ -228,7 +228,7 @@ const addDirectorSeven=()=>{
               </label>
               <input
                 type="date"
-                className="form-control"
+                className="form-control" min="1900-01-01"
                 ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(setotherdirectorship1, "dob", event.target.value)
@@ -243,7 +243,7 @@ const addDirectorSeven=()=>{
             <Col lg={4}>
               <label>Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship2, "dob", event.target.value)
@@ -255,7 +255,7 @@ const addDirectorSeven=()=>{
             <Col lg={4}>
               <label>Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship3, "dob", event.target.value)
@@ -967,7 +967,7 @@ const addDirectorSeven=()=>{
               />
                <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship4, "dob", event.target.value)
@@ -1175,7 +1175,7 @@ const addDirectorSeven=()=>{
               />
               <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship5, "dob", event.target.value)
@@ -1383,7 +1383,7 @@ const addDirectorSeven=()=>{
               />
               <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship6, "dob", event.target.value)
@@ -1590,7 +1590,7 @@ const addDirectorSeven=()=>{
               />
               <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship7, "dob", event.target.value)
@@ -1792,25 +1792,25 @@ const addDirectorSeven=()=>{
                 type="button" onClick={addDirectorFour}
                 className="btn btn-primary mr-2"
               >
-                Add More Director
+                Add More Directors
               </button>}
               {showButtonFive &&  <button
                 type="button" onClick={addDirectorFive}
                 className="btn btn-primary mr-2"
               >
-                Add More Director
+                Add More Directors
               </button>}
               {showButtonSix &&  <button
                 type="button" onClick={addDirectorSix}
                 className="btn btn-primary mr-2"
               >
-                Add More Director
+                Add More Directors
               </button>}
               {showButtonSeven &&  <button
                 type="button" onClick={addDirectorSeven}
                 className="btn btn-primary mr-2"
               >
-                Add More Director
+                Add More Directors
               </button>}
               <button
                 type="submit"

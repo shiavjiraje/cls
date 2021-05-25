@@ -104,7 +104,7 @@ var urlpattern =config.baseUrl;
               />
                <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship4, "dob", event.target.value)
@@ -311,7 +311,7 @@ var urlpattern =config.baseUrl;
               />
               <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship5, "dob", event.target.value)
@@ -518,7 +518,7 @@ var urlpattern =config.baseUrl;
               />
               <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship6, "dob", event.target.value)
@@ -724,7 +724,7 @@ var urlpattern =config.baseUrl;
               />
               <label className="mt-4">Date Of Birth</label>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship7, "dob", event.target.value)

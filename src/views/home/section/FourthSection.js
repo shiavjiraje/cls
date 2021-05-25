@@ -177,7 +177,7 @@ axios(config)
             </Col>
             <Col lg={3}>
               <input
-                type="date"
+                type="date" min="1900-01-01"
                 className="form-control"
                 onChange={(e) => {
                   setdob(e.target.value);
