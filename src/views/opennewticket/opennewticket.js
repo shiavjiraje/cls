@@ -163,7 +163,7 @@ function OpenNewTicket() {
               </Col>
               <Col lg={3}>
                 <input
-                  type="number"
+                  type="number" pattern="[0-9\s]*"
                   className="form-control"
                   onChange={(e) => {
                     setphoneno(e.target.value);
@@ -176,7 +176,7 @@ function OpenNewTicket() {
               </Col>
               <Col lg={1}>
                 <input
-                  type="number"
+                  type="number" pattern="[0-9\s]*"
                   className="form-control"
                   onChange={(e) => {
                     setextension(e.target.value);

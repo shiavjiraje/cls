@@ -10,7 +10,7 @@ var urlpattern =config.baseUrl;
 
 const FirstSection = (props) => {
   var getUsername = localStorage.getItem('Username') || '';
-  const [name, setname] = useState("");
+  //const [name, setname] = useState("");
   const [agree, setagree] = useState(0);
   const [nonthirdparties, setnonthirdparties] = useState("");
   const [incorporationtype, setincorporationtype] = useState("");
@@ -24,6 +24,8 @@ const FirstSection = (props) => {
   const [email, setemail] = useState("");
   const [postal, setpostal] = useState("");
   const [username] = useState(getUsername);
+  const [firstname, setfirstname] = useState('');
+  const [lastname, setlastname] = useState('');
   const { register, errors, handleSubmit } = useForm();
   
   //const dispatch = useDispatch();
@@ -33,6 +35,7 @@ const FirstSection = (props) => {
 }
   const onSubmit = (e) => {
     var axios = require('axios');
+    var name=firstname + " " + lastname;
     var data = {
       name: name,
       agree: agree,
@@ -283,6 +286,8 @@ const FirstSection = (props) => {
               </label>
             </Col>
             <Col lg={3}>
+              <Row>
+            <Col lg={6}>
               <input
                 type="text"
                 ref={register({
@@ -293,12 +298,36 @@ const FirstSection = (props) => {
                   },
                  })}
                 onChange={(e) => {
-                  setname(e.target.value);
+                  setfirstname(e.target.value);
                 }}
-                name="name"
+                name="firstname"
+                id="firstname"
+                placeholder="Firstname"
                 className="form-control"
               />
               {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                ref={register({
+                  required: "The field is Required",
+                  pattern: {
+                    value: /^[a-zA-Z ]*$/,
+                    message: "Enter a valid Name",
+                  },
+                 })}
+                onChange={(e) => {
+                  setlastname(e.target.value);
+                }}
+                name="lastname"
+                id="lastname"
+                placeholder="Lastname"
+                className="form-control"
+              />
+              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
+            </Col>
+            </Row>
             </Col>
             <Col lg={3}>
               <label>
@@ -368,7 +397,7 @@ const FirstSection = (props) => {
             </Col>
             <Col lg={3}>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+" 
                 ref={register({ required: true, min: 10 })}
                 className="form-control"
                 onChange={(e) => {

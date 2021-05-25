@@ -203,7 +203,7 @@ const NineSection = (props) => {
             <Col lg={4}>
               <label>Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -219,7 +219,7 @@ const NineSection = (props) => {
             <Col lg={4}>
               <label>Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -235,7 +235,7 @@ const NineSection = (props) => {
             <Col lg={4}>
               <label>Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -610,7 +610,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -738,7 +738,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -866,7 +866,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -994,7 +994,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(

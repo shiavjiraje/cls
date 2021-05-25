@@ -11,8 +11,9 @@ const FourthSection = (props) => {
   //var getcfid = JSON.parse(localStorage.getItem("apiData"));
   //var cfidPost =getcfid.cfid
  // console.log(getcfid.cfid, "section-4");
-  const [cfid, setcfid] = useState();
-  const [name, setname] = useState("");
+  const [cfid, setcfid] = useState();  
+  const [firstname, setfirstname] = useState('');
+  const [lastname, setlastname] = useState('');
   const [companyname, setcompanyname] = useState('');
   const [dob, setdob] = useState("");
   const [companynumber, setcompanynumber] = useState("");
@@ -32,6 +33,7 @@ const FourthSection = (props) => {
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
     var axios = require('axios');
+    var name=firstname + " " + lastname;
     var data = {
       cfid: cfid,
       name: name,
@@ -129,31 +131,48 @@ axios(config)
               </label>
             </Col>
             <Col lg={3}>
-              {/* <input
-                type="hidden"
-                className="form-control"
-                onChange={(e) => {
-                  setcfid(e.target.value);
-                }}
-                value={getcfid.cfid}
-                name="cfid"
-              /> */}
+              <Row>
+            <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setname(e.target.value);
-                }}
-                name="name"
                 ref={register({
                   required: "The field is Required",
                   pattern: {
                     value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid First Name",
+                    message: "Enter a valid Name",
                   },
                  })}
+                onChange={(e) => {
+                  setfirstname(e.target.value);
+                }}
+                name="firstname"
+                id="firstname"
+                placeholder="Firstname"
+                className="form-control"
               />
               {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                ref={register({
+                  required: "The field is Required",
+                  pattern: {
+                    value: /^[a-zA-Z ]*$/,
+                    message: "Enter a valid Name",
+                  },
+                 })}
+                onChange={(e) => {
+                  setlastname(e.target.value);
+                }}
+                name="lastname"
+                id="lastname"
+                placeholder="Lastname"
+                className="form-control"
+              />
+              {errors.name && <p className="error redspan font-12">{errors.name.message}</p>}
+            </Col>
+            </Row>
             </Col>
             <Col lg={3}>
               <label>Company Name</label>
@@ -194,7 +213,7 @@ axios(config)
             </Col>
             <Col lg={3}>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(e) => {
                   setcompanynumber(e.target.value);

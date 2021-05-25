@@ -104,7 +104,7 @@ const TenSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -231,7 +231,7 @@ const TenSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -358,7 +358,7 @@ const TenSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -485,7 +485,7 @@ const TenSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="number"
+                type="text" pattern="[0-9 ]+"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
