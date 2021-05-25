@@ -28,8 +28,7 @@ const FiveSection = (props) => {
 }, []);
 
 
-const [getcfid, setcfid] = useState();  
- 
+const [getcfid, setcfid] = useState();
 
 const getCfidApi=()=>{
 var axios = require('axios');
