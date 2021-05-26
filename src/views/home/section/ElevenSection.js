@@ -152,41 +152,101 @@ const ElevenSection = (props) => {
             </Col>
           </Row>
           <Row className="mt-3">
-            <Col lg={4}>
-              <label>Name</label>
+          <Col lg={4}>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship1, "firstname", event.target.value)
                 }
-                name="name"
-                id="name1"
+                name="firstname"
+                id="firstname1"
+                placeholder="Firstname"
+                className="form-control"
               />
             </Col>
-            <Col lg={4}>
-              <label>Name</label>
+            <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship1, "lastname", event.target.value)
                 }
-                name="name"
-                id="name2"
+                name="lastname"
+                id="lastname1"
+                placeholder="Lastname"
+                className="form-control"
               />
             </Col>
+              </Row>
+            </Col>
             <Col lg={4}>
-              <label>Name</label>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship2, "firstname", event.target.value)
                 }
-                name="name"
-                id="name3"
+                name="firstname"
+                id="firstname2"
+                placeholder="Firstname"
+                className="form-control"
               />
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship2, "lastname", event.target.value)
+                }
+                name="lastname"
+                id="lastname2"
+                placeholder="Lastname"
+                className="form-control"
+              />
+            </Col>
+              </Row>
+            </Col>
+            <Col lg={4}>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship3, "firstname", event.target.value)
+                }
+                name="firstname"
+                id="firstname3"
+                placeholder="Firstname"
+                className="form-control"
+              />
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship3, "lastname", event.target.value)
+                }
+                name="lastname"
+                id="lastname3"
+                placeholder="Lastname"
+                className="form-control"
+              />
+            </Col>
+              </Row>
             </Col>
           </Row>
 
@@ -584,16 +644,36 @@ const ElevenSection = (props) => {
             <label className="text-span">
                 <b>Beneficial Owner 4</b>
               </label><br/>
-              <label className="mt-4">Name</label>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship4, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship4, "firstname", event.target.value)
                 }
-                name="name"
-                id="name4"
+                name="firstname"
+                id="firstname4"
+                placeholder="Firstname"
+                className="form-control"
               />
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship4, "lastname", event.target.value)
+                }
+                name="lastname"
+                id="lastname4"
+                placeholder="Lastname"
+                className="form-control"
+              />
+            </Col>
+              </Row>
               <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
@@ -707,16 +787,36 @@ const ElevenSection = (props) => {
             <label className="text-span">
                 <b>Beneficial Owner 5</b>
               </label><br/>
-              <label className="mt-4">Name</label>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship5, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship5, "firstname", event.target.value)
                 }
-                name="name"
-                id="name5"
+                name="firstname"
+                id="firstname5"
+                placeholder="Firstname"
+                className="form-control"
               />
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship5, "lastname", event.target.value)
+                }
+                name="lastname"
+                id="lastname5"
+                placeholder="Lastname"
+                className="form-control"
+              />
+            </Col>
+              </Row>
               <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
@@ -830,16 +930,36 @@ const ElevenSection = (props) => {
             <label className="text-span">
                 <b>Beneficial Owner 6</b>
               </label><br/>
-              <label className="mt-4">Name</label>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship6, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship6, "firstname", event.target.value)
                 }
-                name="name"
-                id="name6"
+                name="firstname"
+                id="firstname6"
+                placeholder="Firstname"
+                className="form-control"
               />
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship6, "lastname", event.target.value)
+                }
+                name="lastname"
+                id="lastname6"
+                placeholder="Lastname"
+                className="form-control"
+              />
+            </Col>
+              </Row>
               <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
@@ -953,16 +1073,36 @@ const ElevenSection = (props) => {
             <label className="text-span">
                 <b>Beneficial Owner 7</b>
               </label><br/>
-              <label className="mt-4">Name</label>
+              <Row>
+              <label className="col-sm-12">
+                Name 
+              </label>
+             
+              <Col lg={6}>
               <input
                 type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship7, "name", event.target.value)
+                 onChange={(event) =>
+                  onChange(setotherdirectorship7, "firstname", event.target.value)
                 }
-                name="name"
-                id="name7"
+                name="firstname"
+                id="firstname7"
+                placeholder="Firstname"
+                className="form-control"
               />
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                 onChange={(event) =>
+                  onChange(setotherdirectorship7, "lastname", event.target.value)
+                }
+                name="lastname"
+                id="lastname7"
+                placeholder="Lastname"
+                className="form-control"
+              />
+            </Col>
+              </Row>
               <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
