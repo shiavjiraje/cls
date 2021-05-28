@@ -18,17 +18,17 @@ import ElevenSection from './section/ElevenSection';
 import ThirteenSection from './section/ThirteenSection';
 import FourteenSection from './section/FourteenSection';
 import HomeNavbar from '../../_components/homnavbar';
-
+import AgentNavbar from '../../_components/agentnavbar';
 
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      collapse1: false,  collapse2: false,  collapse3: false,
-      collapse4: false,  collapse5: false,  collapse6: false,
-      collapse7: false,  collapse8: false,  collapse9: false,
-      collapse10: false, collapse11: false, collapse12:false, collapse13:false,
+      collapse1: true,  collapse2: true,  collapse3: true,
+      collapse4: true,  collapse5: true,  collapse6: true,
+      collapse7: true,  collapse8: true,  collapse9: true,
+      collapse10: true, collapse11: true, collapse12:true, collapse13:true,
      };
   }
 
@@ -89,9 +89,19 @@ class Home extends Component {
   
   
    render() {
+    var getRole = localStorage.getItem('Role');
+    console.log(getRole, "getrole");
+    
+    let navbarcheck;
+if (getRole==="Agent") {
+  navbarcheck = <AgentNavbar/>;
+} else {
+  navbarcheck =<HomeNavbar />;
+}
       return (
           <React.Fragment>
-              <HomeNavbar />
+            {navbarcheck}
+              
               <div style={{height:"12730px"}}>
               <FirstSection onSecondSectionClick={this.showSecondSection.bind(this)}/>
               <Collapse isOpen={this.state.collapse1}>

@@ -52,8 +52,7 @@ function App() {
         <Router history={history}>
           <div>            
               <Switch>
-                {/* <PrivateRoute exact path='/home' component={Home} /> */}
-                
+                <PrivateRoute exact path='/agenthome' component={Home} />                
                 <PrivateRoute exact path='/welcome' component={Welcome} />
                 <PrivateRoute exact path='/teamspce' component={TeamSpaces} />
                 <PrivateRoute exact path='/viewforms' component={FormSubmissionStstus} />

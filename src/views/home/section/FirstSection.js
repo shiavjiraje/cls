@@ -29,10 +29,10 @@ const FirstSection = (props) => {
   const { register, errors, handleSubmit } = useForm();
   
   //const dispatch = useDispatch();
-  if(window.location.href.indexOf("home") > -1) {
-    //alert('working href');
-    localStorage.removeItem('Username');
-}
+//   if(window.location.href.indexOf("home") > -1) {
+//     //alert('working href');
+//     localStorage.removeItem('Username');
+// }
   const onSubmit = (e) => {
     var axios = require('axios');
     var name=firstname + " " + lastname;

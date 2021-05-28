@@ -7,7 +7,8 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import axios from 'axios';
 import config from '../../config/config';
-import Homnavbar from '../../_components/homnavbar';
+//import Homnavbar from '../../_components/homnavbar';
+import AgentNavbar from '../../_components/agentnavbar';
 var urlpattern =config.baseUrl;
 const defaultSorted = [
     {
@@ -100,13 +101,14 @@ const FormSubmissionStstus = (props) => {
       // eslint-disable-next-line
     }, []);
 
-   // var getUsername = localStorage.getItem('Username');
+   var getUsername = localStorage.getItem('Username');
+   console.log(getUsername, "agentusername");
     const getAllFormRecords=()=>{
         var data = '';
         
         var config = {
           method: 'get',
-          url: `${urlpattern}clsstatus`,          
+          url: `${urlpattern}clsstatus?Username=${getUsername}`,          
           data : data
         };
         
@@ -143,7 +145,7 @@ const FormSubmissionStstus = (props) => {
     let records =formRecords || [];
     return (
         <React.Fragment>
-           <Homnavbar activeForms={activeForms}/>
+           <AgentNavbar activeForms={activeForms}/>
            
                           
           <section className="light-section pt-3 mt-5">

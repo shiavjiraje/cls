@@ -1,27 +1,29 @@
 import React from 'react';
-import { userActions } from '../_actions';
+//import { userActions } from '../_actions';
 import { connect } from 'react-redux';
+import userLogo from '../assets/img/user.png'
 import Logo from '../assets/img/cls-logo-white.png';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
+  Nav, 
+ NavItem,
+} from 'reactstrap';
+import {
   NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
-import userLogo from '../assets/img/user.png'
+import { userActions } from '../_actions';
 import { Link } from 'react-router-dom';
 // const links = [
-//   { href: '/home', className:"left-border", text: 'Teamwork CRM' },
-//   { href: '/vendor', text: 'Project Management' },
-//   { href: '#about', text: 'Document Management' },
-//   { href: '#cata', text: 'Customer Support' }
+//   { href: '/home', className:"left-border", text: 'Support Center Home' },
+//   { href: '/opennewticket', text: 'Open a New Ticket' },
+//   { href: '#about', text: 'Check Ticket Status' }
 // ];
 
 // const createNavItem = ({ href, text, className, i}) => (
@@ -29,7 +31,7 @@ import { Link } from 'react-router-dom';
 //     <NavLink href={href} className={className}>{text}</NavLink>
 //   </NavItem>
 // );
-class Navigation extends React.Component {
+class Agentnavbar extends React.Component {
 
     constructor(props){
         super(props);
@@ -45,25 +47,21 @@ class Navigation extends React.Component {
           dropDownOpen : !this.state.dropDownOpen
       });
   }
-    logout = event =>{
-        const { dispatch } = this.props;
-        console.log(this.props);
-        console.log(localStorage.getItem('auth'));
-        dispatch(userActions.logout());
-    }
+  logout = event =>{
+    const { dispatch } = this.props;
+    console.log(this.props);
+    console.log(localStorage.getItem('auth'));
+    dispatch(userActions.logout());
+} 
     toggleNav() {
       this.setState({
         isOpen: !this.state.isOpen
       });
     }
-    
     render() {
         //const { classes } = this.props;
        // const { anchor } = this.state;
-      var getUsername = localStorage.getItem('Username');
-      //console.log(this.props.user, "AppJsConsole")
-      //let userrole =this.props.user.Role;
-       //console.log(getUsername,"getUsernamegetUsernamegetUsername");
+       var getUsername = localStorage.getItem('Username');
         return(
           <div>
             <Navbar className="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb">
@@ -71,25 +69,26 @@ class Navigation extends React.Component {
           <NavbarToggler onClick={this.toggleNav} />
           <Collapse isOpen={this.state.isOpen} navbar className="col-9">
             <Nav className="col-md-9 homenavbar" navbar>
+           
             <NavItem>
-              <NavLink target="_blank" href="https://www.teamwork.com/launchpad/login?redirect_uri=http://localhost:3000/welcome&client_id=884044adcead8dd8fcff5f051bcd420246d40b22" className={this.props.activeCrm +'left-border'}>Teamwork Login</NavLink>
+              <NavLink to="/agenthome" className= 'nav-link' >Add Form</NavLink>
+            </NavItem>
+             
+            <NavItem>
+              <NavLink to="/formview" className={'nav-link'} >View Form</NavLink>
             </NavItem>
             {/* <NavItem>
-              <NavLink href="/projectmanagement" className={this.props.activeProject}>Project Management</NavLink>
+              <NavLink href="/supportcenter" className={this.props.activeSupport +'left-border'}>Support Center Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/opennewticket" className={this.props.activeTicket}>Open a New Ticket</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/ticketstatus" className={this.props.activeTickitStatus}>Check Ticket Status</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/viewticketthread" className={this.props.activeTickitThread}>View Ticket Thread</NavLink>
             </NavItem> */}
-            <NavItem>
-              <NavLink href="/teamspce" className={this.props.activeTeamspce} >Team Space</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/deals" className={this.props.activeDeals} >Teamwork CRM</NavLink>
-            </NavItem>
-            
-            <NavItem>
-              <NavLink href="/viewforms" className={this.props.activeForms} >View Forms</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/supportcenter" className="">Customer Support</NavLink>
-            </NavItem>
             </Nav>
             <div className="col-md-3 pl-0" >
             <Nav className="" navbar>
@@ -137,10 +136,10 @@ class Navigation extends React.Component {
 
   
 const mapStateToProps = (state) =>{
-    const { loggingIn,user } = state.authentication;
+    const { loggingIn } = state.authentication;
     return {
-        loggingIn, user
+        loggingIn
     };
 }
 
-export default connect(mapStateToProps)(Navigation);
+export default connect(mapStateToProps)(Agentnavbar);

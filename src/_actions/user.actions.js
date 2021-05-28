@@ -16,19 +16,20 @@ function login(username, password){
         }
         userService.post(apiEndpoint, payload)
         .then((response)=>{
-            console.log(response,"Login Response");
+            
             if (response.data.status===true) {
+                console.log(response.data.data.Username,"Login Response");
                 localStorage.setItem('token', response.data.data.token);
                 localStorage.setItem('auth', response.data.data.auth);
                 localStorage.setItem('Username', response.data.data.Username);
                 localStorage.setItem('Role', response.data.data.Role);
                // localStorage.setItem("apiData", JSON.stringify({cfid:"10"}));
                 dispatch(setUserDetails(response.data.data));
-                // if (response.data.data.Role==="Agent") {
-                // history.push('/home');
-                // }else{
+                if (response.data.data.Role==="Agent") {
+                 history.push('/agenthome');
+                 }else{
                     history.push('/welcome');
-               // }
+               }
             }
             else{
                 swal("Username Password Wrong", "error");
