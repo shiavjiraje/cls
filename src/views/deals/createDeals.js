@@ -77,9 +77,9 @@ const CreateDeals = (props) => {
     
   return (
     <div>
-      <Button color="primary" onClick={toggle}>Create New Deals</Button>
+      <Button color="primary" onClick={toggle}>Create New Deal</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Create New Deals</ModalHeader>
+        <ModalHeader toggle={toggle}>Create New Deal</ModalHeader>
         <ModalBody>
         <Row>
                 <Col lg={12}>
