@@ -71,11 +71,11 @@ class Agentnavbar extends React.Component {
             <Nav className="col-md-9 homenavbar" navbar>
            
             <NavItem>
-              <NavLink to="/agenthome" className= 'nav-link' >Add Form</NavLink>
+              <Link to="/agenthome" className= 'nav-link' >Add Form</Link>
             </NavItem>
              
             <NavItem>
-              <NavLink to="/formview" className={'nav-link'} >View Form</NavLink>
+              <Link to="/formview" className={'nav-link'} >View Form</Link>
             </NavItem>
             {/* <NavItem>
               <NavLink href="/supportcenter" className={this.props.activeSupport +'left-border'}>Support Center Home</NavLink>
