@@ -107,10 +107,6 @@ function Registration() {
                               name="firstname"
                               ref={register({
                                 required: "The field is Required",
-                                pattern: {
-                                  value: /^[a-zA-Z ]*$/,
-                                  message: "Enter a valid First Name",
-                                },
                                })}/>
                                
                         </div>
@@ -131,10 +127,6 @@ function Registration() {
                               name="lastname"
                               ref={register({
                                 required: "The field is Required",
-                                pattern: {
-                                  value: /^[a-zA-Z ]*$/,
-                                  message: "Enter a valid Last Name",
-                                },
                                })}/>
                                
                         </div>

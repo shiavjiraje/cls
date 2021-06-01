@@ -292,10 +292,6 @@ const FirstSection = (props) => {
                 type="text"
                 ref={register({
                   required: "The field is Required",
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid Name",
-                  },
                  })}
                 onChange={(e) => {
                   setfirstname(e.target.value);
@@ -312,10 +308,6 @@ const FirstSection = (props) => {
                 type="text"
                 ref={register({
                   required: "The field is Required",
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid Name",
-                  },
                  })}
                 onChange={(e) => {
                   setlastname(e.target.value);

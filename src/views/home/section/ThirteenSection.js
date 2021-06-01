@@ -97,21 +97,13 @@ const ThirteenSection = (props) => {
                   <b>Registered Office Address </b>
                 </label>
                 <p>This must be in the Republic of Ireland<a className="text-span" target="_blank" href="/handyguide">(Note 15)</a></p>
-              </Col>
-              <Col lg={6}>
-                <label className="text-span">
-                  <b>Business / Central Administration Address</b>
-                </label>
-                <p>(If different from Registered Address)</p>
-              </Col>  
-            </Row>
-            <Row className="mt-4">
-              <Col lg={3}>
+                <Row className="mt-4">
+                <Col lg={6}>
                 <label>
                   Address Line 1 <span className="redspan">*</span>
                 </label>
               </Col>
-              <Col lg={3}>
+              <Col lg={6}>
                 <input
                   type="text"
                   className="form-control"
@@ -126,28 +118,14 @@ const ThirteenSection = (props) => {
                   <p className="redspan font-12">The field is Required</p>
                 )}
               </Col>
-              <Col lg={3}>
-                <label>Address Line 1</label>
-              </Col>
-              <Col lg={3}>
-                <input
-                  type="text"
-                  className="form-control"
-                  onChange={(e) => {
-                    setcaaddressline1(e.target.value);
-                  }}
-                  name="caaddressline1"
-                  id="caaddressline1"
-                />
-              </Col>
-            </Row>
-            <Row className="mt-4">
-              <Col lg={3}>
+                </Row>
+                <Row className="mt-4">
+                <Col lg={6}>
                 <label>
                   Address Line 2 <span className="redspan">*</span>
                 </label>
               </Col>
-              <Col lg={3}>
+              <Col lg={6}>
                 <input
                   type="text"
                   className="form-control"
@@ -162,10 +140,68 @@ const ThirteenSection = (props) => {
                   <p className="redspan font-12">The field is Required</p>
                 )}
               </Col>
-              <Col lg={3}>
+                </Row>
+                <Row className="mt-4">
+                <Col lg={6}>
+                <label>Address Line 3</label>
+              </Col>
+              <Col lg={6}>
+                <input
+                  type="text"
+                  className="form-control"
+                  onChange={(e) => {
+                    setroaddressline3(e.target.value);
+                  }}
+                  name="roaddressline3"
+                  id="roaddressline3"
+                />
+              </Col>
+                </Row>
+                <Row className="mt-4">
+                <Col lg={6}>
+                <label>Eircode/Postcode</label>
+              </Col>
+              <Col lg={6}>
+                <input
+                  type="text"
+                  className="form-control"
+                  onChange={(e) => {
+                    setropostalcode(e.target.value);
+                  }}
+                  name="ropostalcode"
+                  id="ropostalcode"
+                />
+              </Col>
+                </Row>
+              </Col>
+              <Col lg={6}>
+                <label className="text-span">
+                  <b>Business / Central Administration Address</b>
+                </label>
+                <p>(If different from Registered Address)</p>
+                <Row className="mt-4">
+             
+              <Col lg={6}>
+                <label>Address Line 1</label>
+              </Col>
+              <Col lg={6}>
+                <input
+                  type="text"
+                  className="form-control"
+                  onChange={(e) => {
+                    setcaaddressline1(e.target.value);
+                  }}
+                  name="caaddressline1"
+                  id="caaddressline1"
+                />
+              </Col>
+            </Row>
+            <Row className="mt-4">
+              
+              <Col lg={6}>
                 <label>Address Line 2</label>
               </Col>
-              <Col lg={3}>
+              <Col lg={6}>
                 <input
                   type="text"
                   className="form-control"
@@ -178,24 +214,11 @@ const ThirteenSection = (props) => {
               </Col>
             </Row>
             <Row className="mt-4">
-              <Col lg={3}>
+              
+              <Col lg={6}>
                 <label>Address Line 3</label>
               </Col>
-              <Col lg={3}>
-                <input
-                  type="text"
-                  className="form-control"
-                  onChange={(e) => {
-                    setroaddressline3(e.target.value);
-                  }}
-                  name="roaddressline3"
-                  id="roaddressline3"
-                />
-              </Col>
-              <Col lg={3}>
-                <label>Address Line 3</label>
-              </Col>
-              <Col lg={3}>
+              <Col lg={6}>
                 <input
                   type="text"
                   className="form-control"
@@ -208,24 +231,11 @@ const ThirteenSection = (props) => {
               </Col>
             </Row>
             <Row className="mt-4 mb-5">
-              <Col lg={3}>
+             
+              <Col lg={6}>
                 <label>Eircode/Postcode</label>
               </Col>
-              <Col lg={3}>
-                <input
-                  type="text"
-                  className="form-control"
-                  onChange={(e) => {
-                    setropostalcode(e.target.value);
-                  }}
-                  name="ropostalcode"
-                  id="ropostalcode"
-                />
-              </Col>
-              <Col lg={3}>
-                <label>Eircode/Postcode</label>
-              </Col>
-              <Col lg={3}>
+              <Col lg={6}>
                 <input
                   type="text"
                   className="form-control"
@@ -237,6 +247,12 @@ const ThirteenSection = (props) => {
                 />
               </Col>
             </Row>
+              </Col>  
+            </Row>
+            
+            
+           
+            
             <Row>
               <Col lg={12}>
                 <div className="form-group form-check">

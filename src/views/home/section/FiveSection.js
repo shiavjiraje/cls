@@ -147,22 +147,8 @@ const addDirectorSeven=()=>{
             <Col lg={4}>
               <label className="text-span">
                 <b>Director 1</b>
-              </label>
-            </Col>
-            <Col lg={4}>
-              <label className="text-span">
-                <b>Director 2</b>
-              </label>
-            </Col>
-            <Col lg={4}>
-              <label className="text-span">
-                <b>Director 3</b>
-              </label>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-          <Col lg={4}>
-              <Row>
+              </label><br/>
+              <Row className="mt-4">
               <label className="col-sm-12">
                 Name <span className="redspan">*</span>
               </label>
@@ -171,11 +157,7 @@ const addDirectorSeven=()=>{
               <input
                 type="text"
                 ref={register({
-                  required: "The field is Required",
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid Name",
-                  },
+                  required: "The field is Required",                  
                  })}
                  onChange={(event) =>
                   onChange(setotherdirectorship1, "firstname", event.target.value)
@@ -192,10 +174,6 @@ const addDirectorSeven=()=>{
                 type="text"
                 ref={register({
                   required: "The field is Required",
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid Name",
-                  },
                  })}
                  onChange={(event) =>
                   onChange(setotherdirectorship1, "lastname", event.target.value)
@@ -208,9 +186,314 @@ const addDirectorSeven=()=>{
               {errors.lastname1 && <p className="error redspan font-12">{errors.lastname.message}</p>}
             </Col>
               </Row>
+              <Row className="mt-4">
+              <label className="col-sm-12">
+                Date Of Birth <span className="redspan">*</span>
+              </label>
+              <div className="col-sm-12">
+              <input
+                type="date"
+                className="form-control" min="1900-01-01"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob1"
+              />
+              {errors.dob && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+              </div>
+              </Row>
+              <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Occupation <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="ocuu1"
+              />
+              {errors.occupation && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Address Line 1 <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addline1_1"
+              />
+              {errors.addressline1 && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Address Line 2 <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addline1_2"
+              />
+              {errors.addressline2 && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Address Line 3</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addline1_3"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Eircode/Postcode</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Country <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "country", event.target.value)
+                }
+                name="country"
+                id="country1"
+              />
+              {errors.postal && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Nationality <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality1"
+              />
+              {errors.nationality && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">Other Directorship 1 - Company Number</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "otherdirectorship1",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship1"
+                id="otherdirectorship1_1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">Other Directorship 2 - Company Number</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "otherdirectorship2",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship2"
+                id="otherdirectorship2_1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Other Directorship 3 - Company Number</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "otherdirectorship3",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship3"
+                id="otherdirectorship3_1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">Disqualified or Restricted</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4 pb-1">
+           
+              <label className="col-sm-12">
+                Is the director the beneficial owner of the above shares?
+                <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <select
+                className="form-control"
+                ref={register({ required: true })}
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner1"
+              >
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+              {errors.beneficialowner && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
             </Col>
             <Col lg={4}>
-              <Row>
+              <label className="text-span">
+                <b>Director 2</b>
+              </label><br/>
+              <Row className="mt-4">
               <label className="col-sm-12">
                 Name
               </label>
@@ -240,9 +523,285 @@ const addDirectorSeven=()=>{
               />
             </Col>
               </Row>
+              <Row className="mt-4">
+              <label className="col-sm-12">
+                Date Of Birth 
+              </label>
+              <div className="col-sm-12">
+              <input
+                type="date"
+                className="form-control" min="1900-01-01"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "dob", event.target.value)
+                }
+                name="dob"
+                id="dob2"
+              />
+              </div>
+              </Row>
+              <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Occupation <span className="redspan">*</span>
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="ocuu2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Address Line 1 
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addline2_1"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Address Line 2 
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addline2_2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Address Line 3</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addline2_3"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Eircode/Postcode</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "postal", event.target.value)
+                }
+                name="postal"
+                id="postal2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Country 
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "country", event.target.value)
+                }
+                name="country"
+                id="country2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Nationality 
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+            <label className="col-sm-12">Other Directorship 1 - Company Number</label>
+            <Col lg={12}>
+            <input
+              type="text"
+              className="form-control"
+              onChange={(event) =>
+                onChange(
+                  setotherdirectorship2,
+                  "otherdirectorship1",
+                  event.target.value
+                )
+              }
+              name="otherdirectorship1"
+              id="otherdirectorship1_2"
+            />
+          </Col>
+          </Row>
+          <Row className="mt-4">
+            
+              <label className="col-sm-12">Other Directorship 2 - Company Number</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "otherdirectorship2",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship2"
+                id="otherdirectorship2_2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Other Directorship 3 - Company Number</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "otherdirectorship3",
+                    event.target.value
+                  )
+                }
+                name="otherdirectorship3"
+                id="otherdirectorship3_2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">Disqualified or Restricted</label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "restricted",
+                    event.target.value
+                  )
+                }
+                name="restricted"
+                id="restricted2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                If this director is also a subscriber, enter their number of
+                shares
+              </label>
+              <Col lg={12}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "numberofshare",
+                    event.target.value
+                  )
+                }
+                name="numberofshare"
+                id="numberofshare2"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4 pb-1">
+           
+              <label className="col-sm-12">
+                Is the director the beneficial owner of the above shares?
+              </label>
+              <Col lg={12}>
+              <select
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "beneficialowner",
+                    event.target.value
+                  )
+                }
+                name="beneficialowner"
+                id="beneficialowner2"
+              >
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </Col>
+            </Row>
             </Col>
             <Col lg={4}>
-              <Row>
+              <label className="text-span">
+                <b>Director 3</b>
+              </label><br/>
+              <Row className="mt-4">
               <label className="col-sm-12">
                 Name
               </label>
@@ -272,149 +831,49 @@ const addDirectorSeven=()=>{
               />
             </Col>
               </Row>
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>
-                Date Of Birth <span className="redspan">*</span>
+              <Row className="mt-4">
+              <label className="col-sm-12">
+                Date Of Birth 
               </label>
+              <div className="col-sm-12">
               <input
                 type="date"
                 className="form-control" min="1900-01-01"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob1"
-              />
-              {errors.dob && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>Date Of Birth</label>
-              <input
-                type="date" min="1900-01-01"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "dob", event.target.value)
-                }
-                name="dob"
-                id="dob2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Date Of Birth</label>
-              <input
-                type="date" min="1900-01-01"
-                className="form-control"
                 onChange={(event) =>
                   onChange(setotherdirectorship3, "dob", event.target.value)
                 }
                 name="dob"
                 id="dob3"
               />
-            </Col>
+              </div>
+              </Row>
+              <Row className="mt-4">
+            
+            <label className="col-sm-12">
+              Occupation <span className="redspan">*</span>
+            </label>
+            <Col lg={12}>
+            <input
+              type="text"
+              className="form-control"
+              onChange={(event) =>
+                onChange(
+                  setotherdirectorship3,
+                  "occupation",
+                  event.target.value
+                )
+              }
+              name="occupation"
+              id="ocuu3"
+            />
+          </Col>
           </Row>
           <Row className="mt-4">
-            <Col lg={4}>
-              <label>
-                Occupation <span className="redspan">*</span>
+            
+              <label className="col-sm-12">
+                Address Line 1 
               </label>
-              <input
-                type="text"
-                className="form-control"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="ocuu1"
-              />
-              {errors.occupation && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occu2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occu3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>
-                Address Line 1 <span className="redspan">*</span>
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addline1_1"
-              />
-              {errors.addressline1 && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addline1_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 1</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -426,101 +885,35 @@ const addDirectorSeven=()=>{
                   )
                 }
                 name="addressline1"
-                id="addline1_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>
-                Address Line 2 <span className="redspan">*</span>
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addline2_1"
-              />
-              {errors.addressline2 && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addline2_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addline2_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
                 id="addline3_1"
               />
             </Col>
-            <Col lg={4}>
-              <label>Address Line 3</label>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
+                Address Line 2 
+              </label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
-                    setotherdirectorship2,
-                    "addressline3",
+                    setotherdirectorship3,
+                    "addressline2",
                     event.target.value
                   )
                 }
-                name="addressline3"
+                name="addressline2"
                 id="addline3_2"
               />
             </Col>
-            <Col lg={4}>
-              <label>Address Line 3</label>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Address Line 3</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -532,36 +925,14 @@ const addDirectorSeven=()=>{
                   )
                 }
                 name="addressline3"
+                id="addline3_3"
               />
             </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "postal", event.target.value)
-                }
-                name="postal"
-                id="postal2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Eircode/Postcode</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -572,92 +943,30 @@ const addDirectorSeven=()=>{
                 id="postal3"
               />
             </Col>
+            </Row>
+            <Row className="mt-4">
+            
+            <label className="col-sm-12">
+              Country 
+            </label>
+            <Col lg={12}>
+            <input
+              type="text"
+              className="form-control"
+              onChange={(event) =>
+                onChange(setotherdirectorship3, "country", event.target.value)
+              }
+              name="country"
+              id="country3"
+            />
+          </Col>
           </Row>
           <Row className="mt-4">
-            <Col lg={4}>
-              <label>
-                Country <span className="redspan">*</span>
+            
+              <label className="col-sm-12">
+                Nationality 
               </label>
-              <input
-                type="text"
-                className="form-control"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "country", event.target.value)
-                }
-                name="country"
-                id="country1"
-              />
-              {errors.postal && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "country", event.target.value)
-                }
-                name="country"
-                id="country3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>
-                Nationality <span className="redspan">*</span>
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality1"
-              />
-              {errors.nationality && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Nationality</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -672,92 +981,30 @@ const addDirectorSeven=()=>{
                 id="nationality3"
               />
             </Col>
+            </Row>
+            <Row className="mt-4">
+            
+            <label className="col-sm-12">Other Directorship 1 - Company Number</label>
+            <Col lg={12}>
+            <input
+              type="text"
+              className="form-control"
+              onChange={(event) =>
+                onChange(
+                  setotherdirectorship3,
+                  "otherdirectorship1",
+                  event.target.value
+                )
+              }
+              name="otherdirectorship1"
+              id="otherdirectorship1_3"
+            />
+          </Col>
           </Row>
           <Row className="mt-4">
-            <Col lg={4}>
-              <label>Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Other Directorship 1 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "otherdirectorship1",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship1"
-                id="otherdirectorship1_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Other Directorship 2 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship2",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship2"
-                id="otherdirectorship2_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Other Directorship 2 - Company Number</label>
+            
+              <label className="col-sm-12">Other Directorship 2 - Company Number</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -772,42 +1019,11 @@ const addDirectorSeven=()=>{
                 id="otherdirectorship2_3"
               />
             </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Other Directorship 3 - Company Number</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "otherdirectorship3",
-                    event.target.value
-                  )
-                }
-                name="otherdirectorship3"
-                id="otherdirectorship3_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Other Directorship 3 - Company Number</label>
+            </Row>
+            <Row className="mt-4">
+           
+              <label className="col-sm-12">Other Directorship 3 - Company Number</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -822,42 +1038,11 @@ const addDirectorSeven=()=>{
                 id="otherdirectorship3_3"
               />
             </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Disqualified or Restricted</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "restricted",
-                    event.target.value
-                  )
-                }
-                name="restricted"
-                id="restricted2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Disqualified or Restricted</label>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">Disqualified or Restricted</label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -872,51 +1057,14 @@ const addDirectorSeven=()=>{
                 id="restricted3"
               />
             </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>
+            </Row>
+            <Row className="mt-4">
+            
+              <label className="col-sm-12">
                 If this director is also a subscriber, enter their number of
                 shares
               </label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-                id="numberofshare1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="numberofshare2"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "numberofshare",
-                    event.target.value
-                  )
-                }
-                name="numberofshare"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>
-                If this director is also a subscriber, enter their number of
-                shares
-              </label>
+              <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
@@ -931,59 +1079,13 @@ const addDirectorSeven=()=>{
                 id="numberofshare3"
               />
             </Col>
-          </Row>
-          <Row className="mt-4 pb-1">
-            <Col lg={4}>
-              <label>
-                Is the director the beneficial owner of the above shares?
-                <span className="redspan">*</span>
-              </label>
-              <select
-                className="form-control"
-                ref={register({ required: true })}
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner1"
-              >
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-              {errors.beneficialowner && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-            <Col lg={4}>
-              <label>
+            </Row>
+            <Row className="mt-4 pb-1">
+           
+              <label className="col-sm-12">
                 Is the director the beneficial owner of the above shares?
               </label>
-              <select
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "beneficialowner",
-                    event.target.value
-                  )
-                }
-                name="beneficialowner"
-                id="beneficialowner2"
-              >
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-            </Col>
-            <Col lg={4}>
-              <label>
-                Is the director the beneficial owner of the above shares?
-              </label>
+              <Col lg={12}>
               <select
                 className="form-control"
                 onChange={(event) =>
@@ -1001,7 +1103,10 @@ const addDirectorSeven=()=>{
                 <option value="No">No</option>
               </select>
             </Col>
+            </Row>
+            </Col>
           </Row>
+          
           <Row className="">
             {showFormFour&&
             

@@ -138,21 +138,7 @@ const ElevenSection = (props) => {
             <Col lg={4}>
               <label className="text-span">
                 <b>Beneficial Owners 1</b>
-              </label>
-            </Col>
-            <Col lg={4}>
-              <label className="text-span">
-                <b>Beneficial Owners 2</b>
-              </label>
-            </Col>
-            <Col lg={4}>
-              <label className="text-span">
-                <b>Beneficial Owners 3</b>
-              </label>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-          <Col lg={4}>
+              </label><br/><br/>
               <Row>
               <label className="col-sm-12">
                 Name 
@@ -183,8 +169,119 @@ const ElevenSection = (props) => {
               />
             </Col>
               </Row>
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline1_1"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline1_2"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline1_3"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode1"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship1, "country", event.target.value)
+                }
+                name="country"
+                id="country1"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality1"
+              />
+               <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation1"
+              />
+              <label className="mt-4">Nature of Beneficial Ownership</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship1,
+                    "natureofownership",
+                    event.target.value
+                  )
+                }
+                name="natureofownership"
+                id="natureofownership1"
+              />
             </Col>
             <Col lg={4}>
+              <label className="text-span">
+                <b>Beneficial Owners 2</b>
+              </label><br/><br/>
               <Row>
               <label className="col-sm-12">
                 Name 
@@ -194,7 +291,7 @@ const ElevenSection = (props) => {
               <input
                 type="text"
                  onChange={(event) =>
-                  onChange(setotherdirectorship2, "firstname", event.target.value)
+                  onChange(setotherdirectorship1, "firstname", event.target.value)
                 }
                 name="firstname"
                 id="firstname2"
@@ -206,7 +303,7 @@ const ElevenSection = (props) => {
               <input
                 type="text"
                  onChange={(event) =>
-                  onChange(setotherdirectorship2, "lastname", event.target.value)
+                  onChange(setotherdirectorship1, "lastname", event.target.value)
                 }
                 name="lastname"
                 id="lastname2"
@@ -215,8 +312,119 @@ const ElevenSection = (props) => {
               />
             </Col>
               </Row>
+              <label className="mt-4">Address Line 1</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline1",
+                    event.target.value
+                  )
+                }
+                name="addressline1"
+                id="addressline2_1"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_2"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline2_3"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode2"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "country", event.target.value)
+                }
+                name="country"
+                id="country2"
+              />
+              <label className="mt-4">Nationality</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "nationality",
+                    event.target.value
+                  )
+                }
+                name="nationality"
+                id="nationality2"
+              />
+               <label className="mt-4">Occupation</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "occupation",
+                    event.target.value
+                  )
+                }
+                name="occupation"
+                id="occupation2"
+              />
+              <label className="mt-4">Nature of Beneficial Ownership</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "natureofownership",
+                    event.target.value
+                  )
+                }
+                name="natureofownership"
+                id="natureofownership2"
+              />
             </Col>
             <Col lg={4}>
+              <label className="text-span">
+                <b>Beneficial Owners 3</b>
+              </label><br/><br/>
               <Row>
               <label className="col-sm-12">
                 Name 
@@ -247,44 +455,7 @@ const ElevenSection = (props) => {
               />
             </Col>
               </Row>
-            </Col>
-          </Row>
-
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 1</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline1",
-                    event.target.value
-                  )
-                }
-                name="addressline1"
-                id="addressline1_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 1</label>
+              <label className="mt-4">Address Line 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -296,95 +467,23 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline1"
-                id="addressline1_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
                 id="addressline3_1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 3</label>
+              <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
                 className="form-control"
                 onChange={(event) =>
                   onChange(
-                    setotherdirectorship2,
-                    "addressline3",
+                    setotherdirectorship3,
+                    "addressline2",
                     event.target.value
                   )
                 }
-                name="addressline3"
+                name="addressline2"
                 id="addressline3_2"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 3</label>
+              <label className="mt-4">Address Line 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -398,43 +497,7 @@ const ElevenSection = (props) => {
                 name="addressline3"
                 id="addressline3_3"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -448,35 +511,7 @@ const ElevenSection = (props) => {
                 name="postalcode"
                 id="postalcode3"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship1, "country", event.target.value)
-                }
-                name="country"
-                id="country1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Country</label>
+              <label className="mt-4">Country</label>
               <input
                 type="text"
                 className="form-control"
@@ -486,43 +521,7 @@ const ElevenSection = (props) => {
                 name="country"
                 id="country3"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Nationality</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "nationality",
-                    event.target.value
-                  )
-                }
-                name="nationality"
-                id="nationality2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Nationality</label>
+              <label className="mt-4">Nationality</label>
               <input
                 type="text"
                 className="form-control"
@@ -536,43 +535,7 @@ const ElevenSection = (props) => {
                 name="nationality"
                 id="nationality3"
               />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Occupation</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "occupation",
-                    event.target.value
-                  )
-                }
-                name="occupation"
-                id="occupation2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Occupation</label>
+               <label className="mt-4">Occupation</label>
               <input
                 type="text"
                 className="form-control"
@@ -586,44 +549,7 @@ const ElevenSection = (props) => {
                 name="occupation"
                 id="occupation3"
               />
-            </Col>
-          </Row>
-
-          <Row className="mt-4 mb-5">
-            <Col lg={4}>
-              <label>Nature of Beneficial Ownership</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship1,
-                    "natureofownership",
-                    event.target.value
-                  )
-                }
-                name="natureofownership"
-                id="natureofownership1"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Nature of Beneficial Ownership</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "natureofownership",
-                    event.target.value
-                  )
-                }
-                name="natureofownership"
-                id="natureofownership2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Nature of Beneficial Ownership</label>
+              <label className="mt-4">Nature of Beneficial Ownership</label>
               <input
                 type="text"
                 className="form-control"
@@ -639,6 +565,7 @@ const ElevenSection = (props) => {
               />
             </Col>
           </Row>
+          
           <Row className="mt-3">
           {showFormFour &&<Col lg={3}>
             <label className="text-span">

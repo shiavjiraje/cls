@@ -116,31 +116,19 @@ axios(config)
             <Col lg={6}>
               <label className="text-span">
                 <b>Individual Secretary Details</b>
-              </label>
-            </Col>
-            <Col lg={6}>
-              <label className="text-span">
-                <b>Corporate Secretary Details</b>
-              </label>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={3}>
-              <label>
+              </label><br/>
+            
+             
+            
+              <Row className="mt-5">
+              <label className="col-sm-6">
                 Name <span className="redspan">*</span>
               </label>
-            </Col>
-            <Col lg={3}>
-              <Row>
-              <Col lg={6}>
+              <Col lg={3}>
               <input
                 type="text"
                 ref={register({
                   required: "The field is Required",
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid Name",
-                  },
                  })}
                 onChange={(e) => {
                   setfirstname(e.target.value);
@@ -152,15 +140,11 @@ axios(config)
               />
               {errors.firstname && <p className="error redspan font-12">{errors.firstname.message}</p>}
             </Col>
-            <Col lg={6}>
+            <Col lg={3}>
               <input
                 type="text"
                 ref={register({
                   required: "The field is Required",
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message: "Enter a valid Name",
-                  },
                  })}
                 onChange={(e) => {
                   setlastname(e.target.value);
@@ -173,28 +157,13 @@ axios(config)
               {errors.lastname && <p className="error redspan font-12">{errors.lastname.message}</p>}
             </Col>
             </Row>
-            </Col>
-            <Col lg={3}>
-              <label>Company Name</label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setcompanyname(e.target.value);
-                }}
-                name="companyname"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
+            <Row className="mt-4">
+            <Col lg={6}>
               <label>
                 Date Of Birth <span className="redspan">*</span>
               </label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="date" min="1900-01-01"
                 className="form-control"
@@ -208,27 +177,14 @@ axios(config)
                 <p className="redspan font-12">The field is Required</p>
               )}
             </Col>
-            <Col lg={3}>
-              <label>Company Number</label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text" pattern="[0-9 ]+"
-                className="form-control"
-                onChange={(e) => {
-                  setcompanynumber(e.target.value);
-                }}
-                name="companynumber"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
+            </Row>
+            <Row className="mt-4">
+            <Col lg={6}>
               <label>
                 Address Line 1 <span className="redspan">*</span>
               </label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -242,29 +198,14 @@ axios(config)
                 <p className="redspan font-12">The field is Required</p>
               )}
             </Col>
-            <Col lg={3}>
-              <label>
-                Company Director <div>(signing on behalf of the Company)</div>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setcompanydirector(e.target.value);
-                }}
-                name="companydirector"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
+            </Row>
+            <Row className="mt-4">
+            <Col lg={6}>
               <label>
                 Address Line 2 <span className="redspan">*</span>
               </label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -278,10 +219,114 @@ axios(config)
                 <p className="redspan font-12">The field is Required</p>
               )}
             </Col>
-            <Col lg={3}>
+            </Row>
+            <Row className="mt-4">
+            <Col lg={6}>
+              <label>Address Line 3</label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => {
+                  setaddressline3(e.target.value);
+                }}
+                name="addressline3"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            <Col lg={6}>
+              <label>Eircode/Postcode</label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => {
+                  setpostal(e.target.value);
+                }}
+                name="postal"
+              />
+            </Col>
+            </Row>
+            <Row className="mt-4">
+            <Col lg={6}>
+              <label>Country</label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => {
+                  setcountry(e.target.value);
+                }}
+                name="country"
+              />
+            </Col>
+            </Row>
+            </Col>
+            <Col lg={6}>
+              <label className="text-span">
+                <b>Corporate Secretary Details</b>
+              </label><br/>
+              <Row className="mt-5">
+            
+            <Col lg={6}>
+              <label>Company Name</label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => {
+                  setcompanyname(e.target.value);
+                }}
+                name="companyname"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            
+            <Col lg={6}>
+              <label>Company Number</label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text" pattern="[0-9 ]+"
+                className="form-control"
+                onChange={(e) => {
+                  setcompanynumber(e.target.value);
+                }}
+                name="companynumber"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            
+            <Col lg={6}>
+              <label>
+                Company Director <div>(signing on behalf of the Company)</div>
+              </label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => {
+                  setcompanydirector(e.target.value);
+                }}
+                name="companydirector"
+              />
+            </Col>
+          </Row>
+          
+          <Row className="mt-4">
+            
+            <Col lg={6}>
               <label>Registered Office</label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -293,23 +338,11 @@ axios(config)
             </Col>
           </Row>
           <Row className="mt-4">
-            <Col lg={3}>
-              <label>Address Line 3</label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setaddressline3(e.target.value);
-                }}
-                name="addressline3"
-              />
-            </Col>
-            <Col lg={3}>
+            
+            <Col lg={6}>
               <label>Address Line 1</label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -321,23 +354,11 @@ axios(config)
             </Col>
           </Row>
           <Row className="mt-4">
-            <Col lg={3}>
-              <label>Eircode/Postcode</label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setpostal(e.target.value);
-                }}
-                name="postal"
-              />
-            </Col>
-            <Col lg={3}>
+            
+            <Col lg={6}>
               <label>Address Line 2</label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -348,24 +369,13 @@ axios(config)
               />
             </Col>
           </Row>
+          
           <Row className="mt-4">
-            <Col lg={3}>
-              <label>Country</label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setcountry(e.target.value);
-                }}
-                name="country"
-              />
-            </Col>
-            <Col lg={3}>
+            
+            <Col lg={6}>
               <label>Eircode/Postcode</label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -377,12 +387,10 @@ axios(config)
             </Col>
           </Row>
           <Row className="mt-4 mb-5">
-            <Col lg={3}></Col>
-            <Col lg={3}></Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <label>Country</label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -393,6 +401,13 @@ axios(config)
               />
             </Col>
           </Row>
+            </Col>
+          </Row>
+          
+          
+          
+          
+          
           <Row className="pb-3">
             {/* <Col lg={4} className="text-left">             
             </Col>

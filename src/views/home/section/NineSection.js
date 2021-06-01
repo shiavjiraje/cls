@@ -136,22 +136,8 @@ const NineSection = (props) => {
             <Col lg={4}>
               <label className="text-span">
                 <b>Corporate Subscriber 1</b>
-              </label>
-            </Col>
-            <Col lg={4}>
-              <label className="text-span">
-                <b>Corporate Subscriber 2</b>
-              </label>
-            </Col>
-            <Col lg={4}>
-              <label className="text-span">
-                <b>Corporate Subscriber 3</b>
-              </label>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={4}>
-              <label>Company Name</label>
+              </label><br/>
+              <label className="mt-4">Company Name</label>
               <input
                 type="text"
                 className="form-control"
@@ -165,43 +151,7 @@ const NineSection = (props) => {
                 name="companyname"
                 id="companyname1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Company Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "companyname",
-                    event.target.value
-                  )
-                }
-                name="companyname"
-                id="companyname2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Company Name</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "companyname",
-                    event.target.value
-                  )
-                }
-                name="companyname"
-                id="companyname3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Company Number</label>
+              <label className="mt-4">Company Number</label>
               <input
                 type="text" pattern="[0-9 ]+"
                 className="form-control"
@@ -215,43 +165,7 @@ const NineSection = (props) => {
                 name="companyphonenumber"
                 id="companyphonenumber1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Company Number</label>
-              <input
-                type="text" pattern="[0-9 ]+"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "companyphonenumber",
-                    event.target.value
-                  )
-                }
-                name="companyphonenumber"
-                id="companyphonenumber2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Company Number</label>
-              <input
-                type="text" pattern="[0-9 ]+"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "companyphonenumber",
-                    event.target.value
-                  )
-                }
-                name="companyphonenumber"
-                id="companyphonenumber3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={4}>
-              <label>Company Director(Signing)</label>
+              <label className="mt-4">Company Director (Signing)</label>
               <input
                 type="text"
                 className="form-control"
@@ -265,43 +179,7 @@ const NineSection = (props) => {
                 name="companydirector"
                 id="companydirector1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Company Director(Signing)</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "companydirector",
-                    event.target.value
-                  )
-                }
-                name="companydirector"
-                id="companydirector2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Company Director(Signing)</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "companydirector",
-                    event.target.value
-                  )
-                }
-                name="companydirector"
-                id="companydirector3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col lg={4}>
-              <label>Registred Office Address</label>
+               <label className="mt-4">Registered Office Address</label>
               <input
                 type="text"
                 className="form-control"
@@ -315,43 +193,7 @@ const NineSection = (props) => {
                 name="registeroffice"
                 id="registeroffice1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Registred Office Address</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "registeroffice",
-                    event.target.value
-                  )
-                }
-                name="registeroffice"
-                id="registeroffice2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Registred Office Address</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "registeroffice",
-                    event.target.value
-                  )
-                }
-                name="registeroffice"
-                id="registeroffice3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Address Line 2</label>
+              <label className="mt-4">Address Line 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -363,45 +205,9 @@ const NineSection = (props) => {
                   )
                 }
                 name="addressline2"
-                id="addressline2_1"
+                id="addressline1_2"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline2",
-                    event.target.value
-                  )
-                }
-                name="addressline2"
-                id="addressline2_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Address Line 3</label>
+              <label className="mt-4">Address Line 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -413,45 +219,9 @@ const NineSection = (props) => {
                   )
                 }
                 name="addressline3"
-                id="addressline3_1"
+                id="addressline1_3"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Address Line 3</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "addressline3",
-                    event.target.value
-                  )
-                }
-                name="addressline3"
-                id="addressline3_3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
+              <label className="mt-4">Eircode/Postcode</label>
               <input
                 type="text"
                 className="form-control"
@@ -465,43 +235,7 @@ const NineSection = (props) => {
                 name="postalcode"
                 id="postalcode1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship2,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Eircode/Postcode</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(
-                    setotherdirectorship3,
-                    "postalcode",
-                    event.target.value
-                  )
-                }
-                name="postalcode"
-                id="postalcode3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={4}>
-              <label>Country</label>
+              <label className="mt-4">Country</label>
               <input
                 type="text"
                 className="form-control"
@@ -511,35 +245,7 @@ const NineSection = (props) => {
                 name="country"
                 id="country1"
               />
-            </Col>
-            <Col lg={4}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship2, "country", event.target.value)
-                }
-                name="country"
-                id="country2"
-              />
-            </Col>
-            <Col lg={4}>
-              <label>Country</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(event) =>
-                  onChange(setotherdirectorship3, "country", event.target.value)
-                }
-                name="country"
-                id="country3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4 mb-1">
-            <Col lg={4}>
-              <label>Number Of Shares</label>
+              <label className="mt-4">Number Of Shares</label>
               <input
                 type="text"
                 className="form-control"
@@ -555,7 +261,118 @@ const NineSection = (props) => {
               />
             </Col>
             <Col lg={4}>
-              <label>Number Of Shares</label>
+              <label className="text-span">
+                <b>Corporate Subscriber 2</b>
+              </label><br/>
+              <label className="mt-4">Company Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "companyname",
+                    event.target.value
+                  )
+                }
+                name="companyname"
+                id="companyname2"
+              />
+              <label className="mt-4">Company Number</label>
+              <input
+                type="text" pattern="[0-9 ]+"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "companyphonenumber",
+                    event.target.value
+                  )
+                }
+                name="companyphonenumber"
+                id="companyphonenumber2"
+              />
+              <label className="mt-4">Company Director (Signing)</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "companydirector",
+                    event.target.value
+                  )
+                }
+                name="companydirector"
+                id="companydirector2"
+              />
+               <label className="mt-4">Registered Office Address</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "registeroffice",
+                    event.target.value
+                  )
+                }
+                name="registeroffice"
+                id="registeroffice2"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline2_2"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline2_3"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship2,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode2"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship2, "country", event.target.value)
+                }
+                name="country"
+                id="country2"
+              />
+              <label className="mt-4">Number Of Shares</label>
               <input
                 type="text"
                 className="form-control"
@@ -571,7 +388,118 @@ const NineSection = (props) => {
               />
             </Col>
             <Col lg={4}>
-              <label>Number Of Shares</label>
+              <label className="text-span">
+                <b>Corporate Subscriber 3</b>
+              </label><br/>
+              <label className="mt-4">Company Name</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "companyname",
+                    event.target.value
+                  )
+                }
+                name="companyname"
+                id="companyname3"
+              />
+              <label className="mt-4">Company Number</label>
+              <input
+                type="text" pattern="[0-9 ]+"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "companyphonenumber",
+                    event.target.value
+                  )
+                }
+                name="companyphonenumber"
+                id="companyphonenumber3"
+              />
+              <label className="mt-4">Company Director (Signing)</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "companydirector",
+                    event.target.value
+                  )
+                }
+                name="companydirector"
+                id="companydirector3"
+              />
+               <label className="mt-4">Registered Office Address</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "registeroffice",
+                    event.target.value
+                  )
+                }
+                name="registeroffice"
+                id="registeroffice3"
+              />
+              <label className="mt-4">Address Line 2</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline2",
+                    event.target.value
+                  )
+                }
+                name="addressline2"
+                id="addressline3_2"
+              />
+              <label className="mt-4">Address Line 3</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "addressline3",
+                    event.target.value
+                  )
+                }
+                name="addressline3"
+                id="addressline3_3"
+              />
+              <label className="mt-4">Eircode/Postcode</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(
+                    setotherdirectorship3,
+                    "postalcode",
+                    event.target.value
+                  )
+                }
+                name="postalcode"
+                id="postalcode3"
+              />
+              <label className="mt-4">Country</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(event) =>
+                  onChange(setotherdirectorship3, "country", event.target.value)
+                }
+                name="country"
+                id="country3"
+              />
+              <label className="mt-4">Number Of Shares</label>
               <input
                 type="text"
                 className="form-control"
@@ -586,8 +514,8 @@ const NineSection = (props) => {
                 id="numberofshare3"
               />
             </Col>
-
           </Row>
+         
           <Row className="mt-3">
           {showFormFour &&
           <Col lg={3}>
