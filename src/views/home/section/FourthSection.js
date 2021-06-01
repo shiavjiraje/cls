@@ -293,7 +293,7 @@ axios(config)
             </Col>
             <Col lg={6}>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text"
                 className="form-control"
                 onChange={(e) => {
                   setcompanynumber(e.target.value);

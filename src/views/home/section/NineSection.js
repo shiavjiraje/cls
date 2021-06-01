@@ -153,7 +153,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -280,7 +280,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -407,7 +407,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -538,7 +538,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -666,7 +666,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -794,7 +794,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(
@@ -922,7 +922,7 @@ const NineSection = (props) => {
               />
               <label className="mt-4">Company Number</label>
               <input
-                type="text" pattern="[0-9 ]+"
+                type="text" 
                 className="form-control"
                 onChange={(event) =>
                   onChange(

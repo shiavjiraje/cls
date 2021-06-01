@@ -205,7 +205,7 @@ const SecondSection = (props) => {
               )}
             </Col>
             <Col lg={1}>
-              <label>additional Wording</label>
+              <label>Additional Wording</label>
             </Col>
             <Col lg={3}>
               <textarea

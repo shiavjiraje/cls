@@ -389,7 +389,7 @@ const FirstSection = (props) => {
             </Col>
             <Col lg={3}>
               <input
-                type="text" pattern="[0-9 ]+" 
+                type="text" 
                 ref={register({ required: true, min: 10 })}
                 className="form-control"
                 onChange={(e) => {
