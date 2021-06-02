@@ -41,7 +41,7 @@ const ElevenSection = (props) => {
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
     var axios = require('axios');
-    let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
+    let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3, otherdirectorship4, otherdirectorship5, otherdirectorship6, otherdirectorship7 ];
     data.map(directorship => directorship.cfid=getcfid);
   
   var config = {
@@ -291,7 +291,7 @@ const ElevenSection = (props) => {
               <input
                 type="text"
                  onChange={(event) =>
-                  onChange(setotherdirectorship1, "firstname", event.target.value)
+                  onChange(setotherdirectorship2, "firstname", event.target.value)
                 }
                 name="firstname"
                 id="firstname2"
@@ -303,7 +303,7 @@ const ElevenSection = (props) => {
               <input
                 type="text"
                  onChange={(event) =>
-                  onChange(setotherdirectorship1, "lastname", event.target.value)
+                  onChange(setotherdirectorship2, "lastname", event.target.value)
                 }
                 name="lastname"
                 id="lastname2"
@@ -613,7 +613,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline1"
-                id="addressline1_4"
+                id="addressline4_1"
               />
               <label className="mt-4">Address Line 2</label>
               <input
@@ -627,7 +627,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline2"
-                id="addressline2_4"
+                id="addressline4_2"
               />
               <label className="mt-4">Address Line 3</label>
               <input
@@ -641,7 +641,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline3"
-                id="addressline3_4"
+                id="addressline4_3"
               />
               <label className="mt-4">Eircode/Postcode</label>
               <input
@@ -756,7 +756,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline1"
-                id="addressline1_5"
+                id="addressline5_1"
               />
               <label className="mt-4">Address Line 2</label>
               <input
@@ -770,7 +770,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline2"
-                id="addressline2_5"
+                id="addressline5_2"
               />
               <label className="mt-4">Address Line 3</label>
               <input
@@ -784,7 +784,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline3"
-                id="addressline3_5"
+                id="addressline5_3"
               />
               <label className="mt-4">Eircode/Postcode</label>
               <input
@@ -899,7 +899,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline1"
-                id="addressline1_6"
+                id="addressline6_1"
               />
               <label className="mt-4">Address Line 2</label>
               <input
@@ -913,7 +913,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline2"
-                id="addressline2_6"
+                id="addressline6_2"
               />
               <label className="mt-4">Address Line 3</label>
               <input
@@ -927,7 +927,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline3"
-                id="addressline3_6"
+                id="addressline6_3"
               />
               <label className="mt-4">Eircode/Postcode</label>
               <input
@@ -1042,7 +1042,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline1"
-                id="addressline1_7"
+                id="addressline7_1"
               />
               <label className="mt-4">Address Line 2</label>
               <input
@@ -1056,7 +1056,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline2"
-                id="addressline2_7"
+                id="addressline7_2"
               />
               <label className="mt-4">Address Line 3</label>
               <input
@@ -1070,7 +1070,7 @@ const ElevenSection = (props) => {
                   )
                 }
                 name="addressline3"
-                id="addressline3_7"
+                id="addressline7_3"
               />
               <label className="mt-4">Eircode/Postcode</label>
               <input
