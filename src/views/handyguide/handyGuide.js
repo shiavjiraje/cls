@@ -204,7 +204,7 @@ The nominee incorporation is where CLS act as directors, secretary and sharehold
       <th></th>
         <th className="text-center">Basic Pack (Digital)</th>
         <th className="text-center">Digital Pack (Incl. Seal)	 </th>
-        <th className="text-center">Hard Copy Pack(Incl. Seal)</th>
+        {/* <th className="text-center">Hard Copy Pack(Incl. Seal)</th> */}
       </tr>
     </thead>
     <tbody>
@@ -212,37 +212,37 @@ The nominee incorporation is where CLS act as directors, secretary and sharehold
         <td>Certificate of Incorporation</td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        {/* <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td> */}
       </tr>
       <tr>
         <td>Share Certificate(s)</td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        {/* <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td> */}
       </tr>
       <tr>
         <td>Board Meeting Minutes</td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        {/* <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td> */}
       </tr>
       <tr>
         <td>Company Register</td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        {/* <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td> */}
       </tr>
       <tr>
         <td>Company Constitution</td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        {/* <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td> */}
       </tr>
       <tr>
         <td>Company Seal</td>
         <td className="text-center"><i className="fa fa-times" aria-hidden="true"></i></td>
         <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
-        <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td>
+        {/* <td className="text-center"><i className="fa fa-check" aria-hidden="true"></i></td> */}
       </tr>
       <tr>
         <td>Method Of Delivery:</td>
