@@ -250,8 +250,8 @@ The nominee incorporation is where CLS act as directors, secretary and sharehold
 All Content Digital</td>
         <td>E-Mailed Directly to You,
 Company Seal Posted</td>
-        <td>Delivered by Courier,
-Seal Posted</td>
+        {/* <td>Delivered by Courier,
+Seal Posted</td> */}
       </tr>
     </tbody>
   </table>
