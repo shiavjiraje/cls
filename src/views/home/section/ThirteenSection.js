@@ -22,7 +22,9 @@ const ThirteenSection = (props) => {
   const [capostalcode ,setcapostalcode]=useState('');
   const [roisalsothebusinessorcaaddress ,setroisalsothebusinessorcaaddress]=useState('');
   const [cfid, setcfid] = useState();
+  const [disabled, setdisabled] = useState(false);
   const onSubmit = (e) => {
+    setdisabled(true);
     var axios = require('axios');
     let data ={
       cfid:cfid,
@@ -48,6 +50,7 @@ const ThirteenSection = (props) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onFourteenSectionClick();
+    setdisabled(false);
   })
   .catch(function (error) {
     swal(error.response.data, "error")
@@ -290,6 +293,7 @@ const ThirteenSection = (props) => {
                 <button
                   type="submit"
                   className="btn btn-primary"
+                  disabled={disabled}
                 >
                   Next
                 </button>

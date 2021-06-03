@@ -12,6 +12,7 @@ const FourteenSection = (props) => {
 var urlpattern =config.baseUrl;
  
 const [cfid, setcfid] = useState();
+const [disabled, setdisabled] = useState(false);
 useEffect(() => {
   getCfidApi();
   // eslint-disable-next-line 
@@ -90,6 +91,7 @@ axios(config)
 
   const dispatch = useDispatch();
   const onSubmit = (e) => {
+    setdisabled(true);
     let reqBody = {
       cfid:cfid,
       addtionalinfo:addtionalinfo
@@ -97,6 +99,7 @@ axios(config)
    
     dispatch(createVendor(reqBody));
     handlePdfSubmit();
+    setdisabled(false);
   };
   return (
     <React.Fragment>
@@ -126,7 +129,7 @@ axios(config)
             </Row>
             <Row className="pb-3 mt-4">
               <Col lg={12} className="text-center">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary" disabled={disabled}>
                   Submit
                 </button>
               </Col>

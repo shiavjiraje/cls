@@ -29,9 +29,10 @@ const FourthSection = (props) => {
   const [postal, setpostal] = useState("");
   const [companycountry, setcompanycountry] = useState("");
   const { register, errors, handleSubmit } = useForm();
-
+  const [disabled, setdisabled] = useState(false);
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
+    setdisabled(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
     var data = {
@@ -64,6 +65,7 @@ const FourthSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       props.onFiveSectionClick();
+      setdisabled(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error")
@@ -420,6 +422,7 @@ axios(config)
               <button
                 type="submit"
                 className="btn btn-primary"
+                disabled={disabled}
               >
                 Next
               </button>

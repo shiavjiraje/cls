@@ -9,7 +9,7 @@ import swal from "sweetalert";
 const ElevenSection = (props) => {
   var urlpattern =config.baseUrl;
   const [getcfid, setcfid] = useState();  
- 
+  const [disabled, setdisabled] = useState(false);
   useEffect(() => {
     getCfidApi();
     // eslint-disable-next-line 
@@ -40,6 +40,7 @@ const ElevenSection = (props) => {
 
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
+    setdisabled(true);
     var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3, otherdirectorship4, otherdirectorship5, otherdirectorship6, otherdirectorship7 ];
     data.map(directorship => directorship.cfid=getcfid);
@@ -55,6 +56,7 @@ const ElevenSection = (props) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onThirteenSectionClick();
+    setdisabled(false);
   })
   .catch(function (error) {
     swal(error.response.data, "error")
@@ -1176,6 +1178,7 @@ const ElevenSection = (props) => {
               <button
                 type="submit"
                 className="btn btn-primary"
+                disabled={disabled}
               >
                 Next
               </button>

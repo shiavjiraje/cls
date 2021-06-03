@@ -27,13 +27,15 @@ const FirstSection = (props) => {
   const [firstname, setfirstname] = useState('');
   const [lastname, setlastname] = useState('');
   const { register, errors, handleSubmit } = useForm();
-  
+  const [disabled, setdisabled] = useState(false);
   //const dispatch = useDispatch();
 //   if(window.location.href.indexOf("home") > -1) {
 //     //alert('working href');
 //     localStorage.removeItem('Username');
 // }
   const onSubmit = (e) => {
+    debugger;
+    setdisabled(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
     var data = {
@@ -64,6 +66,7 @@ const FirstSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       props.onSecondSectionClick();
+      setdisabled(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error")
@@ -465,8 +468,9 @@ const FirstSection = (props) => {
             </Col> */}
             <Col lg={12} className="text-right">
               <button
-                type="submit"
+                type="submit" 
                 className="btn btn-primary" id="second-section"
+                disabled={disabled}
               >
                 Next
               </button>
