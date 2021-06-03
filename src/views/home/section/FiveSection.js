@@ -51,7 +51,7 @@ axios(config)
 });
 
 }
-
+const [disabled, setdisabled] = useState(false);
  
 const [otherdirectorship1, setotherdirectorship1] = useState({
   cfid:getcfid
@@ -75,6 +75,7 @@ const [otherdirectorship7, setotherdirectorship7] = useState({
   cfid: getcfid,
 });
 const onSubmit = (e) => {
+  setdisabled(true);
   var axios = require('axios');
   let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3, otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
   data.map(directorship => directorship.cfid=getcfid);
@@ -91,6 +92,7 @@ const onSubmit = (e) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onSevenSectionClick();
+    setdisabled(false);
   })
   .catch(function (error) {
     swal(error.response.data, "error")
@@ -2054,6 +2056,7 @@ const addDirectorSeven=()=>{
               <button
                 type="submit"
                 className="btn btn-primary"
+                disabled={disabled}
               >
                 Next
               </button>

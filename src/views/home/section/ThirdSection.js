@@ -17,7 +17,9 @@ const ThirdSection = (props) => {
   const [shareclass, setshareclass] = useState("");
   const [authorisedsharecapital, setauthorisedsharecapital] = useState("");
   const { register, errors, handleSubmit } = useForm();
+  const [disabled, setdisabled] = useState(false);
   const onSubmit = (e) => {
+    setdisabled(true);
     var axios = require('axios');
     var data = {
       cfid: cfid,
@@ -38,6 +40,7 @@ const ThirdSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       props.onFourthSectionClick();
+      setdisabled(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error")
@@ -183,6 +186,7 @@ const ThirdSection = (props) => {
               <button
                 type="submit"
                 className="btn btn-primary"
+                disabled={disabled}
               >
                 Next
               </button>

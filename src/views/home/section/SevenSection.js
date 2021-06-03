@@ -13,7 +13,7 @@ var urlpattern =config.baseUrl;
 
   const { handleSubmit } = useForm();
   const [getcfid, setcfid] = useState();  
- 
+  const [disabled, setdisabled] = useState(false);
   useEffect(() => {
     getCfidApi();
     // eslint-disable-next-line 
@@ -42,6 +42,7 @@ var urlpattern =config.baseUrl;
 
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
+    setdisabled(true);
     var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
   data.map(directorship => directorship.cfid=getcfid);
@@ -57,6 +58,7 @@ var urlpattern =config.baseUrl;
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onNineSectionClick();
+    setdisabled(false);
   })
   .catch(function (error) {
     swal(error.response.data, "error")
@@ -1311,6 +1313,7 @@ const addDirectorSeven=()=>{
               <button
                 type="submit"
                 className="btn btn-primary"
+                disabled={disabled}
               >
                 Next
               </button>

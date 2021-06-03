@@ -21,7 +21,9 @@ const SecondSection = (props) => {
   const [companytype, setcompanytype] = useState("");
   const { register, errors, handleSubmit } = useForm();
   const firstInputFocus = useRef();
+  const [disabled, setdisabled] = useState(false);
   const onSubmit = (e) => {
+    setdisabled(true);
     var axios = require('axios');
     var data = {
       cfid: cfid,
@@ -44,6 +46,7 @@ const SecondSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful",);
       props.onThirdSectionClick();
+      setdisabled(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error")
@@ -281,6 +284,7 @@ const SecondSection = (props) => {
               <button
                 type="submit"
                 className="btn btn-primary"
+                disabled={disabled}
               >
                 Next
               </button>
