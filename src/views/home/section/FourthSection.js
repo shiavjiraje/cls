@@ -137,7 +137,7 @@ axios(config)
                 }}
                 name="firstname"
                 id="firstname"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
               {errors.firstname && <p className="error redspan font-12">{errors.firstname.message}</p>}
@@ -153,7 +153,7 @@ axios(config)
                 }}
                 name="lastname"
                 id="lastname"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
               {errors.lastname && <p className="error redspan font-12">{errors.lastname.message}</p>}
@@ -183,7 +183,7 @@ axios(config)
             <Row className="mt-4">
             <Col lg={6}>
               <label>
-                Address Line 1 <span className="redspan">*</span>
+                Residential Address 1 <span className="redspan">*</span>
               </label>
             </Col>
             <Col lg={6}>
@@ -204,7 +204,7 @@ axios(config)
             <Row className="mt-4">
             <Col lg={6}>
               <label>
-                Address Line 2 <span className="redspan">*</span>
+                Residential Address 2 <span className="redspan">*</span>
               </label>
             </Col>
             <Col lg={6}>
@@ -224,7 +224,7 @@ axios(config)
             </Row>
             <Row className="mt-4">
             <Col lg={6}>
-              <label>Address Line 3</label>
+              <label>Residential Address 3</label>
             </Col>
             <Col lg={6}>
               <input
@@ -342,7 +342,7 @@ axios(config)
           <Row className="mt-4">
             
             <Col lg={6}>
-              <label>Address Line 1</label>
+              <label>Residential Address 1</label>
             </Col>
             <Col lg={6}>
               <input
@@ -358,7 +358,7 @@ axios(config)
           <Row className="mt-4">
             
             <Col lg={6}>
-              <label>Address Line 2</label>
+              <label>Residential Address 2</label>
             </Col>
             <Col lg={6}>
               <input

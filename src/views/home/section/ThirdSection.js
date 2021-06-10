@@ -159,7 +159,7 @@ const ThirdSection = (props) => {
           </Row>
           <Row className="mt-3">
             <Col lg={9}>
-              <label>Athorised Share Capital(Optional for LTD)</label>
+              <label>Authorised Share Capital(Optional for LTD)</label>
             </Col>
             <Col lg={3} className="style-input">
               <div className="form-group">

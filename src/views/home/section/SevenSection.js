@@ -158,7 +158,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname1"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -170,7 +170,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname1"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -319,7 +319,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname2"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -331,7 +331,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname2"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -480,7 +480,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname3"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -492,7 +492,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname3"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -645,7 +645,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname4"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -657,7 +657,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname4"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -807,7 +807,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname5"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -819,7 +819,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname5"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -969,7 +969,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname6"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -981,7 +981,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname6"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -1132,7 +1132,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname7"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -1144,7 +1144,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname7"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>

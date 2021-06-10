@@ -166,7 +166,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname1"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
               {errors.firstname1 && <p className="error redspan font-12">{errors.firstname.message}</p>}
@@ -182,7 +182,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname1"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
               {errors.lastname1 && <p className="error redspan font-12">{errors.lastname.message}</p>}
@@ -236,7 +236,7 @@ const addDirectorSeven=()=>{
             <Row className="mt-4">
             
               <label className="col-sm-12">
-                Address Line 1 <span className="redspan">*</span>
+                Residential Address 1 <span className="redspan">*</span>
               </label>
               <Col lg={12}>
               <input
@@ -261,7 +261,7 @@ const addDirectorSeven=()=>{
             <Row className="mt-4">
             
               <label className="col-sm-12">
-                Address Line 2 <span className="redspan">*</span>
+                Residential Address 2 <span className="redspan">*</span>
               </label>
               <Col lg={12}>
               <input
@@ -285,7 +285,7 @@ const addDirectorSeven=()=>{
             </Row>
             <Row className="mt-4">
            
-              <label className="col-sm-12">Address Line 3</label>
+              <label className="col-sm-12">Residential Address 3</label>
               <Col lg={12}>
               <input
                 type="text"
@@ -422,11 +422,12 @@ const addDirectorSeven=()=>{
             </Row>
             <Row className="mt-4">
             
-              <label className="col-sm-12">Disqualified or Restricted</label>
+              <label className="col-sm-12">Disqualified or Restricted <span className="redspan">*</span></label>
               <Col lg={12}>
               <input
                 type="text"
                 className="form-control"
+                ref={register({ required: true })}
                 onChange={(event) =>
                   onChange(
                     setotherdirectorship1,
@@ -437,6 +438,9 @@ const addDirectorSeven=()=>{
                 name="restricted"
                 id="restricted1"
               />
+              {errors.restricted && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
             </Col>
             </Row>
             <Row className="mt-4">
@@ -508,7 +512,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname2"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -520,7 +524,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname2"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -565,7 +569,7 @@ const addDirectorSeven=()=>{
             <Row className="mt-4">
             
               <label className="col-sm-12">
-                Address Line 1 
+                Residential Address 1 
               </label>
               <Col lg={12}>
               <input
@@ -586,7 +590,7 @@ const addDirectorSeven=()=>{
             <Row className="mt-4">
             
               <label className="col-sm-12">
-                Address Line 2 
+                Residential Address 2 
               </label>
               <Col lg={12}>
               <input
@@ -606,7 +610,7 @@ const addDirectorSeven=()=>{
             </Row>
             <Row className="mt-4">
            
-              <label className="col-sm-12">Address Line 3</label>
+              <label className="col-sm-12">Residential Address 3</label>
               <Col lg={12}>
               <input
                 type="text"
@@ -816,7 +820,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname3"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -828,7 +832,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname3"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -873,7 +877,7 @@ const addDirectorSeven=()=>{
           <Row className="mt-4">
             
               <label className="col-sm-12">
-                Address Line 1 
+                Residential Address 1 
               </label>
               <Col lg={12}>
               <input
@@ -894,7 +898,7 @@ const addDirectorSeven=()=>{
             <Row className="mt-4">
             
               <label className="col-sm-12">
-                Address Line 2 
+                Residential Address 2 
               </label>
               <Col lg={12}>
               <input
@@ -914,7 +918,7 @@ const addDirectorSeven=()=>{
             </Row>
             <Row className="mt-4">
            
-              <label className="col-sm-12">Address Line 3</label>
+              <label className="col-sm-12">Residential Address 3</label>
               <Col lg={12}>
               <input
                 type="text"
@@ -1129,7 +1133,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname4"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -1141,7 +1145,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname4"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -1170,7 +1174,7 @@ const addDirectorSeven=()=>{
                 name="occupation"
                 id="occupation4"
               />
-               <label className="mt-4">Address Line 1</label>
+               <label className="mt-4">Residential Address 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -1184,7 +1188,7 @@ const addDirectorSeven=()=>{
                 name="addressline1"
                 id="addressline4_1"
               />
-              <label className="mt-4">Address Line 2</label>
+              <label className="mt-4">Residential Address 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -1198,7 +1202,7 @@ const addDirectorSeven=()=>{
                 name="addressline2"
                 id="addressline2_4"
               />
-              <label className="mt-4">Address Line 3</label>
+              <label className="mt-4">Residential Address 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -1357,7 +1361,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname5"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -1369,7 +1373,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname5"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -1398,7 +1402,7 @@ const addDirectorSeven=()=>{
                 name="occupation"
                 id="occupation5"
               />
-               <label className="mt-4">Address Line 1</label>
+               <label className="mt-4">Residential Address 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -1412,7 +1416,7 @@ const addDirectorSeven=()=>{
                 name="addressline1"
                 id="addressline1_5"
               />
-              <label className="mt-4">Address Line 2</label>
+              <label className="mt-4">Residential Address 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -1426,7 +1430,7 @@ const addDirectorSeven=()=>{
                 name="addressline2"
                 id="addressline2_5"
               />
-              <label className="mt-4">Address Line 3</label>
+              <label className="mt-4">Residential Address 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -1585,7 +1589,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname6"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -1597,7 +1601,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname6"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -1626,7 +1630,7 @@ const addDirectorSeven=()=>{
                 name="occupation"
                 id="occupation6"
               />
-              <label className="mt-4">Address Line 1</label>
+              <label className="mt-4">Residential Address 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -1640,7 +1644,7 @@ const addDirectorSeven=()=>{
                 name="addressline1"
                 id="addressline1_6"
               />
-              <label className="mt-4">Address Line 2</label>
+              <label className="mt-4">Residential Address 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -1654,7 +1658,7 @@ const addDirectorSeven=()=>{
                 name="addressline2"
                 id="addressline2_6"
               />
-              <label className="mt-4">Address Line 3</label>
+              <label className="mt-4">Residential Address 3</label>
               <input
                 type="text"
                 className="form-control"
@@ -1812,7 +1816,7 @@ const addDirectorSeven=()=>{
                 }
                 name="firstname"
                 id="firstname7"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
             </Col>
@@ -1824,7 +1828,7 @@ const addDirectorSeven=()=>{
                 }
                 name="lastname"
                 id="lastname7"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
             </Col>
@@ -1853,7 +1857,7 @@ const addDirectorSeven=()=>{
                 name="occupation"
                 id="occupation7"
               />
-              <label className="mt-4">Address Line 1</label>
+              <label className="mt-4">Residential Address 1</label>
               <input
                 type="text"
                 className="form-control"
@@ -1867,7 +1871,7 @@ const addDirectorSeven=()=>{
                 name="addressline1"
                 id="addressline1_7"
               />
-              <label className="mt-4">Address Line 2</label>
+              <label className="mt-4">Residential Address 2</label>
               <input
                 type="text"
                 className="form-control"
@@ -1881,7 +1885,7 @@ const addDirectorSeven=()=>{
                 name="addressline2"
                 id="addressline2_7"
               />
-              <label className="mt-4">Address Line 3</label>
+              <label className="mt-4">Residential Address 3</label>
               <input
                 type="text"
                 className="form-control"

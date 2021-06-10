@@ -282,15 +282,17 @@ const FirstSection = (props) => {
               </h6>
             </Col>
           </Row>
+          
           <Row className="mt-3">
-            <Col lg={3}>
+          <Col lg="6">
+          <Row className="mt-3">
+            <Col lg={6}>
               <label>
                 Name<span className="redspan">*</span>
               </label>
             </Col>
+           
             <Col lg={3}>
-              <Row>
-            <Col lg={6}>
               <input
                 type="text"
                 ref={register({
@@ -301,12 +303,12 @@ const FirstSection = (props) => {
                 }}
                 name="firstname"
                 id="firstname"
-                placeholder="Firstname"
+                placeholder="First Name"
                 className="form-control"
               />
               {errors.firstname && <p className="error redspan font-12">{errors.firstname.message}</p>}
             </Col>
-            <Col lg={6}>
+            <Col lg={3}>
               <input
                 type="text"
                 ref={register({
@@ -317,40 +319,19 @@ const FirstSection = (props) => {
                 }}
                 name="lastname"
                 id="lastname"
-                placeholder="Lastname"
+                placeholder="Last Name"
                 className="form-control"
               />
               {errors.lastname && <p className="error redspan font-12">{errors.lastname.message}</p>}
             </Col>
             </Row>
-            </Col>
-            <Col lg={3}>
-              <label>
-                Address Line 1<span className="redspan">*</span>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                ref={register({ required: true })}
-                className="form-control"
-                onChange={(e) => {
-                  setaddressline1(e.target.value);
-                }}
-                name="addressline1"
-              />
-              {errors.addressline1 && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
+            <Row className="mt-3">
+            <Col lg={6}>
               <label>
                 Practice/Company Name<span className="redspan">*</span>
               </label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 ref={register({ required: true })}
@@ -364,33 +345,16 @@ const FirstSection = (props) => {
                 <p className="redspan font-12">The field is Required</p>
               )}
             </Col>
-            <Col lg={3}>
-              <label>
-                Address Line 2<span className="redspan">*</span>
-              </label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                ref={register({ required: true })}
-                className="form-control"
-                onChange={(e) => {
-                  setaddressline2(e.target.value);
-                }}
-                name="addressline2"
-              />
-              {errors.addressline2 && (
-                <p className="redspan font-12">The field is Required</p>
-              )}
-            </Col>
           </Row>
-          <Row className="mt-4">
-            <Col lg={3}>
+          <Row className="mt-3">
+          
+          
+            <Col lg={6}>
               <label>
                 Phone Number<span className="redspan">*</span>
               </label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text" 
                 ref={register({ required: true, min: 10 })}
@@ -404,27 +368,14 @@ const FirstSection = (props) => {
                 <p className="redspan font-12">The Feild is Required Number</p>
               )}
             </Col>
-            <Col lg={3}>
-              <label>Address Line 3</label>
-            </Col>
-            <Col lg={3}>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setaddressline3(e.target.value);
-                }}
-                name="addressline3"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-4 mb-4">
-            <Col lg={3}>
+            </Row>
+            <Row className="mt-3">
+            <Col lg={6}>
               <label>
                 Email Address<span className="redspan">*</span>
               </label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="email"
                 ref={register({
@@ -443,10 +394,73 @@ const FirstSection = (props) => {
               />
              {errors.email && <p className="error redspan font-12">{errors.email.message}</p>}
             </Col>
-            <Col lg={3}>
+            </Row>
+          </Col>
+          <Col lg="6">
+            <Row className="mt-3">
+            <Col lg={6}>
+              <label>
+                Address Line 1<span className="redspan">*</span>
+              </label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                ref={register({ required: true })}
+                className="form-control"
+                onChange={(e) => {
+                  setaddressline1(e.target.value);
+                }}
+                name="addressline1"
+              />
+              {errors.addressline1 && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+            </Row>
+            <Row className="mt-4">            
+            <Col lg={6}>
+              <label>
+                Address Line 2<span className="redspan">*</span>
+              </label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                ref={register({ required: true })}
+                className="form-control"
+                onChange={(e) => {
+                  setaddressline2(e.target.value);
+                }}
+                name="addressline2"
+              />
+              {errors.addressline2 && (
+                <p className="redspan font-12">The field is Required</p>
+              )}
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            
+            <Col lg={6}>
+              <label>Address Line 3</label>
+            </Col>
+            <Col lg={6}>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => {
+                  setaddressline3(e.target.value);
+                }}
+                name="addressline3"
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4 mb-4">
+            
+            <Col lg={6}>
               <label>Eircode/Postcode</label>
             </Col>
-            <Col lg={3}>
+            <Col lg={6}>
               <input
                 type="text"
                 className="form-control"
@@ -459,6 +473,8 @@ const FirstSection = (props) => {
                 <p className="redspan font-12">The Feild is Required Number</p>
               )}
             </Col>
+          </Row>
+          </Col>
           </Row>
           <Row className="pb-3">
           {/* <Col lg={4} className="text-right">
