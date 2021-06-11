@@ -548,7 +548,7 @@ const addDirectorSeven=()=>{
               <Row className="mt-4">
             
               <label className="col-sm-12">
-                Occupation <span className="redspan">*</span>
+                Occupation 
               </label>
               <Col lg={12}>
               <input
@@ -856,7 +856,7 @@ const addDirectorSeven=()=>{
               <Row className="mt-4">
             
             <label className="col-sm-12">
-              Occupation <span className="redspan">*</span>
+              Occupation 
             </label>
             <Col lg={12}>
             <input
