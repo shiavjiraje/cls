@@ -328,3 +328,7 @@ footer {
 .dropdown-item a{
   color:#212529;
 }
+.readonly{
+  cursor: not-allowed;
+  pointer-events: none;
+}

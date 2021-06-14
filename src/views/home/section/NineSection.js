@@ -8,7 +8,7 @@ import swal from "sweetalert";
 const NineSection = (props) => {
   var urlpattern =config.baseUrl;
   const [getcfid, setcfid] = useState();  
-  const [disabled, setdisabled] = useState(false);
+  const [readonly, setreadonly] = useState("");
   useEffect(() => {
     getCfidApi();
     // eslint-disable-next-line 
@@ -41,7 +41,7 @@ const NineSection = (props) => {
   //const dispatch = useDispatch();
   
   const onSubmit = (e) => {
-    setdisabled(true);
+    setreadonly("readonly");
     var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
     data.map(directorship => directorship.cfid=getcfid);
@@ -57,10 +57,11 @@ const NineSection = (props) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onElevenSectionClick();
-    setdisabled(false);
+    setreadonly("readonly");
   })
   .catch(function (error) {
-    swal(error.response.data, "error")
+    swal(error.response.data, "error");
+    setreadonly("");
   });
   };
   const [otherdirectorship1, setotherdirectorship1] = useState({
@@ -119,7 +120,7 @@ const NineSection = (props) => {
   }
   
   return (
-    <section className="light-section pb-4">
+    <section className={"light-section pb-4", readonly}>
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="mt-3">
@@ -1067,7 +1068,6 @@ const NineSection = (props) => {
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={disabled}
               >
                 Next
               </button>

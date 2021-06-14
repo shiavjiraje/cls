@@ -13,7 +13,7 @@ var urlpattern =config.baseUrl;
 
   const { handleSubmit } = useForm();
   const [getcfid, setcfid] = useState();  
-  const [disabled, setdisabled] = useState(false);
+  const [readonly, setreadonly] = useState("");
   useEffect(() => {
     getCfidApi();
     // eslint-disable-next-line 
@@ -42,7 +42,7 @@ var urlpattern =config.baseUrl;
 
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
-    setdisabled(true);
+    setreadonly("readonly");
     var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
   data.map(directorship => directorship.cfid=getcfid);
@@ -58,10 +58,11 @@ var urlpattern =config.baseUrl;
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onNineSectionClick();
-    setdisabled(false);
+    setreadonly("readonly");
   })
   .catch(function (error) {
-    swal(error.response.data, "error")
+    swal(error.response.data, "error");
+    setreadonly("");
   });
   };
   
@@ -121,7 +122,7 @@ const addDirectorSeven=()=>{
 }
 
   return (
-    <section className="dark-section pb-4">
+    <section className={"dark-section pb-4", readonly}>
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="mt-3">
@@ -1313,7 +1314,6 @@ const addDirectorSeven=()=>{
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={disabled}
               >
                 Next
               </button>

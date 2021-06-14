@@ -51,7 +51,7 @@ axios(config)
 });
 
 }
-const [disabled, setdisabled] = useState(false);
+const [readonly, setreadonly] = useState("");
  
 const [otherdirectorship1, setotherdirectorship1] = useState({
   cfid:getcfid
@@ -75,7 +75,7 @@ const [otherdirectorship7, setotherdirectorship7] = useState({
   cfid: getcfid,
 });
 const onSubmit = (e) => {
-  setdisabled(true);
+  setreadonly("readonly");
   var axios = require('axios');
   let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3, otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
   data.map(directorship => directorship.cfid=getcfid);
@@ -92,10 +92,11 @@ const onSubmit = (e) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onSevenSectionClick();
-    setdisabled(false);
+    setreadonly("readonly");
   })
   .catch(function (error) {
-    swal(error.response.data, "error")
+    swal(error.response.data, "error");
+    setreadonly("");
   });
 };
 const [showFormFour, setshowFormFour]=useState(false);
@@ -126,7 +127,7 @@ const addDirectorSeven=()=>{
   setshowButtonSeven(false);
 }
   return (
-    <section className="light-section pb-4">
+    <section className={"light-section pb-4", readonly}>
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="mt-3">
@@ -2060,7 +2061,6 @@ const addDirectorSeven=()=>{
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={disabled}
               >
                 Next
               </button>
