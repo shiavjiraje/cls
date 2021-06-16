@@ -34,7 +34,10 @@ const FirstSection = (props) => {
 //     localStorage.removeItem('Username');
 // }
   const onSubmit = (e) => {
-    debugger;
+      if(localStorage.getItem('CfiID') !== null){
+        handleEditFistSection();
+      } else {
+   alert("calling first time");
     setdesable(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
@@ -64,6 +67,7 @@ const FirstSection = (props) => {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
+      localStorage.setItem('CfiID', JSON.stringify(response.data))
       swal("Record Saved Successful", );
       props.onSecondSectionClick();
       setdesable(false);
@@ -72,9 +76,52 @@ const FirstSection = (props) => {
       swal(error.response.data, "error");
       setdesable(false);
     });
-    
+  }
   };
+  const handleEditFistSection=()=>{
+    let repetCfid = JSON.parse(localStorage.getItem('CfiID'))
+    alert("calling second time");
+    setdesable(true);
+    var axios = require('axios');
+    var name=firstname + " " + lastname;
+    var data = {
+      cfid:repetCfid.cfid,
+      name: name,
 
+      agree: agree,
+      nonthirdparties: nonthirdparties,
+      incorporationtype: incorporationtype,
+      companypacktype: companypacktype,
+      paymenttype: paymenttype,
+      companyname: companyname,
+      addressline1: addressline1,
+      addressline2: addressline2,
+      addressline3: addressline3,
+      phone: phone,
+      email: email,
+      postal: postal,
+      username:username
+    };
+    
+    var config = {
+      method: 'post',
+      url: `${urlpattern}clsagree/`,
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      //localStorage.setItem('CfiID', JSON.stringify(response.data))
+      swal("Record Saved Successful", );
+      props.onSecondSectionClick();
+      setdesable(false);
+    })
+    .catch(function (error) {
+      swal(error.response.data, "error");
+      setdesable(false);
+    });
+  }
   // useEffect(() => {
   //   localStorage.setItem("apiData", JSON.stringify({cfid:""}));
   // });

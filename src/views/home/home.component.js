@@ -19,7 +19,6 @@ import ThirteenSection from './section/ThirteenSection';
 import FourteenSection from './section/FourteenSection';
 import HomeNavbar from '../../_components/homnavbar';
 import AgentNavbar from '../../_components/agentnavbar';
-import ScrollTo from "react-scroll-into-view";
 
 class Home extends Component {
   constructor(props) {
