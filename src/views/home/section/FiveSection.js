@@ -92,11 +92,11 @@ const onSubmit = (e) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onSevenSectionClick();
-    setdesable(true);
+    setdesable(false);
   })
   .catch(function (error) {
     swal(error.response.data, "error");
-    setdesable(true);
+    setdesable(false);
   });
 };
 const [showFormFour, setshowFormFour]=useState(false);
