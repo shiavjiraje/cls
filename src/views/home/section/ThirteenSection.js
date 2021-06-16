@@ -22,9 +22,9 @@ const ThirteenSection = (props) => {
   const [capostalcode ,setcapostalcode]=useState('');
   const [roisalsothebusinessorcaaddress ,setroisalsothebusinessorcaaddress]=useState('');
   const [cfid, setcfid] = useState();
-  const [readonly, setreadonly] = useState("");
+  const [disabled, setdesable] = useState(false);
   const onSubmit = (e) => {
-    setreadonly("readonly");
+    setdesable(true);
     var axios = require('axios');
     let data ={
       cfid:cfid,
@@ -50,11 +50,11 @@ const ThirteenSection = (props) => {
     console.log(JSON.stringify(response.data));
     swal("Record Saved Successful", );
     props.onFourteenSectionClick();
-    setreadonly("readonly");
+    setdesable(false);
   })
   .catch(function (error) {
     swal(error.response.data, "error");
-    setreadonly("");
+    setdesable(false);
   });
   };
   useEffect(() => {
@@ -86,7 +86,7 @@ const ThirteenSection = (props) => {
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <section className={"light-section pb-4", readonly}>
+        <section className={"light-section pb-4"}>
           <div className="content pt-5">
             <Row className="mt-3">
               <Col lg={12}>
@@ -292,7 +292,7 @@ const ThirteenSection = (props) => {
               </Col> */}
               <Col lg={12} className="text-right">
                 <button
-                  type="submit"
+                  type="submit"  disabled={disabled}
                   className="btn btn-primary"
                 >
                   Next

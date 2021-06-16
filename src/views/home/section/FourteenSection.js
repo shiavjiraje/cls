@@ -12,7 +12,7 @@ const FourteenSection = (props) => {
 var urlpattern =config.baseUrl;
  
 const [cfid, setcfid] = useState();
-const [readonly, setreadonly] = useState("");
+const [disabled, setdesable] = useState(false);
 useEffect(() => {
   getCfidApi();
   // eslint-disable-next-line 
@@ -45,6 +45,10 @@ axios(config)
       .then((response) => {
        // alert("pdf calling");
         console.log(response);
+        swal("Record Saved Successful");
+        history.push('/home');
+              window.location.reload();
+              window.scrollTo(0, 0)
         //localStorage.setItem("pdfData", JSON.stringify(response.data));
         //debugger;
         //if(response.data.Filepath==!null){
@@ -74,10 +78,8 @@ axios(config)
           .then(recipes => {
               console.log(recipes);
              // getAllProject();
-              swal("Project Created Successful", recipes.id, );
-              history.push('/home');
-              window.location.reload();
-              window.scrollTo(0, 0)
+              //swal("Project Created Successful", recipes.id, );
+              
               //alert(recipes.id);
           });
         
@@ -91,7 +93,7 @@ axios(config)
 
   const dispatch = useDispatch();
   const onSubmit = (e) => {
-    setreadonly("readonly");
+    setdesable(true);
     let reqBody = {
       cfid:cfid,
       addtionalinfo:addtionalinfo
@@ -99,12 +101,12 @@ axios(config)
    
     dispatch(createVendor(reqBody));
     handlePdfSubmit();
-    setreadonly("readonly");
+    setdesable(false);
   };
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <section className={"dark-section pb-4", readonly}>
+        <section className={"dark-section pb-4"}>
           <div className="content pt-3">
             <Row className="mt-3">
               <Col lg={12}>
@@ -129,7 +131,7 @@ axios(config)
             </Row>
             <Row className="pb-3 mt-4">
               <Col lg={12} className="text-center">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary"  disabled={disabled}>
                   Submit
                 </button>
               </Col>

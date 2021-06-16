@@ -19,72 +19,81 @@ import ThirteenSection from './section/ThirteenSection';
 import FourteenSection from './section/FourteenSection';
 import HomeNavbar from '../../_components/homnavbar';
 import AgentNavbar from '../../_components/agentnavbar';
-
+import ScrollTo from "react-scroll-into-view";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      collapse1: false,  collapse2: false,  collapse3: false,
-      collapse4: false,  collapse5: false,  collapse6: false,
-      collapse7: false,  collapse8: false,  collapse9: false,
-      collapse10: false, collapse11: false, collapse12:false, collapse13:false,
+      collapse1: true,  collapse2: true,  collapse3: true,
+      collapse4: true,  collapse5: true,  collapse6: true,
+      collapse7: true,  collapse8: true,  collapse9: true,
+      collapse10: true, collapse11: true, collapse12:true, collapse13:true,
      };
   }
 
   
   showSecondSection(){
-    this.setState({ collapse1: !this.state.collapse1 });
-    window.scrollBy(0,400);
+    this.setState({ collapse1: true });
+    document.getElementById('SecondSection').scrollIntoView();
+    //window.scrollBy(0,400);
   }
   showThirdSection() {
-    this.setState({ collapse2: !this.state.collapse2 });
-    window.scrollBy(0,500);
+    this.setState({ collapse2: true });
+    document.getElementById('ThirdSection').scrollIntoView();
+    //window.scrollBy(0,500);
   }
   showFourthSection() {
-    this.setState({ collapse3: !this.state.collapse3 });
-    window.scrollBy(0,500);
+    this.setState({ collapse3: true });
+   // window.scrollBy(0,500); 
+   document.getElementById('FourthSection').scrollIntoView();
   }
   showFiveSection() {
-    this.setState({ collapse4: !this.state.collapse4 });
-    window.scrollBy(0,500);
+    this.setState({ collapse4: true });
+    //window.scrollBy(0,500);
+    document.getElementById('FiveSection').scrollIntoView();
   }
-  showSixSection() {
-    this.setState({ collapse5: !this.state.collapse5 });
-    window.scrollBy(0,500);
-  }
+  // showSixSection() {
+  //   this.setState({ collapse5: true });
+  //   window.scrollBy(0,500);
+  // }
   showSevenSection() {
-    this.setState({ collapse6: !this.state.collapse6 });
-    window.scrollBy(0,500);
+    this.setState({ collapse6: true });
+    //window.scrollBy(0,500);
+    document.getElementById('SevenSection').scrollIntoView();
   }
-  showEightSection() {
-    this.setState({ collapse7: !this.state.collapse7 });
-    window.scrollBy(0,500);
-  }
+  // showEightSection() {
+  //   this.setState({ collapse7: true });
+  //   window.scrollBy(0,500);
+  // }
   showNineSection() {
-    this.setState({ collapse8: !this.state.collapse8 });
-    window.scrollBy(0,500);
+    this.setState({ collapse8: true });
+    //window.scrollBy(0,500);
+    document.getElementById('NineSection').scrollIntoView();
   }
-  showTenSection() {
-    this.setState({ collapse9: !this.state.collapse9 });
-    window.scrollBy(0,500);
-  }
+  // showTenSection() {
+  //   this.setState({ collapse9: true });
+  //   window.scrollBy(0,500);
+  // }
   showElevenSection() {
-    this.setState({ collapse10: !this.state.collapse10 });
-    window.scrollBy(0,500);
+    this.setState({ collapse4: true });
+    //window.scrollBy(0,500);
+    document.getElementById('ElevenSection').scrollIntoView();
   }
-  showTwellSection() {
-    this.setState({ collapse11: !this.state.collapse11 });
-    window.scrollBy(0,500);
-  }
+  // showTwellSection() {
+  //   this.setState({ collapse11: !this.state.collapse11 });
+  //   window.scrollBy(0,500);
+  // }
 
   showThirteenSection() {
-    this.setState({ collapse12: !this.state.collapse12 });
-    window.scrollBy(0,500);
+    this.setState({ collapse4: true });
+    //window.scrollBy(0,500);
+    document.getElementById('ThirteenSection').scrollIntoView();
   }
   showFourteenSection() {
-    this.setState({ collapse13: !this.state.collapse13 });
-    window.scrollBy(0,500);
+    this.setState({ collapse4: true });
+    //window.scrollBy(0,500);
+    document.getElementById('FourteenSection').scrollIntoView();
   }
   
   
@@ -102,46 +111,64 @@ if (getRole==="Agent") {
           <React.Fragment>
             {navbarcheck}
               
-              <div style={{height:"12730px"}}>
+              <div>
               <FirstSection onSecondSectionClick={this.showSecondSection.bind(this)}/>
               <Collapse isOpen={this.state.collapse1}>
+                <div id="SecondSection">
                 <SecondSection onThirdSectionClick={this.showThirdSection.bind(this)}/>
+                </div>
                </Collapse>
                <Collapse isOpen={this.state.collapse2}>
+               <div id="ThirdSection">
               <ThirdSection onFourthSectionClick={this.showFourthSection.bind(this)}/>
+              </div>
              </Collapse>
              <Collapse isOpen={this.state.collapse3}>
+             <div id="FourthSection">
               <FourthSection onFiveSectionClick={this.showFiveSection.bind(this)}/>
+              </div>
              </Collapse>
              <Collapse isOpen={this.state.collapse4}>
+             <div id="FiveSection">
               <FiveSection onSevenSectionClick={this.showSevenSection.bind(this)}/>
+              </div>
              </Collapse>
              {/* <Collapse isOpen={this.state.collapse5}>
               <SixSection onSevenSectionClick={this.showSevenSection.bind(this)}/>
              </Collapse> */}
              <Collapse isOpen={this.state.collapse6}>
+             <div id="SevenSection">
               <SevenSection onNineSectionClick={this.showNineSection.bind(this)}/>
+              </div>
              </Collapse>
              {/* <Collapse isOpen={this.state.collapse7}>
               <EightSection onNineSectionClick={this.showNineSection.bind(this)}/>
              </Collapse> */}
              <Collapse isOpen={this.state.collapse8}>
+             <div id="NineSection">
               <NineSection onElevenSectionClick={this.showElevenSection.bind(this)}/>
+              </div>
              </Collapse>
             {/* <Collapse isOpen={this.state.collapse9}>
               <TenSection onElevenSectionClick={this.showElevenSection.bind(this)}/>
              </Collapse> */}
              <Collapse isOpen={this.state.collapse10}>
+             <div id="ElevenSection">
               <ElevenSection onThirteenSectionClick={this.showThirteenSection.bind(this)}/>
+              </div>
              </Collapse>
              {/* <Collapse isOpen={this.state.collapse11}>
               <TwellSection onThirteenSectionClick={this.showThirteenSection.bind(this)}/>
              </Collapse> */}
              <Collapse isOpen={this.state.collapse12}>
+             <div id="ThirteenSection">
               <ThirteenSection onFourteenSectionClick={this.showFourteenSection.bind(this)}/>
+              </div>
              </Collapse>
               <Collapse isOpen={this.state.collapse13}>
+              <div id="FourteenSection">
               <FourteenSection />
+              </div>
              </Collapse> 
            
               <Footer/>

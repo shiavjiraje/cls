@@ -17,9 +17,9 @@ const ThirdSection = (props) => {
   const [shareclass, setshareclass] = useState("");
   const [authorisedsharecapital, setauthorisedsharecapital] = useState("");
   const { register, errors, handleSubmit } = useForm();
-  const [readonly, setreadonly] = useState("");
+  const [disabled, setdesable] = useState(false);
   const onSubmit = (e) => {
-    setreadonly("readonly");
+    setdesable(true);
     var axios = require('axios');
     var data = {
       cfid: cfid,
@@ -40,11 +40,11 @@ const ThirdSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       props.onFourthSectionClick();
-      setreadonly("readonly");
+      setdesable(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error");
-      setreadonly("");
+      setdesable(false);
     });
   };
   useEffect(() => {
@@ -73,7 +73,7 @@ const ThirdSection = (props) => {
     
    }
   return (
-    <section className={"light-section pt-5 pb-4", readonly}>
+    <section className={"light-section pt-5 pb-4"}>
       <div className="content">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="">
@@ -185,7 +185,7 @@ const ThirdSection = (props) => {
             </Col> */}
             <Col lg={12} className="text-right">
               <button
-                type="submit"
+                type="submit"  disabled={disabled}
                 className="btn btn-primary"
               >
                 Next

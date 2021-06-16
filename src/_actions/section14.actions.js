@@ -9,7 +9,7 @@ export const createVendor=(payload)=>{
             dispatch(createUserInfo());
             console.log(response.data);
             if(response.data){
-                swal("Record Saved Successful");
+                //swal("Record Saved Successful");
                 
                // reset();
                }

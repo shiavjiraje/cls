@@ -29,10 +29,10 @@ const FourthSection = (props) => {
   const [postal, setpostal] = useState("");
   const [companycountry, setcompanycountry] = useState("");
   const { register, errors, handleSubmit } = useForm();
-  const [readonly, setreadonly] = useState("");
+  const [disabled, setdesable] = useState(false);
   //const dispatch = useDispatch();
   const onSubmit = (e) => {
-    setreadonly("readonly");
+    setdesable(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
     var data = {
@@ -65,11 +65,11 @@ const FourthSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       props.onFiveSectionClick();
-      setreadonly("readonly");
+      setdesable(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error");
-      setreadonly("");
+      setdesable(false);
     });
   };
   useEffect(() => {
@@ -98,7 +98,7 @@ axios(config)
 
 }
   return (
-    <section className={"dark-section pb-4", readonly}>
+    <section className={"dark-section pb-4"}>
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="mt-3">
@@ -421,7 +421,7 @@ axios(config)
             </Col> */}
             <Col lg={12} className="text-right">
               <button
-                type="submit"
+                type="submit"  disabled={disabled}
                 className="btn btn-primary"
               >
                 Next

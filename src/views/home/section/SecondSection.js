@@ -21,9 +21,9 @@ const SecondSection = (props) => {
   const [companytype, setcompanytype] = useState("");
   const { register, errors, handleSubmit } = useForm();
   const firstInputFocus = useRef();
-  const [readonly, setreadonly] = useState("");
+  const [disabled, setdesable] = useState(false);
   const onSubmit = (e) => {
-    setreadonly("readonly");
+    setdesable(true);
     var axios = require('axios');
     var data = {
       cfid: cfid,
@@ -46,11 +46,11 @@ const SecondSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful",);
       props.onThirdSectionClick();
-      setreadonly("readonly");
+      setdesable(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error");
-      setreadonly("");
+      setdesable(false);
     });
   };
   useEffect(() => {
@@ -82,7 +82,7 @@ const SecondSection = (props) => {
     
    }
   return (
-    <section className={'dark-section pt-2 pb-4', readonly}>
+    <section className={'dark-section pt-2 pb-4'}>
       <div className="content pt-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="">
@@ -283,7 +283,7 @@ const SecondSection = (props) => {
             </Col> */}
             <Col lg={12} className="text-right">
               <button
-                type="submit"
+                type="submit"  disabled={disabled}
                 className="btn btn-primary"
               >
                 Next

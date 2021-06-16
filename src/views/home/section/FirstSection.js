@@ -27,7 +27,7 @@ const FirstSection = (props) => {
   const [firstname, setfirstname] = useState('');
   const [lastname, setlastname] = useState('');
   const { register, errors, handleSubmit } = useForm();
-  const [readonly, setreadonly] = useState("");
+  const [disabled, setdesable] = useState(false);
   //const dispatch = useDispatch();
 //   if(window.location.href.indexOf("home") > -1) {
 //     //alert('working href');
@@ -35,7 +35,7 @@ const FirstSection = (props) => {
 // }
   const onSubmit = (e) => {
     debugger;
-    setreadonly("readonly");
+    setdesable(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
     var data = {
@@ -66,11 +66,11 @@ const FirstSection = (props) => {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       props.onSecondSectionClick();
-      setreadonly("readonly");
+      setdesable(false);
     })
     .catch(function (error) {
       swal(error.response.data, "error");
-      setreadonly("");
+      setdesable(false);
     });
     
   };
@@ -81,7 +81,7 @@ const FirstSection = (props) => {
  
  
   return (
-    <section className={'light-section top-100 pb-5', readonly}>
+    <section className={'light-section top-100 pb-5'}>
       <div className="content">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row className="pb-4 pt-3">
@@ -486,7 +486,7 @@ const FirstSection = (props) => {
             <Col lg={12} className="text-right">
               <button
                 type="submit" 
-                className="btn btn-primary" id="second-section"
+                className={"btn btn-primary"} disabled={disabled} id="SecondSection"
                 
               >
                 Next
