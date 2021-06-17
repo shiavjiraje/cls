@@ -102,7 +102,7 @@ const SecondSection = (props) => {
                   <b>Proposed Company Name:</b>{" "}
                 </h6>
                 <label>Please review before choosing a company name</label>
-                <span className="text-span"> (Note 7)</span>
+                <a className="text-span" target="_blank" href="/handyguide"> (Note 7)</a>
               </label>
             </Col>
           </Row>
