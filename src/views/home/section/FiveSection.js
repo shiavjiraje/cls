@@ -140,7 +140,7 @@ const addDirectorSeven=()=>{
                 have 2, and charity companies must have 3
                 <a className="text-span" target="_blank" href="/handyguide"> (Note 12)</a> If any director
                 has more than 3 directorships please forward these details by
-                email to <span className="text-span">formations@clscs.ie</span>
+                email to <span className="text-span">formations@clscs.ie </span>
                 If any director is also a subscriber, please enter their number
                 of shares in the second last section of the column
               </label>

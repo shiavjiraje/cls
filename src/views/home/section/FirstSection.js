@@ -157,7 +157,7 @@ const FirstSection = (props) => {
                     CLS General Terms of Business
                   </span>{" "}
                   and have reviewed the{" "}
-                  <span className="text-span">CLS Handy Guide</span> to
+                  <a className="text-span" target="_blank" href="/handyguide">CLS Handy Guide</a> to
                   Completing the Company Order Form (Tick Box)
                 </b>
               </label>
