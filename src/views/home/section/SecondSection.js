@@ -25,7 +25,6 @@ const SecondSection = (props) => {
   const onSubmit = (e) => {
     setdesable(true);
     var axios = require('axios');
-    alert(cfid);
     var data = {
       cfid: cfid,
       firstchoice: firstchoice,

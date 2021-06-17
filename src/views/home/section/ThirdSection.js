@@ -20,7 +20,6 @@ const ThirdSection = (props) => {
   const [disabled, setdesable] = useState(false);
   const onSubmit = (e) => {
     setdesable(true);
-    alert(cfid);
     var axios = require('axios');
     var data = {
       cfid: cfid,

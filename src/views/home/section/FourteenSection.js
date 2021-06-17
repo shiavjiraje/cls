@@ -95,7 +95,6 @@ axios(config)
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     setdesable(true);
-    alert(cfid);
     let reqBody = {
       cfid:cfid,
       addtionalinfo:addtionalinfo

@@ -26,7 +26,6 @@ const ThirteenSection = (props) => {
   const onSubmit = (e) => {
     setdesable(true);
     var axios = require('axios');
-    alert(cfid);
     let data ={
       cfid:cfid,
       roaddressline1: roaddressline1,

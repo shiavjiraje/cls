@@ -42,7 +42,6 @@ const NineSection = (props) => {
   
   const onSubmit = (e) => {
     setdesable(true);
-    alert(getcfid);
     var axios = require('axios');
     let data =[otherdirectorship1, otherdirectorship2, otherdirectorship3,otherdirectorship4, otherdirectorship5, otherdirectorship6,otherdirectorship7];
     data.map(directorship => directorship.cfid=getcfid);
