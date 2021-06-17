@@ -79,9 +79,9 @@ const FirstSection = (props) => {
   }
   };
   const handleEditFistSection=()=>{
-    let repetCfid = JSON.parse(localStorage.getItem('CfiID'))
+    let repetCfid = JSON.parse(localStorage.getItem('CfiID'))    
     alert("calling second time");
-    setdesable(true);
+    //setdesable(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
     var data = {

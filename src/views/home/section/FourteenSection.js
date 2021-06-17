@@ -48,7 +48,8 @@ axios(config)
         swal("Record Saved Successful");
         history.push('/home');
               window.location.reload();
-              window.scrollTo(0, 0)
+              window.scrollTo(0, 0);
+              localStorage.removeItem('CfiID')
         //localStorage.setItem("pdfData", JSON.stringify(response.data));
         //debugger;
         //if(response.data.Filepath==!null){
