@@ -37,7 +37,7 @@ const FirstSection = (props) => {
       if(localStorage.getItem('CfiID') !== null){
         handleEditFistSection();
       } else {
-   alert("calling first time");
+   //alert("calling first time");
     setdesable(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
@@ -68,6 +68,7 @@ const FirstSection = (props) => {
     .then(function (response) {
       console.log(JSON.stringify(response.data));
       localStorage.setItem('CfiID', JSON.stringify(response.data))
+      localStorage.setItem('storeCfid', JSON.stringify(response.data))
       swal("Record Saved Successful", );
       props.onSecondSectionClick();
       setdesable(false);
@@ -80,7 +81,7 @@ const FirstSection = (props) => {
   };
   const handleEditFistSection=()=>{
     let repetCfid = JSON.parse(localStorage.getItem('CfiID'))    
-    alert("calling second time");
+    //alert("calling second time");
     //setdesable(true);
     var axios = require('axios');
     var name=firstname + " " + lastname;
