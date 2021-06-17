@@ -295,7 +295,7 @@ const ThirteenSection = (props) => {
                   type="submit"  disabled={disabled}
                   className="btn btn-primary"
                 >
-                  Next
+                  Save and Next
                 </button>
               </Col>
             </Row>

@@ -537,7 +537,7 @@ const FirstSection = (props) => {
                 className={"btn btn-primary"} disabled={disabled} id="SecondSection"
                 
               >
-                Next
+               Save and Next
               </button>
             </Col>
           </Row>
