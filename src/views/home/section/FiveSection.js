@@ -170,7 +170,7 @@ const addDirectorSeven=()=>{
                 placeholder="First Name"
                 className="form-control"
               />
-              {errors.firstname1 && <p className="error redspan font-12">{errors.firstname.message}</p>}
+              {errors.firstname && <p className="error redspan font-12">{errors.firstname.message}</p>}
             </Col>
             <Col lg={6}>
               <input
@@ -186,7 +186,7 @@ const addDirectorSeven=()=>{
                 placeholder="Last Name"
                 className="form-control"
               />
-              {errors.lastname1 && <p className="error redspan font-12">{errors.lastname.message}</p>}
+              {errors.lastname && <p className="error redspan font-12">{errors.lastname.message}</p>}
             </Col>
               </Row>
               <Row className="mt-4">
@@ -334,7 +334,7 @@ const addDirectorSeven=()=>{
                 name="country"
                 id="country1"
               />
-              {errors.postal && (
+              {errors.country && (
                 <p className="redspan font-12">The field is Required</p>
               )}
             </Col>
