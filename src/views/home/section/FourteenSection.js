@@ -85,6 +85,7 @@ axios(config)
       })
       .catch(function () {
         console.log("error");
+        swal("Oops... Something went wrong!", 'error');
       });
   };
  

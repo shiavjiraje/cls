@@ -31,7 +31,16 @@ class Home extends Component {
      };
   }
 
-  
+  componentDidMount(){
+    setTimeout(
+      function() {
+        localStorage.removeItem('CfiID');
+        localStorage.removeItem('storeCfid');
+      }
+      .bind(this),
+      1000 * 60 * 60
+  );
+  }
   showSecondSection(){
     this.setState({ collapse1: true });
     document.getElementById('SecondSection').scrollIntoView();
