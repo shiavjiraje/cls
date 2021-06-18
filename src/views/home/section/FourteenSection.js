@@ -92,12 +92,16 @@ axios(config)
 
   const onSubmit = (e) => {
     setdesable(true);
-    let reqBody = {
+    let data = {
       cfid:cfid,
-      addtionalinfo:addtionalinfo,
-      url: `${urlpattern}clsadditionalinfo/`,
+      addtionalinfo:addtionalinfo
     }
-    axios(reqBody)
+    var config = {
+      method: 'post',
+      url: `${urlpattern}clsadditionalinfo/`,
+      data : data
+    };
+    axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
