@@ -40,7 +40,7 @@ const FirstSection = (props) => {
    //alert("calling first time");
     setdesable(true);
     var axios = require('axios');
-    var name=firstname + " " + lastname;
+    var name=firstname.trim() + " " + lastname.trim();
     var data = {
       name: name,
       agree: agree,

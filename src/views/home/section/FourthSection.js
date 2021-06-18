@@ -34,7 +34,7 @@ const FourthSection = (props) => {
   const onSubmit = (e) => {
     setdesable(true);
     var axios = require('axios');
-    var name=firstname + " " + lastname;
+    var name=firstname.trim() + " " + lastname.trim();
     var data = {
       cfid: cfid,
       name: name,
