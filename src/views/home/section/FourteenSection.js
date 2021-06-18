@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Col, Row } from "reactstrap";
-import { createVendor } from "../../../_actions/section14.actions";
 import axios from "axios";
 import config from '../../../config/config';
 import { history } from '../../../_helpers';
@@ -92,17 +90,27 @@ axios(config)
  
   const [addtionalinfo, setaddtionalinfo]=useState();
 
-  const dispatch = useDispatch();
   const onSubmit = (e) => {
     setdesable(true);
     let reqBody = {
       cfid:cfid,
-      addtionalinfo:addtionalinfo
+      addtionalinfo:addtionalinfo,
+      url: `${urlpattern}clsadditionalinfo/`,
     }
+    axios(reqBody)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      swal("Record Saved Successful", );
+      handlePdfSubmit();
+      setdesable(false);
+    })
+    .catch(function (error) {
+      swal(error.response.data, "error");
+      setdesable(false);
+    });
    
-    dispatch(createVendor(reqBody));
-    handlePdfSubmit();
-    setdesable(false);
+  
+    
   };
   return (
     <React.Fragment>
