@@ -76,6 +76,7 @@ axios(config)
           .then(res => res.json())
           .then(recipes => {
               console.log(recipes);
+              setdesable(false);
              // getAllProject();
               //swal("Project Created Successful", recipes.id, );
               
@@ -86,6 +87,8 @@ axios(config)
       .catch(function () {
         console.log("error");
         swal("Oops... Something went wrong!", 'error');
+        setdesable(false);
+        localStorage.removeItem('CfiID')
       });
   };
  
@@ -107,7 +110,7 @@ axios(config)
       console.log(JSON.stringify(response.data));
       swal("Record Saved Successful", );
       handlePdfSubmit();
-      setdesable(false);
+      setdesable(true);
     })
     .catch(function (error) {
       swal(error.response.data, "error");
