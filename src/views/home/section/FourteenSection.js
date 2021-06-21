@@ -86,7 +86,7 @@ axios(config)
       })
       .catch(function () {
         console.log("error");
-        swal("Oops... Something went wrong!", 'error');
+        swal("Oops PDF not generated... Something went wrong!", 'error');
         setdesable(false);
         localStorage.removeItem('CfiID')
       });
@@ -96,6 +96,7 @@ axios(config)
 
   const onSubmit = (e) => {
     setdesable(true);
+    localStorage.removeItem('CfiID')
     let data = {
       cfid:cfid,
       addtionalinfo:addtionalinfo
