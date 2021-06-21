@@ -32,14 +32,14 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    localStorage.removeItem('CfiID');
+   
     setTimeout(
       function() {
         localStorage.removeItem('CfiID');
         localStorage.removeItem('storeCfid');
       }
       .bind(this),
-      1000 * 60 * 60
+      1800000
   );
   }
   showSecondSection(){
