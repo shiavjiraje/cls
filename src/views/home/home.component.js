@@ -32,6 +32,7 @@ class Home extends Component {
   }
 
   componentDidMount(){
+    localStorage.removeItem('CfiID');
     setTimeout(
       function() {
         localStorage.removeItem('CfiID');
