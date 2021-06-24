@@ -32,15 +32,8 @@ class Home extends Component {
   }
 
   componentDidMount(){
-  // alert('home compenent');
-    setTimeout(
-      function() {
-        localStorage.removeItem('CfiID');
-        localStorage.removeItem('storeCfid');
-      }
-      .bind(this),
-      180000
-  );
+         localStorage.removeItem('CfiID');
+        localStorage.removeItem('storeCfid');      
   }
   showSecondSection(){
     this.setState({ collapse1: true });
